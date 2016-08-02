@@ -1,0 +1,70 @@
+<?php
+namespace FedEx\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * Describes specific information about the email label shipment.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Pickup Service
+ */
+class EMailLabelDetail
+    extends AbstractComplexType
+{
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'EMailLabelDetail';
+
+    /**
+     * Notification email will be sent to this email address
+     *
+     * @param string $notificationEMailAddress
+     * @return EMailLabelDetail
+     */
+    public function setNotificationEMailAddress($notificationEMailAddress)
+    {
+        $this->NotificationEMailAddress = $notificationEMailAddress;
+        return $this;
+    }
+    
+    /**
+     * Returns Notification email will be sent to this email address
+     *
+     * @return string
+     */
+    public function getNotificationEMailAddress()
+    {
+        return $this->NotificationEMailAddress;
+    }
+    
+    /**
+     * Message to be sent in the notification email
+     *
+     * @param string $notificationMessage
+     * @return EMailLabelDetail
+     */
+    public function setNotificationMessage($notificationMessage)
+    {
+        $this->NotificationMessage = $notificationMessage;
+        return $this;
+    }
+    
+    /**
+     * Returns Message to be sent in the notification email
+     *
+     * @return string
+     */
+    public function getNotificationMessage()
+    {
+        return $this->NotificationMessage;
+    }
+    
+
+    
+}
