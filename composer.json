@@ -10,10 +10,14 @@
             "name": "Jeremy Dunn",
             "email": "jeremy@jsdunn.info",
             "homepage": "http://www.jsdunn.info"
+        },
+        {
+            "name": "Kenny Hanson",
+            "email": "kennyhansondev@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=7.0"
     },
     "require-dev": {
         "symfony/console": "2.*"
