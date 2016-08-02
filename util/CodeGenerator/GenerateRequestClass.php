@@ -52,7 +52,7 @@ class GenerateRequestClass extends AbstractGenerate
         if (file_exists($wsdlPath)) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            throw new \Exception('path to wsdl file is invalid');
+            throw new \Exception('path to wsdl file is invalid: ' . $wsdlPath);
         }
         
         $this->_pathToRequestClassFile = $pathToRequestClassFile;

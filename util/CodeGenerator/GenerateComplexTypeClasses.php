@@ -56,7 +56,12 @@ class GenerateComplexTypeClasses extends AbstractGenerate
 
         if (is_writable($exportPath)){
             $this->_exportPath = $exportPath;
-        } else {
+        }
+        elseif (!file_exists($exportPath)) {
+            mkdir($exportPath);
+            $this->_exportPath = $exportPath;
+        }
+        else {
             throw new \Exception('cannot write to export path');
         }
 
