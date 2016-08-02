@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Currency exchange rate information.
+ * CurrencyExchangeRate
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CurrencyExchangeRate
     extends AbstractComplexType

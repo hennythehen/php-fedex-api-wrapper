@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomLabelTextEntry
     extends AbstractComplexType
@@ -151,6 +151,28 @@ class CustomLabelTextEntry
     public function getFontSize()
     {
         return $this->FontSize;
+    }
+    
+    /**
+     * Set Rotation
+     *
+     * @param \FedEx\SimpleType\RotationType|string $rotation
+     * @return CustomLabelTextEntry
+     */
+    public function setRotation($rotation)
+    {
+        $this->Rotation = $rotation;
+        return $this;
+    }
+    
+    /**
+     * Returns Set Rotation
+     *
+     * @return \FedEx\SimpleType\RotationType|string
+     */
+    public function getRotation()
+    {
+        return $this->Rotation;
     }
     
 

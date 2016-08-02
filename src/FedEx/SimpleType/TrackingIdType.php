@@ -8,14 +8,13 @@ use FedEx\AbstractSimpleType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class TrackingIdType
     extends AbstractSimpleType
 {
     const _EXPRESS = 'EXPRESS';
     const _FEDEX = 'FEDEX';
-    const _FREIGHT = 'FREIGHT';
     const _GROUND = 'GROUND';
     const _USPS = 'USPS';
 }

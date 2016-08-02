@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomerSpecifiedLabelDetail
     extends AbstractComplexType
@@ -44,7 +44,29 @@ class CustomerSpecifiedLabelDetail
     }
     
     /**
-     * Defines any custom content to print on the label.
+     * Controls the position of the customer specified content relative to the FedEx portion.
+     *
+     * @param \FedEx\SimpleType\RelativeVerticalPositionType|string $customContentPosition
+     * @return CustomerSpecifiedLabelDetail
+     */
+    public function setCustomContentPosition($customContentPosition)
+    {
+        $this->CustomContentPosition = $customContentPosition;
+        return $this;
+    }
+    
+    /**
+     * Returns Controls the position of the customer specified content relative to the FedEx portion.
+     *
+     * @return \FedEx\SimpleType\RelativeVerticalPositionType|string
+     */
+    public function getCustomContentPosition()
+    {
+        return $this->CustomContentPosition;
+    }
+    
+    /**
+     * Set CustomContent
      *
      * @param CustomLabelDetail $customContent
      * @return CustomerSpecifiedLabelDetail
@@ -56,7 +78,7 @@ class CustomerSpecifiedLabelDetail
     }
     
     /**
-     * Returns Defines any custom content to print on the label.
+     * Returns Set CustomContent
      *
      * @return CustomLabelDetail
      */
@@ -66,7 +88,7 @@ class CustomerSpecifiedLabelDetail
     }
     
     /**
-     * Defines additional data to print in the Configurable portion of the label, this allows you to print the same type information on the label that can also be printed on the doc tab.
+     * Set ConfigurableReferenceEntries
      *
      * @param ConfigurableLabelReferenceEntry[] $configurableReferenceEntries
      * @return CustomerSpecifiedLabelDetail
@@ -78,7 +100,7 @@ class CustomerSpecifiedLabelDetail
     }
     
     /**
-     * Returns Defines additional data to print in the Configurable portion of the label, this allows you to print the same type information on the label that can also be printed on the doc tab.
+     * Returns Set ConfigurableReferenceEntries
      *
      * @return ConfigurableLabelReferenceEntry[]
      */
@@ -151,6 +173,28 @@ class CustomerSpecifiedLabelDetail
     public function getTermsAndConditionsLocalization()
     {
         return $this->TermsAndConditionsLocalization;
+    }
+    
+    /**
+     * Set RegulatoryLabels
+     *
+     * @param RegulatoryLabelContentDetail[] $regulatoryLabels
+     * @return CustomerSpecifiedLabelDetail
+     */
+    public function setRegulatoryLabels(array $regulatoryLabels)
+    {
+        $this->RegulatoryLabels = $regulatoryLabels;
+        return $this;
+    }
+    
+    /**
+     * Returns Set RegulatoryLabels
+     *
+     * @return RegulatoryLabelContentDetail[]
+     */
+    public function getRegulatoryLabels()
+    {
+        return $this->RegulatoryLabels;
     }
     
     /**

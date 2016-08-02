@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for a person or company entitiy doing business with FedEx.
+ * ContactAndAddress
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class ContactAndAddress
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class ContactAndAddress
     protected $_name = 'ContactAndAddress';
 
     /**
-     * Descriptive data identifying the point-of-contact person.
+     * Set Contact
      *
      * @param Contact $contact
      * @return ContactAndAddress
@@ -34,7 +34,7 @@ class ContactAndAddress
     }
     
     /**
-     * Returns Descriptive data identifying the point-of-contact person.
+     * Returns Set Contact
      *
      * @return Contact
      */
@@ -44,7 +44,7 @@ class ContactAndAddress
     }
     
     /**
-     * The descriptive data for a physical location.
+     * Set Address
      *
      * @param Address $address
      * @return ContactAndAddress
@@ -56,7 +56,7 @@ class ContactAndAddress
     }
     
     /**
-     * Returns The descriptive data for a physical location.
+     * Returns Set Address
      *
      * @return Address
      */

@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Return Email Details
+ * ReturnEMailDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class ReturnEMailDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class ReturnEMailDetail
     protected $_name = 'ReturnEMailDetail';
 
     /**
-     * Phone number of the merchant
+     * Set MerchantPhoneNumber
      *
      * @param string $merchantPhoneNumber
      * @return ReturnEMailDetail
@@ -34,7 +34,7 @@ class ReturnEMailDetail
     }
     
     /**
-     * Returns Phone number of the merchant
+     * Returns Set MerchantPhoneNumber
      *
      * @return string
      */

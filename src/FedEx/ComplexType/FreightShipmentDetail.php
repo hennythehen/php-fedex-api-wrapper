@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class FreightShipmentDetail
     extends AbstractComplexType
@@ -85,28 +85,6 @@ class FreightShipmentDetail
     public function getAlternateBilling()
     {
         return $this->AlternateBilling;
-    }
-    
-    /**
-     * Identification values to be printed during creation of a Freight bill of lading.
-     *
-     * @param PrintedReference[] $printedReferences
-     * @return FreightShipmentDetail
-     */
-    public function setPrintedReferences(array $printedReferences)
-    {
-        $this->PrintedReferences = $printedReferences;
-        return $this;
-    }
-    
-    /**
-     * Returns Identification values to be printed during creation of a Freight bill of lading.
-     *
-     * @return PrintedReference[]
-     */
-    public function getPrintedReferences()
-    {
-        return $this->PrintedReferences;
     }
     
     /**
@@ -371,28 +349,6 @@ class FreightShipmentDetail
     public function getSpecialServicePayments()
     {
         return $this->SpecialServicePayments;
-    }
-    
-    /**
-     * Must be populated if any line items contain hazardous materials.
-     *
-     * @param string $hazardousMaterialsEmergencyContactNumber
-     * @return FreightShipmentDetail
-     */
-    public function setHazardousMaterialsEmergencyContactNumber($hazardousMaterialsEmergencyContactNumber)
-    {
-        $this->HazardousMaterialsEmergencyContactNumber = $hazardousMaterialsEmergencyContactNumber;
-        return $this;
-    }
-    
-    /**
-     * Returns Must be populated if any line items contain hazardous materials.
-     *
-     * @return string
-     */
-    public function getHazardousMaterialsEmergencyContactNumber()
-    {
-        return $this->HazardousMaterialsEmergencyContactNumber;
     }
     
     /**

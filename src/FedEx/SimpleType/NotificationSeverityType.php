@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Identifies the set of severity values for a Notification.
+ * NotificationSeverityType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class NotificationSeverityType
     extends AbstractSimpleType

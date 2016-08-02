@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class EtdDetail
     extends AbstractComplexType
@@ -21,28 +21,6 @@ class EtdDetail
      */
     protected $_name = 'EtdDetail';
 
-    /**
-     * Specifies client's intent for whether all documents must be confirmed before shipment processing.
-     *
-     * @param \FedEx\SimpleType\EtdConfirmationType|string $confirmation
-     * @return EtdDetail
-     */
-    public function setConfirmation($confirmation)
-    {
-        $this->Confirmation = $confirmation;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifies client's intent for whether all documents must be confirmed before shipment processing.
-     *
-     * @return \FedEx\SimpleType\EtdConfirmationType|string
-     */
-    public function getConfirmation()
-    {
-        return $this->Confirmation;
-    }
-    
     /**
      * Indicates the types of shipping documents produced for the shipper by FedEx (see ShippingDocumentSpecification) which should be copied back to the shipper in the shipment result data.
      *
@@ -63,28 +41,6 @@ class EtdDetail
     public function getRequestedDocumentCopies()
     {
         return $this->RequestedDocumentCopies;
-    }
-    
-    /**
-     * Set Documents
-     *
-     * @param UploadDocumentDetail[] $documents
-     * @return EtdDetail
-     */
-    public function setDocuments(array $documents)
-    {
-        $this->Documents = $documents;
-        return $this;
-    }
-    
-    /**
-     * Returns Set Documents
-     *
-     * @return UploadDocumentDetail[]
-     */
-    public function getDocuments()
-    {
-        return $this->Documents;
     }
     
     /**

@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Identifies the type of additional labels.
+ * AdditionalLabelsType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class AdditionalLabelsType
     extends AbstractSimpleType
@@ -17,7 +17,6 @@ class AdditionalLabelsType
     const _CONSIGNEE = 'CONSIGNEE';
     const _CUSTOMS = 'CUSTOMS';
     const _DESTINATION = 'DESTINATION';
-    const _FREIGHT_REFERENCE = 'FREIGHT_REFERENCE';
     const _MANIFEST = 'MANIFEST';
     const _ORIGIN = 'ORIGIN';
     const _RECIPIENT = 'RECIPIENT';

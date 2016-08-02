@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Type of Brazilian taxpayer identifier provided in Recipient/TaxPayerIdentification/Number. For shipments bound for Brazil this overrides the value in Recipient/TaxPayerIdentification/TinType
+ * RecipientCustomsIdType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class RecipientCustomsIdType
     extends AbstractSimpleType

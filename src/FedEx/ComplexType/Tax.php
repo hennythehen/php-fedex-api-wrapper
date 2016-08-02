@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Identifies each tax applied to the shipment.
+ * Tax
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class Tax
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class Tax
     protected $_name = 'Tax';
 
     /**
-     * The type of tax applied to the shipment.
+     * Set TaxType
      *
      * @param \FedEx\SimpleType\TaxType|string $taxType
      * @return Tax
@@ -34,7 +34,7 @@ class Tax
     }
     
     /**
-     * Returns The type of tax applied to the shipment.
+     * Returns Set TaxType
      *
      * @return \FedEx\SimpleType\TaxType|string
      */
@@ -66,7 +66,7 @@ class Tax
     }
     
     /**
-     * The amount of the tax applied to the shipment.
+     * Set Amount
      *
      * @param Money $amount
      * @return Tax
@@ -78,7 +78,7 @@ class Tax
     }
     
     /**
-     * Returns The amount of the tax applied to the shipment.
+     * Returns Set Amount
      *
      * @return Money
      */

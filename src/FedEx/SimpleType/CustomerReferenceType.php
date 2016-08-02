@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * The types of references available for use.
+ * CustomerReferenceType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomerReferenceType
     extends AbstractSimpleType
@@ -19,6 +19,7 @@ class CustomerReferenceType
     const _ELECTRONIC_PRODUCT_CODE = 'ELECTRONIC_PRODUCT_CODE';
     const _INTRACOUNTRY_REGULATORY_REFERENCE = 'INTRACOUNTRY_REGULATORY_REFERENCE';
     const _INVOICE_NUMBER = 'INVOICE_NUMBER';
+    const _PACKING_SLIP_NUMBER = 'PACKING_SLIP_NUMBER';
     const _P_O_NUMBER = 'P_O_NUMBER';
     const _RMA_ASSOCIATION = 'RMA_ASSOCIATION';
     const _SHIPMENT_INTEGRITY = 'SHIPMENT_INTEGRITY';

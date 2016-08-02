@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for a FedEx email notification recipient.
+ * EMailNotificationRecipient
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class EMailNotificationRecipient
     extends AbstractComplexType

@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class UploadDocumentReferenceDetail
     extends AbstractComplexType
@@ -63,6 +63,28 @@ class UploadDocumentReferenceDetail
     public function getCustomerReference()
     {
         return $this->CustomerReference;
+    }
+    
+    /**
+     * Description of the uploaded document.
+     *
+     * @param string $description
+     * @return UploadDocumentReferenceDetail
+     */
+    public function setDescription($description)
+    {
+        $this->Description = $description;
+        return $this;
+    }
+    
+    /**
+     * Returns Description of the uploaded document.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->Description;
     }
     
     /**

@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class WebAuthenticationDetail
     extends AbstractComplexType
@@ -21,6 +21,28 @@ class WebAuthenticationDetail
      */
     protected $_name = 'WebAuthenticationDetail';
 
+    /**
+     * This was renamed from cspCredential.
+     *
+     * @param WebAuthenticationCredential $parentCredential
+     * @return WebAuthenticationDetail
+     */
+    public function setParentCredential(WebAuthenticationCredential $parentCredential)
+    {
+        $this->ParentCredential = $parentCredential;
+        return $this;
+    }
+    
+    /**
+     * Returns This was renamed from cspCredential.
+     *
+     * @return WebAuthenticationCredential
+     */
+    public function getParentCredential()
+    {
+        return $this->ParentCredential;
+    }
+    
     /**
      * Credential used to authenticate a specific software application. This value is provided by FedEx after registration.
      *

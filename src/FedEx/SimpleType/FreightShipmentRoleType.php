@@ -8,12 +8,11 @@ use FedEx\AbstractSimpleType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class FreightShipmentRoleType
     extends AbstractSimpleType
 {
     const _CONSIGNEE = 'CONSIGNEE';
     const _SHIPPER = 'SHIPPER';
-    const _THIRD_PARTY = 'THIRD_PARTY';
 }

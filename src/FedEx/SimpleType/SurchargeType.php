@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * The type of the surcharge.
+ * SurchargeType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class SurchargeType
     extends AbstractSimpleType
@@ -24,7 +24,6 @@ class SurchargeType
     const _DANGEROUS_GOODS = 'DANGEROUS_GOODS';
     const _DELIVERY_AREA = 'DELIVERY_AREA';
     const _DELIVERY_CONFIRMATION = 'DELIVERY_CONFIRMATION';
-    const _DELIVERY_ON_INVOICE_ACCEPTANCE = 'DELIVERY_ON_INVOICE_ACCEPTANCE';
     const _DOCUMENTATION_FEE = 'DOCUMENTATION_FEE';
     const _DRY_ICE = 'DRY_ICE';
     const _EMAIL_LABEL = 'EMAIL_LABEL';
@@ -40,6 +39,7 @@ class SurchargeType
     const _FLATBED = 'FLATBED';
     const _FREIGHT_GUARANTEE = 'FREIGHT_GUARANTEE';
     const _FREIGHT_ON_VALUE = 'FREIGHT_ON_VALUE';
+    const _FREIGHT_TO_COLLECT = 'FREIGHT_TO_COLLECT';
     const _FUEL = 'FUEL';
     const _HOLD_AT_LOCATION = 'HOLD_AT_LOCATION';
     const _HOME_DELIVERY_APPOINTMENT = 'HOME_DELIVERY_APPOINTMENT';
@@ -69,6 +69,8 @@ class SurchargeType
     const _PROTECTION_FROM_FREEZING = 'PROTECTION_FROM_FREEZING';
     const _REGIONAL_MALL_DELIVERY = 'REGIONAL_MALL_DELIVERY';
     const _REGIONAL_MALL_PICKUP = 'REGIONAL_MALL_PICKUP';
+    const _REROUTE = 'REROUTE';
+    const _RESCHEDULE = 'RESCHEDULE';
     const _RESIDENTIAL_DELIVERY = 'RESIDENTIAL_DELIVERY';
     const _RESIDENTIAL_PICKUP = 'RESIDENTIAL_PICKUP';
     const _RETURN_LABEL = 'RETURN_LABEL';

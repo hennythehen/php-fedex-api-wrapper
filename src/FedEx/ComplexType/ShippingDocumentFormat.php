@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class ShippingDocumentFormat
     extends AbstractComplexType
@@ -132,6 +132,28 @@ class ShippingDocumentFormat
     }
     
     /**
+     * Set OptionsRequested
+     *
+     * @param DocumentFormatOptionsRequested $optionsRequested
+     * @return ShippingDocumentFormat
+     */
+    public function setOptionsRequested(DocumentFormatOptionsRequested $optionsRequested)
+    {
+        $this->OptionsRequested = $optionsRequested;
+        return $this;
+    }
+    
+    /**
+     * Returns Set OptionsRequested
+     *
+     * @return DocumentFormatOptionsRequested
+     */
+    public function getOptionsRequested()
+    {
+        return $this->OptionsRequested;
+    }
+    
+    /**
      * Governs the language to be used for this individual document, independently from other content returned for the same shipment.
      *
      * @param Localization $localization
@@ -151,28 +173,6 @@ class ShippingDocumentFormat
     public function getLocalization()
     {
         return $this->Localization;
-    }
-    
-    /**
-     * Identifies the individual document specified by the client.
-     *
-     * @param string $customDocumentIdentifier
-     * @return ShippingDocumentFormat
-     */
-    public function setCustomDocumentIdentifier($customDocumentIdentifier)
-    {
-        $this->CustomDocumentIdentifier = $customDocumentIdentifier;
-        return $this;
-    }
-    
-    /**
-     * Returns Identifies the individual document specified by the client.
-     *
-     * @return string
-     */
-    public function getCustomDocumentIdentifier()
-    {
-        return $this->CustomDocumentIdentifier;
     }
     
 

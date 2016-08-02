@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class TrackingId
     extends AbstractComplexType
@@ -63,28 +63,6 @@ class TrackingId
     public function getFormId()
     {
         return $this->FormId;
-    }
-    
-    /**
-     * For use with SmartPost tracking IDs only
-     *
-     * @param string $uspsApplicationId
-     * @return TrackingId
-     */
-    public function setUspsApplicationId($uspsApplicationId)
-    {
-        $this->UspsApplicationId = $uspsApplicationId;
-        return $this;
-    }
-    
-    /**
-     * Returns For use with SmartPost tracking IDs only
-     *
-     * @return string
-     */
-    public function getUspsApplicationId()
-    {
-        return $this->UspsApplicationId;
     }
     
     /**

@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * This indicates if the top or bottom of the label comes out of the printer first.
+ * LabelPrintingOrientationType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class LabelPrintingOrientationType
     extends AbstractSimpleType

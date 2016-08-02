@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class Address
     extends AbstractComplexType
@@ -151,6 +151,28 @@ class Address
     public function getCountryCode()
     {
         return $this->CountryCode;
+    }
+    
+    /**
+     * The fully spelt out name of a country.
+     *
+     * @param string $countryName
+     * @return Address
+     */
+    public function setCountryName($countryName)
+    {
+        $this->CountryName = $countryName;
+        return $this;
+    }
+    
+    /**
+     * Returns The fully spelt out name of a country.
+     *
+     * @return string
+     */
+    public function getCountryName()
+    {
+        return $this->CountryName;
     }
     
     /**

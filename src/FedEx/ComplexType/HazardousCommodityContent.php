@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class HazardousCommodityContent
     extends AbstractComplexType
@@ -66,6 +66,28 @@ class HazardousCommodityContent
     }
     
     /**
+     * This describes the inner receptacle details for a hazardous commodity within the dangerous goods container.
+     *
+     * @param HazardousCommodityInnerReceptacleDetail[] $innerReceptacles
+     * @return HazardousCommodityContent
+     */
+    public function setInnerReceptacles(array $innerReceptacles)
+    {
+        $this->InnerReceptacles = $innerReceptacles;
+        return $this;
+    }
+    
+    /**
+     * Returns This describes the inner receptacle details for a hazardous commodity within the dangerous goods container.
+     *
+     * @return HazardousCommodityInnerReceptacleDetail[]
+     */
+    public function getInnerReceptacles()
+    {
+        return $this->InnerReceptacles;
+    }
+    
+    /**
      * Customer-provided specifications for handling individual commodities.
      *
      * @param HazardousCommodityOptionDetail $options
@@ -107,6 +129,28 @@ class HazardousCommodityContent
     public function getRadionuclideDetail()
     {
         return $this->RadionuclideDetail;
+    }
+    
+    /**
+     * The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
+     *
+     * @param NetExplosiveDetail $netExplosiveDetail
+     * @return HazardousCommodityContent
+     */
+    public function setNetExplosiveDetail(NetExplosiveDetail $netExplosiveDetail)
+    {
+        $this->NetExplosiveDetail = $netExplosiveDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
+     *
+     * @return NetExplosiveDetail
+     */
+    public function getNetExplosiveDetail()
+    {
+        return $this->NetExplosiveDetail;
     }
     
 

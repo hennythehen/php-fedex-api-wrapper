@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Description of shipping label to be returned in the reply
+ * LabelSpecification
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class LabelSpecification
     extends AbstractComplexType
@@ -22,29 +22,7 @@ class LabelSpecification
     protected $_name = 'LabelSpecification';
 
     /**
-     * Specifies how to create, organize, and return the document.
-     *
-     * @param ShippingDocumentDispositionDetail[] $dispositions
-     * @return LabelSpecification
-     */
-    public function setDispositions(array $dispositions)
-    {
-        $this->Dispositions = $dispositions;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifies how to create, organize, and return the document.
-     *
-     * @return ShippingDocumentDispositionDetail[]
-     */
-    public function getDispositions()
-    {
-        return $this->Dispositions;
-    }
-    
-    /**
-     * Specify type of label to be returned
+     * Set LabelFormatType
      *
      * @param \FedEx\SimpleType\LabelFormatType|string $labelFormatType
      * @return LabelSpecification
@@ -56,7 +34,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns Specify type of label to be returned
+     * Returns Set LabelFormatType
      *
      * @return \FedEx\SimpleType\LabelFormatType|string
      */
@@ -66,7 +44,7 @@ class LabelSpecification
     }
     
     /**
-     * Specifies the image format used for a shipping document.
+     * Set ImageType
      *
      * @param \FedEx\SimpleType\ShippingDocumentImageType|string $imageType
      * @return LabelSpecification
@@ -78,7 +56,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns Specifies the image format used for a shipping document.
+     * Returns Set ImageType
      *
      * @return \FedEx\SimpleType\ShippingDocumentImageType|string
      */
@@ -88,7 +66,7 @@ class LabelSpecification
     }
     
     /**
-     * For thermal printer lables this indicates the size of the label and the location of the doc tab if present.
+     * Set LabelStockType
      *
      * @param \FedEx\SimpleType\LabelStockType|string $labelStockType
      * @return LabelSpecification
@@ -100,7 +78,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns For thermal printer lables this indicates the size of the label and the location of the doc tab if present.
+     * Returns Set LabelStockType
      *
      * @return \FedEx\SimpleType\LabelStockType|string
      */
@@ -110,7 +88,7 @@ class LabelSpecification
     }
     
     /**
-     * This indicates if the top or bottom of the label comes out of the printer first.
+     * Set LabelPrintingOrientation
      *
      * @param \FedEx\SimpleType\LabelPrintingOrientationType|string $labelPrintingOrientation
      * @return LabelSpecification
@@ -122,7 +100,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns This indicates if the top or bottom of the label comes out of the printer first.
+     * Returns Set LabelPrintingOrientation
      *
      * @return \FedEx\SimpleType\LabelPrintingOrientationType|string
      */
@@ -132,7 +110,51 @@ class LabelSpecification
     }
     
     /**
-     * If present, this contact and address information will replace the return address information on the label.
+     * Set LabelRotation
+     *
+     * @param \FedEx\SimpleType\LabelRotationType|string $labelRotation
+     * @return LabelSpecification
+     */
+    public function setLabelRotation($labelRotation)
+    {
+        $this->LabelRotation = $labelRotation;
+        return $this;
+    }
+    
+    /**
+     * Returns Set LabelRotation
+     *
+     * @return \FedEx\SimpleType\LabelRotationType|string
+     */
+    public function getLabelRotation()
+    {
+        return $this->LabelRotation;
+    }
+    
+    /**
+     * Specifies the order in which the labels are requested to be returned
+     *
+     * @param \FedEx\SimpleType\LabelOrderType|string $labelOrder
+     * @return LabelSpecification
+     */
+    public function setLabelOrder($labelOrder)
+    {
+        $this->LabelOrder = $labelOrder;
+        return $this;
+    }
+    
+    /**
+     * Returns Specifies the order in which the labels are requested to be returned
+     *
+     * @return \FedEx\SimpleType\LabelOrderType|string
+     */
+    public function getLabelOrder()
+    {
+        return $this->LabelOrder;
+    }
+    
+    /**
+     * Set PrintedLabelOrigin
      *
      * @param ContactAndAddress $printedLabelOrigin
      * @return LabelSpecification
@@ -144,7 +166,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns If present, this contact and address information will replace the return address information on the label.
+     * Returns Set PrintedLabelOrigin
      *
      * @return ContactAndAddress
      */
@@ -154,7 +176,7 @@ class LabelSpecification
     }
     
     /**
-     * Allows customer-specified control of label content.
+     * Set CustomerSpecifiedDetail
      *
      * @param CustomerSpecifiedLabelDetail $customerSpecifiedDetail
      * @return LabelSpecification
@@ -166,7 +188,7 @@ class LabelSpecification
     }
     
     /**
-     * Returns Allows customer-specified control of label content.
+     * Returns Set CustomerSpecifiedDetail
      *
      * @return CustomerSpecifiedLabelDetail
      */

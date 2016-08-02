@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class PickupDetail
     extends AbstractComplexType
@@ -88,7 +88,7 @@ class PickupDetail
     }
     
     /**
-     * Identifies the type of Pickup request
+     * Set RequestType
      *
      * @param \FedEx\SimpleType\PickupRequestType|string $requestType
      * @return PickupDetail
@@ -100,7 +100,7 @@ class PickupDetail
     }
     
     /**
-     * Returns Identifies the type of Pickup request
+     * Returns Set RequestType
      *
      * @return \FedEx\SimpleType\PickupRequestType|string
      */
@@ -110,7 +110,7 @@ class PickupDetail
     }
     
     /**
-     * Identifies the type of source for Pickup request
+     * Set RequestSource
      *
      * @param \FedEx\SimpleType\PickupRequestSourceType|string $requestSource
      * @return PickupDetail
@@ -122,7 +122,7 @@ class PickupDetail
     }
     
     /**
-     * Returns Identifies the type of source for Pickup request
+     * Returns Set RequestSource
      *
      * @return \FedEx\SimpleType\PickupRequestSourceType|string
      */

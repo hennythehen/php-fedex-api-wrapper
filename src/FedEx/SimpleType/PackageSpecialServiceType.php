@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Identifies the collection of special service offered by FedEx. BROKER_SELECT_OPTION should be used for Ground shipments only.
+ * PackageSpecialServiceType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class PackageSpecialServiceType
     extends AbstractSimpleType

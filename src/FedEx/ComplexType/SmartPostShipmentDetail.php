@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class SmartPostShipmentDetail
     extends AbstractComplexType
@@ -21,6 +21,28 @@ class SmartPostShipmentDetail
      */
     protected $_name = 'SmartPostShipmentDetail';
 
+    /**
+     * Set ProcessingOptionsRequested
+     *
+     * @param SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
+     * @return SmartPostShipmentDetail
+     */
+    public function setProcessingOptionsRequested(SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested)
+    {
+        $this->ProcessingOptionsRequested = $processingOptionsRequested;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ProcessingOptionsRequested
+     *
+     * @return SmartPostShipmentProcessingOptionsRequested
+     */
+    public function getProcessingOptionsRequested()
+    {
+        return $this->ProcessingOptionsRequested;
+    }
+    
     /**
      * Set Indicia
      *
@@ -88,12 +110,7 @@ class SmartPostShipmentDetail
     }
     
     /**
-     * 
-                The CustomerManifestId is used to group Smart Post packages onto a manifest for each trailer that is being prepared. If you do not have multiple trailers this field can be omitted. If you have multiple trailers, you
-                must assign the same Manifest Id to each SmartPost package as determined by its trailer.  In other words, all packages on a trailer must have the same Customer Manifest Id. The manifest Id must be unique to your account number for a minimum of 6 months
-                and cannot exceed 8 characters in length. We recommend you use the day of year + the trailer id (this could simply be a sequential number for that trailer). So if you had 3 trailers that you started loading on Feb 10
-                the 3 manifest ids would be 041001, 041002, 041003 (in this case we used leading zeros on the trailer numbers).
-              
+     * Set CustomerManifestId
      *
      * @param string $customerManifestId
      * @return SmartPostShipmentDetail
@@ -105,12 +122,7 @@ class SmartPostShipmentDetail
     }
     
     /**
-     * Returns 
-                The CustomerManifestId is used to group Smart Post packages onto a manifest for each trailer that is being prepared. If you do not have multiple trailers this field can be omitted. If you have multiple trailers, you
-                must assign the same Manifest Id to each SmartPost package as determined by its trailer.  In other words, all packages on a trailer must have the same Customer Manifest Id. The manifest Id must be unique to your account number for a minimum of 6 months
-                and cannot exceed 8 characters in length. We recommend you use the day of year + the trailer id (this could simply be a sequential number for that trailer). So if you had 3 trailers that you started loading on Feb 10
-                the 3 manifest ids would be 041001, 041002, 041003 (in this case we used leading zeros on the trailer numbers).
-              
+     * Returns Set CustomerManifestId
      *
      * @return string
      */

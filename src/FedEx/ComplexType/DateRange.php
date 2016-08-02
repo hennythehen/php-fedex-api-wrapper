@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class DateRange
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class DateRange
     protected $_name = 'DateRange';
 
     /**
-     * The beginning date in a date range.
+     * Set Begins
      *
      * @param date $begins
      * @return DateRange
@@ -34,7 +34,7 @@ class DateRange
     }
     
     /**
-     * Returns The beginning date in a date range.
+     * Returns Set Begins
      *
      * @return date
      */
@@ -44,7 +44,7 @@ class DateRange
     }
     
     /**
-     * The end date in a date range.
+     * Set Ends
      *
      * @param date $ends
      * @return DateRange
@@ -56,7 +56,7 @@ class DateRange
     }
     
     /**
-     * Returns The end date in a date range.
+     * Returns Set Ends
      *
      * @return date
      */

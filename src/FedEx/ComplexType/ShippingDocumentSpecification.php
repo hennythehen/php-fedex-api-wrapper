@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class ShippingDocumentSpecification
     extends AbstractComplexType
@@ -132,7 +132,29 @@ class ShippingDocumentSpecification
     }
     
     /**
-     * This element is currently not supported and is for the future use. (Details pertaining to the GAA.)
+     * Set ExportDeclarationDetail
+     *
+     * @param ExportDeclarationDetail $exportDeclarationDetail
+     * @return ShippingDocumentSpecification
+     */
+    public function setExportDeclarationDetail(ExportDeclarationDetail $exportDeclarationDetail)
+    {
+        $this->ExportDeclarationDetail = $exportDeclarationDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ExportDeclarationDetail
+     *
+     * @return ExportDeclarationDetail
+     */
+    public function getExportDeclarationDetail()
+    {
+        return $this->ExportDeclarationDetail;
+    }
+    
+    /**
+     * Set GeneralAgencyAgreementDetail
      *
      * @param GeneralAgencyAgreementDetail $generalAgencyAgreementDetail
      * @return ShippingDocumentSpecification
@@ -144,7 +166,7 @@ class ShippingDocumentSpecification
     }
     
     /**
-     * Returns This element is currently not supported and is for the future use. (Details pertaining to the GAA.)
+     * Returns Set GeneralAgencyAgreementDetail
      *
      * @return GeneralAgencyAgreementDetail
      */

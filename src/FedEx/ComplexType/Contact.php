@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class Contact
     extends AbstractComplexType
@@ -151,6 +151,28 @@ class Contact
     public function getPhoneExtension()
     {
         return $this->PhoneExtension;
+    }
+    
+    /**
+     * Identifies a toll free number, if any, associated with this contact.
+     *
+     * @param string $tollFreePhoneNumber
+     * @return Contact
+     */
+    public function setTollFreePhoneNumber($tollFreePhoneNumber)
+    {
+        $this->TollFreePhoneNumber = $tollFreePhoneNumber;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies a toll free number, if any, associated with this contact.
+     *
+     * @return string
+     */
+    public function getTollFreePhoneNumber()
+    {
+        return $this->TollFreePhoneNumber;
     }
     
     /**

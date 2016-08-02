@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomLabelDetail
     extends AbstractComplexType
@@ -107,6 +107,28 @@ class CustomLabelDetail
     public function getBoxEntries()
     {
         return $this->BoxEntries;
+    }
+    
+    /**
+     * Set TextBoxEntries
+     *
+     * @param CustomLabelTextBoxEntry[] $textBoxEntries
+     * @return CustomLabelDetail
+     */
+    public function setTextBoxEntries(array $textBoxEntries)
+    {
+        $this->TextBoxEntries = $textBoxEntries;
+        return $this;
+    }
+    
+    /**
+     * Returns Set TextBoxEntries
+     *
+     * @return CustomLabelTextBoxEntry[]
+     */
+    public function getTextBoxEntries()
+    {
+        return $this->TextBoxEntries;
     }
     
     /**

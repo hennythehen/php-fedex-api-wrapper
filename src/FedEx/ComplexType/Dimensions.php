@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive data detailing the length, width, and height of a package.
+ * Dimensions
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class Dimensions
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class Dimensions
     protected $_name = 'Dimensions';
 
     /**
-     * Identifies the length of the package.
+     * Set Length
      *
      * @param nonNegativeInteger $length
      * @return Dimensions
@@ -34,7 +34,7 @@ class Dimensions
     }
     
     /**
-     * Returns Identifies the length of the package.
+     * Returns Set Length
      *
      * @return nonNegativeInteger
      */
@@ -44,7 +44,7 @@ class Dimensions
     }
     
     /**
-     * Identifies the width of the package.
+     * Set Width
      *
      * @param nonNegativeInteger $width
      * @return Dimensions
@@ -56,7 +56,7 @@ class Dimensions
     }
     
     /**
-     * Returns Identifies the width of the package.
+     * Returns Set Width
      *
      * @return nonNegativeInteger
      */
@@ -66,7 +66,7 @@ class Dimensions
     }
     
     /**
-     * Identifies the height of the package.
+     * Set Height
      *
      * @param nonNegativeInteger $height
      * @return Dimensions
@@ -78,7 +78,7 @@ class Dimensions
     }
     
     /**
-     * Returns Identifies the height of the package.
+     * Returns Set Height
      *
      * @return nonNegativeInteger
      */
@@ -88,7 +88,7 @@ class Dimensions
     }
     
     /**
-     * Identifies the unit of measure associated with a dimensional values. See LinearUnits for valid values.
+     * Set Units
      *
      * @param \FedEx\SimpleType\LinearUnits|string $units
      * @return Dimensions
@@ -100,7 +100,7 @@ class Dimensions
     }
     
     /**
-     * Returns Identifies the unit of measure associated with a dimensional values. See LinearUnits for valid values.
+     * Returns Set Units
      *
      * @return \FedEx\SimpleType\LinearUnits|string
      */

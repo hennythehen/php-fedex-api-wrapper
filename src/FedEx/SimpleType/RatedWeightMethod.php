@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * The weight method used to calculate the rate.
+ * RatedWeightMethod
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class RatedWeightMethod
     extends AbstractSimpleType
@@ -16,6 +16,7 @@ class RatedWeightMethod
     const _ACTUAL = 'ACTUAL';
     const _AVERAGE_PACKAGE_WEIGHT_MINIMUM = 'AVERAGE_PACKAGE_WEIGHT_MINIMUM';
     const _BALLOON = 'BALLOON';
+    const _DEFAULT_WEIGHT_APPLIED = 'DEFAULT_WEIGHT_APPLIED';
     const _DIM = 'DIM';
     const _FREIGHT_MINIMUM = 'FREIGHT_MINIMUM';
     const _MIXED = 'MIXED';

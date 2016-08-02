@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Optional features/characteristics requested for a Freight shipment utilizing a flatbed trailer.
+ * FlatbedTrailerOption
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class FlatbedTrailerOption
     extends AbstractSimpleType

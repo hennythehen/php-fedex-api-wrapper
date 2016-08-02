@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class PendingShipmentDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class PendingShipmentDetail
     protected $_name = 'PendingShipmentDetail';
 
     /**
-     * Identifies the type of FedEx pending shipment
+     * Set Type
      *
      * @param \FedEx\SimpleType\PendingShipmentType|string $type
      * @return PendingShipmentDetail
@@ -34,7 +34,7 @@ class PendingShipmentDetail
     }
     
     /**
-     * Returns Identifies the type of FedEx pending shipment
+     * Returns Set Type
      *
      * @return \FedEx\SimpleType\PendingShipmentType|string
      */
@@ -85,6 +85,50 @@ class PendingShipmentDetail
     public function getEmailLabelDetail()
     {
         return $this->EmailLabelDetail;
+    }
+    
+    /**
+     * Set ProcessingOptions
+     *
+     * @param PendingShipmentProcessingOptionsRequested $processingOptions
+     * @return PendingShipmentDetail
+     */
+    public function setProcessingOptions(PendingShipmentProcessingOptionsRequested $processingOptions)
+    {
+        $this->ProcessingOptions = $processingOptions;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ProcessingOptions
+     *
+     * @return PendingShipmentProcessingOptionsRequested
+     */
+    public function getProcessingOptions()
+    {
+        return $this->ProcessingOptions;
+    }
+    
+    /**
+     * These are documents that are recommended to be included with the shipment.
+     *
+     * @param RecommendedDocumentSpecification $recommendedDocumentSpecification
+     * @return PendingShipmentDetail
+     */
+    public function setRecommendedDocumentSpecification(RecommendedDocumentSpecification $recommendedDocumentSpecification)
+    {
+        $this->RecommendedDocumentSpecification = $recommendedDocumentSpecification;
+        return $this;
+    }
+    
+    /**
+     * Returns These are documents that are recommended to be included with the shipment.
+     *
+     * @return RecommendedDocumentSpecification
+     */
+    public function getRecommendedDocumentSpecification()
+    {
+        return $this->RecommendedDocumentSpecification;
     }
     
 

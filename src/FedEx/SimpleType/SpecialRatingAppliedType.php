@@ -4,15 +4,16 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Special circumstance rating used for this shipment.
+ * SpecialRatingAppliedType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class SpecialRatingAppliedType
     extends AbstractSimpleType
 {
+    const _FEDEX_ONE_RATE = 'FEDEX_ONE_RATE';
     const _FIXED_FUEL_SURCHARGE = 'FIXED_FUEL_SURCHARGE';
     const _IMPORT_PRICING = 'IMPORT_PRICING';
 }

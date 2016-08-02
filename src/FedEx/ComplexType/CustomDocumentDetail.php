@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomDocumentDetail
     extends AbstractComplexType
@@ -110,47 +110,25 @@ class CustomDocumentDetail
     }
     
     /**
-     * Identifies the individual document specified by the client.
+     * Set CustomContent
      *
-     * @param string $customDocumentIdentifier
+     * @param CustomLabelDetail $customContent
      * @return CustomDocumentDetail
      */
-    public function setCustomDocumentIdentifier($customDocumentIdentifier)
+    public function setCustomContent(CustomLabelDetail $customContent)
     {
-        $this->CustomDocumentIdentifier = $customDocumentIdentifier;
+        $this->CustomContent = $customContent;
         return $this;
     }
     
     /**
-     * Returns Identifies the individual document specified by the client.
+     * Returns Set CustomContent
      *
-     * @return string
+     * @return CustomLabelDetail
      */
-    public function getCustomDocumentIdentifier()
+    public function getCustomContent()
     {
-        return $this->CustomDocumentIdentifier;
-    }
-    
-    /**
-     * If provided, thermal documents will include specified doc tab content. If omitted, document will be produced without doc tab content.
-     *
-     * @param DocTabContent $docTabContent
-     * @return CustomDocumentDetail
-     */
-    public function setDocTabContent(DocTabContent $docTabContent)
-    {
-        $this->DocTabContent = $docTabContent;
-        return $this;
-    }
-    
-    /**
-     * Returns If provided, thermal documents will include specified doc tab content. If omitted, document will be produced without doc tab content.
-     *
-     * @return DocTabContent
-     */
-    public function getDocTabContent()
-    {
-        return $this->DocTabContent;
+        return $this->CustomContent;
     }
     
 

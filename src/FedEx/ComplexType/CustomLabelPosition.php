@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomLabelPosition
     extends AbstractComplexType
@@ -46,7 +46,7 @@ class CustomLabelPosition
     /**
      * Vertical position, relative to top edge of custom area.
      *
-     * @param nonNegativeInteger $y
+     * @param int $y
      * @return CustomLabelPosition
      */
     public function setY($y)
@@ -58,7 +58,7 @@ class CustomLabelPosition
     /**
      * Returns Vertical position, relative to top edge of custom area.
      *
-     * @return nonNegativeInteger
+     * @return int
      */
     public function getY()
     {

@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class FreightAddressLabelDetail
     extends AbstractComplexType
@@ -107,6 +107,50 @@ class FreightAddressLabelDetail
     public function getDocTabContent()
     {
         return $this->DocTabContent;
+    }
+    
+    /**
+     * Controls the position of the customer specified content relative to the FedEx portion.
+     *
+     * @param \FedEx\SimpleType\RelativeVerticalPositionType|string $customContentPosition
+     * @return FreightAddressLabelDetail
+     */
+    public function setCustomContentPosition($customContentPosition)
+    {
+        $this->CustomContentPosition = $customContentPosition;
+        return $this;
+    }
+    
+    /**
+     * Returns Controls the position of the customer specified content relative to the FedEx portion.
+     *
+     * @return \FedEx\SimpleType\RelativeVerticalPositionType|string
+     */
+    public function getCustomContentPosition()
+    {
+        return $this->CustomContentPosition;
+    }
+    
+    /**
+     * Set CustomContent
+     *
+     * @param CustomLabelDetail $customContent
+     * @return FreightAddressLabelDetail
+     */
+    public function setCustomContent(CustomLabelDetail $customContent)
+    {
+        $this->CustomContent = $customContent;
+        return $this;
+    }
+    
+    /**
+     * Returns Set CustomContent
+     *
+     * @return CustomLabelDetail
+     */
+    public function getCustomContent()
+    {
+        return $this->CustomContent;
     }
     
 

@@ -4,11 +4,11 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * The type of the discount.
+ * RateDiscountType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class RateDiscountType
     extends AbstractSimpleType
@@ -16,7 +16,6 @@ class RateDiscountType
     const _BONUS = 'BONUS';
     const _COUPON = 'COUPON';
     const _EARNED = 'EARNED';
-    const _INCENTIVE = 'INCENTIVE';
     const _OTHER = 'OTHER';
     const _VOLUME = 'VOLUME';
 }

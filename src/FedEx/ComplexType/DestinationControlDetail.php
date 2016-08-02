@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class DestinationControlDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class DestinationControlDetail
     protected $_name = 'DestinationControlDetail';
 
     /**
-     * List of applicable Statment types.
+     * Set StatementTypes
      *
      * @param DestinationControlStatementType[] $statementTypes
      * @return DestinationControlDetail
@@ -34,7 +34,7 @@ class DestinationControlDetail
     }
     
     /**
-     * Returns List of applicable Statment types.
+     * Returns Set StatementTypes
      *
      * @return DestinationControlStatementType[]
      */

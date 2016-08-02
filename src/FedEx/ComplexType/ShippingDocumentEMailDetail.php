@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Close Service
+ * @subpackage  Rate Service
  */
 class ShippingDocumentEMailDetail
     extends AbstractComplexType
@@ -63,6 +63,28 @@ class ShippingDocumentEMailDetail
     public function getGrouping()
     {
         return $this->Grouping;
+    }
+    
+    /**
+     * Specifies the language in which the email containing the document is requested to be composed.
+     *
+     * @param Localization $localization
+     * @return ShippingDocumentEMailDetail
+     */
+    public function setLocalization(Localization $localization)
+    {
+        $this->Localization = $localization;
+        return $this;
+    }
+    
+    /**
+     * Returns Specifies the language in which the email containing the document is requested to be composed.
+     *
+     * @return Localization
+     */
+    public function getLocalization()
+    {
+        return $this->Localization;
     }
     
 

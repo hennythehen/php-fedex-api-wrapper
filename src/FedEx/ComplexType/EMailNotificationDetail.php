@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class EMailNotificationDetail
     extends AbstractComplexType
@@ -21,28 +21,6 @@ class EMailNotificationDetail
      */
     protected $_name = 'EMailNotificationDetail';
 
-    /**
-     * Specifies whether/how email notifications are grouped.
-     *
-     * @param \FedEx\SimpleType\EMailNotificationAggregationType|string $aggregationType
-     * @return EMailNotificationDetail
-     */
-    public function setAggregationType($aggregationType)
-    {
-        $this->AggregationType = $aggregationType;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifies whether/how email notifications are grouped.
-     *
-     * @return \FedEx\SimpleType\EMailNotificationAggregationType|string
-     */
-    public function getAggregationType()
-    {
-        return $this->AggregationType;
-    }
-    
     /**
      * A message that will be included in the email notifications
      *

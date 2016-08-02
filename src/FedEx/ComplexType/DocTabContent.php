@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class DocTabContent
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class DocTabContent
     protected $_name = 'DocTabContent';
 
     /**
-     * The DocTabContentType options available.
+     * Set DocTabContentType
      *
      * @param \FedEx\SimpleType\DocTabContentType|string $docTabContentType
      * @return DocTabContent
@@ -34,7 +34,7 @@ class DocTabContent
     }
     
     /**
-     * Returns The DocTabContentType options available.
+     * Returns Set DocTabContentType
      *
      * @return \FedEx\SimpleType\DocTabContentType|string
      */
@@ -44,7 +44,7 @@ class DocTabContent
     }
     
     /**
-     * The DocTabContentType should be set to ZONE001 to specify additional Zone details.
+     * Set Zone001
      *
      * @param DocTabContentZone001 $zone001
      * @return DocTabContent
@@ -56,7 +56,7 @@ class DocTabContent
     }
     
     /**
-     * Returns The DocTabContentType should be set to ZONE001 to specify additional Zone details.
+     * Returns Set Zone001
      *
      * @return DocTabContentZone001
      */
@@ -66,7 +66,7 @@ class DocTabContent
     }
     
     /**
-     * The DocTabContentType should be set to BARCODED to specify additional BarCoded details.
+     * Set Barcoded
      *
      * @param DocTabContentBarcoded $barcoded
      * @return DocTabContent
@@ -78,7 +78,7 @@ class DocTabContent
     }
     
     /**
-     * Returns The DocTabContentType should be set to BARCODED to specify additional BarCoded details.
+     * Returns Set Barcoded
      *
      * @return DocTabContentBarcoded
      */

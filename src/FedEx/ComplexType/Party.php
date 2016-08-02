@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for a person or company entitiy doing business with FedEx.
+ * Party
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class Party
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class Party
     protected $_name = 'Party';
 
     /**
-     * Identifies the FedEx account number assigned to the customer.
+     * Set AccountNumber
      *
      * @param string $accountNumber
      * @return Party
@@ -34,7 +34,7 @@ class Party
     }
     
     /**
-     * Returns Identifies the FedEx account number assigned to the customer.
+     * Returns Set AccountNumber
      *
      * @return string
      */
@@ -66,7 +66,7 @@ class Party
     }
     
     /**
-     * Descriptive data identifying the point-of-contact person.
+     * Set Contact
      *
      * @param Contact $contact
      * @return Party
@@ -78,7 +78,7 @@ class Party
     }
     
     /**
-     * Returns Descriptive data identifying the point-of-contact person.
+     * Returns Set Contact
      *
      * @return Contact
      */
@@ -88,7 +88,7 @@ class Party
     }
     
     /**
-     * The descriptive data for a physical location.
+     * Set Address
      *
      * @param Address $address
      * @return Party
@@ -100,7 +100,7 @@ class Party
     }
     
     /**
-     * Returns The descriptive data for a physical location.
+     * Returns Set Address
      *
      * @return Address
      */

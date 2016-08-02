@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CommercialInvoice
     extends AbstractComplexType
@@ -242,28 +242,6 @@ class CommercialInvoice
     }
     
     /**
-     * Additional customer reference data.
-     *
-     * @param CustomerReference[] $customerReferences
-     * @return CommercialInvoice
-     */
-    public function setCustomerReferences(array $customerReferences)
-    {
-        $this->CustomerReferences = $customerReferences;
-        return $this;
-    }
-    
-    /**
-     * Returns Additional customer reference data.
-     *
-     * @return CustomerReference[]
-     */
-    public function getCustomerReferences()
-    {
-        return $this->CustomerReferences;
-    }
-    
-    /**
      * Name of the International Expert that completed the Commercial Invoice different from Sender.
      *
      * @param string $originatorName
@@ -286,9 +264,9 @@ class CommercialInvoice
     }
     
     /**
-     * Required for dutiable international Express or Ground shipment. This field is not applicable to an international PIB(document) or a non-document which does not require a Commercial Invoice
+     * Required for dutiable international Express or Ground shipments. This field is not applicable to an international PIB(document) or a non-document which does not require a Commercial Invoice.
      *
-     * @param \FedEx\SimpleType\TermsOfSaleType|string $termsOfSale
+     * @param string $termsOfSale
      * @return CommercialInvoice
      */
     public function setTermsOfSale($termsOfSale)
@@ -298,9 +276,9 @@ class CommercialInvoice
     }
     
     /**
-     * Returns Required for dutiable international Express or Ground shipment. This field is not applicable to an international PIB(document) or a non-document which does not require a Commercial Invoice
+     * Returns Required for dutiable international Express or Ground shipments. This field is not applicable to an international PIB(document) or a non-document which does not require a Commercial Invoice.
      *
-     * @return \FedEx\SimpleType\TermsOfSaleType|string
+     * @return string
      */
     public function getTermsOfSale()
     {

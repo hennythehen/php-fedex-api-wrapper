@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The variable handling charges calculated based on the type variable handling charges requested.
+ * VariableHandlingCharges
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class VariableHandlingCharges
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class VariableHandlingCharges
     protected $_name = 'VariableHandlingCharges';
 
     /**
-     * The variable handling charge amount calculated based on the requested variable handling charge detail.
+     * Set VariableHandlingCharge
      *
      * @param Money $variableHandlingCharge
      * @return VariableHandlingCharges
@@ -34,7 +34,7 @@ class VariableHandlingCharges
     }
     
     /**
-     * Returns The variable handling charge amount calculated based on the requested variable handling charge detail.
+     * Returns Set VariableHandlingCharge
      *
      * @return Money
      */
@@ -88,7 +88,7 @@ class VariableHandlingCharges
     }
     
     /**
-     * The calculated varibale handling charge plus the net charge.
+     * Set TotalCustomerCharge
      *
      * @param Money $totalCustomerCharge
      * @return VariableHandlingCharges
@@ -100,7 +100,7 @@ class VariableHandlingCharges
     }
     
     /**
-     * Returns The calculated varibale handling charge plus the net charge.
+     * Returns Set TotalCustomerCharge
      *
      * @return Money
      */

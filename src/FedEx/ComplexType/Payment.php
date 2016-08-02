@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for the monetary compensation given to FedEx for services rendered to the customer.
+ * Payment
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class Payment
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class Payment
     protected $_name = 'Payment';
 
     /**
-     * Identifies the method of payment for a service. See PaymentType for list of valid enumerated values.
+     * Set PaymentType
      *
      * @param \FedEx\SimpleType\PaymentType|string $paymentType
      * @return Payment
@@ -34,7 +34,7 @@ class Payment
     }
     
     /**
-     * Returns Identifies the method of payment for a service. See PaymentType for list of valid enumerated values.
+     * Returns Set PaymentType
      *
      * @return \FedEx\SimpleType\PaymentType|string
      */
@@ -44,7 +44,7 @@ class Payment
     }
     
     /**
-     * Descriptive data identifying the party responsible for payment for a service.
+     * Set Payor
      *
      * @param Payor $payor
      * @return Payment
@@ -56,79 +56,13 @@ class Payment
     }
     
     /**
-     * Returns Descriptive data identifying the party responsible for payment for a service.
+     * Returns Set Payor
      *
      * @return Payor
      */
     public function getPayor()
     {
         return $this->Payor;
-    }
-    
-    /**
-     * Set CreditCard
-     *
-     * @param CreditCard $creditCard
-     * @return Payment
-     */
-    public function setCreditCard(CreditCard $creditCard)
-    {
-        $this->CreditCard = $creditCard;
-        return $this;
-    }
-    
-    /**
-     * Returns Set CreditCard
-     *
-     * @return CreditCard
-     */
-    public function getCreditCard()
-    {
-        return $this->CreditCard;
-    }
-    
-    /**
-     * Set CreditCardTransactionDetail
-     *
-     * @param CreditCardTransactionDetail $creditCardTransactionDetail
-     * @return Payment
-     */
-    public function setCreditCardTransactionDetail(CreditCardTransactionDetail $creditCardTransactionDetail)
-    {
-        $this->CreditCardTransactionDetail = $creditCardTransactionDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Set CreditCardTransactionDetail
-     *
-     * @return CreditCardTransactionDetail
-     */
-    public function getCreditCardTransactionDetail()
-    {
-        return $this->CreditCardTransactionDetail;
-    }
-    
-    /**
-     * Descriptive data for the payor's cash payment.
-     *
-     * @param Money $amount
-     * @return Payment
-     */
-    public function setAmount(Money $amount)
-    {
-        $this->Amount = $amount;
-        return $this;
-    }
-    
-    /**
-     * Returns Descriptive data for the payor's cash payment.
-     *
-     * @return Money
-     */
-    public function getAmount()
-    {
-        return $this->Amount;
     }
     
 

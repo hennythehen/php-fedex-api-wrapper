@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive data regarding a FedEx freight service pickup request.
+ * FreightGuaranteeDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class FreightGuaranteeDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class FreightGuaranteeDetail
     protected $_name = 'FreightGuaranteeDetail';
 
     /**
-     * Description of Guarantee
+     * Set Type
      *
      * @param \FedEx\SimpleType\FreightGuaranteeType|string $type
      * @return FreightGuaranteeDetail
@@ -34,7 +34,7 @@ class FreightGuaranteeDetail
     }
     
     /**
-     * Returns Description of Guarantee
+     * Returns Set Type
      *
      * @return \FedEx\SimpleType\FreightGuaranteeType|string
      */

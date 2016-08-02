@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class CodAddTransportationChargesDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class CodAddTransportationChargesDetail
     protected $_name = 'CodAddTransportationChargesDetail';
 
     /**
-     * Set RateTypeBasis
+     * Select the type of rate from which the element is to be selected.
      *
      * @param \FedEx\SimpleType\RateTypeBasisType|string $rateTypeBasis
      * @return CodAddTransportationChargesDetail
@@ -34,7 +34,7 @@ class CodAddTransportationChargesDetail
     }
     
     /**
-     * Returns Set RateTypeBasis
+     * Returns Select the type of rate from which the element is to be selected.
      *
      * @return \FedEx\SimpleType\RateTypeBasisType|string
      */

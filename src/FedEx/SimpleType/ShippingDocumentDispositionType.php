@@ -8,13 +8,15 @@ use FedEx\AbstractSimpleType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Close Service
+ * @subpackage  Rate Service
  */
 class ShippingDocumentDispositionType
     extends AbstractSimpleType
 {
     const _CONFIRMED = 'CONFIRMED';
-    const _DEFERRED = 'DEFERRED';
+    const _DEFERRED_QUEUED = 'DEFERRED_QUEUED';
+    const _DEFERRED_RETURNED = 'DEFERRED_RETURNED';
+    const _DEFERRED_STORED = 'DEFERRED_STORED';
     const _EMAILED = 'EMAILED';
     const _QUEUED = 'QUEUED';
     const _RETURNED = 'RETURNED';

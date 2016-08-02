@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class ClientDetail
     extends AbstractComplexType
@@ -66,29 +66,7 @@ class ClientDetail
     }
     
     /**
-     * Set MeterInstance
-     *
-     * @param string $meterInstance
-     * @return ClientDetail
-     */
-    public function setMeterInstance($meterInstance)
-    {
-        $this->MeterInstance = $meterInstance;
-        return $this;
-    }
-    
-    /**
-     * Returns Set MeterInstance
-     *
-     * @return string
-     */
-    public function getMeterInstance()
-    {
-        return $this->MeterInstance;
-    }
-    
-    /**
-     * Only used in transactions which require identification of the Fed Ex Office integrator.
+     * Only used in transactions which require identification of the FedEx Office integrator.
      *
      * @param string $integratorId
      * @return ClientDetail
@@ -100,7 +78,7 @@ class ClientDetail
     }
     
     /**
-     * Returns Only used in transactions which require identification of the Fed Ex Office integrator.
+     * Returns Only used in transactions which require identification of the FedEx Office integrator.
      *
      * @return string
      */

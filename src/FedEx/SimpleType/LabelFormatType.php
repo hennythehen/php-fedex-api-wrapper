@@ -4,17 +4,19 @@ namespace FedEx\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Specifies the type of label to be returned.
+ * LabelFormatType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class LabelFormatType
     extends AbstractSimpleType
 {
     const _COMMON2D = 'COMMON2D';
-    const _FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING = 'FEDEX_FREIGHT_STRAIGHT_BILL_OF_LADING';
     const _LABEL_DATA_ONLY = 'LABEL_DATA_ONLY';
-    const _VICS_BILL_OF_LADING = 'VICS_BILL_OF_LADING';
+    const _MAILROOM = 'MAILROOM';
+    const _NO_LABEL = 'NO_LABEL';
+    const _OPERATIONAL_LABEL = 'OPERATIONAL_LABEL';
+    const _PRE_COMMON2D = 'PRE_COMMON2D';
 }

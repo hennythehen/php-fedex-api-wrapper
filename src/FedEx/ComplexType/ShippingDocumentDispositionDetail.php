@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Close Service
+ * @subpackage  Rate Service
  */
 class ShippingDocumentDispositionDetail
     extends AbstractComplexType
@@ -63,28 +63,6 @@ class ShippingDocumentDispositionDetail
     public function getGrouping()
     {
         return $this->Grouping;
-    }
-    
-    /**
-     * Specifies how to store document images.
-     *
-     * @param ShippingDocumentStorageDetail $storageDetail
-     * @return ShippingDocumentDispositionDetail
-     */
-    public function setStorageDetail(ShippingDocumentStorageDetail $storageDetail)
-    {
-        $this->StorageDetail = $storageDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifies how to store document images.
-     *
-     * @return ShippingDocumentStorageDetail
-     */
-    public function getStorageDetail()
-    {
-        return $this->StorageDetail;
     }
     
     /**

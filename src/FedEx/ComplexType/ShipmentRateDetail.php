@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class ShipmentRateDetail
     extends AbstractComplexType
@@ -88,7 +88,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Identifies the type of pricing used for this shipment.
+     * Set PricingCode
      *
      * @param \FedEx\SimpleType\PricingCodeType|string $pricingCode
      * @return ShipmentRateDetail
@@ -100,7 +100,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns Identifies the type of pricing used for this shipment.
+     * Returns Set PricingCode
      *
      * @return \FedEx\SimpleType\PricingCodeType|string
      */
@@ -198,7 +198,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The value used to calculate the weight based on the dimensions.
+     * Set DimDivisor
      *
      * @param nonNegativeInteger $dimDivisor
      * @return ShipmentRateDetail
@@ -210,7 +210,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The value used to calculate the weight based on the dimensions.
+     * Returns Set DimDivisor
      *
      * @return nonNegativeInteger
      */
@@ -242,7 +242,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Specifies a fuel surcharge percentage.
+     * Set FuelSurchargePercent
      *
      * @param decimal $fuelSurchargePercent
      * @return ShipmentRateDetail
@@ -254,7 +254,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns Specifies a fuel surcharge percentage.
+     * Returns Set FuelSurchargePercent
      *
      * @return decimal
      */
@@ -264,7 +264,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The weight used to calculate these rates.
+     * Set TotalBillingWeight
      *
      * @param Weight $totalBillingWeight
      * @return ShipmentRateDetail
@@ -276,7 +276,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The weight used to calculate these rates.
+     * Returns Set TotalBillingWeight
      *
      * @return Weight
      */
@@ -308,7 +308,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The total freight charge that was calculated for this package before surcharges, discounts and taxes.
+     * Set TotalBaseCharge
      *
      * @param Money $totalBaseCharge
      * @return ShipmentRateDetail
@@ -320,7 +320,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The total freight charge that was calculated for this package before surcharges, discounts and taxes.
+     * Returns Set TotalBaseCharge
      *
      * @return Money
      */
@@ -330,7 +330,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The total discounts used in the rate calculation.
+     * Set TotalFreightDiscounts
      *
      * @param Money $totalFreightDiscounts
      * @return ShipmentRateDetail
@@ -342,7 +342,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The total discounts used in the rate calculation.
+     * Returns Set TotalFreightDiscounts
      *
      * @return Money
      */
@@ -352,7 +352,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The freight charge minus discounts.
+     * Set TotalNetFreight
      *
      * @param Money $totalNetFreight
      * @return ShipmentRateDetail
@@ -364,7 +364,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The freight charge minus discounts.
+     * Returns Set TotalNetFreight
      *
      * @return Money
      */
@@ -374,7 +374,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The total amount of all surcharges applied to this shipment.
+     * Set TotalSurcharges
      *
      * @param Money $totalSurcharges
      * @return ShipmentRateDetail
@@ -386,7 +386,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The total amount of all surcharges applied to this shipment.
+     * Returns Set TotalSurcharges
      *
      * @return Money
      */
@@ -440,7 +440,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The net charge after applying all discounts and surcharges.
+     * Set TotalNetCharge
      *
      * @param Money $totalNetCharge
      * @return ShipmentRateDetail
@@ -452,7 +452,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The net charge after applying all discounts and surcharges.
+     * Returns Set TotalNetCharge
      *
      * @return Money
      */
@@ -462,7 +462,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * The total sum of all rebates applied to this shipment.
+     * Set TotalRebates
      *
      * @param Money $totalRebates
      * @return ShipmentRateDetail
@@ -474,7 +474,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns The total sum of all rebates applied to this shipment.
+     * Returns Set TotalRebates
      *
      * @return Money
      */

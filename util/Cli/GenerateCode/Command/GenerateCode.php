@@ -80,18 +80,7 @@ class GenerateCode extends Console\Command\Command
         if (!is_writable($this->srcDir)) {
             throw new \Exception('Cannot write to directory: ' . $this->srcDir);
         }
-
+        
         $this->buildToPath('Rate Service', '/_wsdl/RateService_v18.wsdl');
-        $this->buildToPath('Package Movement Information Service','/_wsdl/PackageMovementInformationService_v5.wsdl');
-        $this->buildToPath('Track Service', '/_wsdl/TrackService_v5.wsdl');
-        $this->buildToPath('Address Validation Service', '/_wsdl/AddressValidationService_v2.wsdl');
-        $this->buildToPath('Locator Service', '/_wsdl/LocatorService_v2.wsdl');
-        $this->buildToPath('Ship Service', '/_wsdl/ShipService_v12.wsdl');
-        $this->buildToPath('Courier Dispatch Service', '/_wsdl/CourierDispatchService_v3.wsdl');
-        $this->buildToPath('Close Service', '/_wsdl/CloseService_v2.wsdl');
-        $this->buildToPath('Return Tag Service', '/_wsdl/ReturnTagService_v1.wsdl');
-        $this->buildToPath('Upload Document Service', '/_wsdl/UploadDocumentService_v1.wsdl');
-        $this->buildToPath('Pickup Service', '/_wsdl/PickupService_v3.wsdl');
-
     }
 }

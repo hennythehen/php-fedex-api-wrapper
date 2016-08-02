@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class FreightShipmentLineItem
     extends AbstractComplexType
@@ -41,50 +41,6 @@ class FreightShipmentLineItem
     public function getFreightClass()
     {
         return $this->FreightClass;
-    }
-    
-    /**
-     * FEDEX INTERNAL USE ONLY: for FedEx system that estimate freight class from customer-provided dimensions and weight.
-     *
-     * @param boolean $classProvidedByCustomer
-     * @return FreightShipmentLineItem
-     */
-    public function setClassProvidedByCustomer($classProvidedByCustomer)
-    {
-        $this->ClassProvidedByCustomer = $classProvidedByCustomer;
-        return $this;
-    }
-    
-    /**
-     * Returns FEDEX INTERNAL USE ONLY: for FedEx system that estimate freight class from customer-provided dimensions and weight.
-     *
-     * @return boolean
-     */
-    public function getClassProvidedByCustomer()
-    {
-        return $this->ClassProvidedByCustomer;
-    }
-    
-    /**
-     * Number of individual handling units to which this line applies. (NOTE: Total of line-item-level handling units may not balance to shipment-level total handling units.)
-     *
-     * @param nonNegativeInteger $handlingUnits
-     * @return FreightShipmentLineItem
-     */
-    public function setHandlingUnits($handlingUnits)
-    {
-        $this->HandlingUnits = $handlingUnits;
-        return $this;
-    }
-    
-    /**
-     * Returns Number of individual handling units to which this line applies. (NOTE: Total of line-item-level handling units may not balance to shipment-level total handling units.)
-     *
-     * @return nonNegativeInteger
-     */
-    public function getHandlingUnits()
-    {
-        return $this->HandlingUnits;
     }
     
     /**
@@ -132,72 +88,6 @@ class FreightShipmentLineItem
     }
     
     /**
-     * NMFC Code for commodity.
-     *
-     * @param string $nmfcCode
-     * @return FreightShipmentLineItem
-     */
-    public function setNmfcCode($nmfcCode)
-    {
-        $this->NmfcCode = $nmfcCode;
-        return $this;
-    }
-    
-    /**
-     * Returns NMFC Code for commodity.
-     *
-     * @return string
-     */
-    public function getNmfcCode()
-    {
-        return $this->NmfcCode;
-    }
-    
-    /**
-     * Indicates the kind of hazardous material content in this line item.
-     *
-     * @param \FedEx\SimpleType\HazardousCommodityOptionType|string $hazardousMaterials
-     * @return FreightShipmentLineItem
-     */
-    public function setHazardousMaterials($hazardousMaterials)
-    {
-        $this->HazardousMaterials = $hazardousMaterials;
-        return $this;
-    }
-    
-    /**
-     * Returns Indicates the kind of hazardous material content in this line item.
-     *
-     * @return \FedEx\SimpleType\HazardousCommodityOptionType|string
-     */
-    public function getHazardousMaterials()
-    {
-        return $this->HazardousMaterials;
-    }
-    
-    /**
-     * For printed reference per line item.
-     *
-     * @param string $purchaseOrderNumber
-     * @return FreightShipmentLineItem
-     */
-    public function setPurchaseOrderNumber($purchaseOrderNumber)
-    {
-        $this->PurchaseOrderNumber = $purchaseOrderNumber;
-        return $this;
-    }
-    
-    /**
-     * Returns For printed reference per line item.
-     *
-     * @return string
-     */
-    public function getPurchaseOrderNumber()
-    {
-        return $this->PurchaseOrderNumber;
-    }
-    
-    /**
      * Customer-provided description for this commodity or class line.
      *
      * @param string $description
@@ -242,7 +132,7 @@ class FreightShipmentLineItem
     }
     
     /**
-     * FED EX INTERNAL USE ONLY - Individual line item dimensions.
+     * Set Dimensions
      *
      * @param Dimensions $dimensions
      * @return FreightShipmentLineItem
@@ -254,7 +144,7 @@ class FreightShipmentLineItem
     }
     
     /**
-     * Returns FED EX INTERNAL USE ONLY - Individual line item dimensions.
+     * Returns Set Dimensions
      *
      * @return Dimensions
      */

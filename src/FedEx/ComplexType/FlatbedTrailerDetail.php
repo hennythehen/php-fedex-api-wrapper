@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class FlatbedTrailerDetail
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class FlatbedTrailerDetail
     protected $_name = 'FlatbedTrailerDetail';
 
     /**
-     * Specifies the optional features/characteristics requested for a Freight shipment utilizing a flatbed trailer.
+     * Set Options
      *
      * @param FlatbedTrailerOption[] $options
      * @return FlatbedTrailerDetail
@@ -34,7 +34,7 @@ class FlatbedTrailerDetail
     }
     
     /**
-     * Returns Specifies the optional features/characteristics requested for a Freight shipment utilizing a flatbed trailer.
+     * Returns Set Options
      *
      * @return FlatbedTrailerOption[]
      */

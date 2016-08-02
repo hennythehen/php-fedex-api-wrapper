@@ -121,7 +121,9 @@ class GenerateRequestClass extends AbstractGenerate
      * @return string
      */
     protected function _getGeneratedFileBody(array $requestFunctionDefinitions)
-    {        
+    {
+        $className = str_replace(" ", "", $this->_subPackageName);
+
         $relativePathToWSDL = $this->getRelativePath($this->_pathToRequestClassFile, $this->_wsdlPath);
 
         $requestFunctions = '';
@@ -157,7 +159,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  {$this->_subPackageName}
  */
-class Request extends AbstractRequest
+class {$className}Request extends AbstractRequest
 {
     /**
      * WSDL Path

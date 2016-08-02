@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data required for a FedEx shipment containing dangerous goods (hazardous materials).
+ * DangerousGoodsDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class DangerousGoodsDetail
     extends AbstractComplexType
@@ -22,7 +22,29 @@ class DangerousGoodsDetail
     protected $_name = 'DangerousGoodsDetail';
 
     /**
-     * Identifies whether or not the products being shipped are required to be accessible during delivery.
+     * Set Regulation
+     *
+     * @param \FedEx\SimpleType\HazardousCommodityRegulationType|string $regulation
+     * @return DangerousGoodsDetail
+     */
+    public function setRegulation($regulation)
+    {
+        $this->Regulation = $regulation;
+        return $this;
+    }
+    
+    /**
+     * Returns Set Regulation
+     *
+     * @return \FedEx\SimpleType\HazardousCommodityRegulationType|string
+     */
+    public function getRegulation()
+    {
+        return $this->Regulation;
+    }
+    
+    /**
+     * Set Accessibility
      *
      * @param \FedEx\SimpleType\DangerousGoodsAccessibilityType|string $accessibility
      * @return DangerousGoodsDetail
@@ -34,7 +56,7 @@ class DangerousGoodsDetail
     }
     
     /**
-     * Returns Identifies whether or not the products being shipped are required to be accessible during delivery.
+     * Returns Set Accessibility
      *
      * @return \FedEx\SimpleType\DangerousGoodsAccessibilityType|string
      */

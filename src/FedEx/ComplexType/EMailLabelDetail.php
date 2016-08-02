@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Describes specific information about the email label shipment.
+ * EMailLabelDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class EMailLabelDetail
     extends AbstractComplexType
@@ -22,47 +22,47 @@ class EMailLabelDetail
     protected $_name = 'EMailLabelDetail';
 
     /**
-     * Notification email will be sent to this email address
+     * Content of the email message.
      *
-     * @param string $notificationEMailAddress
+     * @param string $message
      * @return EMailLabelDetail
      */
-    public function setNotificationEMailAddress($notificationEMailAddress)
+    public function setMessage($message)
     {
-        $this->NotificationEMailAddress = $notificationEMailAddress;
+        $this->Message = $message;
         return $this;
     }
     
     /**
-     * Returns Notification email will be sent to this email address
+     * Returns Content of the email message.
      *
      * @return string
      */
-    public function getNotificationEMailAddress()
+    public function getMessage()
     {
-        return $this->NotificationEMailAddress;
+        return $this->Message;
     }
     
     /**
-     * Message to be sent in the notification email
+     * Set Recipients
      *
-     * @param string $notificationMessage
+     * @param EMailRecipient[] $recipients
      * @return EMailLabelDetail
      */
-    public function setNotificationMessage($notificationMessage)
+    public function setRecipients(array $recipients)
     {
-        $this->NotificationMessage = $notificationMessage;
+        $this->Recipients = $recipients;
         return $this;
     }
     
     /**
-     * Returns Message to be sent in the notification email
+     * Returns Set Recipients
      *
-     * @return string
+     * @return EMailRecipient[]
      */
-    public function getNotificationMessage()
+    public function getRecipients()
     {
-        return $this->NotificationMessage;
+        return $this->Recipients;
     }
     
 

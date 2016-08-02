@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Pickup Service
+ * @subpackage  Rate Service
  */
 class ShipmentSpecialServicesRequested
     extends AbstractComplexType
@@ -44,7 +44,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Descriptive data required for a FedEx COD (Collect-On-Delivery) shipment. This element is required when SpecialServiceType.COD is present in the SpecialServiceTypes collection.
+     * Set CodDetail
      *
      * @param CodDetail $codDetail
      * @return ShipmentSpecialServicesRequested
@@ -56,7 +56,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Descriptive data required for a FedEx COD (Collect-On-Delivery) shipment. This element is required when SpecialServiceType.COD is present in the SpecialServiceTypes collection.
+     * Returns Set CodDetail
      *
      * @return CodDetail
      */
@@ -66,7 +66,29 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Descriptive data required for a FedEx shipment that is to be held at the destination FedEx location for pickup by the recipient. This element is required when SpecialServiceType.HOLD_AT_LOCATION is present in the SpecialServiceTypes collection.
+     * Set DeliveryOnInvoiceAcceptanceDetail
+     *
+     * @param DeliveryOnInvoiceAcceptanceDetail $deliveryOnInvoiceAcceptanceDetail
+     * @return ShipmentSpecialServicesRequested
+     */
+    public function setDeliveryOnInvoiceAcceptanceDetail(DeliveryOnInvoiceAcceptanceDetail $deliveryOnInvoiceAcceptanceDetail)
+    {
+        $this->DeliveryOnInvoiceAcceptanceDetail = $deliveryOnInvoiceAcceptanceDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set DeliveryOnInvoiceAcceptanceDetail
+     *
+     * @return DeliveryOnInvoiceAcceptanceDetail
+     */
+    public function getDeliveryOnInvoiceAcceptanceDetail()
+    {
+        return $this->DeliveryOnInvoiceAcceptanceDetail;
+    }
+    
+    /**
+     * Set HoldAtLocationDetail
      *
      * @param HoldAtLocationDetail $holdAtLocationDetail
      * @return ShipmentSpecialServicesRequested
@@ -78,7 +100,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Descriptive data required for a FedEx shipment that is to be held at the destination FedEx location for pickup by the recipient. This element is required when SpecialServiceType.HOLD_AT_LOCATION is present in the SpecialServiceTypes collection.
+     * Returns Set HoldAtLocationDetail
      *
      * @return HoldAtLocationDetail
      */
@@ -88,7 +110,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Descriptive data required for FedEx to provide email notification to the customer regarding the shipment. This element is required when SpecialServiceType.EMAIL_NOTIFICATION is present in the SpecialServiceTypes collection.
+     * Set EMailNotificationDetail
      *
      * @param EMailNotificationDetail $eMailNotificationDetail
      * @return ShipmentSpecialServicesRequested
@@ -100,7 +122,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Descriptive data required for FedEx to provide email notification to the customer regarding the shipment. This element is required when SpecialServiceType.EMAIL_NOTIFICATION is present in the SpecialServiceTypes collection.
+     * Returns Set EMailNotificationDetail
      *
      * @return EMailNotificationDetail
      */
@@ -110,7 +132,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * The descriptive data required for FedEx Printed Return Label. This element is required when SpecialServiceType.PRINTED_RETURN_LABEL is present in the SpecialServiceTypes collection
+     * Set ReturnShipmentDetail
      *
      * @param ReturnShipmentDetail $returnShipmentDetail
      * @return ShipmentSpecialServicesRequested
@@ -122,7 +144,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns The descriptive data required for FedEx Printed Return Label. This element is required when SpecialServiceType.PRINTED_RETURN_LABEL is present in the SpecialServiceTypes collection
+     * Returns Set ReturnShipmentDetail
      *
      * @return ReturnShipmentDetail
      */
@@ -176,7 +198,29 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Number of packages in this shipment which contain dry ice and the total weight of the dry ice for this shipment.
+     * Set InternationalTrafficInArmsRegulationsDetail
+     *
+     * @param InternationalTrafficInArmsRegulationsDetail $internationalTrafficInArmsRegulationsDetail
+     * @return ShipmentSpecialServicesRequested
+     */
+    public function setInternationalTrafficInArmsRegulationsDetail(InternationalTrafficInArmsRegulationsDetail $internationalTrafficInArmsRegulationsDetail)
+    {
+        $this->InternationalTrafficInArmsRegulationsDetail = $internationalTrafficInArmsRegulationsDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set InternationalTrafficInArmsRegulationsDetail
+     *
+     * @return InternationalTrafficInArmsRegulationsDetail
+     */
+    public function getInternationalTrafficInArmsRegulationsDetail()
+    {
+        return $this->InternationalTrafficInArmsRegulationsDetail;
+    }
+    
+    /**
+     * Set ShipmentDryIceDetail
      *
      * @param ShipmentDryIceDetail $shipmentDryIceDetail
      * @return ShipmentSpecialServicesRequested
@@ -188,7 +232,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Number of packages in this shipment which contain dry ice and the total weight of the dry ice for this shipment.
+     * Returns Set ShipmentDryIceDetail
      *
      * @return ShipmentDryIceDetail
      */
@@ -198,7 +242,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * The descriptive data required for FedEx Home Delivery options. This element is required when SpecialServiceType.HOME_DELIVERY_PREMIUM is present in the SpecialServiceTypes collection
+     * Set HomeDeliveryPremiumDetail
      *
      * @param HomeDeliveryPremiumDetail $homeDeliveryPremiumDetail
      * @return ShipmentSpecialServicesRequested
@@ -210,7 +254,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns The descriptive data required for FedEx Home Delivery options. This element is required when SpecialServiceType.HOME_DELIVERY_PREMIUM is present in the SpecialServiceTypes collection
+     * Returns Set HomeDeliveryPremiumDetail
      *
      * @return HomeDeliveryPremiumDetail
      */
@@ -220,7 +264,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Identifies the delivery guarantee information.
+     * Set FlatbedTrailerDetail
      *
      * @param FlatbedTrailerDetail $flatbedTrailerDetail
      * @return ShipmentSpecialServicesRequested
@@ -232,7 +276,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Identifies the delivery guarantee information.
+     * Returns Set FlatbedTrailerDetail
      *
      * @return FlatbedTrailerDetail
      */
@@ -242,7 +286,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Identifies the delivery guarantee information.
+     * Set FreightGuaranteeDetail
      *
      * @param FreightGuaranteeDetail $freightGuaranteeDetail
      * @return ShipmentSpecialServicesRequested
@@ -254,7 +298,7 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Returns Identifies the delivery guarantee information.
+     * Returns Set FreightGuaranteeDetail
      *
      * @return FreightGuaranteeDetail
      */
@@ -283,248 +327,6 @@ class ShipmentSpecialServicesRequested
     public function getEtdDetail()
     {
         return $this->EtdDetail;
-    }
-    
-    /**
-     * Specification for labor to be performed with the shipment.
-     *
-     * @param ExtraLaborDetail $extraLaborDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setExtraLaborDetail(ExtraLaborDetail $extraLaborDetail)
-    {
-        $this->ExtraLaborDetail = $extraLaborDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for labor to be performed with the shipment.
-     *
-     * @return ExtraLaborDetail
-     */
-    public function getExtraLaborDetail()
-    {
-        return $this->ExtraLaborDetail;
-    }
-    
-    /**
-     * Specifications for pallets to be shrinkwrapped as part of a Freight shipment.
-     *
-     * @param PalletShrinkwrapDetail $palletShrinkwrapDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setPalletShrinkwrapDetail(PalletShrinkwrapDetail $palletShrinkwrapDetail)
-    {
-        $this->PalletShrinkwrapDetail = $palletShrinkwrapDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifications for pallets to be shrinkwrapped as part of a Freight shipment.
-     *
-     * @return PalletShrinkwrapDetail
-     */
-    public function getPalletShrinkwrapDetail()
-    {
-        return $this->PalletShrinkwrapDetail;
-    }
-    
-    /**
-     * Specifications for pallets to be provided on Freight shipment.
-     *
-     * @param PalletsProvidedDetail $palletsProvidedDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setPalletsProvidedDetail(PalletsProvidedDetail $palletsProvidedDetail)
-    {
-        $this->PalletsProvidedDetail = $palletsProvidedDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifications for pallets to be provided on Freight shipment.
-     *
-     * @return PalletsProvidedDetail
-     */
-    public function getPalletsProvidedDetail()
-    {
-        return $this->PalletsProvidedDetail;
-    }
-    
-    /**
-     * Specifications for pup/set or vehicle delayed for loading or unloading.
-     *
-     * @param DetentionDetail $detentionDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setDetentionDetail(DetentionDetail $detentionDetail)
-    {
-        $this->DetentionDetail = $detentionDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specifications for pup/set or vehicle delayed for loading or unloading.
-     *
-     * @return DetentionDetail
-     */
-    public function getDetentionDetail()
-    {
-        return $this->DetentionDetail;
-    }
-    
-    /**
-     * Specification for marking or tagging of pieces in shipment.
-     *
-     * @param MarkingOrTaggingDetail $markingOrTaggingDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setMarkingOrTaggingDetail(MarkingOrTaggingDetail $markingOrTaggingDetail)
-    {
-        $this->MarkingOrTaggingDetail = $markingOrTaggingDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for marking or tagging of pieces in shipment.
-     *
-     * @return MarkingOrTaggingDetail
-     */
-    public function getMarkingOrTaggingDetail()
-    {
-        return $this->MarkingOrTaggingDetail;
-    }
-    
-    /**
-     * Specification for services performed during non-business hours and/or days.
-     *
-     * @param NonBusinessTimeDetail $nonBusinessTimeDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setNonBusinessTimeDetail(NonBusinessTimeDetail $nonBusinessTimeDetail)
-    {
-        $this->NonBusinessTimeDetail = $nonBusinessTimeDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for services performed during non-business hours and/or days.
-     *
-     * @return NonBusinessTimeDetail
-     */
-    public function getNonBusinessTimeDetail()
-    {
-        return $this->NonBusinessTimeDetail;
-    }
-    
-    /**
-     * Specification for assembly performed on shipment.
-     *
-     * @param ShipmentAssemblyDetail $shipmentAssemblyDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setShipmentAssemblyDetail(ShipmentAssemblyDetail $shipmentAssemblyDetail)
-    {
-        $this->ShipmentAssemblyDetail = $shipmentAssemblyDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for assembly performed on shipment.
-     *
-     * @return ShipmentAssemblyDetail
-     */
-    public function getShipmentAssemblyDetail()
-    {
-        return $this->ShipmentAssemblyDetail;
-    }
-    
-    /**
-     * Specification for sorting and/or segregating performed on shipment.
-     *
-     * @param SortAndSegregateDetail $sortAndSegregateDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setSortAndSegregateDetail(SortAndSegregateDetail $sortAndSegregateDetail)
-    {
-        $this->SortAndSegregateDetail = $sortAndSegregateDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for sorting and/or segregating performed on shipment.
-     *
-     * @return SortAndSegregateDetail
-     */
-    public function getSortAndSegregateDetail()
-    {
-        return $this->SortAndSegregateDetail;
-    }
-    
-    /**
-     * Specification for special equipment used in loading/unloading shipment.
-     *
-     * @param SpecialEquipmentDetail $specialEquipmentDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setSpecialEquipmentDetail(SpecialEquipmentDetail $specialEquipmentDetail)
-    {
-        $this->SpecialEquipmentDetail = $specialEquipmentDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for special equipment used in loading/unloading shipment.
-     *
-     * @return SpecialEquipmentDetail
-     */
-    public function getSpecialEquipmentDetail()
-    {
-        return $this->SpecialEquipmentDetail;
-    }
-    
-    /**
-     * Specification for storage provided for shipment.
-     *
-     * @param StorageDetail $storageDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setStorageDetail(StorageDetail $storageDetail)
-    {
-        $this->StorageDetail = $storageDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for storage provided for shipment.
-     *
-     * @return StorageDetail
-     */
-    public function getStorageDetail()
-    {
-        return $this->StorageDetail;
-    }
-    
-    /**
-     * Specification for weighing services provided for shipment.
-     *
-     * @param WeighingDetail $weighingDetail
-     * @return ShipmentSpecialServicesRequested
-     */
-    public function setWeighingDetail(WeighingDetail $weighingDetail)
-    {
-        $this->WeighingDetail = $weighingDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Specification for weighing services provided for shipment.
-     *
-     * @return WeighingDetail
-     */
-    public function getWeighingDetail()
-    {
-        return $this->WeighingDetail;
     }
     
     /**

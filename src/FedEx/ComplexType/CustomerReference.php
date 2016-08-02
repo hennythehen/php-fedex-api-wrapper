@@ -4,11 +4,11 @@ namespace FedEx\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Reference information to be associated with this package.
+ * CustomerReference
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Ship Service
+ * @subpackage  Rate Service
  */
 class CustomerReference
     extends AbstractComplexType
@@ -22,7 +22,7 @@ class CustomerReference
     protected $_name = 'CustomerReference';
 
     /**
-     * The reference type to be associated with this reference data.
+     * Set CustomerReferenceType
      *
      * @param \FedEx\SimpleType\CustomerReferenceType|string $customerReferenceType
      * @return CustomerReference
@@ -34,7 +34,7 @@ class CustomerReference
     }
     
     /**
-     * Returns The reference type to be associated with this reference data.
+     * Returns Set CustomerReferenceType
      *
      * @return \FedEx\SimpleType\CustomerReferenceType|string
      */
