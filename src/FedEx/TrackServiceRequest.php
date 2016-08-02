@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Track Service
  */
-class Request extends AbstractRequest
+class TrackServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

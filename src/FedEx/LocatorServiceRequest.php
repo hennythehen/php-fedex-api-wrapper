@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Locator Service
  */
-class Request extends AbstractRequest
+class LocatorServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

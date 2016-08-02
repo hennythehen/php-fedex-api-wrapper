@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Return Tag Service
  */
-class Request extends AbstractRequest
+class ReturnTagServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

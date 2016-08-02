@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Address Validation Service
  */
-class Request extends AbstractRequest
+class AddressValidationServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

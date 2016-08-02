@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Rate Service
  */
-class Request extends AbstractRequest
+class RateServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

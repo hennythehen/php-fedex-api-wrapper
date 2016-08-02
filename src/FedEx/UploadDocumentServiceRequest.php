@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Upload Document Service
  */
-class Request extends AbstractRequest
+class UploadDocumentServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path

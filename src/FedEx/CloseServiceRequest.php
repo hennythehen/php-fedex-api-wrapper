@@ -10,7 +10,7 @@ use FedEx\AbstractRequest;
  * @package     PHP FedEx API wrapper
  * @subpackage  Close Service
  */
-class Request extends AbstractRequest
+class CloseServiceRequest extends AbstractRequest
 {
     /**
      * WSDL Path
