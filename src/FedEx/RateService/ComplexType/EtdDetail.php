@@ -25,7 +25,7 @@ class EtdDetail
      * Indicates the types of shipping documents produced for the shipper by FedEx (see ShippingDocumentSpecification) which should be copied back to the shipper in the shipment result data.
      *
      * @param RequestedShippingDocumentType[] $requestedDocumentCopies
-     * return EtdDetail
+     * @return EtdDetail
      */
     public function setRequestedDocumentCopies(array $requestedDocumentCopies)
     {
@@ -34,27 +34,35 @@ class EtdDetail
     }
     
     /**
-     * Currently not supported.
+     * Returns Indicates the types of shipping documents produced for the shipper by FedEx (see ShippingDocumentSpecification) which should be copied back to the shipper in the shipment result data.
      *
-     * @param UploadDocumentDetail[] $documents
-     * return EtdDetail
+     * @return RequestedShippingDocumentType[]
      */
-    public function setDocuments(array $documents)
+    public function getRequestedDocumentCopies()
     {
-        $this->Documents = $documents;
-        return $this;
+        return $this->RequestedDocumentCopies;
     }
     
     /**
      * Set DocumentReferences
      *
      * @param UploadDocumentReferenceDetail[] $documentReferences
-     * return EtdDetail
+     * @return EtdDetail
      */
     public function setDocumentReferences(array $documentReferences)
     {
         $this->DocumentReferences = $documentReferences;
         return $this;
+    }
+    
+    /**
+     * Returns Set DocumentReferences
+     *
+     * @return UploadDocumentReferenceDetail[]
+     */
+    public function getDocumentReferences()
+    {
+        return $this->DocumentReferences;
     }
     
 

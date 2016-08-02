@@ -22,10 +22,32 @@ class SmartPostShipmentDetail
     protected $_name = 'SmartPostShipmentDetail';
 
     /**
+     * Set ProcessingOptionsRequested
+     *
+     * @param SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested
+     * @return SmartPostShipmentDetail
+     */
+    public function setProcessingOptionsRequested(SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested)
+    {
+        $this->ProcessingOptionsRequested = $processingOptionsRequested;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ProcessingOptionsRequested
+     *
+     * @return SmartPostShipmentProcessingOptionsRequested
+     */
+    public function getProcessingOptionsRequested()
+    {
+        return $this->ProcessingOptionsRequested;
+    }
+    
+    /**
      * Set Indicia
      *
      * @param \FedEx\RateService\SimpleType\SmartPostIndiciaType|string $indicia
-     * return SmartPostShipmentDetail
+     * @return SmartPostShipmentDetail
      */
     public function setIndicia($indicia)
     {
@@ -34,10 +56,20 @@ class SmartPostShipmentDetail
     }
     
     /**
+     * Returns Set Indicia
+     *
+     * @return \FedEx\RateService\SimpleType\SmartPostIndiciaType|string
+     */
+    public function getIndicia()
+    {
+        return $this->Indicia;
+    }
+    
+    /**
      * Set AncillaryEndorsement
      *
      * @param \FedEx\RateService\SimpleType\SmartPostAncillaryEndorsementType|string $ancillaryEndorsement
-     * return SmartPostShipmentDetail
+     * @return SmartPostShipmentDetail
      */
     public function setAncillaryEndorsement($ancillaryEndorsement)
     {
@@ -46,10 +78,20 @@ class SmartPostShipmentDetail
     }
     
     /**
+     * Returns Set AncillaryEndorsement
+     *
+     * @return \FedEx\RateService\SimpleType\SmartPostAncillaryEndorsementType|string
+     */
+    public function getAncillaryEndorsement()
+    {
+        return $this->AncillaryEndorsement;
+    }
+    
+    /**
      * Set HubId
      *
      * @param string $hubId
-     * return SmartPostShipmentDetail
+     * @return SmartPostShipmentDetail
      */
     public function setHubId($hubId)
     {
@@ -58,15 +100,35 @@ class SmartPostShipmentDetail
     }
     
     /**
+     * Returns Set HubId
+     *
+     * @return string
+     */
+    public function getHubId()
+    {
+        return $this->HubId;
+    }
+    
+    /**
      * Set CustomerManifestId
      *
      * @param string $customerManifestId
-     * return SmartPostShipmentDetail
+     * @return SmartPostShipmentDetail
      */
     public function setCustomerManifestId($customerManifestId)
     {
         $this->CustomerManifestId = $customerManifestId;
         return $this;
+    }
+    
+    /**
+     * Returns Set CustomerManifestId
+     *
+     * @return string
+     */
+    public function getCustomerManifestId()
+    {
+        return $this->CustomerManifestId;
     }
     
 
