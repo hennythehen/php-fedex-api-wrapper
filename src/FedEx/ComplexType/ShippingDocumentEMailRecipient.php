@@ -14,12 +14,32 @@ class ShippingDocumentEMailRecipient
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RecipientType' => 'EMailNotificationRecipientType',
+'Address' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentEMailRecipient';
+
+        
+    /**
+     * @var \FedEx\SimpleType\EMailNotificationRecipientType|string
+     */
+    public $RecipientType;
+
+        
+    /**
+     * @var string
+     */
+    public $Address;
+
+
 
     /**
      * Identifies the relationship of this recipient in the shipment.
@@ -29,6 +49,7 @@ class ShippingDocumentEMailRecipient
      */
     public function setRecipientType($recipientType)
     {
+        $this->__set('RecipientType', $recipientType);
         $this->RecipientType = $recipientType;
         return $this;
     }
@@ -51,6 +72,7 @@ class ShippingDocumentEMailRecipient
      */
     public function setAddress($address)
     {
+        $this->__set('Address', $address);
         $this->Address = $address;
         return $this;
     }

@@ -14,12 +14,53 @@ class NaftaCommodityDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PreferenceCriterion' => 'NaftaPreferenceCriterionCode',
+'ProducerDetermination' => 'NaftaProducerDeterminationCode',
+'ProducerId' => 'string',
+'NetCostMethod' => 'NaftaNetCostMethodCode',
+'NetCostDateRange' => 'DateRange',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'NaftaCommodityDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\NaftaPreferenceCriterionCode|string
+     */
+    public $PreferenceCriterion;
+
+        
+    /**
+     * @var \FedEx\SimpleType\NaftaProducerDeterminationCode|string
+     */
+    public $ProducerDetermination;
+
+        
+    /**
+     * @var string
+     */
+    public $ProducerId;
+
+        
+    /**
+     * @var \FedEx\SimpleType\NaftaNetCostMethodCode|string
+     */
+    public $NetCostMethod;
+
+        
+    /**
+     * @var DateRange
+     */
+    public $NetCostDateRange;
+
+
 
     /**
      * Defined by NAFTA regulations.
@@ -29,6 +70,7 @@ class NaftaCommodityDetail
      */
     public function setPreferenceCriterion($preferenceCriterion)
     {
+        $this->__set('PreferenceCriterion', $preferenceCriterion);
         $this->PreferenceCriterion = $preferenceCriterion;
         return $this;
     }
@@ -51,6 +93,7 @@ class NaftaCommodityDetail
      */
     public function setProducerDetermination($producerDetermination)
     {
+        $this->__set('ProducerDetermination', $producerDetermination);
         $this->ProducerDetermination = $producerDetermination;
         return $this;
     }
@@ -73,6 +116,7 @@ class NaftaCommodityDetail
      */
     public function setProducerId($producerId)
     {
+        $this->__set('ProducerId', $producerId);
         $this->ProducerId = $producerId;
         return $this;
     }
@@ -95,6 +139,7 @@ class NaftaCommodityDetail
      */
     public function setNetCostMethod($netCostMethod)
     {
+        $this->__set('NetCostMethod', $netCostMethod);
         $this->NetCostMethod = $netCostMethod;
         return $this;
     }
@@ -117,6 +162,7 @@ class NaftaCommodityDetail
      */
     public function setNetCostDateRange(DateRange $netCostDateRange)
     {
+        $this->__set('NetCostDateRange', $netCostDateRange);
         $this->NetCostDateRange = $netCostDateRange;
         return $this;
     }

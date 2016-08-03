@@ -14,12 +14,137 @@ class RateReplyDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ServiceType' => 'ServiceType',
+'PackagingType' => 'PackagingType',
+'AppliedOptions' => 'ServiceOptionType',
+'AppliedSubOptions' => 'ServiceSubOptionDetail',
+'DeliveryStation' => 'string',
+'DeliveryDayOfWeek' => 'DayOfWeekType',
+'DeliveryTimestamp' => 'dateTime',
+'CommitDetails' => 'CommitDetail',
+'DestinationAirportId' => 'string',
+'IneligibleForMoneyBackGuarantee' => 'boolean',
+'OriginServiceArea' => 'string',
+'DestinationServiceArea' => 'string',
+'TransitTime' => 'TransitTimeType',
+'MaximumTransitTime' => 'TransitTimeType',
+'SignatureOption' => 'SignatureOptionType',
+'ActualRateType' => 'ReturnedRateType',
+'RatedShipmentDetails' => 'RatedShipmentDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RateReplyDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ServiceType|string
+     */
+    public $ServiceType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PackagingType|string
+     */
+    public $PackagingType;
+
+        
+    /**
+     * @var ServiceOptionType[]
+     */
+    public $AppliedOptions = array();
+
+        
+    /**
+     * @var ServiceSubOptionDetail
+     */
+    public $AppliedSubOptions;
+
+        
+    /**
+     * @var string
+     */
+    public $DeliveryStation;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DayOfWeekType|string
+     */
+    public $DeliveryDayOfWeek;
+
+        
+    /**
+     * @var dateTime
+     */
+    public $DeliveryTimestamp;
+
+        
+    /**
+     * @var CommitDetail[]
+     */
+    public $CommitDetails = array();
+
+        
+    /**
+     * @var string
+     */
+    public $DestinationAirportId;
+
+        
+    /**
+     * @var boolean
+     */
+    public $IneligibleForMoneyBackGuarantee;
+
+        
+    /**
+     * @var string
+     */
+    public $OriginServiceArea;
+
+        
+    /**
+     * @var string
+     */
+    public $DestinationServiceArea;
+
+        
+    /**
+     * @var \FedEx\SimpleType\TransitTimeType|string
+     */
+    public $TransitTime;
+
+        
+    /**
+     * @var \FedEx\SimpleType\TransitTimeType|string
+     */
+    public $MaximumTransitTime;
+
+        
+    /**
+     * @var \FedEx\SimpleType\SignatureOptionType|string
+     */
+    public $SignatureOption;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ReturnedRateType|string
+     */
+    public $ActualRateType;
+
+        
+    /**
+     * @var RatedShipmentDetail[]
+     */
+    public $RatedShipmentDetails = array();
+
+
 
     /**
      * Set ServiceType
@@ -29,6 +154,7 @@ class RateReplyDetail
      */
     public function setServiceType($serviceType)
     {
+        $this->__set('ServiceType', $serviceType);
         $this->ServiceType = $serviceType;
         return $this;
     }
@@ -51,6 +177,7 @@ class RateReplyDetail
      */
     public function setPackagingType($packagingType)
     {
+        $this->__set('PackagingType', $packagingType);
         $this->PackagingType = $packagingType;
         return $this;
     }
@@ -73,6 +200,7 @@ class RateReplyDetail
      */
     public function setAppliedOptions(array $appliedOptions)
     {
+        $this->__set('AppliedOptions', $appliedOptions);
         $this->AppliedOptions = $appliedOptions;
         return $this;
     }
@@ -95,6 +223,7 @@ class RateReplyDetail
      */
     public function setAppliedSubOptions(ServiceSubOptionDetail $appliedSubOptions)
     {
+        $this->__set('AppliedSubOptions', $appliedSubOptions);
         $this->AppliedSubOptions = $appliedSubOptions;
         return $this;
     }
@@ -117,6 +246,7 @@ class RateReplyDetail
      */
     public function setDeliveryStation($deliveryStation)
     {
+        $this->__set('DeliveryStation', $deliveryStation);
         $this->DeliveryStation = $deliveryStation;
         return $this;
     }
@@ -139,6 +269,7 @@ class RateReplyDetail
      */
     public function setDeliveryDayOfWeek($deliveryDayOfWeek)
     {
+        $this->__set('DeliveryDayOfWeek', $deliveryDayOfWeek);
         $this->DeliveryDayOfWeek = $deliveryDayOfWeek;
         return $this;
     }
@@ -161,6 +292,7 @@ class RateReplyDetail
      */
     public function setDeliveryTimestamp($deliveryTimestamp)
     {
+        $this->__set('DeliveryTimestamp', $deliveryTimestamp);
         $this->DeliveryTimestamp = $deliveryTimestamp;
         return $this;
     }
@@ -183,6 +315,7 @@ class RateReplyDetail
      */
     public function setCommitDetails(array $commitDetails)
     {
+        $this->__set('CommitDetails', $commitDetails);
         $this->CommitDetails = $commitDetails;
         return $this;
     }
@@ -205,6 +338,7 @@ class RateReplyDetail
      */
     public function setDestinationAirportId($destinationAirportId)
     {
+        $this->__set('DestinationAirportId', $destinationAirportId);
         $this->DestinationAirportId = $destinationAirportId;
         return $this;
     }
@@ -227,6 +361,7 @@ class RateReplyDetail
      */
     public function setIneligibleForMoneyBackGuarantee($ineligibleForMoneyBackGuarantee)
     {
+        $this->__set('IneligibleForMoneyBackGuarantee', $ineligibleForMoneyBackGuarantee);
         $this->IneligibleForMoneyBackGuarantee = $ineligibleForMoneyBackGuarantee;
         return $this;
     }
@@ -249,6 +384,7 @@ class RateReplyDetail
      */
     public function setOriginServiceArea($originServiceArea)
     {
+        $this->__set('OriginServiceArea', $originServiceArea);
         $this->OriginServiceArea = $originServiceArea;
         return $this;
     }
@@ -271,6 +407,7 @@ class RateReplyDetail
      */
     public function setDestinationServiceArea($destinationServiceArea)
     {
+        $this->__set('DestinationServiceArea', $destinationServiceArea);
         $this->DestinationServiceArea = $destinationServiceArea;
         return $this;
     }
@@ -293,6 +430,7 @@ class RateReplyDetail
      */
     public function setTransitTime($transitTime)
     {
+        $this->__set('TransitTime', $transitTime);
         $this->TransitTime = $transitTime;
         return $this;
     }
@@ -315,6 +453,7 @@ class RateReplyDetail
      */
     public function setMaximumTransitTime($maximumTransitTime)
     {
+        $this->__set('MaximumTransitTime', $maximumTransitTime);
         $this->MaximumTransitTime = $maximumTransitTime;
         return $this;
     }
@@ -337,6 +476,7 @@ class RateReplyDetail
      */
     public function setSignatureOption($signatureOption)
     {
+        $this->__set('SignatureOption', $signatureOption);
         $this->SignatureOption = $signatureOption;
         return $this;
     }
@@ -359,6 +499,7 @@ class RateReplyDetail
      */
     public function setActualRateType($actualRateType)
     {
+        $this->__set('ActualRateType', $actualRateType);
         $this->ActualRateType = $actualRateType;
         return $this;
     }
@@ -381,6 +522,7 @@ class RateReplyDetail
      */
     public function setRatedShipmentDetails(array $ratedShipmentDetails)
     {
+        $this->__set('RatedShipmentDetails', $ratedShipmentDetails);
         $this->RatedShipmentDetails = $ratedShipmentDetails;
         return $this;
     }

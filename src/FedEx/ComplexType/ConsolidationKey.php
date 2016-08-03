@@ -14,12 +14,39 @@ class ConsolidationKey
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'ConsolidationType',
+'Index' => 'string',
+'Date' => 'date',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ConsolidationKey';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ConsolidationType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var string
+     */
+    public $Index;
+
+        
+    /**
+     * @var date
+     */
+    public $Date;
+
+
 
     /**
      * Specifies the type of consolidation.
@@ -29,6 +56,7 @@ class ConsolidationKey
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +79,7 @@ class ConsolidationKey
      */
     public function setIndex($index)
     {
+        $this->__set('Index', $index);
         $this->Index = $index;
         return $this;
     }
@@ -73,6 +102,7 @@ class ConsolidationKey
      */
     public function setDate($date)
     {
+        $this->__set('Date', $date);
         $this->Date = $date;
         return $this;
     }

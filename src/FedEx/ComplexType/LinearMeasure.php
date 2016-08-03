@@ -14,12 +14,32 @@ class LinearMeasure
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Value' => 'decimal',
+'Units' => 'LinearUnits',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'LinearMeasure';
+
+        
+    /**
+     * @var decimal
+     */
+    public $Value;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LinearUnits|string
+     */
+    public $Units;
+
+
 
     /**
      * The numerical quantity of this measurement.
@@ -29,6 +49,7 @@ class LinearMeasure
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }
@@ -51,6 +72,7 @@ class LinearMeasure
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

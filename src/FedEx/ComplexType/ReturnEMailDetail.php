@@ -14,12 +14,32 @@ class ReturnEMailDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'MerchantPhoneNumber' => 'string',
+'AllowedSpecialServices' => 'ReturnEMailAllowedSpecialServiceType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ReturnEMailDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $MerchantPhoneNumber;
+
+        
+    /**
+     * @var ReturnEMailAllowedSpecialServiceType[]
+     */
+    public $AllowedSpecialServices = array();
+
+
 
     /**
      * Set MerchantPhoneNumber
@@ -29,6 +49,7 @@ class ReturnEMailDetail
      */
     public function setMerchantPhoneNumber($merchantPhoneNumber)
     {
+        $this->__set('MerchantPhoneNumber', $merchantPhoneNumber);
         $this->MerchantPhoneNumber = $merchantPhoneNumber;
         return $this;
     }
@@ -51,6 +72,7 @@ class ReturnEMailDetail
      */
     public function setAllowedSpecialServices(array $allowedSpecialServices)
     {
+        $this->__set('AllowedSpecialServices', $allowedSpecialServices);
         $this->AllowedSpecialServices = $allowedSpecialServices;
         return $this;
     }

@@ -14,12 +14,32 @@ class DangerousGoodsShippersDeclarationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'CustomerImageUsages' => 'CustomerImageUsage',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DangerousGoodsShippersDeclarationDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var CustomerImageUsage[]
+     */
+    public $CustomerImageUsages = array();
+
+
 
     /**
      * Specifies characteristics of a shipping document to be produced.
@@ -29,6 +49,7 @@ class DangerousGoodsShippersDeclarationDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +72,7 @@ class DangerousGoodsShippersDeclarationDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages)
     {
+        $this->__set('CustomerImageUsages', $customerImageUsages);
         $this->CustomerImageUsages = $customerImageUsages;
         return $this;
     }

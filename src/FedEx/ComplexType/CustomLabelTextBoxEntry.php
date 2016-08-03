@@ -14,12 +14,81 @@ class CustomLabelTextBoxEntry
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TopLeftCorner' => 'CustomLabelPosition',
+'BottomRightCorner' => 'CustomLabelPosition',
+'Position' => 'CustomLabelPosition',
+'Format' => 'string',
+'DataFields' => 'string',
+'ThermalFontId' => 'string',
+'FontName' => 'string',
+'FontSize' => 'positiveInteger',
+'Rotation' => 'RotationType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelTextBoxEntry';
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $TopLeftCorner;
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $BottomRightCorner;
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $Position;
+
+        
+    /**
+     * @var string
+     */
+    public $Format;
+
+        
+    /**
+     * @var string[]
+     */
+    public $DataFields = array();
+
+        
+    /**
+     * @var string
+     */
+    public $ThermalFontId;
+
+        
+    /**
+     * @var string
+     */
+    public $FontName;
+
+        
+    /**
+     * @var positiveInteger
+     */
+    public $FontSize;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RotationType|string
+     */
+    public $Rotation;
+
+
 
     /**
      * Set TopLeftCorner
@@ -29,6 +98,7 @@ class CustomLabelTextBoxEntry
      */
     public function setTopLeftCorner(CustomLabelPosition $topLeftCorner)
     {
+        $this->__set('TopLeftCorner', $topLeftCorner);
         $this->TopLeftCorner = $topLeftCorner;
         return $this;
     }
@@ -51,6 +121,7 @@ class CustomLabelTextBoxEntry
      */
     public function setBottomRightCorner(CustomLabelPosition $bottomRightCorner)
     {
+        $this->__set('BottomRightCorner', $bottomRightCorner);
         $this->BottomRightCorner = $bottomRightCorner;
         return $this;
     }
@@ -73,6 +144,7 @@ class CustomLabelTextBoxEntry
      */
     public function setPosition(CustomLabelPosition $position)
     {
+        $this->__set('Position', $position);
         $this->Position = $position;
         return $this;
     }
@@ -95,6 +167,7 @@ class CustomLabelTextBoxEntry
      */
     public function setFormat($format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -117,6 +190,7 @@ class CustomLabelTextBoxEntry
      */
     public function setDataFields(array $dataFields)
     {
+        $this->__set('DataFields', $dataFields);
         $this->DataFields = $dataFields;
         return $this;
     }
@@ -139,6 +213,7 @@ class CustomLabelTextBoxEntry
      */
     public function setThermalFontId($thermalFontId)
     {
+        $this->__set('ThermalFontId', $thermalFontId);
         $this->ThermalFontId = $thermalFontId;
         return $this;
     }
@@ -161,6 +236,7 @@ class CustomLabelTextBoxEntry
      */
     public function setFontName($fontName)
     {
+        $this->__set('FontName', $fontName);
         $this->FontName = $fontName;
         return $this;
     }
@@ -183,6 +259,7 @@ class CustomLabelTextBoxEntry
      */
     public function setFontSize($fontSize)
     {
+        $this->__set('FontSize', $fontSize);
         $this->FontSize = $fontSize;
         return $this;
     }
@@ -205,6 +282,7 @@ class CustomLabelTextBoxEntry
      */
     public function setRotation($rotation)
     {
+        $this->__set('Rotation', $rotation);
         $this->Rotation = $rotation;
         return $this;
     }

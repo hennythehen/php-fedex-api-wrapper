@@ -14,12 +14,32 @@ class EtdDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RequestedDocumentCopies' => 'RequestedShippingDocumentType',
+'DocumentReferences' => 'UploadDocumentReferenceDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EtdDetail';
+
+        
+    /**
+     * @var RequestedShippingDocumentType[]
+     */
+    public $RequestedDocumentCopies = array();
+
+        
+    /**
+     * @var UploadDocumentReferenceDetail[]
+     */
+    public $DocumentReferences = array();
+
+
 
     /**
      * Indicates the types of shipping documents produced for the shipper by FedEx (see ShippingDocumentSpecification) which should be copied back to the shipper in the shipment result data.
@@ -29,6 +49,7 @@ class EtdDetail
      */
     public function setRequestedDocumentCopies(array $requestedDocumentCopies)
     {
+        $this->__set('RequestedDocumentCopies', $requestedDocumentCopies);
         $this->RequestedDocumentCopies = $requestedDocumentCopies;
         return $this;
     }
@@ -51,6 +72,7 @@ class EtdDetail
      */
     public function setDocumentReferences(array $documentReferences)
     {
+        $this->__set('DocumentReferences', $documentReferences);
         $this->DocumentReferences = $documentReferences;
         return $this;
     }

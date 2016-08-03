@@ -14,12 +14,32 @@ class ExpressFreightDetailContact
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Name' => 'string',
+'Phone' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ExpressFreightDetailContact';
+
+        
+    /**
+     * @var string
+     */
+    public $Name;
+
+        
+    /**
+     * @var string
+     */
+    public $Phone;
+
+
 
     /**
      * Set Name
@@ -29,6 +49,7 @@ class ExpressFreightDetailContact
      */
     public function setName($name)
     {
+        $this->__set('Name', $name);
         $this->Name = $name;
         return $this;
     }
@@ -51,6 +72,7 @@ class ExpressFreightDetailContact
      */
     public function setPhone($phone)
     {
+        $this->__set('Phone', $phone);
         $this->Phone = $phone;
         return $this;
     }

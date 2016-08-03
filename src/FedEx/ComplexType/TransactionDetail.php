@@ -14,12 +14,32 @@ class TransactionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CustomerTransactionId' => 'string',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'TransactionDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $CustomerTransactionId;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * Free form text to be echoed back in the reply. Used to match requests and replies.
@@ -29,6 +49,7 @@ class TransactionDetail
      */
     public function setCustomerTransactionId($customerTransactionId)
     {
+        $this->__set('CustomerTransactionId', $customerTransactionId);
         $this->CustomerTransactionId = $customerTransactionId;
         return $this;
     }
@@ -51,6 +72,7 @@ class TransactionDetail
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

@@ -14,12 +14,32 @@ class DeliveryOnInvoiceAcceptanceDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Recipient' => 'Party',
+'TrackingId' => 'TrackingId',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DeliveryOnInvoiceAcceptanceDetail';
+
+        
+    /**
+     * @var Party
+     */
+    public $Recipient;
+
+        
+    /**
+     * @var TrackingId
+     */
+    public $TrackingId;
+
+
 
     /**
      * Set Recipient
@@ -29,6 +49,7 @@ class DeliveryOnInvoiceAcceptanceDetail
      */
     public function setRecipient(Party $recipient)
     {
+        $this->__set('Recipient', $recipient);
         $this->Recipient = $recipient;
         return $this;
     }
@@ -51,6 +72,7 @@ class DeliveryOnInvoiceAcceptanceDetail
      */
     public function setTrackingId(TrackingId $trackingId)
     {
+        $this->__set('TrackingId', $trackingId);
         $this->TrackingId = $trackingId;
         return $this;
     }

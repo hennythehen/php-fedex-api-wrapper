@@ -14,12 +14,32 @@ class NotificationParameter
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Id' => 'string',
+'Value' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'NotificationParameter';
+
+        
+    /**
+     * @var string
+     */
+    public $Id;
+
+        
+    /**
+     * @var string
+     */
+    public $Value;
+
+
 
     /**
      * Identifies the type of data contained in Value (e.g. SERVICE_TYPE, PACKAGE_SEQUENCE, etc..).
@@ -29,6 +49,7 @@ class NotificationParameter
      */
     public function setId($id)
     {
+        $this->__set('Id', $id);
         $this->Id = $id;
         return $this;
     }
@@ -51,6 +72,7 @@ class NotificationParameter
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

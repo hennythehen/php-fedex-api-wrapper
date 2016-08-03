@@ -14,12 +14,67 @@ class ShippingDocumentFormat
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Dispositions' => 'ShippingDocumentDispositionDetail',
+'TopOfPageOffset' => 'LinearMeasure',
+'ImageType' => 'ShippingDocumentImageType',
+'StockType' => 'ShippingDocumentStockType',
+'ProvideInstructions' => 'boolean',
+'OptionsRequested' => 'DocumentFormatOptionsRequested',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentFormat';
+
+        
+    /**
+     * @var ShippingDocumentDispositionDetail[]
+     */
+    public $Dispositions = array();
+
+        
+    /**
+     * @var LinearMeasure
+     */
+    public $TopOfPageOffset;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentImageType|string
+     */
+    public $ImageType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentStockType|string
+     */
+    public $StockType;
+
+        
+    /**
+     * @var boolean
+     */
+    public $ProvideInstructions;
+
+        
+    /**
+     * @var DocumentFormatOptionsRequested
+     */
+    public $OptionsRequested;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * Specifies how to create, organize, and return the document.
@@ -29,6 +84,7 @@ class ShippingDocumentFormat
      */
     public function setDispositions(array $dispositions)
     {
+        $this->__set('Dispositions', $dispositions);
         $this->Dispositions = $dispositions;
         return $this;
     }
@@ -51,6 +107,7 @@ class ShippingDocumentFormat
      */
     public function setTopOfPageOffset(LinearMeasure $topOfPageOffset)
     {
+        $this->__set('TopOfPageOffset', $topOfPageOffset);
         $this->TopOfPageOffset = $topOfPageOffset;
         return $this;
     }
@@ -73,6 +130,7 @@ class ShippingDocumentFormat
      */
     public function setImageType($imageType)
     {
+        $this->__set('ImageType', $imageType);
         $this->ImageType = $imageType;
         return $this;
     }
@@ -95,6 +153,7 @@ class ShippingDocumentFormat
      */
     public function setStockType($stockType)
     {
+        $this->__set('StockType', $stockType);
         $this->StockType = $stockType;
         return $this;
     }
@@ -117,6 +176,7 @@ class ShippingDocumentFormat
      */
     public function setProvideInstructions($provideInstructions)
     {
+        $this->__set('ProvideInstructions', $provideInstructions);
         $this->ProvideInstructions = $provideInstructions;
         return $this;
     }
@@ -139,6 +199,7 @@ class ShippingDocumentFormat
      */
     public function setOptionsRequested(DocumentFormatOptionsRequested $optionsRequested)
     {
+        $this->__set('OptionsRequested', $optionsRequested);
         $this->OptionsRequested = $optionsRequested;
         return $this;
     }
@@ -161,6 +222,7 @@ class ShippingDocumentFormat
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

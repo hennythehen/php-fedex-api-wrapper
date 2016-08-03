@@ -14,12 +14,39 @@ class HomeDeliveryPremiumDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'HomeDeliveryPremiumType' => 'HomeDeliveryPremiumType',
+'Date' => 'date',
+'PhoneNumber' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HomeDeliveryPremiumDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\HomeDeliveryPremiumType|string
+     */
+    public $HomeDeliveryPremiumType;
+
+        
+    /**
+     * @var date
+     */
+    public $Date;
+
+        
+    /**
+     * @var string
+     */
+    public $PhoneNumber;
+
+
 
     /**
      * Set HomeDeliveryPremiumType
@@ -29,6 +56,7 @@ class HomeDeliveryPremiumDetail
      */
     public function setHomeDeliveryPremiumType($homeDeliveryPremiumType)
     {
+        $this->__set('HomeDeliveryPremiumType', $homeDeliveryPremiumType);
         $this->HomeDeliveryPremiumType = $homeDeliveryPremiumType;
         return $this;
     }
@@ -51,6 +79,7 @@ class HomeDeliveryPremiumDetail
      */
     public function setDate($date)
     {
+        $this->__set('Date', $date);
         $this->Date = $date;
         return $this;
     }
@@ -73,6 +102,7 @@ class HomeDeliveryPremiumDetail
      */
     public function setPhoneNumber($phoneNumber)
     {
+        $this->__set('PhoneNumber', $phoneNumber);
         $this->PhoneNumber = $phoneNumber;
         return $this;
     }

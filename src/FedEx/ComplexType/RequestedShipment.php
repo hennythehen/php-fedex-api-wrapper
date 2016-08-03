@@ -14,12 +14,235 @@ class RequestedShipment
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ShipTimestamp' => 'dateTime',
+'DropoffType' => 'DropoffType',
+'ServiceType' => 'ServiceType',
+'PackagingType' => 'PackagingType',
+'VariationOptions' => 'ShipmentVariationOptionDetail',
+'TotalWeight' => 'Weight',
+'TotalInsuredValue' => 'Money',
+'PreferredCurrency' => 'string',
+'Shipper' => 'Party',
+'Recipient' => 'Party',
+'RecipientLocationNumber' => 'string',
+'Origin' => 'ContactAndAddress',
+'SoldTo' => 'Party',
+'ShippingChargesPayment' => 'Payment',
+'SpecialServicesRequested' => 'ShipmentSpecialServicesRequested',
+'ExpressFreightDetail' => 'ExpressFreightDetail',
+'FreightShipmentDetail' => 'FreightShipmentDetail',
+'DeliveryInstructions' => 'string',
+'VariableHandlingChargeDetail' => 'VariableHandlingChargeDetail',
+'CustomsClearanceDetail' => 'CustomsClearanceDetail',
+'PickupDetail' => 'PickupDetail',
+'SmartPostDetail' => 'SmartPostShipmentDetail',
+'BlockInsightVisibility' => 'boolean',
+'LabelSpecification' => 'LabelSpecification',
+'ShippingDocumentSpecification' => 'ShippingDocumentSpecification',
+'RateRequestTypes' => 'RateRequestType',
+'EdtRequestType' => 'EdtRequestType',
+'PackageCount' => 'nonNegativeInteger',
+'ShipmentOnlyFields' => 'ShipmentOnlyFieldsType',
+'ConfigurationData' => 'ShipmentConfigurationData',
+'RequestedPackageLineItems' => 'RequestedPackageLineItem',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RequestedShipment';
+
+        
+    /**
+     * @var dateTime
+     */
+    public $ShipTimestamp;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DropoffType|string
+     */
+    public $DropoffType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ServiceType|string
+     */
+    public $ServiceType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PackagingType|string
+     */
+    public $PackagingType;
+
+        
+    /**
+     * @var ShipmentVariationOptionDetail[]
+     */
+    public $VariationOptions = array();
+
+        
+    /**
+     * @var Weight
+     */
+    public $TotalWeight;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalInsuredValue;
+
+        
+    /**
+     * @var string
+     */
+    public $PreferredCurrency;
+
+        
+    /**
+     * @var Party
+     */
+    public $Shipper;
+
+        
+    /**
+     * @var Party
+     */
+    public $Recipient;
+
+        
+    /**
+     * @var string
+     */
+    public $RecipientLocationNumber;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $Origin;
+
+        
+    /**
+     * @var Party
+     */
+    public $SoldTo;
+
+        
+    /**
+     * @var Payment
+     */
+    public $ShippingChargesPayment;
+
+        
+    /**
+     * @var ShipmentSpecialServicesRequested
+     */
+    public $SpecialServicesRequested;
+
+        
+    /**
+     * @var ExpressFreightDetail
+     */
+    public $ExpressFreightDetail;
+
+        
+    /**
+     * @var FreightShipmentDetail
+     */
+    public $FreightShipmentDetail;
+
+        
+    /**
+     * @var string
+     */
+    public $DeliveryInstructions;
+
+        
+    /**
+     * @var VariableHandlingChargeDetail
+     */
+    public $VariableHandlingChargeDetail;
+
+        
+    /**
+     * @var CustomsClearanceDetail
+     */
+    public $CustomsClearanceDetail;
+
+        
+    /**
+     * @var PickupDetail
+     */
+    public $PickupDetail;
+
+        
+    /**
+     * @var SmartPostShipmentDetail
+     */
+    public $SmartPostDetail;
+
+        
+    /**
+     * @var boolean
+     */
+    public $BlockInsightVisibility;
+
+        
+    /**
+     * @var LabelSpecification
+     */
+    public $LabelSpecification;
+
+        
+    /**
+     * @var ShippingDocumentSpecification
+     */
+    public $ShippingDocumentSpecification;
+
+        
+    /**
+     * @var RateRequestType[]
+     */
+    public $RateRequestTypes = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\EdtRequestType|string
+     */
+    public $EdtRequestType;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $PackageCount;
+
+        
+    /**
+     * @var ShipmentOnlyFieldsType[]
+     */
+    public $ShipmentOnlyFields = array();
+
+        
+    /**
+     * @var ShipmentConfigurationData
+     */
+    public $ConfigurationData;
+
+        
+    /**
+     * @var RequestedPackageLineItem[]
+     */
+    public $RequestedPackageLineItems = array();
+
+
 
     /**
      * Set ShipTimestamp
@@ -29,6 +252,7 @@ class RequestedShipment
      */
     public function setShipTimestamp($shipTimestamp)
     {
+        $this->__set('ShipTimestamp', $shipTimestamp);
         $this->ShipTimestamp = $shipTimestamp;
         return $this;
     }
@@ -51,6 +275,7 @@ class RequestedShipment
      */
     public function setDropoffType($dropoffType)
     {
+        $this->__set('DropoffType', $dropoffType);
         $this->DropoffType = $dropoffType;
         return $this;
     }
@@ -73,6 +298,7 @@ class RequestedShipment
      */
     public function setServiceType($serviceType)
     {
+        $this->__set('ServiceType', $serviceType);
         $this->ServiceType = $serviceType;
         return $this;
     }
@@ -95,6 +321,7 @@ class RequestedShipment
      */
     public function setPackagingType($packagingType)
     {
+        $this->__set('PackagingType', $packagingType);
         $this->PackagingType = $packagingType;
         return $this;
     }
@@ -117,6 +344,7 @@ class RequestedShipment
      */
     public function setVariationOptions(array $variationOptions)
     {
+        $this->__set('VariationOptions', $variationOptions);
         $this->VariationOptions = $variationOptions;
         return $this;
     }
@@ -139,6 +367,7 @@ class RequestedShipment
      */
     public function setTotalWeight(Weight $totalWeight)
     {
+        $this->__set('TotalWeight', $totalWeight);
         $this->TotalWeight = $totalWeight;
         return $this;
     }
@@ -161,6 +390,7 @@ class RequestedShipment
      */
     public function setTotalInsuredValue(Money $totalInsuredValue)
     {
+        $this->__set('TotalInsuredValue', $totalInsuredValue);
         $this->TotalInsuredValue = $totalInsuredValue;
         return $this;
     }
@@ -183,6 +413,7 @@ class RequestedShipment
      */
     public function setPreferredCurrency($preferredCurrency)
     {
+        $this->__set('PreferredCurrency', $preferredCurrency);
         $this->PreferredCurrency = $preferredCurrency;
         return $this;
     }
@@ -205,6 +436,7 @@ class RequestedShipment
      */
     public function setShipper(Party $shipper)
     {
+        $this->__set('Shipper', $shipper);
         $this->Shipper = $shipper;
         return $this;
     }
@@ -227,6 +459,7 @@ class RequestedShipment
      */
     public function setRecipient(Party $recipient)
     {
+        $this->__set('Recipient', $recipient);
         $this->Recipient = $recipient;
         return $this;
     }
@@ -249,6 +482,7 @@ class RequestedShipment
      */
     public function setRecipientLocationNumber($recipientLocationNumber)
     {
+        $this->__set('RecipientLocationNumber', $recipientLocationNumber);
         $this->RecipientLocationNumber = $recipientLocationNumber;
         return $this;
     }
@@ -271,6 +505,7 @@ class RequestedShipment
      */
     public function setOrigin(ContactAndAddress $origin)
     {
+        $this->__set('Origin', $origin);
         $this->Origin = $origin;
         return $this;
     }
@@ -293,6 +528,7 @@ class RequestedShipment
      */
     public function setSoldTo(Party $soldTo)
     {
+        $this->__set('SoldTo', $soldTo);
         $this->SoldTo = $soldTo;
         return $this;
     }
@@ -315,6 +551,7 @@ class RequestedShipment
      */
     public function setShippingChargesPayment(Payment $shippingChargesPayment)
     {
+        $this->__set('ShippingChargesPayment', $shippingChargesPayment);
         $this->ShippingChargesPayment = $shippingChargesPayment;
         return $this;
     }
@@ -337,6 +574,7 @@ class RequestedShipment
      */
     public function setSpecialServicesRequested(ShipmentSpecialServicesRequested $specialServicesRequested)
     {
+        $this->__set('SpecialServicesRequested', $specialServicesRequested);
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
@@ -359,6 +597,7 @@ class RequestedShipment
      */
     public function setExpressFreightDetail(ExpressFreightDetail $expressFreightDetail)
     {
+        $this->__set('ExpressFreightDetail', $expressFreightDetail);
         $this->ExpressFreightDetail = $expressFreightDetail;
         return $this;
     }
@@ -381,6 +620,7 @@ class RequestedShipment
      */
     public function setFreightShipmentDetail(FreightShipmentDetail $freightShipmentDetail)
     {
+        $this->__set('FreightShipmentDetail', $freightShipmentDetail);
         $this->FreightShipmentDetail = $freightShipmentDetail;
         return $this;
     }
@@ -403,6 +643,7 @@ class RequestedShipment
      */
     public function setDeliveryInstructions($deliveryInstructions)
     {
+        $this->__set('DeliveryInstructions', $deliveryInstructions);
         $this->DeliveryInstructions = $deliveryInstructions;
         return $this;
     }
@@ -425,6 +666,7 @@ class RequestedShipment
      */
     public function setVariableHandlingChargeDetail(VariableHandlingChargeDetail $variableHandlingChargeDetail)
     {
+        $this->__set('VariableHandlingChargeDetail', $variableHandlingChargeDetail);
         $this->VariableHandlingChargeDetail = $variableHandlingChargeDetail;
         return $this;
     }
@@ -447,6 +689,7 @@ class RequestedShipment
      */
     public function setCustomsClearanceDetail(CustomsClearanceDetail $customsClearanceDetail)
     {
+        $this->__set('CustomsClearanceDetail', $customsClearanceDetail);
         $this->CustomsClearanceDetail = $customsClearanceDetail;
         return $this;
     }
@@ -469,6 +712,7 @@ class RequestedShipment
      */
     public function setPickupDetail(PickupDetail $pickupDetail)
     {
+        $this->__set('PickupDetail', $pickupDetail);
         $this->PickupDetail = $pickupDetail;
         return $this;
     }
@@ -491,6 +735,7 @@ class RequestedShipment
      */
     public function setSmartPostDetail(SmartPostShipmentDetail $smartPostDetail)
     {
+        $this->__set('SmartPostDetail', $smartPostDetail);
         $this->SmartPostDetail = $smartPostDetail;
         return $this;
     }
@@ -513,6 +758,7 @@ class RequestedShipment
      */
     public function setBlockInsightVisibility($blockInsightVisibility)
     {
+        $this->__set('BlockInsightVisibility', $blockInsightVisibility);
         $this->BlockInsightVisibility = $blockInsightVisibility;
         return $this;
     }
@@ -535,6 +781,7 @@ class RequestedShipment
      */
     public function setLabelSpecification(LabelSpecification $labelSpecification)
     {
+        $this->__set('LabelSpecification', $labelSpecification);
         $this->LabelSpecification = $labelSpecification;
         return $this;
     }
@@ -557,6 +804,7 @@ class RequestedShipment
      */
     public function setShippingDocumentSpecification(ShippingDocumentSpecification $shippingDocumentSpecification)
     {
+        $this->__set('ShippingDocumentSpecification', $shippingDocumentSpecification);
         $this->ShippingDocumentSpecification = $shippingDocumentSpecification;
         return $this;
     }
@@ -579,6 +827,7 @@ class RequestedShipment
      */
     public function setRateRequestTypes(array $rateRequestTypes)
     {
+        $this->__set('RateRequestTypes', $rateRequestTypes);
         $this->RateRequestTypes = $rateRequestTypes;
         return $this;
     }
@@ -601,6 +850,7 @@ class RequestedShipment
      */
     public function setEdtRequestType($edtRequestType)
     {
+        $this->__set('EdtRequestType', $edtRequestType);
         $this->EdtRequestType = $edtRequestType;
         return $this;
     }
@@ -623,6 +873,7 @@ class RequestedShipment
      */
     public function setPackageCount($packageCount)
     {
+        $this->__set('PackageCount', $packageCount);
         $this->PackageCount = $packageCount;
         return $this;
     }
@@ -645,6 +896,7 @@ class RequestedShipment
      */
     public function setShipmentOnlyFields(array $shipmentOnlyFields)
     {
+        $this->__set('ShipmentOnlyFields', $shipmentOnlyFields);
         $this->ShipmentOnlyFields = $shipmentOnlyFields;
         return $this;
     }
@@ -667,6 +919,7 @@ class RequestedShipment
      */
     public function setConfigurationData(ShipmentConfigurationData $configurationData)
     {
+        $this->__set('ConfigurationData', $configurationData);
         $this->ConfigurationData = $configurationData;
         return $this;
     }
@@ -689,6 +942,7 @@ class RequestedShipment
      */
     public function setRequestedPackageLineItems(array $requestedPackageLineItems)
     {
+        $this->__set('RequestedPackageLineItems', $requestedPackageLineItems);
         $this->RequestedPackageLineItems = $requestedPackageLineItems;
         return $this;
     }

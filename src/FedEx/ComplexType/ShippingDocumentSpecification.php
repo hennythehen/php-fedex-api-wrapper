@@ -14,12 +14,102 @@ class ShippingDocumentSpecification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ShippingDocumentTypes' => 'RequestedShippingDocumentType',
+'CertificateOfOrigin' => 'CertificateOfOriginDetail',
+'CommercialInvoiceDetail' => 'CommercialInvoiceDetail',
+'CustomPackageDocumentDetail' => 'CustomDocumentDetail',
+'CustomShipmentDocumentDetail' => 'CustomDocumentDetail',
+'ExportDeclarationDetail' => 'ExportDeclarationDetail',
+'GeneralAgencyAgreementDetail' => 'GeneralAgencyAgreementDetail',
+'NaftaCertificateOfOriginDetail' => 'NaftaCertificateOfOriginDetail',
+'Op900Detail' => 'Op900Detail',
+'DangerousGoodsShippersDeclarationDetail' => 'DangerousGoodsShippersDeclarationDetail',
+'FreightAddressLabelDetail' => 'FreightAddressLabelDetail',
+'ReturnInstructionsDetail' => 'ReturnInstructionsDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentSpecification';
+
+        
+    /**
+     * @var RequestedShippingDocumentType[]
+     */
+    public $ShippingDocumentTypes = array();
+
+        
+    /**
+     * @var CertificateOfOriginDetail
+     */
+    public $CertificateOfOrigin;
+
+        
+    /**
+     * @var CommercialInvoiceDetail
+     */
+    public $CommercialInvoiceDetail;
+
+        
+    /**
+     * @var CustomDocumentDetail[]
+     */
+    public $CustomPackageDocumentDetail = array();
+
+        
+    /**
+     * @var CustomDocumentDetail[]
+     */
+    public $CustomShipmentDocumentDetail = array();
+
+        
+    /**
+     * @var ExportDeclarationDetail
+     */
+    public $ExportDeclarationDetail;
+
+        
+    /**
+     * @var GeneralAgencyAgreementDetail
+     */
+    public $GeneralAgencyAgreementDetail;
+
+        
+    /**
+     * @var NaftaCertificateOfOriginDetail
+     */
+    public $NaftaCertificateOfOriginDetail;
+
+        
+    /**
+     * @var Op900Detail
+     */
+    public $Op900Detail;
+
+        
+    /**
+     * @var DangerousGoodsShippersDeclarationDetail
+     */
+    public $DangerousGoodsShippersDeclarationDetail;
+
+        
+    /**
+     * @var FreightAddressLabelDetail
+     */
+    public $FreightAddressLabelDetail;
+
+        
+    /**
+     * @var ReturnInstructionsDetail
+     */
+    public $ReturnInstructionsDetail;
+
+
 
     /**
      * Indicates the types of shipping documents requested by the shipper.
@@ -29,6 +119,7 @@ class ShippingDocumentSpecification
      */
     public function setShippingDocumentTypes(array $shippingDocumentTypes)
     {
+        $this->__set('ShippingDocumentTypes', $shippingDocumentTypes);
         $this->ShippingDocumentTypes = $shippingDocumentTypes;
         return $this;
     }
@@ -51,6 +142,7 @@ class ShippingDocumentSpecification
      */
     public function setCertificateOfOrigin(CertificateOfOriginDetail $certificateOfOrigin)
     {
+        $this->__set('CertificateOfOrigin', $certificateOfOrigin);
         $this->CertificateOfOrigin = $certificateOfOrigin;
         return $this;
     }
@@ -73,6 +165,7 @@ class ShippingDocumentSpecification
      */
     public function setCommercialInvoiceDetail(CommercialInvoiceDetail $commercialInvoiceDetail)
     {
+        $this->__set('CommercialInvoiceDetail', $commercialInvoiceDetail);
         $this->CommercialInvoiceDetail = $commercialInvoiceDetail;
         return $this;
     }
@@ -95,6 +188,7 @@ class ShippingDocumentSpecification
      */
     public function setCustomPackageDocumentDetail(array $customPackageDocumentDetail)
     {
+        $this->__set('CustomPackageDocumentDetail', $customPackageDocumentDetail);
         $this->CustomPackageDocumentDetail = $customPackageDocumentDetail;
         return $this;
     }
@@ -117,6 +211,7 @@ class ShippingDocumentSpecification
      */
     public function setCustomShipmentDocumentDetail(array $customShipmentDocumentDetail)
     {
+        $this->__set('CustomShipmentDocumentDetail', $customShipmentDocumentDetail);
         $this->CustomShipmentDocumentDetail = $customShipmentDocumentDetail;
         return $this;
     }
@@ -139,6 +234,7 @@ class ShippingDocumentSpecification
      */
     public function setExportDeclarationDetail(ExportDeclarationDetail $exportDeclarationDetail)
     {
+        $this->__set('ExportDeclarationDetail', $exportDeclarationDetail);
         $this->ExportDeclarationDetail = $exportDeclarationDetail;
         return $this;
     }
@@ -161,6 +257,7 @@ class ShippingDocumentSpecification
      */
     public function setGeneralAgencyAgreementDetail(GeneralAgencyAgreementDetail $generalAgencyAgreementDetail)
     {
+        $this->__set('GeneralAgencyAgreementDetail', $generalAgencyAgreementDetail);
         $this->GeneralAgencyAgreementDetail = $generalAgencyAgreementDetail;
         return $this;
     }
@@ -183,6 +280,7 @@ class ShippingDocumentSpecification
      */
     public function setNaftaCertificateOfOriginDetail(NaftaCertificateOfOriginDetail $naftaCertificateOfOriginDetail)
     {
+        $this->__set('NaftaCertificateOfOriginDetail', $naftaCertificateOfOriginDetail);
         $this->NaftaCertificateOfOriginDetail = $naftaCertificateOfOriginDetail;
         return $this;
     }
@@ -205,6 +303,7 @@ class ShippingDocumentSpecification
      */
     public function setOp900Detail(Op900Detail $op900Detail)
     {
+        $this->__set('Op900Detail', $op900Detail);
         $this->Op900Detail = $op900Detail;
         return $this;
     }
@@ -227,6 +326,7 @@ class ShippingDocumentSpecification
      */
     public function setDangerousGoodsShippersDeclarationDetail(DangerousGoodsShippersDeclarationDetail $dangerousGoodsShippersDeclarationDetail)
     {
+        $this->__set('DangerousGoodsShippersDeclarationDetail', $dangerousGoodsShippersDeclarationDetail);
         $this->DangerousGoodsShippersDeclarationDetail = $dangerousGoodsShippersDeclarationDetail;
         return $this;
     }
@@ -249,6 +349,7 @@ class ShippingDocumentSpecification
      */
     public function setFreightAddressLabelDetail(FreightAddressLabelDetail $freightAddressLabelDetail)
     {
+        $this->__set('FreightAddressLabelDetail', $freightAddressLabelDetail);
         $this->FreightAddressLabelDetail = $freightAddressLabelDetail;
         return $this;
     }
@@ -271,6 +372,7 @@ class ShippingDocumentSpecification
      */
     public function setReturnInstructionsDetail(ReturnInstructionsDetail $returnInstructionsDetail)
     {
+        $this->__set('ReturnInstructionsDetail', $returnInstructionsDetail);
         $this->ReturnInstructionsDetail = $returnInstructionsDetail;
         return $this;
     }

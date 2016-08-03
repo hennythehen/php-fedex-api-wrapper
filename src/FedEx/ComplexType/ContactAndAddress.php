@@ -14,12 +14,32 @@ class ContactAndAddress
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Contact' => 'Contact',
+'Address' => 'Address',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ContactAndAddress';
+
+        
+    /**
+     * @var Contact
+     */
+    public $Contact;
+
+        
+    /**
+     * @var Address
+     */
+    public $Address;
+
+
 
     /**
      * Set Contact
@@ -29,6 +49,7 @@ class ContactAndAddress
      */
     public function setContact(Contact $contact)
     {
+        $this->__set('Contact', $contact);
         $this->Contact = $contact;
         return $this;
     }
@@ -51,6 +72,7 @@ class ContactAndAddress
      */
     public function setAddress(Address $address)
     {
+        $this->__set('Address', $address);
         $this->Address = $address;
         return $this;
     }

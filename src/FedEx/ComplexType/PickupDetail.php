@@ -14,12 +14,53 @@ class PickupDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ReadyDateTime' => 'dateTime',
+'LatestPickupDateTime' => 'dateTime',
+'CourierInstructions' => 'string',
+'RequestType' => 'PickupRequestType',
+'RequestSource' => 'PickupRequestSourceType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PickupDetail';
+
+        
+    /**
+     * @var dateTime
+     */
+    public $ReadyDateTime;
+
+        
+    /**
+     * @var dateTime
+     */
+    public $LatestPickupDateTime;
+
+        
+    /**
+     * @var string
+     */
+    public $CourierInstructions;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PickupRequestType|string
+     */
+    public $RequestType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PickupRequestSourceType|string
+     */
+    public $RequestSource;
+
+
 
     /**
      * Set ReadyDateTime
@@ -29,6 +70,7 @@ class PickupDetail
      */
     public function setReadyDateTime($readyDateTime)
     {
+        $this->__set('ReadyDateTime', $readyDateTime);
         $this->ReadyDateTime = $readyDateTime;
         return $this;
     }
@@ -51,6 +93,7 @@ class PickupDetail
      */
     public function setLatestPickupDateTime($latestPickupDateTime)
     {
+        $this->__set('LatestPickupDateTime', $latestPickupDateTime);
         $this->LatestPickupDateTime = $latestPickupDateTime;
         return $this;
     }
@@ -73,6 +116,7 @@ class PickupDetail
      */
     public function setCourierInstructions($courierInstructions)
     {
+        $this->__set('CourierInstructions', $courierInstructions);
         $this->CourierInstructions = $courierInstructions;
         return $this;
     }
@@ -95,6 +139,7 @@ class PickupDetail
      */
     public function setRequestType($requestType)
     {
+        $this->__set('RequestType', $requestType);
         $this->RequestType = $requestType;
         return $this;
     }
@@ -117,6 +162,7 @@ class PickupDetail
      */
     public function setRequestSource($requestSource)
     {
+        $this->__set('RequestSource', $requestSource);
         $this->RequestSource = $requestSource;
         return $this;
     }

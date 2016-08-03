@@ -14,12 +14,46 @@ class Surcharge
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'SurchargeType' => 'SurchargeType',
+'Level' => 'SurchargeLevelType',
+'Description' => 'string',
+'Amount' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Surcharge';
+
+        
+    /**
+     * @var \FedEx\SimpleType\SurchargeType|string
+     */
+    public $SurchargeType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\SurchargeLevelType|string
+     */
+    public $Level;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Money
+     */
+    public $Amount;
+
+
 
     /**
      * Set SurchargeType
@@ -29,6 +63,7 @@ class Surcharge
      */
     public function setSurchargeType($surchargeType)
     {
+        $this->__set('SurchargeType', $surchargeType);
         $this->SurchargeType = $surchargeType;
         return $this;
     }
@@ -51,6 +86,7 @@ class Surcharge
      */
     public function setLevel($level)
     {
+        $this->__set('Level', $level);
         $this->Level = $level;
         return $this;
     }
@@ -73,6 +109,7 @@ class Surcharge
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -95,6 +132,7 @@ class Surcharge
      */
     public function setAmount(Money $amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }

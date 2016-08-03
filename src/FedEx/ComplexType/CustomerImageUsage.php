@@ -14,12 +14,32 @@ class CustomerImageUsage
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'CustomerImageUsageType',
+'Id' => 'ImageId',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomerImageUsage';
+
+        
+    /**
+     * @var \FedEx\SimpleType\CustomerImageUsageType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ImageId|string
+     */
+    public $Id;
+
+
 
     /**
      * Set Type
@@ -29,6 +49,7 @@ class CustomerImageUsage
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class CustomerImageUsage
      */
     public function setId($id)
     {
+        $this->__set('Id', $id);
         $this->Id = $id;
         return $this;
     }

@@ -14,12 +14,74 @@ class LabelSpecification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'LabelFormatType' => 'LabelFormatType',
+'ImageType' => 'ShippingDocumentImageType',
+'LabelStockType' => 'LabelStockType',
+'LabelPrintingOrientation' => 'LabelPrintingOrientationType',
+'LabelRotation' => 'LabelRotationType',
+'LabelOrder' => 'LabelOrderType',
+'PrintedLabelOrigin' => 'ContactAndAddress',
+'CustomerSpecifiedDetail' => 'CustomerSpecifiedLabelDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'LabelSpecification';
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelFormatType|string
+     */
+    public $LabelFormatType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentImageType|string
+     */
+    public $ImageType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelStockType|string
+     */
+    public $LabelStockType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelPrintingOrientationType|string
+     */
+    public $LabelPrintingOrientation;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelRotationType|string
+     */
+    public $LabelRotation;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelOrderType|string
+     */
+    public $LabelOrder;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $PrintedLabelOrigin;
+
+        
+    /**
+     * @var CustomerSpecifiedLabelDetail
+     */
+    public $CustomerSpecifiedDetail;
+
+
 
     /**
      * Set LabelFormatType
@@ -29,6 +91,7 @@ class LabelSpecification
      */
     public function setLabelFormatType($labelFormatType)
     {
+        $this->__set('LabelFormatType', $labelFormatType);
         $this->LabelFormatType = $labelFormatType;
         return $this;
     }
@@ -51,6 +114,7 @@ class LabelSpecification
      */
     public function setImageType($imageType)
     {
+        $this->__set('ImageType', $imageType);
         $this->ImageType = $imageType;
         return $this;
     }
@@ -73,6 +137,7 @@ class LabelSpecification
      */
     public function setLabelStockType($labelStockType)
     {
+        $this->__set('LabelStockType', $labelStockType);
         $this->LabelStockType = $labelStockType;
         return $this;
     }
@@ -95,6 +160,7 @@ class LabelSpecification
      */
     public function setLabelPrintingOrientation($labelPrintingOrientation)
     {
+        $this->__set('LabelPrintingOrientation', $labelPrintingOrientation);
         $this->LabelPrintingOrientation = $labelPrintingOrientation;
         return $this;
     }
@@ -117,6 +183,7 @@ class LabelSpecification
      */
     public function setLabelRotation($labelRotation)
     {
+        $this->__set('LabelRotation', $labelRotation);
         $this->LabelRotation = $labelRotation;
         return $this;
     }
@@ -139,6 +206,7 @@ class LabelSpecification
      */
     public function setLabelOrder($labelOrder)
     {
+        $this->__set('LabelOrder', $labelOrder);
         $this->LabelOrder = $labelOrder;
         return $this;
     }
@@ -161,6 +229,7 @@ class LabelSpecification
      */
     public function setPrintedLabelOrigin(ContactAndAddress $printedLabelOrigin)
     {
+        $this->__set('PrintedLabelOrigin', $printedLabelOrigin);
         $this->PrintedLabelOrigin = $printedLabelOrigin;
         return $this;
     }
@@ -183,6 +252,7 @@ class LabelSpecification
      */
     public function setCustomerSpecifiedDetail(CustomerSpecifiedLabelDetail $customerSpecifiedDetail)
     {
+        $this->__set('CustomerSpecifiedDetail', $customerSpecifiedDetail);
         $this->CustomerSpecifiedDetail = $customerSpecifiedDetail;
         return $this;
     }

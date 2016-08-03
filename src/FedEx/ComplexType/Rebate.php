@@ -14,12 +14,46 @@ class Rebate
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RebateType' => 'RebateType',
+'Description' => 'string',
+'Amount' => 'Money',
+'Percent' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Rebate';
+
+        
+    /**
+     * @var \FedEx\SimpleType\RebateType|string
+     */
+    public $RebateType;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Money
+     */
+    public $Amount;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Percent;
+
+
 
     /**
      * Set RebateType
@@ -29,6 +63,7 @@ class Rebate
      */
     public function setRebateType($rebateType)
     {
+        $this->__set('RebateType', $rebateType);
         $this->RebateType = $rebateType;
         return $this;
     }
@@ -51,6 +86,7 @@ class Rebate
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -73,6 +109,7 @@ class Rebate
      */
     public function setAmount(Money $amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }
@@ -95,6 +132,7 @@ class Rebate
      */
     public function setPercent($percent)
     {
+        $this->__set('Percent', $percent);
         $this->Percent = $percent;
         return $this;
     }

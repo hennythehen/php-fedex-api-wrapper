@@ -14,12 +14,46 @@ class VariableHandlingCharges
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'VariableHandlingCharge' => 'Money',
+'FixedVariableHandlingCharge' => 'Money',
+'PercentVariableHandlingCharge' => 'Money',
+'TotalCustomerCharge' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'VariableHandlingCharges';
+
+        
+    /**
+     * @var Money
+     */
+    public $VariableHandlingCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $FixedVariableHandlingCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $PercentVariableHandlingCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalCustomerCharge;
+
+
 
     /**
      * Set VariableHandlingCharge
@@ -29,6 +63,7 @@ class VariableHandlingCharges
      */
     public function setVariableHandlingCharge(Money $variableHandlingCharge)
     {
+        $this->__set('VariableHandlingCharge', $variableHandlingCharge);
         $this->VariableHandlingCharge = $variableHandlingCharge;
         return $this;
     }
@@ -51,6 +86,7 @@ class VariableHandlingCharges
      */
     public function setFixedVariableHandlingCharge(Money $fixedVariableHandlingCharge)
     {
+        $this->__set('FixedVariableHandlingCharge', $fixedVariableHandlingCharge);
         $this->FixedVariableHandlingCharge = $fixedVariableHandlingCharge;
         return $this;
     }
@@ -73,6 +109,7 @@ class VariableHandlingCharges
      */
     public function setPercentVariableHandlingCharge(Money $percentVariableHandlingCharge)
     {
+        $this->__set('PercentVariableHandlingCharge', $percentVariableHandlingCharge);
         $this->PercentVariableHandlingCharge = $percentVariableHandlingCharge;
         return $this;
     }
@@ -95,6 +132,7 @@ class VariableHandlingCharges
      */
     public function setTotalCustomerCharge(Money $totalCustomerCharge)
     {
+        $this->__set('TotalCustomerCharge', $totalCustomerCharge);
         $this->TotalCustomerCharge = $totalCustomerCharge;
         return $this;
     }

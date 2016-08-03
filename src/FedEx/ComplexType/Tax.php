@@ -14,12 +14,39 @@ class Tax
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TaxType' => 'TaxType',
+'Description' => 'string',
+'Amount' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Tax';
+
+        
+    /**
+     * @var \FedEx\SimpleType\TaxType|string
+     */
+    public $TaxType;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Money
+     */
+    public $Amount;
+
+
 
     /**
      * Set TaxType
@@ -29,6 +56,7 @@ class Tax
      */
     public function setTaxType($taxType)
     {
+        $this->__set('TaxType', $taxType);
         $this->TaxType = $taxType;
         return $this;
     }
@@ -51,6 +79,7 @@ class Tax
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -73,6 +102,7 @@ class Tax
      */
     public function setAmount(Money $amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }

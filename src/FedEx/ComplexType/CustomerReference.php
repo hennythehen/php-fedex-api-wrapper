@@ -14,12 +14,32 @@ class CustomerReference
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CustomerReferenceType' => 'CustomerReferenceType',
+'Value' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomerReference';
+
+        
+    /**
+     * @var \FedEx\SimpleType\CustomerReferenceType|string
+     */
+    public $CustomerReferenceType;
+
+        
+    /**
+     * @var string
+     */
+    public $Value;
+
+
 
     /**
      * Set CustomerReferenceType
@@ -29,6 +49,7 @@ class CustomerReference
      */
     public function setCustomerReferenceType($customerReferenceType)
     {
+        $this->__set('CustomerReferenceType', $customerReferenceType);
         $this->CustomerReferenceType = $customerReferenceType;
         return $this;
     }
@@ -51,6 +72,7 @@ class CustomerReference
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

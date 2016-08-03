@@ -14,12 +14,60 @@ class FreightAddressLabelDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'Copies' => 'nonNegativeInteger',
+'StartingPosition' => 'PageQuadrantType',
+'DocTabContent' => 'DocTabContent',
+'CustomContentPosition' => 'RelativeVerticalPositionType',
+'CustomContent' => 'CustomLabelDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightAddressLabelDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Copies;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PageQuadrantType|string
+     */
+    public $StartingPosition;
+
+        
+    /**
+     * @var DocTabContent
+     */
+    public $DocTabContent;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RelativeVerticalPositionType|string
+     */
+    public $CustomContentPosition;
+
+        
+    /**
+     * @var CustomLabelDetail
+     */
+    public $CustomContent;
+
+
 
     /**
      * Set Format
@@ -29,6 +77,7 @@ class FreightAddressLabelDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +100,7 @@ class FreightAddressLabelDetail
      */
     public function setCopies($copies)
     {
+        $this->__set('Copies', $copies);
         $this->Copies = $copies;
         return $this;
     }
@@ -73,6 +123,7 @@ class FreightAddressLabelDetail
      */
     public function setStartingPosition($startingPosition)
     {
+        $this->__set('StartingPosition', $startingPosition);
         $this->StartingPosition = $startingPosition;
         return $this;
     }
@@ -95,6 +146,7 @@ class FreightAddressLabelDetail
      */
     public function setDocTabContent(DocTabContent $docTabContent)
     {
+        $this->__set('DocTabContent', $docTabContent);
         $this->DocTabContent = $docTabContent;
         return $this;
     }
@@ -117,6 +169,7 @@ class FreightAddressLabelDetail
      */
     public function setCustomContentPosition($customContentPosition)
     {
+        $this->__set('CustomContentPosition', $customContentPosition);
         $this->CustomContentPosition = $customContentPosition;
         return $this;
     }
@@ -139,6 +192,7 @@ class FreightAddressLabelDetail
      */
     public function setCustomContent(CustomLabelDetail $customContent)
     {
+        $this->__set('CustomContent', $customContent);
         $this->CustomContent = $customContent;
         return $this;
     }

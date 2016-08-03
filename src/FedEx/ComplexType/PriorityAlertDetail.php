@@ -14,12 +14,32 @@ class PriorityAlertDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'EnhancementTypes' => 'PriorityAlertEnhancementType',
+'Content' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PriorityAlertDetail';
+
+        
+    /**
+     * @var PriorityAlertEnhancementType[]
+     */
+    public $EnhancementTypes = array();
+
+        
+    /**
+     * @var string[]
+     */
+    public $Content = array();
+
+
 
     /**
      * Set EnhancementTypes
@@ -29,6 +49,7 @@ class PriorityAlertDetail
      */
     public function setEnhancementTypes(array $enhancementTypes)
     {
+        $this->__set('EnhancementTypes', $enhancementTypes);
         $this->EnhancementTypes = $enhancementTypes;
         return $this;
     }
@@ -51,6 +72,7 @@ class PriorityAlertDetail
      */
     public function setContent(array $content)
     {
+        $this->__set('Content', $content);
         $this->Content = $content;
         return $this;
     }

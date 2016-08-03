@@ -14,12 +14,109 @@ class HazardousCommodityDescription
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Id' => 'string',
+'SequenceNumber' => 'nonNegativeInteger',
+'PackingGroup' => 'HazardousCommodityPackingGroupType',
+'PackingDetails' => 'HazardousCommodityPackingDetail',
+'ReportableQuantity' => 'boolean',
+'ProperShippingName' => 'string',
+'TechnicalName' => 'string',
+'Percentage' => 'decimal',
+'HazardClass' => 'string',
+'SubsidiaryClasses' => 'string',
+'LabelText' => 'string',
+'ProcessingOptions' => 'HazardousCommodityDescriptionProcessingOptionType',
+'Authorization' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityDescription';
+
+        
+    /**
+     * @var string
+     */
+    public $Id;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $SequenceNumber;
+
+        
+    /**
+     * @var \FedEx\SimpleType\HazardousCommodityPackingGroupType|string
+     */
+    public $PackingGroup;
+
+        
+    /**
+     * @var HazardousCommodityPackingDetail
+     */
+    public $PackingDetails;
+
+        
+    /**
+     * @var boolean
+     */
+    public $ReportableQuantity;
+
+        
+    /**
+     * @var string
+     */
+    public $ProperShippingName;
+
+        
+    /**
+     * @var string
+     */
+    public $TechnicalName;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Percentage;
+
+        
+    /**
+     * @var string
+     */
+    public $HazardClass;
+
+        
+    /**
+     * @var string[]
+     */
+    public $SubsidiaryClasses = array();
+
+        
+    /**
+     * @var string
+     */
+    public $LabelText;
+
+        
+    /**
+     * @var HazardousCommodityDescriptionProcessingOptionType[]
+     */
+    public $ProcessingOptions = array();
+
+        
+    /**
+     * @var string
+     */
+    public $Authorization;
+
+
 
     /**
      * Regulatory identifier for a commodity (e.g. "UN ID" value).
@@ -29,6 +126,7 @@ class HazardousCommodityDescription
      */
     public function setId($id)
     {
+        $this->__set('Id', $id);
         $this->Id = $id;
         return $this;
     }
@@ -51,6 +149,7 @@ class HazardousCommodityDescription
      */
     public function setSequenceNumber($sequenceNumber)
     {
+        $this->__set('SequenceNumber', $sequenceNumber);
         $this->SequenceNumber = $sequenceNumber;
         return $this;
     }
@@ -73,6 +172,7 @@ class HazardousCommodityDescription
      */
     public function setPackingGroup($packingGroup)
     {
+        $this->__set('PackingGroup', $packingGroup);
         $this->PackingGroup = $packingGroup;
         return $this;
     }
@@ -95,6 +195,7 @@ class HazardousCommodityDescription
      */
     public function setPackingDetails(HazardousCommodityPackingDetail $packingDetails)
     {
+        $this->__set('PackingDetails', $packingDetails);
         $this->PackingDetails = $packingDetails;
         return $this;
     }
@@ -117,6 +218,7 @@ class HazardousCommodityDescription
      */
     public function setReportableQuantity($reportableQuantity)
     {
+        $this->__set('ReportableQuantity', $reportableQuantity);
         $this->ReportableQuantity = $reportableQuantity;
         return $this;
     }
@@ -139,6 +241,7 @@ class HazardousCommodityDescription
      */
     public function setProperShippingName($properShippingName)
     {
+        $this->__set('ProperShippingName', $properShippingName);
         $this->ProperShippingName = $properShippingName;
         return $this;
     }
@@ -161,6 +264,7 @@ class HazardousCommodityDescription
      */
     public function setTechnicalName($technicalName)
     {
+        $this->__set('TechnicalName', $technicalName);
         $this->TechnicalName = $technicalName;
         return $this;
     }
@@ -183,6 +287,7 @@ class HazardousCommodityDescription
      */
     public function setPercentage($percentage)
     {
+        $this->__set('Percentage', $percentage);
         $this->Percentage = $percentage;
         return $this;
     }
@@ -205,6 +310,7 @@ class HazardousCommodityDescription
      */
     public function setHazardClass($hazardClass)
     {
+        $this->__set('HazardClass', $hazardClass);
         $this->HazardClass = $hazardClass;
         return $this;
     }
@@ -227,6 +333,7 @@ class HazardousCommodityDescription
      */
     public function setSubsidiaryClasses(array $subsidiaryClasses)
     {
+        $this->__set('SubsidiaryClasses', $subsidiaryClasses);
         $this->SubsidiaryClasses = $subsidiaryClasses;
         return $this;
     }
@@ -249,6 +356,7 @@ class HazardousCommodityDescription
      */
     public function setLabelText($labelText)
     {
+        $this->__set('LabelText', $labelText);
         $this->LabelText = $labelText;
         return $this;
     }
@@ -271,6 +379,7 @@ class HazardousCommodityDescription
      */
     public function setProcessingOptions(array $processingOptions)
     {
+        $this->__set('ProcessingOptions', $processingOptions);
         $this->ProcessingOptions = $processingOptions;
         return $this;
     }
@@ -293,6 +402,7 @@ class HazardousCommodityDescription
      */
     public function setAuthorization($authorization)
     {
+        $this->__set('Authorization', $authorization);
         $this->Authorization = $authorization;
         return $this;
     }

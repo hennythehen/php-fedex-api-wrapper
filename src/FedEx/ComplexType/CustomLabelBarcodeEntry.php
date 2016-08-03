@@ -14,12 +14,60 @@ class CustomLabelBarcodeEntry
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Position' => 'CustomLabelPosition',
+'Format' => 'string',
+'DataFields' => 'string',
+'BarHeight' => 'int',
+'ThinBarWidth' => 'int',
+'BarcodeSymbology' => 'BarcodeSymbologyType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelBarcodeEntry';
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $Position;
+
+        
+    /**
+     * @var string
+     */
+    public $Format;
+
+        
+    /**
+     * @var string[]
+     */
+    public $DataFields = array();
+
+        
+    /**
+     * @var int
+     */
+    public $BarHeight;
+
+        
+    /**
+     * @var int
+     */
+    public $ThinBarWidth;
+
+        
+    /**
+     * @var \FedEx\SimpleType\BarcodeSymbologyType|string
+     */
+    public $BarcodeSymbology;
+
+
 
     /**
      * Set Position
@@ -29,6 +77,7 @@ class CustomLabelBarcodeEntry
      */
     public function setPosition(CustomLabelPosition $position)
     {
+        $this->__set('Position', $position);
         $this->Position = $position;
         return $this;
     }
@@ -51,6 +100,7 @@ class CustomLabelBarcodeEntry
      */
     public function setFormat($format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -73,6 +123,7 @@ class CustomLabelBarcodeEntry
      */
     public function setDataFields(array $dataFields)
     {
+        $this->__set('DataFields', $dataFields);
         $this->DataFields = $dataFields;
         return $this;
     }
@@ -95,6 +146,7 @@ class CustomLabelBarcodeEntry
      */
     public function setBarHeight($barHeight)
     {
+        $this->__set('BarHeight', $barHeight);
         $this->BarHeight = $barHeight;
         return $this;
     }
@@ -117,6 +169,7 @@ class CustomLabelBarcodeEntry
      */
     public function setThinBarWidth($thinBarWidth)
     {
+        $this->__set('ThinBarWidth', $thinBarWidth);
         $this->ThinBarWidth = $thinBarWidth;
         return $this;
     }
@@ -139,6 +192,7 @@ class CustomLabelBarcodeEntry
      */
     public function setBarcodeSymbology($barcodeSymbology)
     {
+        $this->__set('BarcodeSymbology', $barcodeSymbology);
         $this->BarcodeSymbology = $barcodeSymbology;
         return $this;
     }

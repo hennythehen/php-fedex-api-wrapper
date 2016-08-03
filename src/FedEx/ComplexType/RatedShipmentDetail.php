@@ -14,12 +14,46 @@ class RatedShipmentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'EffectiveNetDiscount' => 'Money',
+'AdjustedCodCollectionAmount' => 'Money',
+'ShipmentRateDetail' => 'ShipmentRateDetail',
+'RatedPackages' => 'RatedPackageDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RatedShipmentDetail';
+
+        
+    /**
+     * @var Money
+     */
+    public $EffectiveNetDiscount;
+
+        
+    /**
+     * @var Money
+     */
+    public $AdjustedCodCollectionAmount;
+
+        
+    /**
+     * @var ShipmentRateDetail
+     */
+    public $ShipmentRateDetail;
+
+        
+    /**
+     * @var RatedPackageDetail[]
+     */
+    public $RatedPackages = array();
+
+
 
     /**
      * The difference between "list" and "account" total net charge.
@@ -29,6 +63,7 @@ class RatedShipmentDetail
      */
     public function setEffectiveNetDiscount(Money $effectiveNetDiscount)
     {
+        $this->__set('EffectiveNetDiscount', $effectiveNetDiscount);
         $this->EffectiveNetDiscount = $effectiveNetDiscount;
         return $this;
     }
@@ -51,6 +86,7 @@ class RatedShipmentDetail
      */
     public function setAdjustedCodCollectionAmount(Money $adjustedCodCollectionAmount)
     {
+        $this->__set('AdjustedCodCollectionAmount', $adjustedCodCollectionAmount);
         $this->AdjustedCodCollectionAmount = $adjustedCodCollectionAmount;
         return $this;
     }
@@ -73,6 +109,7 @@ class RatedShipmentDetail
      */
     public function setShipmentRateDetail(ShipmentRateDetail $shipmentRateDetail)
     {
+        $this->__set('ShipmentRateDetail', $shipmentRateDetail);
         $this->ShipmentRateDetail = $shipmentRateDetail;
         return $this;
     }
@@ -95,6 +132,7 @@ class RatedShipmentDetail
      */
     public function setRatedPackages(array $ratedPackages)
     {
+        $this->__set('RatedPackages', $ratedPackages);
         $this->RatedPackages = $ratedPackages;
         return $this;
     }

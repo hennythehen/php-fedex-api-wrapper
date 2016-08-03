@@ -14,12 +14,60 @@ class ExpressFreightDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PackingListEnclosed' => 'boolean',
+'ShippersLoadAndCount' => 'positiveInteger',
+'BookingConfirmationNumber' => 'string',
+'ReferenceLabelRequested' => 'boolean',
+'BeforeDeliveryContact' => 'ExpressFreightDetailContact',
+'UndeliverableContact' => 'ExpressFreightDetailContact',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ExpressFreightDetail';
+
+        
+    /**
+     * @var boolean
+     */
+    public $PackingListEnclosed;
+
+        
+    /**
+     * @var positiveInteger
+     */
+    public $ShippersLoadAndCount;
+
+        
+    /**
+     * @var string
+     */
+    public $BookingConfirmationNumber;
+
+        
+    /**
+     * @var boolean
+     */
+    public $ReferenceLabelRequested;
+
+        
+    /**
+     * @var ExpressFreightDetailContact
+     */
+    public $BeforeDeliveryContact;
+
+        
+    /**
+     * @var ExpressFreightDetailContact
+     */
+    public $UndeliverableContact;
+
+
 
     /**
      * Set PackingListEnclosed
@@ -29,6 +77,7 @@ class ExpressFreightDetail
      */
     public function setPackingListEnclosed($packingListEnclosed)
     {
+        $this->__set('PackingListEnclosed', $packingListEnclosed);
         $this->PackingListEnclosed = $packingListEnclosed;
         return $this;
     }
@@ -51,6 +100,7 @@ class ExpressFreightDetail
      */
     public function setShippersLoadAndCount($shippersLoadAndCount)
     {
+        $this->__set('ShippersLoadAndCount', $shippersLoadAndCount);
         $this->ShippersLoadAndCount = $shippersLoadAndCount;
         return $this;
     }
@@ -73,6 +123,7 @@ class ExpressFreightDetail
      */
     public function setBookingConfirmationNumber($bookingConfirmationNumber)
     {
+        $this->__set('BookingConfirmationNumber', $bookingConfirmationNumber);
         $this->BookingConfirmationNumber = $bookingConfirmationNumber;
         return $this;
     }
@@ -95,6 +146,7 @@ class ExpressFreightDetail
      */
     public function setReferenceLabelRequested($referenceLabelRequested)
     {
+        $this->__set('ReferenceLabelRequested', $referenceLabelRequested);
         $this->ReferenceLabelRequested = $referenceLabelRequested;
         return $this;
     }
@@ -117,6 +169,7 @@ class ExpressFreightDetail
      */
     public function setBeforeDeliveryContact(ExpressFreightDetailContact $beforeDeliveryContact)
     {
+        $this->__set('BeforeDeliveryContact', $beforeDeliveryContact);
         $this->BeforeDeliveryContact = $beforeDeliveryContact;
         return $this;
     }
@@ -139,6 +192,7 @@ class ExpressFreightDetail
      */
     public function setUndeliverableContact(ExpressFreightDetailContact $undeliverableContact)
     {
+        $this->__set('UndeliverableContact', $undeliverableContact);
         $this->UndeliverableContact = $undeliverableContact;
         return $this;
     }

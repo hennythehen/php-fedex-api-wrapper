@@ -14,12 +14,32 @@ class Measure
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Quantity' => 'decimal',
+'Units' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Measure';
+
+        
+    /**
+     * @var decimal
+     */
+    public $Quantity;
+
+        
+    /**
+     * @var string
+     */
+    public $Units;
+
+
 
     /**
      * Set Quantity
@@ -29,6 +49,7 @@ class Measure
      */
     public function setQuantity($quantity)
     {
+        $this->__set('Quantity', $quantity);
         $this->Quantity = $quantity;
         return $this;
     }
@@ -51,6 +72,7 @@ class Measure
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

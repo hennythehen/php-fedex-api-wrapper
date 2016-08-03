@@ -14,12 +14,39 @@ class DestinationControlDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'StatementTypes' => 'DestinationControlStatementType',
+'DestinationCountries' => 'string',
+'EndUser' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DestinationControlDetail';
+
+        
+    /**
+     * @var DestinationControlStatementType[]
+     */
+    public $StatementTypes = array();
+
+        
+    /**
+     * @var string
+     */
+    public $DestinationCountries;
+
+        
+    /**
+     * @var string
+     */
+    public $EndUser;
+
+
 
     /**
      * Set StatementTypes
@@ -29,6 +56,7 @@ class DestinationControlDetail
      */
     public function setStatementTypes(array $statementTypes)
     {
+        $this->__set('StatementTypes', $statementTypes);
         $this->StatementTypes = $statementTypes;
         return $this;
     }
@@ -51,6 +79,7 @@ class DestinationControlDetail
      */
     public function setDestinationCountries($destinationCountries)
     {
+        $this->__set('DestinationCountries', $destinationCountries);
         $this->DestinationCountries = $destinationCountries;
         return $this;
     }
@@ -73,6 +102,7 @@ class DestinationControlDetail
      */
     public function setEndUser($endUser)
     {
+        $this->__set('EndUser', $endUser);
         $this->EndUser = $endUser;
         return $this;
     }

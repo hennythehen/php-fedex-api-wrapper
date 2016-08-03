@@ -14,12 +14,32 @@ class DocTabContentBarcoded
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Symbology' => 'BarcodeSymbologyType',
+'Specification' => 'DocTabZoneSpecification',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DocTabContentBarcoded';
+
+        
+    /**
+     * @var \FedEx\SimpleType\BarcodeSymbologyType|string
+     */
+    public $Symbology;
+
+        
+    /**
+     * @var DocTabZoneSpecification
+     */
+    public $Specification;
+
+
 
     /**
      * Set Symbology
@@ -29,6 +49,7 @@ class DocTabContentBarcoded
      */
     public function setSymbology($symbology)
     {
+        $this->__set('Symbology', $symbology);
         $this->Symbology = $symbology;
         return $this;
     }
@@ -51,6 +72,7 @@ class DocTabContentBarcoded
      */
     public function setSpecification(DocTabZoneSpecification $specification)
     {
+        $this->__set('Specification', $specification);
         $this->Specification = $specification;
         return $this;
     }

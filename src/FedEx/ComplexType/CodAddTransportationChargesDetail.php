@@ -14,12 +14,39 @@ class CodAddTransportationChargesDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RateTypeBasis' => 'RateTypeBasisType',
+'ChargeBasis' => 'CodAddTransportationChargeBasisType',
+'ChargeBasisLevel' => 'ChargeBasisLevelType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CodAddTransportationChargesDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\RateTypeBasisType|string
+     */
+    public $RateTypeBasis;
+
+        
+    /**
+     * @var \FedEx\SimpleType\CodAddTransportationChargeBasisType|string
+     */
+    public $ChargeBasis;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ChargeBasisLevelType|string
+     */
+    public $ChargeBasisLevel;
+
+
 
     /**
      * Select the type of rate from which the element is to be selected.
@@ -29,6 +56,7 @@ class CodAddTransportationChargesDetail
      */
     public function setRateTypeBasis($rateTypeBasis)
     {
+        $this->__set('RateTypeBasis', $rateTypeBasis);
         $this->RateTypeBasis = $rateTypeBasis;
         return $this;
     }
@@ -51,6 +79,7 @@ class CodAddTransportationChargesDetail
      */
     public function setChargeBasis($chargeBasis)
     {
+        $this->__set('ChargeBasis', $chargeBasis);
         $this->ChargeBasis = $chargeBasis;
         return $this;
     }
@@ -73,6 +102,7 @@ class CodAddTransportationChargesDetail
      */
     public function setChargeBasisLevel($chargeBasisLevel)
     {
+        $this->__set('ChargeBasisLevel', $chargeBasisLevel);
         $this->ChargeBasisLevel = $chargeBasisLevel;
         return $this;
     }

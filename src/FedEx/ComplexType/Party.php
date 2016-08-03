@@ -14,12 +14,46 @@ class Party
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'AccountNumber' => 'string',
+'Tins' => 'TaxpayerIdentification',
+'Contact' => 'Contact',
+'Address' => 'Address',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Party';
+
+        
+    /**
+     * @var string
+     */
+    public $AccountNumber;
+
+        
+    /**
+     * @var TaxpayerIdentification[]
+     */
+    public $Tins = array();
+
+        
+    /**
+     * @var Contact
+     */
+    public $Contact;
+
+        
+    /**
+     * @var Address
+     */
+    public $Address;
+
+
 
     /**
      * Set AccountNumber
@@ -29,6 +63,7 @@ class Party
      */
     public function setAccountNumber($accountNumber)
     {
+        $this->__set('AccountNumber', $accountNumber);
         $this->AccountNumber = $accountNumber;
         return $this;
     }
@@ -51,6 +86,7 @@ class Party
      */
     public function setTins(array $tins)
     {
+        $this->__set('Tins', $tins);
         $this->Tins = $tins;
         return $this;
     }
@@ -73,6 +109,7 @@ class Party
      */
     public function setContact(Contact $contact)
     {
+        $this->__set('Contact', $contact);
         $this->Contact = $contact;
         return $this;
     }
@@ -95,6 +132,7 @@ class Party
      */
     public function setAddress(Address $address)
     {
+        $this->__set('Address', $address);
         $this->Address = $address;
         return $this;
     }

@@ -14,12 +14,95 @@ class FreightServiceCenterDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'InterlineCarrierCode' => 'string',
+'InterlineCarrierName' => 'string',
+'AdditionalDays' => 'int',
+'LocalService' => 'ServiceType',
+'LocalDistance' => 'Distance',
+'LocalDuration' => 'duration',
+'LocalServiceScheduling' => 'FreightServiceSchedulingType',
+'LimitedServiceDays' => 'DayOfWeekType',
+'GatewayLocationId' => 'string',
+'Location' => 'string',
+'ContactAndAddress' => 'ContactAndAddress',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightServiceCenterDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $InterlineCarrierCode;
+
+        
+    /**
+     * @var string
+     */
+    public $InterlineCarrierName;
+
+        
+    /**
+     * @var int
+     */
+    public $AdditionalDays;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ServiceType|string
+     */
+    public $LocalService;
+
+        
+    /**
+     * @var Distance
+     */
+    public $LocalDistance;
+
+        
+    /**
+     * @var duration
+     */
+    public $LocalDuration;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightServiceSchedulingType|string
+     */
+    public $LocalServiceScheduling;
+
+        
+    /**
+     * @var DayOfWeekType[]
+     */
+    public $LimitedServiceDays = array();
+
+        
+    /**
+     * @var string
+     */
+    public $GatewayLocationId;
+
+        
+    /**
+     * @var string
+     */
+    public $Location;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $ContactAndAddress;
+
+
 
     /**
      * Freight Industry standard non-FedEx carrier identification
@@ -29,6 +112,7 @@ class FreightServiceCenterDetail
      */
     public function setInterlineCarrierCode($interlineCarrierCode)
     {
+        $this->__set('InterlineCarrierCode', $interlineCarrierCode);
         $this->InterlineCarrierCode = $interlineCarrierCode;
         return $this;
     }
@@ -51,6 +135,7 @@ class FreightServiceCenterDetail
      */
     public function setInterlineCarrierName($interlineCarrierName)
     {
+        $this->__set('InterlineCarrierName', $interlineCarrierName);
         $this->InterlineCarrierName = $interlineCarrierName;
         return $this;
     }
@@ -73,6 +158,7 @@ class FreightServiceCenterDetail
      */
     public function setAdditionalDays($additionalDays)
     {
+        $this->__set('AdditionalDays', $additionalDays);
         $this->AdditionalDays = $additionalDays;
         return $this;
     }
@@ -95,6 +181,7 @@ class FreightServiceCenterDetail
      */
     public function setLocalService($localService)
     {
+        $this->__set('LocalService', $localService);
         $this->LocalService = $localService;
         return $this;
     }
@@ -117,6 +204,7 @@ class FreightServiceCenterDetail
      */
     public function setLocalDistance(Distance $localDistance)
     {
+        $this->__set('LocalDistance', $localDistance);
         $this->LocalDistance = $localDistance;
         return $this;
     }
@@ -139,6 +227,7 @@ class FreightServiceCenterDetail
      */
     public function setLocalDuration(duration $localDuration)
     {
+        $this->__set('LocalDuration', $localDuration);
         $this->LocalDuration = $localDuration;
         return $this;
     }
@@ -161,6 +250,7 @@ class FreightServiceCenterDetail
      */
     public function setLocalServiceScheduling($localServiceScheduling)
     {
+        $this->__set('LocalServiceScheduling', $localServiceScheduling);
         $this->LocalServiceScheduling = $localServiceScheduling;
         return $this;
     }
@@ -183,6 +273,7 @@ class FreightServiceCenterDetail
      */
     public function setLimitedServiceDays(array $limitedServiceDays)
     {
+        $this->__set('LimitedServiceDays', $limitedServiceDays);
         $this->LimitedServiceDays = $limitedServiceDays;
         return $this;
     }
@@ -205,6 +296,7 @@ class FreightServiceCenterDetail
      */
     public function setGatewayLocationId($gatewayLocationId)
     {
+        $this->__set('GatewayLocationId', $gatewayLocationId);
         $this->GatewayLocationId = $gatewayLocationId;
         return $this;
     }
@@ -227,6 +319,7 @@ class FreightServiceCenterDetail
      */
     public function setLocation($location)
     {
+        $this->__set('Location', $location);
         $this->Location = $location;
         return $this;
     }
@@ -249,6 +342,7 @@ class FreightServiceCenterDetail
      */
     public function setContactAndAddress(ContactAndAddress $contactAndAddress)
     {
+        $this->__set('ContactAndAddress', $contactAndAddress);
         $this->ContactAndAddress = $contactAndAddress;
         return $this;
     }

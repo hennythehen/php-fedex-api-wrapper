@@ -14,12 +14,123 @@ class ShipmentSpecialServicesRequested
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'SpecialServiceTypes' => 'ShipmentSpecialServiceType',
+'CodDetail' => 'CodDetail',
+'DeliveryOnInvoiceAcceptanceDetail' => 'DeliveryOnInvoiceAcceptanceDetail',
+'HoldAtLocationDetail' => 'HoldAtLocationDetail',
+'EMailNotificationDetail' => 'EMailNotificationDetail',
+'ReturnShipmentDetail' => 'ReturnShipmentDetail',
+'PendingShipmentDetail' => 'PendingShipmentDetail',
+'InternationalControlledExportDetail' => 'InternationalControlledExportDetail',
+'InternationalTrafficInArmsRegulationsDetail' => 'InternationalTrafficInArmsRegulationsDetail',
+'ShipmentDryIceDetail' => 'ShipmentDryIceDetail',
+'HomeDeliveryPremiumDetail' => 'HomeDeliveryPremiumDetail',
+'FlatbedTrailerDetail' => 'FlatbedTrailerDetail',
+'FreightGuaranteeDetail' => 'FreightGuaranteeDetail',
+'EtdDetail' => 'EtdDetail',
+'CustomDeliveryWindowDetail' => 'CustomDeliveryWindowDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShipmentSpecialServicesRequested';
+
+        
+    /**
+     * @var ShipmentSpecialServiceType[]
+     */
+    public $SpecialServiceTypes = array();
+
+        
+    /**
+     * @var CodDetail
+     */
+    public $CodDetail;
+
+        
+    /**
+     * @var DeliveryOnInvoiceAcceptanceDetail
+     */
+    public $DeliveryOnInvoiceAcceptanceDetail;
+
+        
+    /**
+     * @var HoldAtLocationDetail
+     */
+    public $HoldAtLocationDetail;
+
+        
+    /**
+     * @var EMailNotificationDetail
+     */
+    public $EMailNotificationDetail;
+
+        
+    /**
+     * @var ReturnShipmentDetail
+     */
+    public $ReturnShipmentDetail;
+
+        
+    /**
+     * @var PendingShipmentDetail
+     */
+    public $PendingShipmentDetail;
+
+        
+    /**
+     * @var InternationalControlledExportDetail
+     */
+    public $InternationalControlledExportDetail;
+
+        
+    /**
+     * @var InternationalTrafficInArmsRegulationsDetail
+     */
+    public $InternationalTrafficInArmsRegulationsDetail;
+
+        
+    /**
+     * @var ShipmentDryIceDetail
+     */
+    public $ShipmentDryIceDetail;
+
+        
+    /**
+     * @var HomeDeliveryPremiumDetail
+     */
+    public $HomeDeliveryPremiumDetail;
+
+        
+    /**
+     * @var FlatbedTrailerDetail
+     */
+    public $FlatbedTrailerDetail;
+
+        
+    /**
+     * @var FreightGuaranteeDetail
+     */
+    public $FreightGuaranteeDetail;
+
+        
+    /**
+     * @var EtdDetail
+     */
+    public $EtdDetail;
+
+        
+    /**
+     * @var CustomDeliveryWindowDetail
+     */
+    public $CustomDeliveryWindowDetail;
+
+
 
     /**
      * The types of all special services requested for the enclosing shipment (or other shipment-level transaction).
@@ -29,6 +140,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes)
     {
+        $this->__set('SpecialServiceTypes', $specialServiceTypes);
         $this->SpecialServiceTypes = $specialServiceTypes;
         return $this;
     }
@@ -51,6 +163,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setCodDetail(CodDetail $codDetail)
     {
+        $this->__set('CodDetail', $codDetail);
         $this->CodDetail = $codDetail;
         return $this;
     }
@@ -73,6 +186,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setDeliveryOnInvoiceAcceptanceDetail(DeliveryOnInvoiceAcceptanceDetail $deliveryOnInvoiceAcceptanceDetail)
     {
+        $this->__set('DeliveryOnInvoiceAcceptanceDetail', $deliveryOnInvoiceAcceptanceDetail);
         $this->DeliveryOnInvoiceAcceptanceDetail = $deliveryOnInvoiceAcceptanceDetail;
         return $this;
     }
@@ -95,6 +209,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setHoldAtLocationDetail(HoldAtLocationDetail $holdAtLocationDetail)
     {
+        $this->__set('HoldAtLocationDetail', $holdAtLocationDetail);
         $this->HoldAtLocationDetail = $holdAtLocationDetail;
         return $this;
     }
@@ -117,6 +232,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setEMailNotificationDetail(EMailNotificationDetail $eMailNotificationDetail)
     {
+        $this->__set('EMailNotificationDetail', $eMailNotificationDetail);
         $this->EMailNotificationDetail = $eMailNotificationDetail;
         return $this;
     }
@@ -139,6 +255,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setReturnShipmentDetail(ReturnShipmentDetail $returnShipmentDetail)
     {
+        $this->__set('ReturnShipmentDetail', $returnShipmentDetail);
         $this->ReturnShipmentDetail = $returnShipmentDetail;
         return $this;
     }
@@ -161,6 +278,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setPendingShipmentDetail(PendingShipmentDetail $pendingShipmentDetail)
     {
+        $this->__set('PendingShipmentDetail', $pendingShipmentDetail);
         $this->PendingShipmentDetail = $pendingShipmentDetail;
         return $this;
     }
@@ -183,6 +301,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setInternationalControlledExportDetail(InternationalControlledExportDetail $internationalControlledExportDetail)
     {
+        $this->__set('InternationalControlledExportDetail', $internationalControlledExportDetail);
         $this->InternationalControlledExportDetail = $internationalControlledExportDetail;
         return $this;
     }
@@ -205,6 +324,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setInternationalTrafficInArmsRegulationsDetail(InternationalTrafficInArmsRegulationsDetail $internationalTrafficInArmsRegulationsDetail)
     {
+        $this->__set('InternationalTrafficInArmsRegulationsDetail', $internationalTrafficInArmsRegulationsDetail);
         $this->InternationalTrafficInArmsRegulationsDetail = $internationalTrafficInArmsRegulationsDetail;
         return $this;
     }
@@ -227,6 +347,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setShipmentDryIceDetail(ShipmentDryIceDetail $shipmentDryIceDetail)
     {
+        $this->__set('ShipmentDryIceDetail', $shipmentDryIceDetail);
         $this->ShipmentDryIceDetail = $shipmentDryIceDetail;
         return $this;
     }
@@ -249,6 +370,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setHomeDeliveryPremiumDetail(HomeDeliveryPremiumDetail $homeDeliveryPremiumDetail)
     {
+        $this->__set('HomeDeliveryPremiumDetail', $homeDeliveryPremiumDetail);
         $this->HomeDeliveryPremiumDetail = $homeDeliveryPremiumDetail;
         return $this;
     }
@@ -271,6 +393,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setFlatbedTrailerDetail(FlatbedTrailerDetail $flatbedTrailerDetail)
     {
+        $this->__set('FlatbedTrailerDetail', $flatbedTrailerDetail);
         $this->FlatbedTrailerDetail = $flatbedTrailerDetail;
         return $this;
     }
@@ -293,6 +416,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setFreightGuaranteeDetail(FreightGuaranteeDetail $freightGuaranteeDetail)
     {
+        $this->__set('FreightGuaranteeDetail', $freightGuaranteeDetail);
         $this->FreightGuaranteeDetail = $freightGuaranteeDetail;
         return $this;
     }
@@ -315,6 +439,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setEtdDetail(EtdDetail $etdDetail)
     {
+        $this->__set('EtdDetail', $etdDetail);
         $this->EtdDetail = $etdDetail;
         return $this;
     }
@@ -337,6 +462,7 @@ class ShipmentSpecialServicesRequested
      */
     public function setCustomDeliveryWindowDetail(CustomDeliveryWindowDetail $customDeliveryWindowDetail)
     {
+        $this->__set('CustomDeliveryWindowDetail', $customDeliveryWindowDetail);
         $this->CustomDeliveryWindowDetail = $customDeliveryWindowDetail;
         return $this;
     }

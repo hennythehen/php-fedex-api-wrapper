@@ -14,12 +14,32 @@ class Money
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Currency' => 'string',
+'Amount' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Money';
+
+        
+    /**
+     * @var string
+     */
+    public $Currency;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Amount;
+
+
 
     /**
      * Set Currency
@@ -29,6 +49,7 @@ class Money
      */
     public function setCurrency($currency)
     {
+        $this->__set('Currency', $currency);
         $this->Currency = $currency;
         return $this;
     }
@@ -51,6 +72,7 @@ class Money
      */
     public function setAmount($amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }

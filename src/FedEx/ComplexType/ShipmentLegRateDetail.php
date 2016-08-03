@@ -14,12 +14,270 @@ class ShipmentLegRateDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'LegDescription' => 'string',
+'LegOrigin' => 'Address',
+'LegOriginLocationId' => 'string',
+'LegDestination' => 'Address',
+'LegDestinationLocationId' => 'string',
+'RateType' => 'ReturnedRateType',
+'RateScale' => 'string',
+'RateZone' => 'string',
+'PricingCode' => 'PricingCodeType',
+'RatedWeightMethod' => 'RatedWeightMethod',
+'MinimumChargeType' => 'MinimumChargeType',
+'CurrencyExchangeRate' => 'CurrencyExchangeRate',
+'SpecialRatingApplied' => 'SpecialRatingAppliedType',
+'DimDivisor' => 'nonNegativeInteger',
+'DimDivisorType' => 'RateDimensionalDivisorType',
+'FuelSurchargePercent' => 'decimal',
+'TotalBillingWeight' => 'Weight',
+'TotalDimWeight' => 'Weight',
+'TotalBaseCharge' => 'Money',
+'TotalFreightDiscounts' => 'Money',
+'TotalNetFreight' => 'Money',
+'TotalSurcharges' => 'Money',
+'TotalNetFedExCharge' => 'Money',
+'TotalTaxes' => 'Money',
+'TotalNetCharge' => 'Money',
+'TotalRebates' => 'Money',
+'TotalDutiesAndTaxes' => 'Money',
+'TotalNetChargeWithDutiesAndTaxes' => 'Money',
+'FreightRateDetail' => 'FreightRateDetail',
+'FreightDiscounts' => 'RateDiscount',
+'Rebates' => 'Rebate',
+'Surcharges' => 'Surcharge',
+'Taxes' => 'Tax',
+'DutiesAndTaxes' => 'EdtCommodityTax',
+'VariableHandlingCharges' => 'VariableHandlingCharges',
+'TotalVariableHandlingCharges' => 'VariableHandlingCharges',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShipmentLegRateDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $LegDescription;
+
+        
+    /**
+     * @var Address
+     */
+    public $LegOrigin;
+
+        
+    /**
+     * @var string
+     */
+    public $LegOriginLocationId;
+
+        
+    /**
+     * @var Address
+     */
+    public $LegDestination;
+
+        
+    /**
+     * @var string
+     */
+    public $LegDestinationLocationId;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ReturnedRateType|string
+     */
+    public $RateType;
+
+        
+    /**
+     * @var string
+     */
+    public $RateScale;
+
+        
+    /**
+     * @var string
+     */
+    public $RateZone;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PricingCodeType|string
+     */
+    public $PricingCode;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RatedWeightMethod|string
+     */
+    public $RatedWeightMethod;
+
+        
+    /**
+     * @var \FedEx\SimpleType\MinimumChargeType|string
+     */
+    public $MinimumChargeType;
+
+        
+    /**
+     * @var CurrencyExchangeRate
+     */
+    public $CurrencyExchangeRate;
+
+        
+    /**
+     * @var SpecialRatingAppliedType[]
+     */
+    public $SpecialRatingApplied = array();
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $DimDivisor;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RateDimensionalDivisorType|string
+     */
+    public $DimDivisorType;
+
+        
+    /**
+     * @var decimal
+     */
+    public $FuelSurchargePercent;
+
+        
+    /**
+     * @var Weight
+     */
+    public $TotalBillingWeight;
+
+        
+    /**
+     * @var Weight
+     */
+    public $TotalDimWeight;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalBaseCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalFreightDiscounts;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalNetFreight;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalSurcharges;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalNetFedExCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalTaxes;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalNetCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalRebates;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalDutiesAndTaxes;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalNetChargeWithDutiesAndTaxes;
+
+        
+    /**
+     * @var FreightRateDetail
+     */
+    public $FreightRateDetail;
+
+        
+    /**
+     * @var RateDiscount[]
+     */
+    public $FreightDiscounts = array();
+
+        
+    /**
+     * @var Rebate[]
+     */
+    public $Rebates = array();
+
+        
+    /**
+     * @var Surcharge[]
+     */
+    public $Surcharges = array();
+
+        
+    /**
+     * @var Tax[]
+     */
+    public $Taxes = array();
+
+        
+    /**
+     * @var EdtCommodityTax[]
+     */
+    public $DutiesAndTaxes = array();
+
+        
+    /**
+     * @var VariableHandlingCharges
+     */
+    public $VariableHandlingCharges;
+
+        
+    /**
+     * @var VariableHandlingCharges
+     */
+    public $TotalVariableHandlingCharges;
+
+
 
     /**
      * Human-readable text describing the shipment leg.
@@ -29,6 +287,7 @@ class ShipmentLegRateDetail
      */
     public function setLegDescription($legDescription)
     {
+        $this->__set('LegDescription', $legDescription);
         $this->LegDescription = $legDescription;
         return $this;
     }
@@ -51,6 +310,7 @@ class ShipmentLegRateDetail
      */
     public function setLegOrigin(Address $legOrigin)
     {
+        $this->__set('LegOrigin', $legOrigin);
         $this->LegOrigin = $legOrigin;
         return $this;
     }
@@ -73,6 +333,7 @@ class ShipmentLegRateDetail
      */
     public function setLegOriginLocationId($legOriginLocationId)
     {
+        $this->__set('LegOriginLocationId', $legOriginLocationId);
         $this->LegOriginLocationId = $legOriginLocationId;
         return $this;
     }
@@ -95,6 +356,7 @@ class ShipmentLegRateDetail
      */
     public function setLegDestination(Address $legDestination)
     {
+        $this->__set('LegDestination', $legDestination);
         $this->LegDestination = $legDestination;
         return $this;
     }
@@ -117,6 +379,7 @@ class ShipmentLegRateDetail
      */
     public function setLegDestinationLocationId($legDestinationLocationId)
     {
+        $this->__set('LegDestinationLocationId', $legDestinationLocationId);
         $this->LegDestinationLocationId = $legDestinationLocationId;
         return $this;
     }
@@ -139,6 +402,7 @@ class ShipmentLegRateDetail
      */
     public function setRateType($rateType)
     {
+        $this->__set('RateType', $rateType);
         $this->RateType = $rateType;
         return $this;
     }
@@ -161,6 +425,7 @@ class ShipmentLegRateDetail
      */
     public function setRateScale($rateScale)
     {
+        $this->__set('RateScale', $rateScale);
         $this->RateScale = $rateScale;
         return $this;
     }
@@ -183,6 +448,7 @@ class ShipmentLegRateDetail
      */
     public function setRateZone($rateZone)
     {
+        $this->__set('RateZone', $rateZone);
         $this->RateZone = $rateZone;
         return $this;
     }
@@ -205,6 +471,7 @@ class ShipmentLegRateDetail
      */
     public function setPricingCode($pricingCode)
     {
+        $this->__set('PricingCode', $pricingCode);
         $this->PricingCode = $pricingCode;
         return $this;
     }
@@ -227,6 +494,7 @@ class ShipmentLegRateDetail
      */
     public function setRatedWeightMethod($ratedWeightMethod)
     {
+        $this->__set('RatedWeightMethod', $ratedWeightMethod);
         $this->RatedWeightMethod = $ratedWeightMethod;
         return $this;
     }
@@ -249,6 +517,7 @@ class ShipmentLegRateDetail
      */
     public function setMinimumChargeType($minimumChargeType)
     {
+        $this->__set('MinimumChargeType', $minimumChargeType);
         $this->MinimumChargeType = $minimumChargeType;
         return $this;
     }
@@ -271,6 +540,7 @@ class ShipmentLegRateDetail
      */
     public function setCurrencyExchangeRate(CurrencyExchangeRate $currencyExchangeRate)
     {
+        $this->__set('CurrencyExchangeRate', $currencyExchangeRate);
         $this->CurrencyExchangeRate = $currencyExchangeRate;
         return $this;
     }
@@ -293,6 +563,7 @@ class ShipmentLegRateDetail
      */
     public function setSpecialRatingApplied(array $specialRatingApplied)
     {
+        $this->__set('SpecialRatingApplied', $specialRatingApplied);
         $this->SpecialRatingApplied = $specialRatingApplied;
         return $this;
     }
@@ -315,6 +586,7 @@ class ShipmentLegRateDetail
      */
     public function setDimDivisor($dimDivisor)
     {
+        $this->__set('DimDivisor', $dimDivisor);
         $this->DimDivisor = $dimDivisor;
         return $this;
     }
@@ -337,6 +609,7 @@ class ShipmentLegRateDetail
      */
     public function setDimDivisorType($dimDivisorType)
     {
+        $this->__set('DimDivisorType', $dimDivisorType);
         $this->DimDivisorType = $dimDivisorType;
         return $this;
     }
@@ -359,6 +632,7 @@ class ShipmentLegRateDetail
      */
     public function setFuelSurchargePercent($fuelSurchargePercent)
     {
+        $this->__set('FuelSurchargePercent', $fuelSurchargePercent);
         $this->FuelSurchargePercent = $fuelSurchargePercent;
         return $this;
     }
@@ -381,6 +655,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalBillingWeight(Weight $totalBillingWeight)
     {
+        $this->__set('TotalBillingWeight', $totalBillingWeight);
         $this->TotalBillingWeight = $totalBillingWeight;
         return $this;
     }
@@ -403,6 +678,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalDimWeight(Weight $totalDimWeight)
     {
+        $this->__set('TotalDimWeight', $totalDimWeight);
         $this->TotalDimWeight = $totalDimWeight;
         return $this;
     }
@@ -425,6 +701,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalBaseCharge(Money $totalBaseCharge)
     {
+        $this->__set('TotalBaseCharge', $totalBaseCharge);
         $this->TotalBaseCharge = $totalBaseCharge;
         return $this;
     }
@@ -447,6 +724,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalFreightDiscounts(Money $totalFreightDiscounts)
     {
+        $this->__set('TotalFreightDiscounts', $totalFreightDiscounts);
         $this->TotalFreightDiscounts = $totalFreightDiscounts;
         return $this;
     }
@@ -469,6 +747,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalNetFreight(Money $totalNetFreight)
     {
+        $this->__set('TotalNetFreight', $totalNetFreight);
         $this->TotalNetFreight = $totalNetFreight;
         return $this;
     }
@@ -491,6 +770,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalSurcharges(Money $totalSurcharges)
     {
+        $this->__set('TotalSurcharges', $totalSurcharges);
         $this->TotalSurcharges = $totalSurcharges;
         return $this;
     }
@@ -513,6 +793,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalNetFedExCharge(Money $totalNetFedExCharge)
     {
+        $this->__set('TotalNetFedExCharge', $totalNetFedExCharge);
         $this->TotalNetFedExCharge = $totalNetFedExCharge;
         return $this;
     }
@@ -535,6 +816,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalTaxes(Money $totalTaxes)
     {
+        $this->__set('TotalTaxes', $totalTaxes);
         $this->TotalTaxes = $totalTaxes;
         return $this;
     }
@@ -557,6 +839,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalNetCharge(Money $totalNetCharge)
     {
+        $this->__set('TotalNetCharge', $totalNetCharge);
         $this->TotalNetCharge = $totalNetCharge;
         return $this;
     }
@@ -579,6 +862,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalRebates(Money $totalRebates)
     {
+        $this->__set('TotalRebates', $totalRebates);
         $this->TotalRebates = $totalRebates;
         return $this;
     }
@@ -601,6 +885,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalDutiesAndTaxes(Money $totalDutiesAndTaxes)
     {
+        $this->__set('TotalDutiesAndTaxes', $totalDutiesAndTaxes);
         $this->TotalDutiesAndTaxes = $totalDutiesAndTaxes;
         return $this;
     }
@@ -623,6 +908,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalNetChargeWithDutiesAndTaxes(Money $totalNetChargeWithDutiesAndTaxes)
     {
+        $this->__set('TotalNetChargeWithDutiesAndTaxes', $totalNetChargeWithDutiesAndTaxes);
         $this->TotalNetChargeWithDutiesAndTaxes = $totalNetChargeWithDutiesAndTaxes;
         return $this;
     }
@@ -645,6 +931,7 @@ class ShipmentLegRateDetail
      */
     public function setFreightRateDetail(FreightRateDetail $freightRateDetail)
     {
+        $this->__set('FreightRateDetail', $freightRateDetail);
         $this->FreightRateDetail = $freightRateDetail;
         return $this;
     }
@@ -667,6 +954,7 @@ class ShipmentLegRateDetail
      */
     public function setFreightDiscounts(array $freightDiscounts)
     {
+        $this->__set('FreightDiscounts', $freightDiscounts);
         $this->FreightDiscounts = $freightDiscounts;
         return $this;
     }
@@ -689,6 +977,7 @@ class ShipmentLegRateDetail
      */
     public function setRebates(array $rebates)
     {
+        $this->__set('Rebates', $rebates);
         $this->Rebates = $rebates;
         return $this;
     }
@@ -711,6 +1000,7 @@ class ShipmentLegRateDetail
      */
     public function setSurcharges(array $surcharges)
     {
+        $this->__set('Surcharges', $surcharges);
         $this->Surcharges = $surcharges;
         return $this;
     }
@@ -733,6 +1023,7 @@ class ShipmentLegRateDetail
      */
     public function setTaxes(array $taxes)
     {
+        $this->__set('Taxes', $taxes);
         $this->Taxes = $taxes;
         return $this;
     }
@@ -755,6 +1046,7 @@ class ShipmentLegRateDetail
      */
     public function setDutiesAndTaxes(array $dutiesAndTaxes)
     {
+        $this->__set('DutiesAndTaxes', $dutiesAndTaxes);
         $this->DutiesAndTaxes = $dutiesAndTaxes;
         return $this;
     }
@@ -777,6 +1069,7 @@ class ShipmentLegRateDetail
      */
     public function setVariableHandlingCharges(VariableHandlingCharges $variableHandlingCharges)
     {
+        $this->__set('VariableHandlingCharges', $variableHandlingCharges);
         $this->VariableHandlingCharges = $variableHandlingCharges;
         return $this;
     }
@@ -799,6 +1092,7 @@ class ShipmentLegRateDetail
      */
     public function setTotalVariableHandlingCharges(VariableHandlingCharges $totalVariableHandlingCharges)
     {
+        $this->__set('TotalVariableHandlingCharges', $totalVariableHandlingCharges);
         $this->TotalVariableHandlingCharges = $totalVariableHandlingCharges;
         return $this;
     }

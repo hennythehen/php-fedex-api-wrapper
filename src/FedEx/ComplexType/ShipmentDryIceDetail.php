@@ -14,12 +14,32 @@ class ShipmentDryIceDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PackageCount' => 'nonNegativeInteger',
+'TotalWeight' => 'Weight',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShipmentDryIceDetail';
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $PackageCount;
+
+        
+    /**
+     * @var Weight
+     */
+    public $TotalWeight;
+
+
 
     /**
      * Total number of packages in the shipment that contain dry ice.
@@ -29,6 +49,7 @@ class ShipmentDryIceDetail
      */
     public function setPackageCount($packageCount)
     {
+        $this->__set('PackageCount', $packageCount);
         $this->PackageCount = $packageCount;
         return $this;
     }
@@ -51,6 +72,7 @@ class ShipmentDryIceDetail
      */
     public function setTotalWeight(Weight $totalWeight)
     {
+        $this->__set('TotalWeight', $totalWeight);
         $this->TotalWeight = $totalWeight;
         return $this;
     }

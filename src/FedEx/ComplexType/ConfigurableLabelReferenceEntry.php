@@ -14,12 +14,46 @@ class ConfigurableLabelReferenceEntry
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ZoneNumber' => 'positiveInteger',
+'Header' => 'string',
+'DataField' => 'string',
+'LiteralValue' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ConfigurableLabelReferenceEntry';
+
+        
+    /**
+     * @var positiveInteger
+     */
+    public $ZoneNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $Header;
+
+        
+    /**
+     * @var string
+     */
+    public $DataField;
+
+        
+    /**
+     * @var string
+     */
+    public $LiteralValue;
+
+
 
     /**
      * Set ZoneNumber
@@ -29,6 +63,7 @@ class ConfigurableLabelReferenceEntry
      */
     public function setZoneNumber($zoneNumber)
     {
+        $this->__set('ZoneNumber', $zoneNumber);
         $this->ZoneNumber = $zoneNumber;
         return $this;
     }
@@ -51,6 +86,7 @@ class ConfigurableLabelReferenceEntry
      */
     public function setHeader($header)
     {
+        $this->__set('Header', $header);
         $this->Header = $header;
         return $this;
     }
@@ -73,6 +109,7 @@ class ConfigurableLabelReferenceEntry
      */
     public function setDataField($dataField)
     {
+        $this->__set('DataField', $dataField);
         $this->DataField = $dataField;
         return $this;
     }
@@ -95,6 +132,7 @@ class ConfigurableLabelReferenceEntry
      */
     public function setLiteralValue($literalValue)
     {
+        $this->__set('LiteralValue', $literalValue);
         $this->LiteralValue = $literalValue;
         return $this;
     }

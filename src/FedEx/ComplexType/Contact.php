@@ -14,12 +14,88 @@ class Contact
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ContactId' => 'string',
+'PersonName' => 'string',
+'Title' => 'string',
+'CompanyName' => 'string',
+'PhoneNumber' => 'string',
+'PhoneExtension' => 'string',
+'TollFreePhoneNumber' => 'string',
+'PagerNumber' => 'string',
+'FaxNumber' => 'string',
+'EMailAddress' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Contact';
+
+        
+    /**
+     * @var string
+     */
+    public $ContactId;
+
+        
+    /**
+     * @var string
+     */
+    public $PersonName;
+
+        
+    /**
+     * @var string
+     */
+    public $Title;
+
+        
+    /**
+     * @var string
+     */
+    public $CompanyName;
+
+        
+    /**
+     * @var string
+     */
+    public $PhoneNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $PhoneExtension;
+
+        
+    /**
+     * @var string
+     */
+    public $TollFreePhoneNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $PagerNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $FaxNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $EMailAddress;
+
+
 
     /**
      * Client provided identifier corresponding to this contact information.
@@ -29,6 +105,7 @@ class Contact
      */
     public function setContactId($contactId)
     {
+        $this->__set('ContactId', $contactId);
         $this->ContactId = $contactId;
         return $this;
     }
@@ -51,6 +128,7 @@ class Contact
      */
     public function setPersonName($personName)
     {
+        $this->__set('PersonName', $personName);
         $this->PersonName = $personName;
         return $this;
     }
@@ -73,6 +151,7 @@ class Contact
      */
     public function setTitle($title)
     {
+        $this->__set('Title', $title);
         $this->Title = $title;
         return $this;
     }
@@ -95,6 +174,7 @@ class Contact
      */
     public function setCompanyName($companyName)
     {
+        $this->__set('CompanyName', $companyName);
         $this->CompanyName = $companyName;
         return $this;
     }
@@ -117,6 +197,7 @@ class Contact
      */
     public function setPhoneNumber($phoneNumber)
     {
+        $this->__set('PhoneNumber', $phoneNumber);
         $this->PhoneNumber = $phoneNumber;
         return $this;
     }
@@ -139,6 +220,7 @@ class Contact
      */
     public function setPhoneExtension($phoneExtension)
     {
+        $this->__set('PhoneExtension', $phoneExtension);
         $this->PhoneExtension = $phoneExtension;
         return $this;
     }
@@ -161,6 +243,7 @@ class Contact
      */
     public function setTollFreePhoneNumber($tollFreePhoneNumber)
     {
+        $this->__set('TollFreePhoneNumber', $tollFreePhoneNumber);
         $this->TollFreePhoneNumber = $tollFreePhoneNumber;
         return $this;
     }
@@ -183,6 +266,7 @@ class Contact
      */
     public function setPagerNumber($pagerNumber)
     {
+        $this->__set('PagerNumber', $pagerNumber);
         $this->PagerNumber = $pagerNumber;
         return $this;
     }
@@ -205,6 +289,7 @@ class Contact
      */
     public function setFaxNumber($faxNumber)
     {
+        $this->__set('FaxNumber', $faxNumber);
         $this->FaxNumber = $faxNumber;
         return $this;
     }
@@ -227,6 +312,7 @@ class Contact
      */
     public function setEMailAddress($eMailAddress)
     {
+        $this->__set('EMailAddress', $eMailAddress);
         $this->EMailAddress = $eMailAddress;
         return $this;
     }

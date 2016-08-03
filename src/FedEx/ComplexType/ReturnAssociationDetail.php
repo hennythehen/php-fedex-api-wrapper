@@ -14,12 +14,32 @@ class ReturnAssociationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TrackingNumber' => 'string',
+'ShipDate' => 'date',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ReturnAssociationDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $TrackingNumber;
+
+        
+    /**
+     * @var date
+     */
+    public $ShipDate;
+
+
 
     /**
      * Specifies the tracking number of the master associated with the return shipment.
@@ -29,6 +49,7 @@ class ReturnAssociationDetail
      */
     public function setTrackingNumber($trackingNumber)
     {
+        $this->__set('TrackingNumber', $trackingNumber);
         $this->TrackingNumber = $trackingNumber;
         return $this;
     }
@@ -51,6 +72,7 @@ class ReturnAssociationDetail
      */
     public function setShipDate($shipDate)
     {
+        $this->__set('ShipDate', $shipDate);
         $this->ShipDate = $shipDate;
         return $this;
     }

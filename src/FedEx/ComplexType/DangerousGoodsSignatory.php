@@ -14,12 +14,39 @@ class DangerousGoodsSignatory
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ContactName' => 'string',
+'Title' => 'string',
+'Place' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DangerousGoodsSignatory';
+
+        
+    /**
+     * @var string
+     */
+    public $ContactName;
+
+        
+    /**
+     * @var string
+     */
+    public $Title;
+
+        
+    /**
+     * @var string
+     */
+    public $Place;
+
+
 
     /**
      * Set ContactName
@@ -29,6 +56,7 @@ class DangerousGoodsSignatory
      */
     public function setContactName($contactName)
     {
+        $this->__set('ContactName', $contactName);
         $this->ContactName = $contactName;
         return $this;
     }
@@ -51,6 +79,7 @@ class DangerousGoodsSignatory
      */
     public function setTitle($title)
     {
+        $this->__set('Title', $title);
         $this->Title = $title;
         return $this;
     }
@@ -73,6 +102,7 @@ class DangerousGoodsSignatory
      */
     public function setPlace($place)
     {
+        $this->__set('Place', $place);
         $this->Place = $place;
         return $this;
     }

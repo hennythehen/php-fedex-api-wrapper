@@ -14,12 +14,53 @@ class ClientDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'AccountNumber' => 'string',
+'MeterNumber' => 'string',
+'IntegratorId' => 'string',
+'Region' => 'ExpressRegionCode',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ClientDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $AccountNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $MeterNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $IntegratorId;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ExpressRegionCode|string
+     */
+    public $Region;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * The FedEx account number associated with this transaction.
@@ -29,6 +70,7 @@ class ClientDetail
      */
     public function setAccountNumber($accountNumber)
     {
+        $this->__set('AccountNumber', $accountNumber);
         $this->AccountNumber = $accountNumber;
         return $this;
     }
@@ -51,6 +93,7 @@ class ClientDetail
      */
     public function setMeterNumber($meterNumber)
     {
+        $this->__set('MeterNumber', $meterNumber);
         $this->MeterNumber = $meterNumber;
         return $this;
     }
@@ -73,6 +116,7 @@ class ClientDetail
      */
     public function setIntegratorId($integratorId)
     {
+        $this->__set('IntegratorId', $integratorId);
         $this->IntegratorId = $integratorId;
         return $this;
     }
@@ -95,6 +139,7 @@ class ClientDetail
      */
     public function setRegion($region)
     {
+        $this->__set('Region', $region);
         $this->Region = $region;
         return $this;
     }
@@ -117,6 +162,7 @@ class ClientDetail
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

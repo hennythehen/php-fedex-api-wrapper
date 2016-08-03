@@ -14,12 +14,60 @@ class RatedPackageDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TrackingIds' => 'TrackingId',
+'GroupNumber' => 'nonNegativeInteger',
+'EffectiveNetDiscount' => 'Money',
+'AdjustedCodCollectionAmount' => 'Money',
+'OversizeClass' => 'OversizeClassType',
+'PackageRateDetail' => 'PackageRateDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RatedPackageDetail';
+
+        
+    /**
+     * @var TrackingId[]
+     */
+    public $TrackingIds = array();
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $GroupNumber;
+
+        
+    /**
+     * @var Money
+     */
+    public $EffectiveNetDiscount;
+
+        
+    /**
+     * @var Money
+     */
+    public $AdjustedCodCollectionAmount;
+
+        
+    /**
+     * @var \FedEx\SimpleType\OversizeClassType|string
+     */
+    public $OversizeClass;
+
+        
+    /**
+     * @var PackageRateDetail
+     */
+    public $PackageRateDetail;
+
+
 
     /**
      * Echoed from the corresponding package in the rate request (if provided).
@@ -29,6 +77,7 @@ class RatedPackageDetail
      */
     public function setTrackingIds(array $trackingIds)
     {
+        $this->__set('TrackingIds', $trackingIds);
         $this->TrackingIds = $trackingIds;
         return $this;
     }
@@ -51,6 +100,7 @@ class RatedPackageDetail
      */
     public function setGroupNumber($groupNumber)
     {
+        $this->__set('GroupNumber', $groupNumber);
         $this->GroupNumber = $groupNumber;
         return $this;
     }
@@ -73,6 +123,7 @@ class RatedPackageDetail
      */
     public function setEffectiveNetDiscount(Money $effectiveNetDiscount)
     {
+        $this->__set('EffectiveNetDiscount', $effectiveNetDiscount);
         $this->EffectiveNetDiscount = $effectiveNetDiscount;
         return $this;
     }
@@ -95,6 +146,7 @@ class RatedPackageDetail
      */
     public function setAdjustedCodCollectionAmount(Money $adjustedCodCollectionAmount)
     {
+        $this->__set('AdjustedCodCollectionAmount', $adjustedCodCollectionAmount);
         $this->AdjustedCodCollectionAmount = $adjustedCodCollectionAmount;
         return $this;
     }
@@ -117,6 +169,7 @@ class RatedPackageDetail
      */
     public function setOversizeClass($oversizeClass)
     {
+        $this->__set('OversizeClass', $oversizeClass);
         $this->OversizeClass = $oversizeClass;
         return $this;
     }
@@ -139,6 +192,7 @@ class RatedPackageDetail
      */
     public function setPackageRateDetail(PackageRateDetail $packageRateDetail)
     {
+        $this->__set('PackageRateDetail', $packageRateDetail);
         $this->PackageRateDetail = $packageRateDetail;
         return $this;
     }

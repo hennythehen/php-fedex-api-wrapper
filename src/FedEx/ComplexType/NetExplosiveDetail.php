@@ -14,12 +14,39 @@ class NetExplosiveDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'NetExplosiveClassificationType',
+'Amount' => 'decimal',
+'Units' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'NetExplosiveDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\NetExplosiveClassificationType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Amount;
+
+        
+    /**
+     * @var string
+     */
+    public $Units;
+
+
 
     /**
      * Set Type
@@ -29,6 +56,7 @@ class NetExplosiveDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +79,7 @@ class NetExplosiveDetail
      */
     public function setAmount($amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }
@@ -73,6 +102,7 @@ class NetExplosiveDetail
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

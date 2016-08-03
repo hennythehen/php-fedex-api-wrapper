@@ -14,12 +14,151 @@ class PackageRateDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RateType' => 'ReturnedRateType',
+'RatedWeightMethod' => 'RatedWeightMethod',
+'MinimumChargeType' => 'MinimumChargeType',
+'BillingWeight' => 'Weight',
+'DimWeight' => 'Weight',
+'OversizeWeight' => 'Weight',
+'BaseCharge' => 'Money',
+'TotalFreightDiscounts' => 'Money',
+'NetFreight' => 'Money',
+'TotalSurcharges' => 'Money',
+'NetFedExCharge' => 'Money',
+'TotalTaxes' => 'Money',
+'NetCharge' => 'Money',
+'TotalRebates' => 'Money',
+'FreightDiscounts' => 'RateDiscount',
+'Rebates' => 'Rebate',
+'Surcharges' => 'Surcharge',
+'Taxes' => 'Tax',
+'VariableHandlingCharges' => 'VariableHandlingCharges',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PackageRateDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ReturnedRateType|string
+     */
+    public $RateType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RatedWeightMethod|string
+     */
+    public $RatedWeightMethod;
+
+        
+    /**
+     * @var \FedEx\SimpleType\MinimumChargeType|string
+     */
+    public $MinimumChargeType;
+
+        
+    /**
+     * @var Weight
+     */
+    public $BillingWeight;
+
+        
+    /**
+     * @var Weight
+     */
+    public $DimWeight;
+
+        
+    /**
+     * @var Weight
+     */
+    public $OversizeWeight;
+
+        
+    /**
+     * @var Money
+     */
+    public $BaseCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalFreightDiscounts;
+
+        
+    /**
+     * @var Money
+     */
+    public $NetFreight;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalSurcharges;
+
+        
+    /**
+     * @var Money
+     */
+    public $NetFedExCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalTaxes;
+
+        
+    /**
+     * @var Money
+     */
+    public $NetCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalRebates;
+
+        
+    /**
+     * @var RateDiscount[]
+     */
+    public $FreightDiscounts = array();
+
+        
+    /**
+     * @var Rebate[]
+     */
+    public $Rebates = array();
+
+        
+    /**
+     * @var Surcharge[]
+     */
+    public $Surcharges = array();
+
+        
+    /**
+     * @var Tax[]
+     */
+    public $Taxes = array();
+
+        
+    /**
+     * @var VariableHandlingCharges
+     */
+    public $VariableHandlingCharges;
+
+
 
     /**
      * Type used for this specific set of rate data.
@@ -29,6 +168,7 @@ class PackageRateDetail
      */
     public function setRateType($rateType)
     {
+        $this->__set('RateType', $rateType);
         $this->RateType = $rateType;
         return $this;
     }
@@ -51,6 +191,7 @@ class PackageRateDetail
      */
     public function setRatedWeightMethod($ratedWeightMethod)
     {
+        $this->__set('RatedWeightMethod', $ratedWeightMethod);
         $this->RatedWeightMethod = $ratedWeightMethod;
         return $this;
     }
@@ -73,6 +214,7 @@ class PackageRateDetail
      */
     public function setMinimumChargeType($minimumChargeType)
     {
+        $this->__set('MinimumChargeType', $minimumChargeType);
         $this->MinimumChargeType = $minimumChargeType;
         return $this;
     }
@@ -95,6 +237,7 @@ class PackageRateDetail
      */
     public function setBillingWeight(Weight $billingWeight)
     {
+        $this->__set('BillingWeight', $billingWeight);
         $this->BillingWeight = $billingWeight;
         return $this;
     }
@@ -117,6 +260,7 @@ class PackageRateDetail
      */
     public function setDimWeight(Weight $dimWeight)
     {
+        $this->__set('DimWeight', $dimWeight);
         $this->DimWeight = $dimWeight;
         return $this;
     }
@@ -139,6 +283,7 @@ class PackageRateDetail
      */
     public function setOversizeWeight(Weight $oversizeWeight)
     {
+        $this->__set('OversizeWeight', $oversizeWeight);
         $this->OversizeWeight = $oversizeWeight;
         return $this;
     }
@@ -161,6 +306,7 @@ class PackageRateDetail
      */
     public function setBaseCharge(Money $baseCharge)
     {
+        $this->__set('BaseCharge', $baseCharge);
         $this->BaseCharge = $baseCharge;
         return $this;
     }
@@ -183,6 +329,7 @@ class PackageRateDetail
      */
     public function setTotalFreightDiscounts(Money $totalFreightDiscounts)
     {
+        $this->__set('TotalFreightDiscounts', $totalFreightDiscounts);
         $this->TotalFreightDiscounts = $totalFreightDiscounts;
         return $this;
     }
@@ -205,6 +352,7 @@ class PackageRateDetail
      */
     public function setNetFreight(Money $netFreight)
     {
+        $this->__set('NetFreight', $netFreight);
         $this->NetFreight = $netFreight;
         return $this;
     }
@@ -227,6 +375,7 @@ class PackageRateDetail
      */
     public function setTotalSurcharges(Money $totalSurcharges)
     {
+        $this->__set('TotalSurcharges', $totalSurcharges);
         $this->TotalSurcharges = $totalSurcharges;
         return $this;
     }
@@ -249,6 +398,7 @@ class PackageRateDetail
      */
     public function setNetFedExCharge(Money $netFedExCharge)
     {
+        $this->__set('NetFedExCharge', $netFedExCharge);
         $this->NetFedExCharge = $netFedExCharge;
         return $this;
     }
@@ -271,6 +421,7 @@ class PackageRateDetail
      */
     public function setTotalTaxes(Money $totalTaxes)
     {
+        $this->__set('TotalTaxes', $totalTaxes);
         $this->TotalTaxes = $totalTaxes;
         return $this;
     }
@@ -293,6 +444,7 @@ class PackageRateDetail
      */
     public function setNetCharge(Money $netCharge)
     {
+        $this->__set('NetCharge', $netCharge);
         $this->NetCharge = $netCharge;
         return $this;
     }
@@ -315,6 +467,7 @@ class PackageRateDetail
      */
     public function setTotalRebates(Money $totalRebates)
     {
+        $this->__set('TotalRebates', $totalRebates);
         $this->TotalRebates = $totalRebates;
         return $this;
     }
@@ -337,6 +490,7 @@ class PackageRateDetail
      */
     public function setFreightDiscounts(array $freightDiscounts)
     {
+        $this->__set('FreightDiscounts', $freightDiscounts);
         $this->FreightDiscounts = $freightDiscounts;
         return $this;
     }
@@ -359,6 +513,7 @@ class PackageRateDetail
      */
     public function setRebates(array $rebates)
     {
+        $this->__set('Rebates', $rebates);
         $this->Rebates = $rebates;
         return $this;
     }
@@ -381,6 +536,7 @@ class PackageRateDetail
      */
     public function setSurcharges(array $surcharges)
     {
+        $this->__set('Surcharges', $surcharges);
         $this->Surcharges = $surcharges;
         return $this;
     }
@@ -403,6 +559,7 @@ class PackageRateDetail
      */
     public function setTaxes(array $taxes)
     {
+        $this->__set('Taxes', $taxes);
         $this->Taxes = $taxes;
         return $this;
     }
@@ -425,6 +582,7 @@ class PackageRateDetail
      */
     public function setVariableHandlingCharges(VariableHandlingCharges $variableHandlingCharges)
     {
+        $this->__set('VariableHandlingCharges', $variableHandlingCharges);
         $this->VariableHandlingCharges = $variableHandlingCharges;
         return $this;
     }

@@ -14,12 +14,53 @@ class RadionuclideDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Radionuclide' => 'string',
+'Activity' => 'RadionuclideActivity',
+'ExceptedPackagingIsReportableQuantity' => 'boolean',
+'PhysicalForm' => 'PhysicalFormType',
+'ChemicalForm' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RadionuclideDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $Radionuclide;
+
+        
+    /**
+     * @var RadionuclideActivity
+     */
+    public $Activity;
+
+        
+    /**
+     * @var boolean
+     */
+    public $ExceptedPackagingIsReportableQuantity;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PhysicalFormType|string
+     */
+    public $PhysicalForm;
+
+        
+    /**
+     * @var string
+     */
+    public $ChemicalForm;
+
+
 
     /**
      * Set Radionuclide
@@ -29,6 +70,7 @@ class RadionuclideDetail
      */
     public function setRadionuclide($radionuclide)
     {
+        $this->__set('Radionuclide', $radionuclide);
         $this->Radionuclide = $radionuclide;
         return $this;
     }
@@ -51,6 +93,7 @@ class RadionuclideDetail
      */
     public function setActivity(RadionuclideActivity $activity)
     {
+        $this->__set('Activity', $activity);
         $this->Activity = $activity;
         return $this;
     }
@@ -73,6 +116,7 @@ class RadionuclideDetail
      */
     public function setExceptedPackagingIsReportableQuantity($exceptedPackagingIsReportableQuantity)
     {
+        $this->__set('ExceptedPackagingIsReportableQuantity', $exceptedPackagingIsReportableQuantity);
         $this->ExceptedPackagingIsReportableQuantity = $exceptedPackagingIsReportableQuantity;
         return $this;
     }
@@ -95,6 +139,7 @@ class RadionuclideDetail
      */
     public function setPhysicalForm($physicalForm)
     {
+        $this->__set('PhysicalForm', $physicalForm);
         $this->PhysicalForm = $physicalForm;
         return $this;
     }
@@ -117,6 +162,7 @@ class RadionuclideDetail
      */
     public function setChemicalForm($chemicalForm)
     {
+        $this->__set('ChemicalForm', $chemicalForm);
         $this->ChemicalForm = $chemicalForm;
         return $this;
     }

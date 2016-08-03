@@ -14,12 +14,32 @@ class HazardousCommodityPackingDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CargoAircraftOnly' => 'boolean',
+'PackingInstructions' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityPackingDetail';
+
+        
+    /**
+     * @var boolean
+     */
+    public $CargoAircraftOnly;
+
+        
+    /**
+     * @var string
+     */
+    public $PackingInstructions;
+
+
 
     /**
      * Set CargoAircraftOnly
@@ -29,6 +49,7 @@ class HazardousCommodityPackingDetail
      */
     public function setCargoAircraftOnly($cargoAircraftOnly)
     {
+        $this->__set('CargoAircraftOnly', $cargoAircraftOnly);
         $this->CargoAircraftOnly = $cargoAircraftOnly;
         return $this;
     }
@@ -51,6 +72,7 @@ class HazardousCommodityPackingDetail
      */
     public function setPackingInstructions($packingInstructions)
     {
+        $this->__set('PackingInstructions', $packingInstructions);
         $this->PackingInstructions = $packingInstructions;
         return $this;
     }

@@ -14,12 +14,32 @@ class EMailNotificationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PersonalMessage' => 'string',
+'Recipients' => 'EMailNotificationRecipient',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EMailNotificationDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $PersonalMessage;
+
+        
+    /**
+     * @var EMailNotificationRecipient[]
+     */
+    public $Recipients = array();
+
+
 
     /**
      * A message that will be included in the email notifications
@@ -29,6 +49,7 @@ class EMailNotificationDetail
      */
     public function setPersonalMessage($personalMessage)
     {
+        $this->__set('PersonalMessage', $personalMessage);
         $this->PersonalMessage = $personalMessage;
         return $this;
     }
@@ -51,6 +72,7 @@ class EMailNotificationDetail
      */
     public function setRecipients(array $recipients)
     {
+        $this->__set('Recipients', $recipients);
         $this->Recipients = $recipients;
         return $this;
     }

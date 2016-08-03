@@ -14,12 +14,32 @@ class RegulatoryLabelContentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'RegulatoryLabelType',
+'GenerationOptions' => 'CustomerSpecifiedLabelGenerationOptionType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RegulatoryLabelContentDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\RegulatoryLabelType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var CustomerSpecifiedLabelGenerationOptionType[]
+     */
+    public $GenerationOptions = array();
+
+
 
     /**
      * Set Type
@@ -29,6 +49,7 @@ class RegulatoryLabelContentDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class RegulatoryLabelContentDetail
      */
     public function setGenerationOptions(array $generationOptions)
     {
+        $this->__set('GenerationOptions', $generationOptions);
         $this->GenerationOptions = $generationOptions;
         return $this;
     }

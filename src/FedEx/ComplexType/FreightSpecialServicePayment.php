@@ -14,12 +14,32 @@ class FreightSpecialServicePayment
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'SpecialService' => 'ShipmentSpecialServiceType',
+'PaymentType' => 'FreightShipmentRoleType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightSpecialServicePayment';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShipmentSpecialServiceType|string
+     */
+    public $SpecialService;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightShipmentRoleType|string
+     */
+    public $PaymentType;
+
+
 
     /**
      * Identifies the special service.
@@ -29,6 +49,7 @@ class FreightSpecialServicePayment
      */
     public function setSpecialService($specialService)
     {
+        $this->__set('SpecialService', $specialService);
         $this->SpecialService = $specialService;
         return $this;
     }
@@ -51,6 +72,7 @@ class FreightSpecialServicePayment
      */
     public function setPaymentType($paymentType)
     {
+        $this->__set('PaymentType', $paymentType);
         $this->PaymentType = $paymentType;
         return $this;
     }

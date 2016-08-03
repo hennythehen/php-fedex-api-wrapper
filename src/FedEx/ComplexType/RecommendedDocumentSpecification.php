@@ -14,12 +14,25 @@ class RecommendedDocumentSpecification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Types' => 'RecommendedDocumentType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RecommendedDocumentSpecification';
+
+        
+    /**
+     * @var RecommendedDocumentType[]
+     */
+    public $Types = array();
+
+
 
     /**
      * Set Types
@@ -29,6 +42,7 @@ class RecommendedDocumentSpecification
      */
     public function setTypes(array $types)
     {
+        $this->__set('Types', $types);
         $this->Types = $types;
         return $this;
     }

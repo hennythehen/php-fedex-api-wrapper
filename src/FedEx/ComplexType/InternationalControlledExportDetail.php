@@ -14,12 +14,53 @@ class InternationalControlledExportDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'InternationalControlledExportType',
+'ForeignTradeZoneCode' => 'string',
+'EntryNumber' => 'string',
+'LicenseOrPermitNumber' => 'string',
+'LicenseOrPermitExpirationDate' => 'date',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'InternationalControlledExportDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\InternationalControlledExportType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var string
+     */
+    public $ForeignTradeZoneCode;
+
+        
+    /**
+     * @var string
+     */
+    public $EntryNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $LicenseOrPermitNumber;
+
+        
+    /**
+     * @var date
+     */
+    public $LicenseOrPermitExpirationDate;
+
+
 
     /**
      * Set Type
@@ -29,6 +70,7 @@ class InternationalControlledExportDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +93,7 @@ class InternationalControlledExportDetail
      */
     public function setForeignTradeZoneCode($foreignTradeZoneCode)
     {
+        $this->__set('ForeignTradeZoneCode', $foreignTradeZoneCode);
         $this->ForeignTradeZoneCode = $foreignTradeZoneCode;
         return $this;
     }
@@ -73,6 +116,7 @@ class InternationalControlledExportDetail
      */
     public function setEntryNumber($entryNumber)
     {
+        $this->__set('EntryNumber', $entryNumber);
         $this->EntryNumber = $entryNumber;
         return $this;
     }
@@ -95,6 +139,7 @@ class InternationalControlledExportDetail
      */
     public function setLicenseOrPermitNumber($licenseOrPermitNumber)
     {
+        $this->__set('LicenseOrPermitNumber', $licenseOrPermitNumber);
         $this->LicenseOrPermitNumber = $licenseOrPermitNumber;
         return $this;
     }
@@ -117,6 +162,7 @@ class InternationalControlledExportDetail
      */
     public function setLicenseOrPermitExpirationDate($licenseOrPermitExpirationDate)
     {
+        $this->__set('LicenseOrPermitExpirationDate', $licenseOrPermitExpirationDate);
         $this->LicenseOrPermitExpirationDate = $licenseOrPermitExpirationDate;
         return $this;
     }

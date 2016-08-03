@@ -14,12 +14,32 @@ class Distance
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Value' => 'decimal',
+'Units' => 'DistanceUnits',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Distance';
+
+        
+    /**
+     * @var decimal
+     */
+    public $Value;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DistanceUnits|string
+     */
+    public $Units;
+
+
 
     /**
      * Identifies the distance quantity.
@@ -29,6 +49,7 @@ class Distance
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }
@@ -51,6 +72,7 @@ class Distance
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

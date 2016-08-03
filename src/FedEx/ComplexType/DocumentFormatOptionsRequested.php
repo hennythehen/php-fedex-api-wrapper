@@ -14,12 +14,25 @@ class DocumentFormatOptionsRequested
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Options' => 'DocumentFormatOptionType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DocumentFormatOptionsRequested';
+
+        
+    /**
+     * @var DocumentFormatOptionType[]
+     */
+    public $Options = array();
+
+
 
     /**
      * Set Options
@@ -29,6 +42,7 @@ class DocumentFormatOptionsRequested
      */
     public function setOptions(array $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }

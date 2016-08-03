@@ -14,12 +14,32 @@ class WebAuthenticationCredential
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Key' => 'string',
+'Password' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'WebAuthenticationCredential';
+
+        
+    /**
+     * @var string
+     */
+    public $Key;
+
+        
+    /**
+     * @var string
+     */
+    public $Password;
+
+
 
     /**
      * Identifying part of authentication credential. This value is provided by FedEx after registration
@@ -29,6 +49,7 @@ class WebAuthenticationCredential
      */
     public function setKey($key)
     {
+        $this->__set('Key', $key);
         $this->Key = $key;
         return $this;
     }
@@ -51,6 +72,7 @@ class WebAuthenticationCredential
      */
     public function setPassword($password)
     {
+        $this->__set('Password', $password);
         $this->Password = $password;
         return $this;
     }

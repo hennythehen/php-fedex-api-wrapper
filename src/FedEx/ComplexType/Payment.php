@@ -14,12 +14,32 @@ class Payment
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PaymentType' => 'PaymentType',
+'Payor' => 'Payor',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Payment';
+
+        
+    /**
+     * @var \FedEx\SimpleType\PaymentType|string
+     */
+    public $PaymentType;
+
+        
+    /**
+     * @var Payor
+     */
+    public $Payor;
+
+
 
     /**
      * Set PaymentType
@@ -29,6 +49,7 @@ class Payment
      */
     public function setPaymentType($paymentType)
     {
+        $this->__set('PaymentType', $paymentType);
         $this->PaymentType = $paymentType;
         return $this;
     }
@@ -51,6 +72,7 @@ class Payment
      */
     public function setPayor(Payor $payor)
     {
+        $this->__set('Payor', $payor);
         $this->Payor = $payor;
         return $this;
     }

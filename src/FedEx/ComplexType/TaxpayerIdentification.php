@@ -14,12 +14,53 @@ class TaxpayerIdentification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TinType' => 'TinType',
+'Number' => 'string',
+'Usage' => 'string',
+'EffectiveDate' => 'dateTime',
+'ExpirationDate' => 'dateTime',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'TaxpayerIdentification';
+
+        
+    /**
+     * @var \FedEx\SimpleType\TinType|string
+     */
+    public $TinType;
+
+        
+    /**
+     * @var string
+     */
+    public $Number;
+
+        
+    /**
+     * @var string
+     */
+    public $Usage;
+
+        
+    /**
+     * @var dateTime
+     */
+    public $EffectiveDate;
+
+        
+    /**
+     * @var dateTime
+     */
+    public $ExpirationDate;
+
+
 
     /**
      * Set TinType
@@ -29,6 +70,7 @@ class TaxpayerIdentification
      */
     public function setTinType($tinType)
     {
+        $this->__set('TinType', $tinType);
         $this->TinType = $tinType;
         return $this;
     }
@@ -51,6 +93,7 @@ class TaxpayerIdentification
      */
     public function setNumber($number)
     {
+        $this->__set('Number', $number);
         $this->Number = $number;
         return $this;
     }
@@ -73,6 +116,7 @@ class TaxpayerIdentification
      */
     public function setUsage($usage)
     {
+        $this->__set('Usage', $usage);
         $this->Usage = $usage;
         return $this;
     }
@@ -95,6 +139,7 @@ class TaxpayerIdentification
      */
     public function setEffectiveDate($effectiveDate)
     {
+        $this->__set('EffectiveDate', $effectiveDate);
         $this->EffectiveDate = $effectiveDate;
         return $this;
     }
@@ -117,6 +162,7 @@ class TaxpayerIdentification
      */
     public function setExpirationDate($expirationDate)
     {
+        $this->__set('ExpirationDate', $expirationDate);
         $this->ExpirationDate = $expirationDate;
         return $this;
     }

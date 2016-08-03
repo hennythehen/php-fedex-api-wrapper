@@ -14,12 +14,32 @@ class BrokerDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'BrokerType',
+'Broker' => 'Party',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'BrokerDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\BrokerType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var Party
+     */
+    public $Broker;
+
+
 
     /**
      * Set Type
@@ -29,6 +49,7 @@ class BrokerDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class BrokerDetail
      */
     public function setBroker(Party $broker)
     {
+        $this->__set('Broker', $broker);
         $this->Broker = $broker;
         return $this;
     }

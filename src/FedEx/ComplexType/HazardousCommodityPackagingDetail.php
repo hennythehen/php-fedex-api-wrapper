@@ -14,12 +14,32 @@ class HazardousCommodityPackagingDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Count' => 'nonNegativeInteger',
+'Units' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityPackagingDetail';
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Count;
+
+        
+    /**
+     * @var string
+     */
+    public $Units;
+
+
 
     /**
      * Number of units of the type below.
@@ -29,6 +49,7 @@ class HazardousCommodityPackagingDetail
      */
     public function setCount($count)
     {
+        $this->__set('Count', $count);
         $this->Count = $count;
         return $this;
     }
@@ -51,6 +72,7 @@ class HazardousCommodityPackagingDetail
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

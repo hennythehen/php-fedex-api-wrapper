@@ -14,12 +14,46 @@ class VariableHandlingChargeDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FixedValue' => 'Money',
+'PercentValue' => 'decimal',
+'RateElementBasis' => 'RateElementBasisType',
+'RateTypeBasis' => 'RateTypeBasisType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'VariableHandlingChargeDetail';
+
+        
+    /**
+     * @var Money
+     */
+    public $FixedValue;
+
+        
+    /**
+     * @var decimal
+     */
+    public $PercentValue;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RateElementBasisType|string
+     */
+    public $RateElementBasis;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RateTypeBasisType|string
+     */
+    public $RateTypeBasis;
+
+
 
     /**
      * Set FixedValue
@@ -29,6 +63,7 @@ class VariableHandlingChargeDetail
      */
     public function setFixedValue(Money $fixedValue)
     {
+        $this->__set('FixedValue', $fixedValue);
         $this->FixedValue = $fixedValue;
         return $this;
     }
@@ -51,6 +86,7 @@ class VariableHandlingChargeDetail
      */
     public function setPercentValue($percentValue)
     {
+        $this->__set('PercentValue', $percentValue);
         $this->PercentValue = $percentValue;
         return $this;
     }
@@ -73,6 +109,7 @@ class VariableHandlingChargeDetail
      */
     public function setRateElementBasis($rateElementBasis)
     {
+        $this->__set('RateElementBasis', $rateElementBasis);
         $this->RateElementBasis = $rateElementBasis;
         return $this;
     }
@@ -95,6 +132,7 @@ class VariableHandlingChargeDetail
      */
     public function setRateTypeBasis($rateTypeBasis)
     {
+        $this->__set('RateTypeBasis', $rateTypeBasis);
         $this->RateTypeBasis = $rateTypeBasis;
         return $this;
     }

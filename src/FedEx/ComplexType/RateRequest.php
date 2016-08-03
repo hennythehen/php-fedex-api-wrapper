@@ -14,12 +14,81 @@ class RateRequest
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'WebAuthenticationDetail' => 'WebAuthenticationDetail',
+'ClientDetail' => 'ClientDetail',
+'TransactionDetail' => 'TransactionDetail',
+'Version' => 'VersionId',
+'ReturnTransitAndCommit' => 'boolean',
+'CarrierCodes' => 'CarrierCodeType',
+'VariableOptions' => 'ServiceOptionType',
+'ConsolidationKey' => 'ConsolidationKey',
+'RequestedShipment' => 'RequestedShipment',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RateRequest';
+
+        
+    /**
+     * @var WebAuthenticationDetail
+     */
+    public $WebAuthenticationDetail;
+
+        
+    /**
+     * @var ClientDetail
+     */
+    public $ClientDetail;
+
+        
+    /**
+     * @var TransactionDetail
+     */
+    public $TransactionDetail;
+
+        
+    /**
+     * @var VersionId
+     */
+    public $Version;
+
+        
+    /**
+     * @var boolean
+     */
+    public $ReturnTransitAndCommit;
+
+        
+    /**
+     * @var CarrierCodeType[]
+     */
+    public $CarrierCodes = array();
+
+        
+    /**
+     * @var ServiceOptionType[]
+     */
+    public $VariableOptions = array();
+
+        
+    /**
+     * @var ConsolidationKey
+     */
+    public $ConsolidationKey;
+
+        
+    /**
+     * @var RequestedShipment
+     */
+    public $RequestedShipment;
+
+
 
     /**
      * Descriptive data to be used in authentication of the sender's identity (and right to use FedEx web services).
@@ -29,6 +98,7 @@ class RateRequest
      */
     public function setWebAuthenticationDetail(WebAuthenticationDetail $webAuthenticationDetail)
     {
+        $this->__set('WebAuthenticationDetail', $webAuthenticationDetail);
         $this->WebAuthenticationDetail = $webAuthenticationDetail;
         return $this;
     }
@@ -51,6 +121,7 @@ class RateRequest
      */
     public function setClientDetail(ClientDetail $clientDetail)
     {
+        $this->__set('ClientDetail', $clientDetail);
         $this->ClientDetail = $clientDetail;
         return $this;
     }
@@ -73,6 +144,7 @@ class RateRequest
      */
     public function setTransactionDetail(TransactionDetail $transactionDetail)
     {
+        $this->__set('TransactionDetail', $transactionDetail);
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
@@ -95,6 +167,7 @@ class RateRequest
      */
     public function setVersion(VersionId $version)
     {
+        $this->__set('Version', $version);
         $this->Version = $version;
         return $this;
     }
@@ -117,6 +190,7 @@ class RateRequest
      */
     public function setReturnTransitAndCommit($returnTransitAndCommit)
     {
+        $this->__set('ReturnTransitAndCommit', $returnTransitAndCommit);
         $this->ReturnTransitAndCommit = $returnTransitAndCommit;
         return $this;
     }
@@ -139,6 +213,7 @@ class RateRequest
      */
     public function setCarrierCodes(array $carrierCodes)
     {
+        $this->__set('CarrierCodes', $carrierCodes);
         $this->CarrierCodes = $carrierCodes;
         return $this;
     }
@@ -161,6 +236,7 @@ class RateRequest
      */
     public function setVariableOptions(array $variableOptions)
     {
+        $this->__set('VariableOptions', $variableOptions);
         $this->VariableOptions = $variableOptions;
         return $this;
     }
@@ -183,6 +259,7 @@ class RateRequest
      */
     public function setConsolidationKey(ConsolidationKey $consolidationKey)
     {
+        $this->__set('ConsolidationKey', $consolidationKey);
         $this->ConsolidationKey = $consolidationKey;
         return $this;
     }
@@ -205,6 +282,7 @@ class RateRequest
      */
     public function setRequestedShipment(RequestedShipment $requestedShipment)
     {
+        $this->__set('RequestedShipment', $requestedShipment);
         $this->RequestedShipment = $requestedShipment;
         return $this;
     }

@@ -14,12 +14,74 @@ class FreightBaseCharge
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FreightClass' => 'FreightClassType',
+'RatedAsClass' => 'FreightClassType',
+'NmfcCode' => 'string',
+'Description' => 'string',
+'Weight' => 'Weight',
+'ChargeRate' => 'Money',
+'ChargeBasis' => 'FreightChargeBasisType',
+'ExtendedAmount' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightBaseCharge';
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightClassType|string
+     */
+    public $FreightClass;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightClassType|string
+     */
+    public $RatedAsClass;
+
+        
+    /**
+     * @var string
+     */
+    public $NmfcCode;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Weight
+     */
+    public $Weight;
+
+        
+    /**
+     * @var Money
+     */
+    public $ChargeRate;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightChargeBasisType|string
+     */
+    public $ChargeBasis;
+
+        
+    /**
+     * @var Money
+     */
+    public $ExtendedAmount;
+
+
 
     /**
      * Freight class for this line item.
@@ -29,6 +91,7 @@ class FreightBaseCharge
      */
     public function setFreightClass($freightClass)
     {
+        $this->__set('FreightClass', $freightClass);
         $this->FreightClass = $freightClass;
         return $this;
     }
@@ -51,6 +114,7 @@ class FreightBaseCharge
      */
     public function setRatedAsClass($ratedAsClass)
     {
+        $this->__set('RatedAsClass', $ratedAsClass);
         $this->RatedAsClass = $ratedAsClass;
         return $this;
     }
@@ -73,6 +137,7 @@ class FreightBaseCharge
      */
     public function setNmfcCode($nmfcCode)
     {
+        $this->__set('NmfcCode', $nmfcCode);
         $this->NmfcCode = $nmfcCode;
         return $this;
     }
@@ -95,6 +160,7 @@ class FreightBaseCharge
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -117,6 +183,7 @@ class FreightBaseCharge
      */
     public function setWeight(Weight $weight)
     {
+        $this->__set('Weight', $weight);
         $this->Weight = $weight;
         return $this;
     }
@@ -139,6 +206,7 @@ class FreightBaseCharge
      */
     public function setChargeRate(Money $chargeRate)
     {
+        $this->__set('ChargeRate', $chargeRate);
         $this->ChargeRate = $chargeRate;
         return $this;
     }
@@ -161,6 +229,7 @@ class FreightBaseCharge
      */
     public function setChargeBasis($chargeBasis)
     {
+        $this->__set('ChargeBasis', $chargeBasis);
         $this->ChargeBasis = $chargeBasis;
         return $this;
     }
@@ -183,6 +252,7 @@ class FreightBaseCharge
      */
     public function setExtendedAmount(Money $extendedAmount)
     {
+        $this->__set('ExtendedAmount', $extendedAmount);
         $this->ExtendedAmount = $extendedAmount;
         return $this;
     }

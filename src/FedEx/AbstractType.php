@@ -9,7 +9,7 @@
 namespace FedEx;
 
 
-class AbstractType
+abstract class AbstractType
 {
-
+    
 }

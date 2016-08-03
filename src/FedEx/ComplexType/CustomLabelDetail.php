@@ -14,12 +14,60 @@ class CustomLabelDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CoordinateUnits' => 'CustomLabelCoordinateUnits',
+'TextEntries' => 'CustomLabelTextEntry',
+'GraphicEntries' => 'CustomLabelGraphicEntry',
+'BoxEntries' => 'CustomLabelBoxEntry',
+'TextBoxEntries' => 'CustomLabelTextBoxEntry',
+'BarcodeEntries' => 'CustomLabelBarcodeEntry',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\CustomLabelCoordinateUnits|string
+     */
+    public $CoordinateUnits;
+
+        
+    /**
+     * @var CustomLabelTextEntry[]
+     */
+    public $TextEntries = array();
+
+        
+    /**
+     * @var CustomLabelGraphicEntry[]
+     */
+    public $GraphicEntries = array();
+
+        
+    /**
+     * @var CustomLabelBoxEntry[]
+     */
+    public $BoxEntries = array();
+
+        
+    /**
+     * @var CustomLabelTextBoxEntry[]
+     */
+    public $TextBoxEntries = array();
+
+        
+    /**
+     * @var CustomLabelBarcodeEntry[]
+     */
+    public $BarcodeEntries = array();
+
+
 
     /**
      * Set CoordinateUnits
@@ -29,6 +77,7 @@ class CustomLabelDetail
      */
     public function setCoordinateUnits($coordinateUnits)
     {
+        $this->__set('CoordinateUnits', $coordinateUnits);
         $this->CoordinateUnits = $coordinateUnits;
         return $this;
     }
@@ -51,6 +100,7 @@ class CustomLabelDetail
      */
     public function setTextEntries(array $textEntries)
     {
+        $this->__set('TextEntries', $textEntries);
         $this->TextEntries = $textEntries;
         return $this;
     }
@@ -73,6 +123,7 @@ class CustomLabelDetail
      */
     public function setGraphicEntries(array $graphicEntries)
     {
+        $this->__set('GraphicEntries', $graphicEntries);
         $this->GraphicEntries = $graphicEntries;
         return $this;
     }
@@ -95,6 +146,7 @@ class CustomLabelDetail
      */
     public function setBoxEntries(array $boxEntries)
     {
+        $this->__set('BoxEntries', $boxEntries);
         $this->BoxEntries = $boxEntries;
         return $this;
     }
@@ -117,6 +169,7 @@ class CustomLabelDetail
      */
     public function setTextBoxEntries(array $textBoxEntries)
     {
+        $this->__set('TextBoxEntries', $textBoxEntries);
         $this->TextBoxEntries = $textBoxEntries;
         return $this;
     }
@@ -139,6 +192,7 @@ class CustomLabelDetail
      */
     public function setBarcodeEntries(array $barcodeEntries)
     {
+        $this->__set('BarcodeEntries', $barcodeEntries);
         $this->BarcodeEntries = $barcodeEntries;
         return $this;
     }

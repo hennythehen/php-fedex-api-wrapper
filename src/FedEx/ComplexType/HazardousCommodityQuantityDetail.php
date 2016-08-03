@@ -14,12 +14,39 @@ class HazardousCommodityQuantityDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Amount' => 'decimal',
+'Units' => 'string',
+'QuantityType' => 'HazardousCommodityQuantityType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityQuantityDetail';
+
+        
+    /**
+     * @var decimal
+     */
+    public $Amount;
+
+        
+    /**
+     * @var string
+     */
+    public $Units;
+
+        
+    /**
+     * @var \FedEx\SimpleType\HazardousCommodityQuantityType|string
+     */
+    public $QuantityType;
+
+
 
     /**
      * Number of units of the type below.
@@ -29,6 +56,7 @@ class HazardousCommodityQuantityDetail
      */
     public function setAmount($amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }
@@ -51,6 +79,7 @@ class HazardousCommodityQuantityDetail
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }
@@ -73,6 +102,7 @@ class HazardousCommodityQuantityDetail
      */
     public function setQuantityType($quantityType)
     {
+        $this->__set('QuantityType', $quantityType);
         $this->QuantityType = $quantityType;
         return $this;
     }

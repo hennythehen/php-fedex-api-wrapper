@@ -14,12 +14,32 @@ class SignatureOptionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'OptionType' => 'SignatureOptionType',
+'SignatureReleaseNumber' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'SignatureOptionDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\SignatureOptionType|string
+     */
+    public $OptionType;
+
+        
+    /**
+     * @var string
+     */
+    public $SignatureReleaseNumber;
+
+
 
     /**
      * Set OptionType
@@ -29,6 +49,7 @@ class SignatureOptionDetail
      */
     public function setOptionType($optionType)
     {
+        $this->__set('OptionType', $optionType);
         $this->OptionType = $optionType;
         return $this;
     }
@@ -51,6 +72,7 @@ class SignatureOptionDetail
      */
     public function setSignatureReleaseNumber($signatureReleaseNumber)
     {
+        $this->__set('SignatureReleaseNumber', $signatureReleaseNumber);
         $this->SignatureReleaseNumber = $signatureReleaseNumber;
         return $this;
     }

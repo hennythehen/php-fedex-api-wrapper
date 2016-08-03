@@ -14,12 +14,25 @@ class Payor
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ResponsibleParty' => 'Party',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Payor';
+
+        
+    /**
+     * @var Party
+     */
+    public $ResponsibleParty;
+
+
 
     /**
      * Set ResponsibleParty
@@ -29,6 +42,7 @@ class Payor
      */
     public function setResponsibleParty(Party $responsibleParty)
     {
+        $this->__set('ResponsibleParty', $responsibleParty);
         $this->ResponsibleParty = $responsibleParty;
         return $this;
     }

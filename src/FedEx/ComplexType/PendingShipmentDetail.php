@@ -14,12 +14,53 @@ class PendingShipmentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'PendingShipmentType',
+'ExpirationDate' => 'date',
+'EmailLabelDetail' => 'EMailLabelDetail',
+'ProcessingOptions' => 'PendingShipmentProcessingOptionsRequested',
+'RecommendedDocumentSpecification' => 'RecommendedDocumentSpecification',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PendingShipmentDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\PendingShipmentType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var date
+     */
+    public $ExpirationDate;
+
+        
+    /**
+     * @var EMailLabelDetail
+     */
+    public $EmailLabelDetail;
+
+        
+    /**
+     * @var PendingShipmentProcessingOptionsRequested
+     */
+    public $ProcessingOptions;
+
+        
+    /**
+     * @var RecommendedDocumentSpecification
+     */
+    public $RecommendedDocumentSpecification;
+
+
 
     /**
      * Set Type
@@ -29,6 +70,7 @@ class PendingShipmentDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +93,7 @@ class PendingShipmentDetail
      */
     public function setExpirationDate($expirationDate)
     {
+        $this->__set('ExpirationDate', $expirationDate);
         $this->ExpirationDate = $expirationDate;
         return $this;
     }
@@ -73,6 +116,7 @@ class PendingShipmentDetail
      */
     public function setEmailLabelDetail(EMailLabelDetail $emailLabelDetail)
     {
+        $this->__set('EmailLabelDetail', $emailLabelDetail);
         $this->EmailLabelDetail = $emailLabelDetail;
         return $this;
     }
@@ -95,6 +139,7 @@ class PendingShipmentDetail
      */
     public function setProcessingOptions(PendingShipmentProcessingOptionsRequested $processingOptions)
     {
+        $this->__set('ProcessingOptions', $processingOptions);
         $this->ProcessingOptions = $processingOptions;
         return $this;
     }
@@ -117,6 +162,7 @@ class PendingShipmentDetail
      */
     public function setRecommendedDocumentSpecification(RecommendedDocumentSpecification $recommendedDocumentSpecification)
     {
+        $this->__set('RecommendedDocumentSpecification', $recommendedDocumentSpecification);
         $this->RecommendedDocumentSpecification = $recommendedDocumentSpecification;
         return $this;
     }

@@ -14,12 +14,32 @@ class Localization
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'LanguageCode' => 'string',
+'LocaleCode' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Localization';
+
+        
+    /**
+     * @var string
+     */
+    public $LanguageCode;
+
+        
+    /**
+     * @var string
+     */
+    public $LocaleCode;
+
+
 
     /**
      * Two-letter code for language (e.g. EN, FR, etc.)
@@ -29,6 +49,7 @@ class Localization
      */
     public function setLanguageCode($languageCode)
     {
+        $this->__set('LanguageCode', $languageCode);
         $this->LanguageCode = $languageCode;
         return $this;
     }
@@ -51,6 +72,7 @@ class Localization
      */
     public function setLocaleCode($localeCode)
     {
+        $this->__set('LocaleCode', $localeCode);
         $this->LocaleCode = $localeCode;
         return $this;
     }

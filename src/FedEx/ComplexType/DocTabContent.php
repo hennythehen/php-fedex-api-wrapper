@@ -14,12 +14,39 @@ class DocTabContent
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'DocTabContentType' => 'DocTabContentType',
+'Zone001' => 'DocTabContentZone001',
+'Barcoded' => 'DocTabContentBarcoded',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DocTabContent';
+
+        
+    /**
+     * @var \FedEx\SimpleType\DocTabContentType|string
+     */
+    public $DocTabContentType;
+
+        
+    /**
+     * @var DocTabContentZone001
+     */
+    public $Zone001;
+
+        
+    /**
+     * @var DocTabContentBarcoded
+     */
+    public $Barcoded;
+
+
 
     /**
      * Set DocTabContentType
@@ -29,6 +56,7 @@ class DocTabContent
      */
     public function setDocTabContentType($docTabContentType)
     {
+        $this->__set('DocTabContentType', $docTabContentType);
         $this->DocTabContentType = $docTabContentType;
         return $this;
     }
@@ -51,6 +79,7 @@ class DocTabContent
      */
     public function setZone001(DocTabContentZone001 $zone001)
     {
+        $this->__set('Zone001', $zone001);
         $this->Zone001 = $zone001;
         return $this;
     }
@@ -73,6 +102,7 @@ class DocTabContent
      */
     public function setBarcoded(DocTabContentBarcoded $barcoded)
     {
+        $this->__set('Barcoded', $barcoded);
         $this->Barcoded = $barcoded;
         return $this;
     }

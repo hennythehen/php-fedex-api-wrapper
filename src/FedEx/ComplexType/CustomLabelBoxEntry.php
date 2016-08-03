@@ -14,12 +14,32 @@ class CustomLabelBoxEntry
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TopLeftCorner' => 'CustomLabelPosition',
+'BottomRightCorner' => 'CustomLabelPosition',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelBoxEntry';
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $TopLeftCorner;
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $BottomRightCorner;
+
+
 
     /**
      * Set TopLeftCorner
@@ -29,6 +49,7 @@ class CustomLabelBoxEntry
      */
     public function setTopLeftCorner(CustomLabelPosition $topLeftCorner)
     {
+        $this->__set('TopLeftCorner', $topLeftCorner);
         $this->TopLeftCorner = $topLeftCorner;
         return $this;
     }
@@ -51,6 +72,7 @@ class CustomLabelBoxEntry
      */
     public function setBottomRightCorner(CustomLabelPosition $bottomRightCorner)
     {
+        $this->__set('BottomRightCorner', $bottomRightCorner);
         $this->BottomRightCorner = $bottomRightCorner;
         return $this;
     }

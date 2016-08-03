@@ -14,12 +14,53 @@ class SmartPostShipmentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ProcessingOptionsRequested' => 'SmartPostShipmentProcessingOptionsRequested',
+'Indicia' => 'SmartPostIndiciaType',
+'AncillaryEndorsement' => 'SmartPostAncillaryEndorsementType',
+'HubId' => 'string',
+'CustomerManifestId' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'SmartPostShipmentDetail';
+
+        
+    /**
+     * @var SmartPostShipmentProcessingOptionsRequested
+     */
+    public $ProcessingOptionsRequested;
+
+        
+    /**
+     * @var \FedEx\SimpleType\SmartPostIndiciaType|string
+     */
+    public $Indicia;
+
+        
+    /**
+     * @var \FedEx\SimpleType\SmartPostAncillaryEndorsementType|string
+     */
+    public $AncillaryEndorsement;
+
+        
+    /**
+     * @var string
+     */
+    public $HubId;
+
+        
+    /**
+     * @var string
+     */
+    public $CustomerManifestId;
+
+
 
     /**
      * Set ProcessingOptionsRequested
@@ -29,6 +70,7 @@ class SmartPostShipmentDetail
      */
     public function setProcessingOptionsRequested(SmartPostShipmentProcessingOptionsRequested $processingOptionsRequested)
     {
+        $this->__set('ProcessingOptionsRequested', $processingOptionsRequested);
         $this->ProcessingOptionsRequested = $processingOptionsRequested;
         return $this;
     }
@@ -51,6 +93,7 @@ class SmartPostShipmentDetail
      */
     public function setIndicia($indicia)
     {
+        $this->__set('Indicia', $indicia);
         $this->Indicia = $indicia;
         return $this;
     }
@@ -73,6 +116,7 @@ class SmartPostShipmentDetail
      */
     public function setAncillaryEndorsement($ancillaryEndorsement)
     {
+        $this->__set('AncillaryEndorsement', $ancillaryEndorsement);
         $this->AncillaryEndorsement = $ancillaryEndorsement;
         return $this;
     }
@@ -95,6 +139,7 @@ class SmartPostShipmentDetail
      */
     public function setHubId($hubId)
     {
+        $this->__set('HubId', $hubId);
         $this->HubId = $hubId;
         return $this;
     }
@@ -117,6 +162,7 @@ class SmartPostShipmentDetail
      */
     public function setCustomerManifestId($customerManifestId)
     {
+        $this->__set('CustomerManifestId', $customerManifestId);
         $this->CustomerManifestId = $customerManifestId;
         return $this;
     }

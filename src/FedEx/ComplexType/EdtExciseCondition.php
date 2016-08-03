@@ -14,12 +14,32 @@ class EdtExciseCondition
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Category' => 'string',
+'Value' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EdtExciseCondition';
+
+        
+    /**
+     * @var string
+     */
+    public $Category;
+
+        
+    /**
+     * @var string
+     */
+    public $Value;
+
+
 
     /**
      * Set Category
@@ -29,6 +49,7 @@ class EdtExciseCondition
      */
     public function setCategory($category)
     {
+        $this->__set('Category', $category);
         $this->Category = $category;
         return $this;
     }
@@ -51,6 +72,7 @@ class EdtExciseCondition
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

@@ -14,12 +14,32 @@ class CustomsOptionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'CustomsOptionType',
+'Description' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomsOptionDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\CustomsOptionType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+
 
     /**
      * Set Type
@@ -29,6 +49,7 @@ class CustomsOptionDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class CustomsOptionDetail
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }

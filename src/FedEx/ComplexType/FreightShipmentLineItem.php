@@ -14,12 +14,67 @@ class FreightShipmentLineItem
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FreightClass' => 'FreightClassType',
+'Packaging' => 'PhysicalPackagingType',
+'Pieces' => 'nonNegativeInteger',
+'Description' => 'string',
+'Weight' => 'Weight',
+'Dimensions' => 'Dimensions',
+'Volume' => 'Volume',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightShipmentLineItem';
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightClassType|string
+     */
+    public $FreightClass;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PhysicalPackagingType|string
+     */
+    public $Packaging;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Pieces;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Weight
+     */
+    public $Weight;
+
+        
+    /**
+     * @var Dimensions
+     */
+    public $Dimensions;
+
+        
+    /**
+     * @var Volume
+     */
+    public $Volume;
+
+
 
     /**
      * Freight class for this line item.
@@ -29,6 +84,7 @@ class FreightShipmentLineItem
      */
     public function setFreightClass($freightClass)
     {
+        $this->__set('FreightClass', $freightClass);
         $this->FreightClass = $freightClass;
         return $this;
     }
@@ -51,6 +107,7 @@ class FreightShipmentLineItem
      */
     public function setPackaging($packaging)
     {
+        $this->__set('Packaging', $packaging);
         $this->Packaging = $packaging;
         return $this;
     }
@@ -73,6 +130,7 @@ class FreightShipmentLineItem
      */
     public function setPieces($pieces)
     {
+        $this->__set('Pieces', $pieces);
         $this->Pieces = $pieces;
         return $this;
     }
@@ -95,6 +153,7 @@ class FreightShipmentLineItem
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -117,6 +176,7 @@ class FreightShipmentLineItem
      */
     public function setWeight(Weight $weight)
     {
+        $this->__set('Weight', $weight);
         $this->Weight = $weight;
         return $this;
     }
@@ -139,6 +199,7 @@ class FreightShipmentLineItem
      */
     public function setDimensions(Dimensions $dimensions)
     {
+        $this->__set('Dimensions', $dimensions);
         $this->Dimensions = $dimensions;
         return $this;
     }
@@ -161,6 +222,7 @@ class FreightShipmentLineItem
      */
     public function setVolume(Volume $volume)
     {
+        $this->__set('Volume', $volume);
         $this->Volume = $volume;
         return $this;
     }

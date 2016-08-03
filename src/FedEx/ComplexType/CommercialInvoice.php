@@ -14,12 +14,102 @@ class CommercialInvoice
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Comments' => 'string',
+'FreightCharge' => 'Money',
+'TaxesOrMiscellaneousCharge' => 'Money',
+'TaxesOrMiscellaneousChargeType' => 'TaxesOrMiscellaneousChargeType',
+'PackingCosts' => 'Money',
+'HandlingCosts' => 'Money',
+'SpecialInstructions' => 'string',
+'DeclarationStatement' => 'string',
+'PaymentTerms' => 'string',
+'Purpose' => 'PurposeOfShipmentType',
+'OriginatorName' => 'string',
+'TermsOfSale' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CommercialInvoice';
+
+        
+    /**
+     * @var string[]
+     */
+    public $Comments = array();
+
+        
+    /**
+     * @var Money
+     */
+    public $FreightCharge;
+
+        
+    /**
+     * @var Money
+     */
+    public $TaxesOrMiscellaneousCharge;
+
+        
+    /**
+     * @var \FedEx\SimpleType\TaxesOrMiscellaneousChargeType|string
+     */
+    public $TaxesOrMiscellaneousChargeType;
+
+        
+    /**
+     * @var Money
+     */
+    public $PackingCosts;
+
+        
+    /**
+     * @var Money
+     */
+    public $HandlingCosts;
+
+        
+    /**
+     * @var string
+     */
+    public $SpecialInstructions;
+
+        
+    /**
+     * @var string
+     */
+    public $DeclarationStatement;
+
+        
+    /**
+     * @var string
+     */
+    public $PaymentTerms;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PurposeOfShipmentType|string
+     */
+    public $Purpose;
+
+        
+    /**
+     * @var string
+     */
+    public $OriginatorName;
+
+        
+    /**
+     * @var string
+     */
+    public $TermsOfSale;
+
+
 
     /**
      * Any comments that need to be communicated about this shipment.
@@ -29,6 +119,7 @@ class CommercialInvoice
      */
     public function setComments(array $comments)
     {
+        $this->__set('Comments', $comments);
         $this->Comments = $comments;
         return $this;
     }
@@ -51,6 +142,7 @@ class CommercialInvoice
      */
     public function setFreightCharge(Money $freightCharge)
     {
+        $this->__set('FreightCharge', $freightCharge);
         $this->FreightCharge = $freightCharge;
         return $this;
     }
@@ -73,6 +165,7 @@ class CommercialInvoice
      */
     public function setTaxesOrMiscellaneousCharge(Money $taxesOrMiscellaneousCharge)
     {
+        $this->__set('TaxesOrMiscellaneousCharge', $taxesOrMiscellaneousCharge);
         $this->TaxesOrMiscellaneousCharge = $taxesOrMiscellaneousCharge;
         return $this;
     }
@@ -95,6 +188,7 @@ class CommercialInvoice
      */
     public function setTaxesOrMiscellaneousChargeType($taxesOrMiscellaneousChargeType)
     {
+        $this->__set('TaxesOrMiscellaneousChargeType', $taxesOrMiscellaneousChargeType);
         $this->TaxesOrMiscellaneousChargeType = $taxesOrMiscellaneousChargeType;
         return $this;
     }
@@ -117,6 +211,7 @@ class CommercialInvoice
      */
     public function setPackingCosts(Money $packingCosts)
     {
+        $this->__set('PackingCosts', $packingCosts);
         $this->PackingCosts = $packingCosts;
         return $this;
     }
@@ -139,6 +234,7 @@ class CommercialInvoice
      */
     public function setHandlingCosts(Money $handlingCosts)
     {
+        $this->__set('HandlingCosts', $handlingCosts);
         $this->HandlingCosts = $handlingCosts;
         return $this;
     }
@@ -161,6 +257,7 @@ class CommercialInvoice
      */
     public function setSpecialInstructions($specialInstructions)
     {
+        $this->__set('SpecialInstructions', $specialInstructions);
         $this->SpecialInstructions = $specialInstructions;
         return $this;
     }
@@ -183,6 +280,7 @@ class CommercialInvoice
      */
     public function setDeclarationStatement($declarationStatement)
     {
+        $this->__set('DeclarationStatement', $declarationStatement);
         $this->DeclarationStatement = $declarationStatement;
         return $this;
     }
@@ -205,6 +303,7 @@ class CommercialInvoice
      */
     public function setPaymentTerms($paymentTerms)
     {
+        $this->__set('PaymentTerms', $paymentTerms);
         $this->PaymentTerms = $paymentTerms;
         return $this;
     }
@@ -227,6 +326,7 @@ class CommercialInvoice
      */
     public function setPurpose($purpose)
     {
+        $this->__set('Purpose', $purpose);
         $this->Purpose = $purpose;
         return $this;
     }
@@ -249,6 +349,7 @@ class CommercialInvoice
      */
     public function setOriginatorName($originatorName)
     {
+        $this->__set('OriginatorName', $originatorName);
         $this->OriginatorName = $originatorName;
         return $this;
     }
@@ -271,6 +372,7 @@ class CommercialInvoice
      */
     public function setTermsOfSale($termsOfSale)
     {
+        $this->__set('TermsOfSale', $termsOfSale);
         $this->TermsOfSale = $termsOfSale;
         return $this;
     }

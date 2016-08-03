@@ -14,12 +14,25 @@ class GeneralAgencyAgreementDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'GeneralAgencyAgreementDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+
 
     /**
      * Set Format
@@ -29,6 +42,7 @@ class GeneralAgencyAgreementDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }

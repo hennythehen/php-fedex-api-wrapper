@@ -7,7 +7,6 @@ namespace FedEx;
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
  */
-abstract class AbstractRequest
+abstract class AbstractRequest extends ReplyDenormalizer
 {
-    
 }

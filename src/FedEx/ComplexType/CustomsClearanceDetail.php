@@ -14,12 +14,123 @@ class CustomsClearanceDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Brokers' => 'BrokerDetail',
+'ClearanceBrokerage' => 'ClearanceBrokerageType',
+'CustomsOptions' => 'CustomsOptionDetail',
+'ImporterOfRecord' => 'Party',
+'RecipientCustomsId' => 'RecipientCustomsId',
+'DutiesPayment' => 'Payment',
+'DocumentContent' => 'InternationalDocumentContentType',
+'CustomsValue' => 'Money',
+'FreightOnValue' => 'FreightOnValueType',
+'InsuranceCharges' => 'Money',
+'PartiesToTransactionAreRelated' => 'boolean',
+'CommercialInvoice' => 'CommercialInvoice',
+'Commodities' => 'Commodity',
+'ExportDetail' => 'ExportDetail',
+'RegulatoryControls' => 'RegulatoryControlType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomsClearanceDetail';
+
+        
+    /**
+     * @var BrokerDetail[]
+     */
+    public $Brokers = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\ClearanceBrokerageType|string
+     */
+    public $ClearanceBrokerage;
+
+        
+    /**
+     * @var CustomsOptionDetail
+     */
+    public $CustomsOptions;
+
+        
+    /**
+     * @var Party
+     */
+    public $ImporterOfRecord;
+
+        
+    /**
+     * @var RecipientCustomsId
+     */
+    public $RecipientCustomsId;
+
+        
+    /**
+     * @var Payment
+     */
+    public $DutiesPayment;
+
+        
+    /**
+     * @var \FedEx\SimpleType\InternationalDocumentContentType|string
+     */
+    public $DocumentContent;
+
+        
+    /**
+     * @var Money
+     */
+    public $CustomsValue;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightOnValueType|string
+     */
+    public $FreightOnValue;
+
+        
+    /**
+     * @var Money
+     */
+    public $InsuranceCharges;
+
+        
+    /**
+     * @var boolean
+     */
+    public $PartiesToTransactionAreRelated;
+
+        
+    /**
+     * @var CommercialInvoice
+     */
+    public $CommercialInvoice;
+
+        
+    /**
+     * @var Commodity[]
+     */
+    public $Commodities = array();
+
+        
+    /**
+     * @var ExportDetail
+     */
+    public $ExportDetail;
+
+        
+    /**
+     * @var RegulatoryControlType[]
+     */
+    public $RegulatoryControls = array();
+
+
 
     /**
      * Set Brokers
@@ -29,6 +140,7 @@ class CustomsClearanceDetail
      */
     public function setBrokers(array $brokers)
     {
+        $this->__set('Brokers', $brokers);
         $this->Brokers = $brokers;
         return $this;
     }
@@ -51,6 +163,7 @@ class CustomsClearanceDetail
      */
     public function setClearanceBrokerage($clearanceBrokerage)
     {
+        $this->__set('ClearanceBrokerage', $clearanceBrokerage);
         $this->ClearanceBrokerage = $clearanceBrokerage;
         return $this;
     }
@@ -73,6 +186,7 @@ class CustomsClearanceDetail
      */
     public function setCustomsOptions(CustomsOptionDetail $customsOptions)
     {
+        $this->__set('CustomsOptions', $customsOptions);
         $this->CustomsOptions = $customsOptions;
         return $this;
     }
@@ -95,6 +209,7 @@ class CustomsClearanceDetail
      */
     public function setImporterOfRecord(Party $importerOfRecord)
     {
+        $this->__set('ImporterOfRecord', $importerOfRecord);
         $this->ImporterOfRecord = $importerOfRecord;
         return $this;
     }
@@ -117,6 +232,7 @@ class CustomsClearanceDetail
      */
     public function setRecipientCustomsId(RecipientCustomsId $recipientCustomsId)
     {
+        $this->__set('RecipientCustomsId', $recipientCustomsId);
         $this->RecipientCustomsId = $recipientCustomsId;
         return $this;
     }
@@ -139,6 +255,7 @@ class CustomsClearanceDetail
      */
     public function setDutiesPayment(Payment $dutiesPayment)
     {
+        $this->__set('DutiesPayment', $dutiesPayment);
         $this->DutiesPayment = $dutiesPayment;
         return $this;
     }
@@ -161,6 +278,7 @@ class CustomsClearanceDetail
      */
     public function setDocumentContent($documentContent)
     {
+        $this->__set('DocumentContent', $documentContent);
         $this->DocumentContent = $documentContent;
         return $this;
     }
@@ -183,6 +301,7 @@ class CustomsClearanceDetail
      */
     public function setCustomsValue(Money $customsValue)
     {
+        $this->__set('CustomsValue', $customsValue);
         $this->CustomsValue = $customsValue;
         return $this;
     }
@@ -205,6 +324,7 @@ class CustomsClearanceDetail
      */
     public function setFreightOnValue($freightOnValue)
     {
+        $this->__set('FreightOnValue', $freightOnValue);
         $this->FreightOnValue = $freightOnValue;
         return $this;
     }
@@ -227,6 +347,7 @@ class CustomsClearanceDetail
      */
     public function setInsuranceCharges(Money $insuranceCharges)
     {
+        $this->__set('InsuranceCharges', $insuranceCharges);
         $this->InsuranceCharges = $insuranceCharges;
         return $this;
     }
@@ -249,6 +370,7 @@ class CustomsClearanceDetail
      */
     public function setPartiesToTransactionAreRelated($partiesToTransactionAreRelated)
     {
+        $this->__set('PartiesToTransactionAreRelated', $partiesToTransactionAreRelated);
         $this->PartiesToTransactionAreRelated = $partiesToTransactionAreRelated;
         return $this;
     }
@@ -271,6 +393,7 @@ class CustomsClearanceDetail
      */
     public function setCommercialInvoice(CommercialInvoice $commercialInvoice)
     {
+        $this->__set('CommercialInvoice', $commercialInvoice);
         $this->CommercialInvoice = $commercialInvoice;
         return $this;
     }
@@ -293,6 +416,7 @@ class CustomsClearanceDetail
      */
     public function setCommodities(array $commodities)
     {
+        $this->__set('Commodities', $commodities);
         $this->Commodities = $commodities;
         return $this;
     }
@@ -315,6 +439,7 @@ class CustomsClearanceDetail
      */
     public function setExportDetail(ExportDetail $exportDetail)
     {
+        $this->__set('ExportDetail', $exportDetail);
         $this->ExportDetail = $exportDetail;
         return $this;
     }
@@ -337,6 +462,7 @@ class CustomsClearanceDetail
      */
     public function setRegulatoryControls(array $regulatoryControls)
     {
+        $this->__set('RegulatoryControls', $regulatoryControls);
         $this->RegulatoryControls = $regulatoryControls;
         return $this;
     }

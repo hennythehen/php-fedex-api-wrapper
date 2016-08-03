@@ -14,12 +14,67 @@ class UploadDocumentReferenceDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'LineNumber' => 'nonNegativeInteger',
+'CustomerReference' => 'string',
+'Description' => 'string',
+'DocumentProducer' => 'UploadDocumentProducerType',
+'DocumentType' => 'UploadDocumentType',
+'DocumentId' => 'string',
+'DocumentIdProducer' => 'UploadDocumentIdProducer',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'UploadDocumentReferenceDetail';
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $LineNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $CustomerReference;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var \FedEx\SimpleType\UploadDocumentProducerType|string
+     */
+    public $DocumentProducer;
+
+        
+    /**
+     * @var \FedEx\SimpleType\UploadDocumentType|string
+     */
+    public $DocumentType;
+
+        
+    /**
+     * @var string
+     */
+    public $DocumentId;
+
+        
+    /**
+     * @var \FedEx\SimpleType\UploadDocumentIdProducer|string
+     */
+    public $DocumentIdProducer;
+
+
 
     /**
      * Set LineNumber
@@ -29,6 +84,7 @@ class UploadDocumentReferenceDetail
      */
     public function setLineNumber($lineNumber)
     {
+        $this->__set('LineNumber', $lineNumber);
         $this->LineNumber = $lineNumber;
         return $this;
     }
@@ -51,6 +107,7 @@ class UploadDocumentReferenceDetail
      */
     public function setCustomerReference($customerReference)
     {
+        $this->__set('CustomerReference', $customerReference);
         $this->CustomerReference = $customerReference;
         return $this;
     }
@@ -73,6 +130,7 @@ class UploadDocumentReferenceDetail
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -95,6 +153,7 @@ class UploadDocumentReferenceDetail
      */
     public function setDocumentProducer($documentProducer)
     {
+        $this->__set('DocumentProducer', $documentProducer);
         $this->DocumentProducer = $documentProducer;
         return $this;
     }
@@ -117,6 +176,7 @@ class UploadDocumentReferenceDetail
      */
     public function setDocumentType($documentType)
     {
+        $this->__set('DocumentType', $documentType);
         $this->DocumentType = $documentType;
         return $this;
     }
@@ -139,6 +199,7 @@ class UploadDocumentReferenceDetail
      */
     public function setDocumentId($documentId)
     {
+        $this->__set('DocumentId', $documentId);
         $this->DocumentId = $documentId;
         return $this;
     }
@@ -161,6 +222,7 @@ class UploadDocumentReferenceDetail
      */
     public function setDocumentIdProducer($documentIdProducer)
     {
+        $this->__set('DocumentIdProducer', $documentIdProducer);
         $this->DocumentIdProducer = $documentIdProducer;
         return $this;
     }

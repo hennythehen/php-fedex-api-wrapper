@@ -14,12 +14,25 @@ class ShippingDocumentPrintDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PrinterId' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentPrintDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $PrinterId;
+
+
 
     /**
      * Provides environment-specific printer identification.
@@ -29,6 +42,7 @@ class ShippingDocumentPrintDetail
      */
     public function setPrinterId($printerId)
     {
+        $this->__set('PrinterId', $printerId);
         $this->PrinterId = $printerId;
         return $this;
     }

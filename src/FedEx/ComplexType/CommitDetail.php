@@ -14,12 +14,186 @@ class CommitDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CommodityName' => 'string',
+'ServiceType' => 'ServiceType',
+'AppliedOptions' => 'ServiceOptionType',
+'AppliedSubOptions' => 'ServiceSubOptionDetail',
+'DerivedShipmentSignatureOption' => 'SignatureOptionDetail',
+'DerivedPackageSignatureOptions' => 'SignatureOptionDetail',
+'CommitTimestamp' => 'dateTime',
+'DayOfWeek' => 'DayOfWeekType',
+'TransitTime' => 'TransitTimeType',
+'MaximumTransitTime' => 'TransitTimeType',
+'DestinationServiceArea' => 'string',
+'BrokerAddress' => 'Address',
+'BrokerLocationId' => 'string',
+'BrokerCommitTimestamp' => 'dateTime',
+'BrokerCommitDayOfWeek' => 'DayOfWeekType',
+'BrokerToDestinationDays' => 'nonNegativeInteger',
+'ProofOfDeliveryDate' => 'date',
+'ProofOfDeliveryDayOfWeek' => 'DayOfWeekType',
+'CommitMessages' => 'Notification',
+'DeliveryMessages' => 'string',
+'DelayDetails' => 'DelayDetail',
+'DocumentContent' => 'InternationalDocumentContentType',
+'RequiredDocuments' => 'RequiredShippingDocumentType',
+'FreightCommitDetail' => 'FreightCommitDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CommitDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $CommodityName;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ServiceType|string
+     */
+    public $ServiceType;
+
+        
+    /**
+     * @var ServiceOptionType[]
+     */
+    public $AppliedOptions = array();
+
+        
+    /**
+     * @var ServiceSubOptionDetail
+     */
+    public $AppliedSubOptions;
+
+        
+    /**
+     * @var SignatureOptionDetail
+     */
+    public $DerivedShipmentSignatureOption;
+
+        
+    /**
+     * @var SignatureOptionDetail[]
+     */
+    public $DerivedPackageSignatureOptions = array();
+
+        
+    /**
+     * @var dateTime
+     */
+    public $CommitTimestamp;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DayOfWeekType|string
+     */
+    public $DayOfWeek;
+
+        
+    /**
+     * @var \FedEx\SimpleType\TransitTimeType|string
+     */
+    public $TransitTime;
+
+        
+    /**
+     * @var \FedEx\SimpleType\TransitTimeType|string
+     */
+    public $MaximumTransitTime;
+
+        
+    /**
+     * @var string
+     */
+    public $DestinationServiceArea;
+
+        
+    /**
+     * @var Address
+     */
+    public $BrokerAddress;
+
+        
+    /**
+     * @var string
+     */
+    public $BrokerLocationId;
+
+        
+    /**
+     * @var dateTime
+     */
+    public $BrokerCommitTimestamp;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DayOfWeekType|string
+     */
+    public $BrokerCommitDayOfWeek;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $BrokerToDestinationDays;
+
+        
+    /**
+     * @var date
+     */
+    public $ProofOfDeliveryDate;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DayOfWeekType|string
+     */
+    public $ProofOfDeliveryDayOfWeek;
+
+        
+    /**
+     * @var Notification[]
+     */
+    public $CommitMessages = array();
+
+        
+    /**
+     * @var string[]
+     */
+    public $DeliveryMessages = array();
+
+        
+    /**
+     * @var DelayDetail[]
+     */
+    public $DelayDetails = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\InternationalDocumentContentType|string
+     */
+    public $DocumentContent;
+
+        
+    /**
+     * @var RequiredShippingDocumentType[]
+     */
+    public $RequiredDocuments = array();
+
+        
+    /**
+     * @var FreightCommitDetail
+     */
+    public $FreightCommitDetail;
+
+
 
     /**
      * The Commodity applicable to this commitment.
@@ -29,6 +203,7 @@ class CommitDetail
      */
     public function setCommodityName($commodityName)
     {
+        $this->__set('CommodityName', $commodityName);
         $this->CommodityName = $commodityName;
         return $this;
     }
@@ -51,6 +226,7 @@ class CommitDetail
      */
     public function setServiceType($serviceType)
     {
+        $this->__set('ServiceType', $serviceType);
         $this->ServiceType = $serviceType;
         return $this;
     }
@@ -73,6 +249,7 @@ class CommitDetail
      */
     public function setAppliedOptions(array $appliedOptions)
     {
+        $this->__set('AppliedOptions', $appliedOptions);
         $this->AppliedOptions = $appliedOptions;
         return $this;
     }
@@ -95,6 +272,7 @@ class CommitDetail
      */
     public function setAppliedSubOptions(ServiceSubOptionDetail $appliedSubOptions)
     {
+        $this->__set('AppliedSubOptions', $appliedSubOptions);
         $this->AppliedSubOptions = $appliedSubOptions;
         return $this;
     }
@@ -117,6 +295,7 @@ class CommitDetail
      */
     public function setDerivedShipmentSignatureOption(SignatureOptionDetail $derivedShipmentSignatureOption)
     {
+        $this->__set('DerivedShipmentSignatureOption', $derivedShipmentSignatureOption);
         $this->DerivedShipmentSignatureOption = $derivedShipmentSignatureOption;
         return $this;
     }
@@ -139,6 +318,7 @@ class CommitDetail
      */
     public function setDerivedPackageSignatureOptions(array $derivedPackageSignatureOptions)
     {
+        $this->__set('DerivedPackageSignatureOptions', $derivedPackageSignatureOptions);
         $this->DerivedPackageSignatureOptions = $derivedPackageSignatureOptions;
         return $this;
     }
@@ -161,6 +341,7 @@ class CommitDetail
      */
     public function setCommitTimestamp($commitTimestamp)
     {
+        $this->__set('CommitTimestamp', $commitTimestamp);
         $this->CommitTimestamp = $commitTimestamp;
         return $this;
     }
@@ -183,6 +364,7 @@ class CommitDetail
      */
     public function setDayOfWeek($dayOfWeek)
     {
+        $this->__set('DayOfWeek', $dayOfWeek);
         $this->DayOfWeek = $dayOfWeek;
         return $this;
     }
@@ -205,6 +387,7 @@ class CommitDetail
      */
     public function setTransitTime($transitTime)
     {
+        $this->__set('TransitTime', $transitTime);
         $this->TransitTime = $transitTime;
         return $this;
     }
@@ -227,6 +410,7 @@ class CommitDetail
      */
     public function setMaximumTransitTime($maximumTransitTime)
     {
+        $this->__set('MaximumTransitTime', $maximumTransitTime);
         $this->MaximumTransitTime = $maximumTransitTime;
         return $this;
     }
@@ -249,6 +433,7 @@ class CommitDetail
      */
     public function setDestinationServiceArea($destinationServiceArea)
     {
+        $this->__set('DestinationServiceArea', $destinationServiceArea);
         $this->DestinationServiceArea = $destinationServiceArea;
         return $this;
     }
@@ -271,6 +456,7 @@ class CommitDetail
      */
     public function setBrokerAddress(Address $brokerAddress)
     {
+        $this->__set('BrokerAddress', $brokerAddress);
         $this->BrokerAddress = $brokerAddress;
         return $this;
     }
@@ -293,6 +479,7 @@ class CommitDetail
      */
     public function setBrokerLocationId($brokerLocationId)
     {
+        $this->__set('BrokerLocationId', $brokerLocationId);
         $this->BrokerLocationId = $brokerLocationId;
         return $this;
     }
@@ -315,6 +502,7 @@ class CommitDetail
      */
     public function setBrokerCommitTimestamp($brokerCommitTimestamp)
     {
+        $this->__set('BrokerCommitTimestamp', $brokerCommitTimestamp);
         $this->BrokerCommitTimestamp = $brokerCommitTimestamp;
         return $this;
     }
@@ -337,6 +525,7 @@ class CommitDetail
      */
     public function setBrokerCommitDayOfWeek($brokerCommitDayOfWeek)
     {
+        $this->__set('BrokerCommitDayOfWeek', $brokerCommitDayOfWeek);
         $this->BrokerCommitDayOfWeek = $brokerCommitDayOfWeek;
         return $this;
     }
@@ -359,6 +548,7 @@ class CommitDetail
      */
     public function setBrokerToDestinationDays($brokerToDestinationDays)
     {
+        $this->__set('BrokerToDestinationDays', $brokerToDestinationDays);
         $this->BrokerToDestinationDays = $brokerToDestinationDays;
         return $this;
     }
@@ -381,6 +571,7 @@ class CommitDetail
      */
     public function setProofOfDeliveryDate($proofOfDeliveryDate)
     {
+        $this->__set('ProofOfDeliveryDate', $proofOfDeliveryDate);
         $this->ProofOfDeliveryDate = $proofOfDeliveryDate;
         return $this;
     }
@@ -403,6 +594,7 @@ class CommitDetail
      */
     public function setProofOfDeliveryDayOfWeek($proofOfDeliveryDayOfWeek)
     {
+        $this->__set('ProofOfDeliveryDayOfWeek', $proofOfDeliveryDayOfWeek);
         $this->ProofOfDeliveryDayOfWeek = $proofOfDeliveryDayOfWeek;
         return $this;
     }
@@ -425,6 +617,7 @@ class CommitDetail
      */
     public function setCommitMessages(array $commitMessages)
     {
+        $this->__set('CommitMessages', $commitMessages);
         $this->CommitMessages = $commitMessages;
         return $this;
     }
@@ -447,6 +640,7 @@ class CommitDetail
      */
     public function setDeliveryMessages(array $deliveryMessages)
     {
+        $this->__set('DeliveryMessages', $deliveryMessages);
         $this->DeliveryMessages = $deliveryMessages;
         return $this;
     }
@@ -469,6 +663,7 @@ class CommitDetail
      */
     public function setDelayDetails(array $delayDetails)
     {
+        $this->__set('DelayDetails', $delayDetails);
         $this->DelayDetails = $delayDetails;
         return $this;
     }
@@ -491,6 +686,7 @@ class CommitDetail
      */
     public function setDocumentContent($documentContent)
     {
+        $this->__set('DocumentContent', $documentContent);
         $this->DocumentContent = $documentContent;
         return $this;
     }
@@ -513,6 +709,7 @@ class CommitDetail
      */
     public function setRequiredDocuments(array $requiredDocuments)
     {
+        $this->__set('RequiredDocuments', $requiredDocuments);
         $this->RequiredDocuments = $requiredDocuments;
         return $this;
     }
@@ -535,6 +732,7 @@ class CommitDetail
      */
     public function setFreightCommitDetail(FreightCommitDetail $freightCommitDetail)
     {
+        $this->__set('FreightCommitDetail', $freightCommitDetail);
         $this->FreightCommitDetail = $freightCommitDetail;
         return $this;
     }

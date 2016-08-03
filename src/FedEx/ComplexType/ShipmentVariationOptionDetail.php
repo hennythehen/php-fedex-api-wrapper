@@ -14,12 +14,32 @@ class ShipmentVariationOptionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Id' => 'string',
+'Values' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShipmentVariationOptionDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $Id;
+
+        
+    /**
+     * @var string[]
+     */
+    public $Values = array();
+
+
 
     /**
      * Specifies the name or the key for the shipment variation.
@@ -29,6 +49,7 @@ class ShipmentVariationOptionDetail
      */
     public function setId($id)
     {
+        $this->__set('Id', $id);
         $this->Id = $id;
         return $this;
     }
@@ -51,6 +72,7 @@ class ShipmentVariationOptionDetail
      */
     public function setValues(array $values)
     {
+        $this->__set('Values', $values);
         $this->Values = $values;
         return $this;
     }

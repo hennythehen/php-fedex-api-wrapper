@@ -14,12 +14,32 @@ class FreightRateNotation
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Code' => 'string',
+'Description' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightRateNotation';
+
+        
+    /**
+     * @var string
+     */
+    public $Code;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+
 
     /**
      * Unique identifier for notation.
@@ -29,6 +49,7 @@ class FreightRateNotation
      */
     public function setCode($code)
     {
+        $this->__set('Code', $code);
         $this->Code = $code;
         return $this;
     }
@@ -51,6 +72,7 @@ class FreightRateNotation
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }

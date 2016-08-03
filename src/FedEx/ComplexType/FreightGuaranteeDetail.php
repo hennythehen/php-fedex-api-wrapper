@@ -14,12 +14,32 @@ class FreightGuaranteeDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'FreightGuaranteeType',
+'Date' => 'date',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightGuaranteeDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightGuaranteeType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var date
+     */
+    public $Date;
+
+
 
     /**
      * Set Type
@@ -29,6 +49,7 @@ class FreightGuaranteeDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class FreightGuaranteeDetail
      */
     public function setDate($date)
     {
+        $this->__set('Date', $date);
         $this->Date = $date;
         return $this;
     }

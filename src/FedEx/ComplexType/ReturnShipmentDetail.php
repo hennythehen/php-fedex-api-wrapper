@@ -14,12 +14,46 @@ class ReturnShipmentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ReturnType' => 'ReturnType',
+'Rma' => 'Rma',
+'ReturnEMailDetail' => 'ReturnEMailDetail',
+'ReturnAssociation' => 'ReturnAssociationDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ReturnShipmentDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ReturnType|string
+     */
+    public $ReturnType;
+
+        
+    /**
+     * @var Rma
+     */
+    public $Rma;
+
+        
+    /**
+     * @var ReturnEMailDetail
+     */
+    public $ReturnEMailDetail;
+
+        
+    /**
+     * @var ReturnAssociationDetail
+     */
+    public $ReturnAssociation;
+
+
 
     /**
      * Set ReturnType
@@ -29,6 +63,7 @@ class ReturnShipmentDetail
      */
     public function setReturnType($returnType)
     {
+        $this->__set('ReturnType', $returnType);
         $this->ReturnType = $returnType;
         return $this;
     }
@@ -51,6 +86,7 @@ class ReturnShipmentDetail
      */
     public function setRma(Rma $rma)
     {
+        $this->__set('Rma', $rma);
         $this->Rma = $rma;
         return $this;
     }
@@ -73,6 +109,7 @@ class ReturnShipmentDetail
      */
     public function setReturnEMailDetail(ReturnEMailDetail $returnEMailDetail)
     {
+        $this->__set('ReturnEMailDetail', $returnEMailDetail);
         $this->ReturnEMailDetail = $returnEMailDetail;
         return $this;
     }
@@ -95,6 +132,7 @@ class ReturnShipmentDetail
      */
     public function setReturnAssociation(ReturnAssociationDetail $returnAssociation)
     {
+        $this->__set('ReturnAssociation', $returnAssociation);
         $this->ReturnAssociation = $returnAssociation;
         return $this;
     }

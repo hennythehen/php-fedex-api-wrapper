@@ -14,12 +14,39 @@ class CurrencyExchangeRate
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FromCurrency' => 'string',
+'IntoCurrency' => 'string',
+'Rate' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CurrencyExchangeRate';
+
+        
+    /**
+     * @var string
+     */
+    public $FromCurrency;
+
+        
+    /**
+     * @var string
+     */
+    public $IntoCurrency;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Rate;
+
+
 
     /**
      * The currency code for the original (converted FROM) currency.
@@ -29,6 +56,7 @@ class CurrencyExchangeRate
      */
     public function setFromCurrency($fromCurrency)
     {
+        $this->__set('FromCurrency', $fromCurrency);
         $this->FromCurrency = $fromCurrency;
         return $this;
     }
@@ -51,6 +79,7 @@ class CurrencyExchangeRate
      */
     public function setIntoCurrency($intoCurrency)
     {
+        $this->__set('IntoCurrency', $intoCurrency);
         $this->IntoCurrency = $intoCurrency;
         return $this;
     }
@@ -73,6 +102,7 @@ class CurrencyExchangeRate
      */
     public function setRate($rate)
     {
+        $this->__set('Rate', $rate);
         $this->Rate = $rate;
         return $this;
     }

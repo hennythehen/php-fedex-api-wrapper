@@ -14,12 +14,46 @@ class RadioactivityDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TransportIndex' => 'decimal',
+'SurfaceReading' => 'decimal',
+'CriticalitySafetyIndex' => 'decimal',
+'Dimensions' => 'Dimensions',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RadioactivityDetail';
+
+        
+    /**
+     * @var decimal
+     */
+    public $TransportIndex;
+
+        
+    /**
+     * @var decimal
+     */
+    public $SurfaceReading;
+
+        
+    /**
+     * @var decimal
+     */
+    public $CriticalitySafetyIndex;
+
+        
+    /**
+     * @var Dimensions
+     */
+    public $Dimensions;
+
+
 
     /**
      * Set TransportIndex
@@ -29,6 +63,7 @@ class RadioactivityDetail
      */
     public function setTransportIndex($transportIndex)
     {
+        $this->__set('TransportIndex', $transportIndex);
         $this->TransportIndex = $transportIndex;
         return $this;
     }
@@ -51,6 +86,7 @@ class RadioactivityDetail
      */
     public function setSurfaceReading($surfaceReading)
     {
+        $this->__set('SurfaceReading', $surfaceReading);
         $this->SurfaceReading = $surfaceReading;
         return $this;
     }
@@ -73,6 +109,7 @@ class RadioactivityDetail
      */
     public function setCriticalitySafetyIndex($criticalitySafetyIndex)
     {
+        $this->__set('CriticalitySafetyIndex', $criticalitySafetyIndex);
         $this->CriticalitySafetyIndex = $criticalitySafetyIndex;
         return $this;
     }
@@ -95,6 +132,7 @@ class RadioactivityDetail
      */
     public function setDimensions(Dimensions $dimensions)
     {
+        $this->__set('Dimensions', $dimensions);
         $this->Dimensions = $dimensions;
         return $this;
     }

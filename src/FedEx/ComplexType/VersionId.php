@@ -14,12 +14,46 @@ class VersionId
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ServiceId' => 'string',
+'Major' => 'int',
+'Intermediate' => 'int',
+'Minor' => 'int',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'VersionId';
+
+        
+    /**
+     * @var string
+     */
+    public $ServiceId;
+
+        
+    /**
+     * @var int
+     */
+    public $Major;
+
+        
+    /**
+     * @var int
+     */
+    public $Intermediate;
+
+        
+    /**
+     * @var int
+     */
+    public $Minor;
+
+
 
     /**
      * Identifies a system or sub-system which performs an operation.
@@ -29,6 +63,7 @@ class VersionId
      */
     public function setServiceId($serviceId)
     {
+        $this->__set('ServiceId', $serviceId);
         $this->ServiceId = $serviceId;
         return $this;
     }
@@ -51,6 +86,7 @@ class VersionId
      */
     public function setMajor($major)
     {
+        $this->__set('Major', $major);
         $this->Major = $major;
         return $this;
     }
@@ -73,6 +109,7 @@ class VersionId
      */
     public function setIntermediate($intermediate)
     {
+        $this->__set('Intermediate', $intermediate);
         $this->Intermediate = $intermediate;
         return $this;
     }
@@ -95,6 +132,7 @@ class VersionId
      */
     public function setMinor($minor)
     {
+        $this->__set('Minor', $minor);
         $this->Minor = $minor;
         return $this;
     }

@@ -14,12 +14,32 @@ class CustomLabelPosition
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'X' => 'nonNegativeInteger',
+'Y' => 'int',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelPosition';
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $X;
+
+        
+    /**
+     * @var int
+     */
+    public $Y;
+
+
 
     /**
      * Horizontal position, relative to left edge of custom area.
@@ -29,6 +49,7 @@ class CustomLabelPosition
      */
     public function setX($x)
     {
+        $this->__set('X', $x);
         $this->X = $x;
         return $this;
     }
@@ -51,6 +72,7 @@ class CustomLabelPosition
      */
     public function setY($y)
     {
+        $this->__set('Y', $y);
         $this->Y = $y;
         return $this;
     }

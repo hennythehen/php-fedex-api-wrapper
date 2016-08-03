@@ -14,12 +14,39 @@ class ShippingDocumentEMailDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'EMailRecipients' => 'ShippingDocumentEMailRecipient',
+'Grouping' => 'ShippingDocumentEMailGroupingType',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentEMailDetail';
+
+        
+    /**
+     * @var ShippingDocumentEMailRecipient[]
+     */
+    public $EMailRecipients = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentEMailGroupingType|string
+     */
+    public $Grouping;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * Provides the roles and email addresses for e-mail recipients.
@@ -29,6 +56,7 @@ class ShippingDocumentEMailDetail
      */
     public function setEMailRecipients(array $eMailRecipients)
     {
+        $this->__set('EMailRecipients', $eMailRecipients);
         $this->EMailRecipients = $eMailRecipients;
         return $this;
     }
@@ -51,6 +79,7 @@ class ShippingDocumentEMailDetail
      */
     public function setGrouping($grouping)
     {
+        $this->__set('Grouping', $grouping);
         $this->Grouping = $grouping;
         return $this;
     }
@@ -73,6 +102,7 @@ class ShippingDocumentEMailDetail
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

@@ -14,12 +14,67 @@ class EdtTaxDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TaxType' => 'EdtTaxType',
+'EffectiveDate' => 'date',
+'Name' => 'string',
+'TaxableValue' => 'Money',
+'Description' => 'string',
+'Formula' => 'string',
+'Amount' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EdtTaxDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\EdtTaxType|string
+     */
+    public $TaxType;
+
+        
+    /**
+     * @var date
+     */
+    public $EffectiveDate;
+
+        
+    /**
+     * @var string
+     */
+    public $Name;
+
+        
+    /**
+     * @var Money
+     */
+    public $TaxableValue;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var string
+     */
+    public $Formula;
+
+        
+    /**
+     * @var Money
+     */
+    public $Amount;
+
+
 
     /**
      * Set TaxType
@@ -29,6 +84,7 @@ class EdtTaxDetail
      */
     public function setTaxType($taxType)
     {
+        $this->__set('TaxType', $taxType);
         $this->TaxType = $taxType;
         return $this;
     }
@@ -51,6 +107,7 @@ class EdtTaxDetail
      */
     public function setEffectiveDate($effectiveDate)
     {
+        $this->__set('EffectiveDate', $effectiveDate);
         $this->EffectiveDate = $effectiveDate;
         return $this;
     }
@@ -73,6 +130,7 @@ class EdtTaxDetail
      */
     public function setName($name)
     {
+        $this->__set('Name', $name);
         $this->Name = $name;
         return $this;
     }
@@ -95,6 +153,7 @@ class EdtTaxDetail
      */
     public function setTaxableValue(Money $taxableValue)
     {
+        $this->__set('TaxableValue', $taxableValue);
         $this->TaxableValue = $taxableValue;
         return $this;
     }
@@ -117,6 +176,7 @@ class EdtTaxDetail
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -139,6 +199,7 @@ class EdtTaxDetail
      */
     public function setFormula($formula)
     {
+        $this->__set('Formula', $formula);
         $this->Formula = $formula;
         return $this;
     }
@@ -161,6 +222,7 @@ class EdtTaxDetail
      */
     public function setAmount(Money $amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }

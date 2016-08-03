@@ -14,12 +14,32 @@ class RecipientCustomsId
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'RecipientCustomsIdType',
+'Value' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RecipientCustomsId';
+
+        
+    /**
+     * @var \FedEx\SimpleType\RecipientCustomsIdType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var string
+     */
+    public $Value;
+
+
 
     /**
      * Specifies the kind of identification being used.
@@ -29,6 +49,7 @@ class RecipientCustomsId
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class RecipientCustomsId
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

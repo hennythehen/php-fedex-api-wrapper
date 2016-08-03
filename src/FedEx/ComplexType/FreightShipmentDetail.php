@@ -14,12 +14,137 @@ class FreightShipmentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FedExFreightAccountNumber' => 'string',
+'FedExFreightBillingContactAndAddress' => 'ContactAndAddress',
+'AlternateBilling' => 'Party',
+'Role' => 'FreightShipmentRoleType',
+'CollectTermsType' => 'FreightCollectTermsType',
+'DeclaredValuePerUnit' => 'Money',
+'DeclaredValueUnits' => 'string',
+'LiabilityCoverageDetail' => 'LiabilityCoverageDetail',
+'Coupons' => 'string',
+'TotalHandlingUnits' => 'nonNegativeInteger',
+'ClientDiscountPercent' => 'decimal',
+'PalletWeight' => 'Weight',
+'ShipmentDimensions' => 'Dimensions',
+'Comment' => 'string',
+'SpecialServicePayments' => 'FreightSpecialServicePayment',
+'HazardousMaterialsOfferor' => 'string',
+'LineItems' => 'FreightShipmentLineItem',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightShipmentDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $FedExFreightAccountNumber;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $FedExFreightBillingContactAndAddress;
+
+        
+    /**
+     * @var Party
+     */
+    public $AlternateBilling;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightShipmentRoleType|string
+     */
+    public $Role;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightCollectTermsType|string
+     */
+    public $CollectTermsType;
+
+        
+    /**
+     * @var Money
+     */
+    public $DeclaredValuePerUnit;
+
+        
+    /**
+     * @var string
+     */
+    public $DeclaredValueUnits;
+
+        
+    /**
+     * @var LiabilityCoverageDetail
+     */
+    public $LiabilityCoverageDetail;
+
+        
+    /**
+     * @var string[]
+     */
+    public $Coupons = array();
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $TotalHandlingUnits;
+
+        
+    /**
+     * @var decimal
+     */
+    public $ClientDiscountPercent;
+
+        
+    /**
+     * @var Weight
+     */
+    public $PalletWeight;
+
+        
+    /**
+     * @var Dimensions
+     */
+    public $ShipmentDimensions;
+
+        
+    /**
+     * @var string
+     */
+    public $Comment;
+
+        
+    /**
+     * @var FreightSpecialServicePayment[]
+     */
+    public $SpecialServicePayments = array();
+
+        
+    /**
+     * @var string
+     */
+    public $HazardousMaterialsOfferor;
+
+        
+    /**
+     * @var FreightShipmentLineItem[]
+     */
+    public $LineItems = array();
+
+
 
     /**
      * Account number used with FEDEX_FREIGHT service.
@@ -29,6 +154,7 @@ class FreightShipmentDetail
      */
     public function setFedExFreightAccountNumber($fedExFreightAccountNumber)
     {
+        $this->__set('FedExFreightAccountNumber', $fedExFreightAccountNumber);
         $this->FedExFreightAccountNumber = $fedExFreightAccountNumber;
         return $this;
     }
@@ -51,6 +177,7 @@ class FreightShipmentDetail
      */
     public function setFedExFreightBillingContactAndAddress(ContactAndAddress $fedExFreightBillingContactAndAddress)
     {
+        $this->__set('FedExFreightBillingContactAndAddress', $fedExFreightBillingContactAndAddress);
         $this->FedExFreightBillingContactAndAddress = $fedExFreightBillingContactAndAddress;
         return $this;
     }
@@ -73,6 +200,7 @@ class FreightShipmentDetail
      */
     public function setAlternateBilling(Party $alternateBilling)
     {
+        $this->__set('AlternateBilling', $alternateBilling);
         $this->AlternateBilling = $alternateBilling;
         return $this;
     }
@@ -95,6 +223,7 @@ class FreightShipmentDetail
      */
     public function setRole($role)
     {
+        $this->__set('Role', $role);
         $this->Role = $role;
         return $this;
     }
@@ -117,6 +246,7 @@ class FreightShipmentDetail
      */
     public function setCollectTermsType($collectTermsType)
     {
+        $this->__set('CollectTermsType', $collectTermsType);
         $this->CollectTermsType = $collectTermsType;
         return $this;
     }
@@ -139,6 +269,7 @@ class FreightShipmentDetail
      */
     public function setDeclaredValuePerUnit(Money $declaredValuePerUnit)
     {
+        $this->__set('DeclaredValuePerUnit', $declaredValuePerUnit);
         $this->DeclaredValuePerUnit = $declaredValuePerUnit;
         return $this;
     }
@@ -161,6 +292,7 @@ class FreightShipmentDetail
      */
     public function setDeclaredValueUnits($declaredValueUnits)
     {
+        $this->__set('DeclaredValueUnits', $declaredValueUnits);
         $this->DeclaredValueUnits = $declaredValueUnits;
         return $this;
     }
@@ -183,6 +315,7 @@ class FreightShipmentDetail
      */
     public function setLiabilityCoverageDetail(LiabilityCoverageDetail $liabilityCoverageDetail)
     {
+        $this->__set('LiabilityCoverageDetail', $liabilityCoverageDetail);
         $this->LiabilityCoverageDetail = $liabilityCoverageDetail;
         return $this;
     }
@@ -205,6 +338,7 @@ class FreightShipmentDetail
      */
     public function setCoupons(array $coupons)
     {
+        $this->__set('Coupons', $coupons);
         $this->Coupons = $coupons;
         return $this;
     }
@@ -227,6 +361,7 @@ class FreightShipmentDetail
      */
     public function setTotalHandlingUnits($totalHandlingUnits)
     {
+        $this->__set('TotalHandlingUnits', $totalHandlingUnits);
         $this->TotalHandlingUnits = $totalHandlingUnits;
         return $this;
     }
@@ -249,6 +384,7 @@ class FreightShipmentDetail
      */
     public function setClientDiscountPercent($clientDiscountPercent)
     {
+        $this->__set('ClientDiscountPercent', $clientDiscountPercent);
         $this->ClientDiscountPercent = $clientDiscountPercent;
         return $this;
     }
@@ -271,6 +407,7 @@ class FreightShipmentDetail
      */
     public function setPalletWeight(Weight $palletWeight)
     {
+        $this->__set('PalletWeight', $palletWeight);
         $this->PalletWeight = $palletWeight;
         return $this;
     }
@@ -293,6 +430,7 @@ class FreightShipmentDetail
      */
     public function setShipmentDimensions(Dimensions $shipmentDimensions)
     {
+        $this->__set('ShipmentDimensions', $shipmentDimensions);
         $this->ShipmentDimensions = $shipmentDimensions;
         return $this;
     }
@@ -315,6 +453,7 @@ class FreightShipmentDetail
      */
     public function setComment($comment)
     {
+        $this->__set('Comment', $comment);
         $this->Comment = $comment;
         return $this;
     }
@@ -337,6 +476,7 @@ class FreightShipmentDetail
      */
     public function setSpecialServicePayments(array $specialServicePayments)
     {
+        $this->__set('SpecialServicePayments', $specialServicePayments);
         $this->SpecialServicePayments = $specialServicePayments;
         return $this;
     }
@@ -359,6 +499,7 @@ class FreightShipmentDetail
      */
     public function setHazardousMaterialsOfferor($hazardousMaterialsOfferor)
     {
+        $this->__set('HazardousMaterialsOfferor', $hazardousMaterialsOfferor);
         $this->HazardousMaterialsOfferor = $hazardousMaterialsOfferor;
         return $this;
     }
@@ -381,6 +522,7 @@ class FreightShipmentDetail
      */
     public function setLineItems(array $lineItems)
     {
+        $this->__set('LineItems', $lineItems);
         $this->LineItems = $lineItems;
         return $this;
     }

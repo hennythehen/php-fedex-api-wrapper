@@ -14,12 +14,53 @@ class DocTabZoneSpecification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ZoneNumber' => 'positiveInteger',
+'Header' => 'string',
+'DataField' => 'string',
+'LiteralValue' => 'string',
+'Justification' => 'DocTabZoneJustificationType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DocTabZoneSpecification';
+
+        
+    /**
+     * @var positiveInteger
+     */
+    public $ZoneNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $Header;
+
+        
+    /**
+     * @var string
+     */
+    public $DataField;
+
+        
+    /**
+     * @var string
+     */
+    public $LiteralValue;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DocTabZoneJustificationType|string
+     */
+    public $Justification;
+
+
 
     /**
      * Set ZoneNumber
@@ -29,6 +70,7 @@ class DocTabZoneSpecification
      */
     public function setZoneNumber($zoneNumber)
     {
+        $this->__set('ZoneNumber', $zoneNumber);
         $this->ZoneNumber = $zoneNumber;
         return $this;
     }
@@ -51,6 +93,7 @@ class DocTabZoneSpecification
      */
     public function setHeader($header)
     {
+        $this->__set('Header', $header);
         $this->Header = $header;
         return $this;
     }
@@ -73,6 +116,7 @@ class DocTabZoneSpecification
      */
     public function setDataField($dataField)
     {
+        $this->__set('DataField', $dataField);
         $this->DataField = $dataField;
         return $this;
     }
@@ -95,6 +139,7 @@ class DocTabZoneSpecification
      */
     public function setLiteralValue($literalValue)
     {
+        $this->__set('LiteralValue', $literalValue);
         $this->LiteralValue = $literalValue;
         return $this;
     }
@@ -117,6 +162,7 @@ class DocTabZoneSpecification
      */
     public function setJustification($justification)
     {
+        $this->__set('Justification', $justification);
         $this->Justification = $justification;
         return $this;
     }

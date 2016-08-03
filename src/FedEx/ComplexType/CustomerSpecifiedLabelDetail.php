@@ -14,12 +14,88 @@ class CustomerSpecifiedLabelDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'DocTabContent' => 'DocTabContent',
+'CustomContentPosition' => 'RelativeVerticalPositionType',
+'CustomContent' => 'CustomLabelDetail',
+'ConfigurableReferenceEntries' => 'ConfigurableLabelReferenceEntry',
+'MaskedData' => 'LabelMaskableDataType',
+'SecondaryBarcode' => 'SecondaryBarcodeType',
+'TermsAndConditionsLocalization' => 'Localization',
+'RegulatoryLabels' => 'RegulatoryLabelContentDetail',
+'AdditionalLabels' => 'AdditionalLabelsDetail',
+'AirWaybillSuppressionCount' => 'nonNegativeInteger',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomerSpecifiedLabelDetail';
+
+        
+    /**
+     * @var DocTabContent
+     */
+    public $DocTabContent;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RelativeVerticalPositionType|string
+     */
+    public $CustomContentPosition;
+
+        
+    /**
+     * @var CustomLabelDetail
+     */
+    public $CustomContent;
+
+        
+    /**
+     * @var ConfigurableLabelReferenceEntry[]
+     */
+    public $ConfigurableReferenceEntries = array();
+
+        
+    /**
+     * @var LabelMaskableDataType[]
+     */
+    public $MaskedData = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\SecondaryBarcodeType|string
+     */
+    public $SecondaryBarcode;
+
+        
+    /**
+     * @var Localization
+     */
+    public $TermsAndConditionsLocalization;
+
+        
+    /**
+     * @var RegulatoryLabelContentDetail[]
+     */
+    public $RegulatoryLabels = array();
+
+        
+    /**
+     * @var AdditionalLabelsDetail[]
+     */
+    public $AdditionalLabels = array();
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $AirWaybillSuppressionCount;
+
+
 
     /**
      * If omitted, no doc tab will be produced (i.e. default is former NONE type).
@@ -29,6 +105,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setDocTabContent(DocTabContent $docTabContent)
     {
+        $this->__set('DocTabContent', $docTabContent);
         $this->DocTabContent = $docTabContent;
         return $this;
     }
@@ -51,6 +128,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setCustomContentPosition($customContentPosition)
     {
+        $this->__set('CustomContentPosition', $customContentPosition);
         $this->CustomContentPosition = $customContentPosition;
         return $this;
     }
@@ -73,6 +151,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setCustomContent(CustomLabelDetail $customContent)
     {
+        $this->__set('CustomContent', $customContent);
         $this->CustomContent = $customContent;
         return $this;
     }
@@ -95,6 +174,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setConfigurableReferenceEntries(array $configurableReferenceEntries)
     {
+        $this->__set('ConfigurableReferenceEntries', $configurableReferenceEntries);
         $this->ConfigurableReferenceEntries = $configurableReferenceEntries;
         return $this;
     }
@@ -117,6 +197,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setMaskedData(array $maskedData)
     {
+        $this->__set('MaskedData', $maskedData);
         $this->MaskedData = $maskedData;
         return $this;
     }
@@ -139,6 +220,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setSecondaryBarcode($secondaryBarcode)
     {
+        $this->__set('SecondaryBarcode', $secondaryBarcode);
         $this->SecondaryBarcode = $secondaryBarcode;
         return $this;
     }
@@ -161,6 +243,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setTermsAndConditionsLocalization(Localization $termsAndConditionsLocalization)
     {
+        $this->__set('TermsAndConditionsLocalization', $termsAndConditionsLocalization);
         $this->TermsAndConditionsLocalization = $termsAndConditionsLocalization;
         return $this;
     }
@@ -183,6 +266,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setRegulatoryLabels(array $regulatoryLabels)
     {
+        $this->__set('RegulatoryLabels', $regulatoryLabels);
         $this->RegulatoryLabels = $regulatoryLabels;
         return $this;
     }
@@ -205,6 +289,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setAdditionalLabels(array $additionalLabels)
     {
+        $this->__set('AdditionalLabels', $additionalLabels);
         $this->AdditionalLabels = $additionalLabels;
         return $this;
     }
@@ -227,6 +312,7 @@ class CustomerSpecifiedLabelDetail
      */
     public function setAirWaybillSuppressionCount($airWaybillSuppressionCount)
     {
+        $this->__set('AirWaybillSuppressionCount', $airWaybillSuppressionCount);
         $this->AirWaybillSuppressionCount = $airWaybillSuppressionCount;
         return $this;
     }

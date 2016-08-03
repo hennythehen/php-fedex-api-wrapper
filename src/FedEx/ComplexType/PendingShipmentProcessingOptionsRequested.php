@@ -14,12 +14,25 @@ class PendingShipmentProcessingOptionsRequested
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Options' => 'PendingShipmentProcessingOptionType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PendingShipmentProcessingOptionsRequested';
+
+        
+    /**
+     * @var PendingShipmentProcessingOptionType[]
+     */
+    public $Options = array();
+
+
 
     /**
      * Set Options
@@ -29,6 +42,7 @@ class PendingShipmentProcessingOptionsRequested
      */
     public function setOptions(array $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }

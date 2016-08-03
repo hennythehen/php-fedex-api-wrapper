@@ -14,12 +14,46 @@ class ContentRecord
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PartNumber' => 'string',
+'ItemNumber' => 'string',
+'ReceivedQuantity' => 'nonNegativeInteger',
+'Description' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ContentRecord';
+
+        
+    /**
+     * @var string
+     */
+    public $PartNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $ItemNumber;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $ReceivedQuantity;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+
 
     /**
      * Set PartNumber
@@ -29,6 +63,7 @@ class ContentRecord
      */
     public function setPartNumber($partNumber)
     {
+        $this->__set('PartNumber', $partNumber);
         $this->PartNumber = $partNumber;
         return $this;
     }
@@ -51,6 +86,7 @@ class ContentRecord
      */
     public function setItemNumber($itemNumber)
     {
+        $this->__set('ItemNumber', $itemNumber);
         $this->ItemNumber = $itemNumber;
         return $this;
     }
@@ -73,6 +109,7 @@ class ContentRecord
      */
     public function setReceivedQuantity($receivedQuantity)
     {
+        $this->__set('ReceivedQuantity', $receivedQuantity);
         $this->ReceivedQuantity = $receivedQuantity;
         return $this;
     }
@@ -95,6 +132,7 @@ class ContentRecord
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }

@@ -14,12 +14,67 @@ class PackageSpecialServicesRequested
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'SpecialServiceTypes' => 'PackageSpecialServiceType',
+'CodDetail' => 'CodDetail',
+'DangerousGoodsDetail' => 'DangerousGoodsDetail',
+'DryIceWeight' => 'Weight',
+'SignatureOptionDetail' => 'SignatureOptionDetail',
+'PriorityAlertDetail' => 'PriorityAlertDetail',
+'AlcoholDetail' => 'AlcoholDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'PackageSpecialServicesRequested';
+
+        
+    /**
+     * @var PackageSpecialServiceType[]
+     */
+    public $SpecialServiceTypes = array();
+
+        
+    /**
+     * @var CodDetail
+     */
+    public $CodDetail;
+
+        
+    /**
+     * @var DangerousGoodsDetail
+     */
+    public $DangerousGoodsDetail;
+
+        
+    /**
+     * @var Weight
+     */
+    public $DryIceWeight;
+
+        
+    /**
+     * @var SignatureOptionDetail
+     */
+    public $SignatureOptionDetail;
+
+        
+    /**
+     * @var PriorityAlertDetail
+     */
+    public $PriorityAlertDetail;
+
+        
+    /**
+     * @var AlcoholDetail
+     */
+    public $AlcoholDetail;
+
+
 
     /**
      * The types of all special services requested for the enclosing shipment or package.
@@ -29,6 +84,7 @@ class PackageSpecialServicesRequested
      */
     public function setSpecialServiceTypes(array $specialServiceTypes)
     {
+        $this->__set('SpecialServiceTypes', $specialServiceTypes);
         $this->SpecialServiceTypes = $specialServiceTypes;
         return $this;
     }
@@ -51,6 +107,7 @@ class PackageSpecialServicesRequested
      */
     public function setCodDetail(CodDetail $codDetail)
     {
+        $this->__set('CodDetail', $codDetail);
         $this->CodDetail = $codDetail;
         return $this;
     }
@@ -73,6 +130,7 @@ class PackageSpecialServicesRequested
      */
     public function setDangerousGoodsDetail(DangerousGoodsDetail $dangerousGoodsDetail)
     {
+        $this->__set('DangerousGoodsDetail', $dangerousGoodsDetail);
         $this->DangerousGoodsDetail = $dangerousGoodsDetail;
         return $this;
     }
@@ -95,6 +153,7 @@ class PackageSpecialServicesRequested
      */
     public function setDryIceWeight(Weight $dryIceWeight)
     {
+        $this->__set('DryIceWeight', $dryIceWeight);
         $this->DryIceWeight = $dryIceWeight;
         return $this;
     }
@@ -117,6 +176,7 @@ class PackageSpecialServicesRequested
      */
     public function setSignatureOptionDetail(SignatureOptionDetail $signatureOptionDetail)
     {
+        $this->__set('SignatureOptionDetail', $signatureOptionDetail);
         $this->SignatureOptionDetail = $signatureOptionDetail;
         return $this;
     }
@@ -139,6 +199,7 @@ class PackageSpecialServicesRequested
      */
     public function setPriorityAlertDetail(PriorityAlertDetail $priorityAlertDetail)
     {
+        $this->__set('PriorityAlertDetail', $priorityAlertDetail);
         $this->PriorityAlertDetail = $priorityAlertDetail;
         return $this;
     }
@@ -161,6 +222,7 @@ class PackageSpecialServicesRequested
      */
     public function setAlcoholDetail(AlcoholDetail $alcoholDetail)
     {
+        $this->__set('AlcoholDetail', $alcoholDetail);
         $this->AlcoholDetail = $alcoholDetail;
         return $this;
     }

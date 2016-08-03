@@ -14,12 +14,67 @@ class NaftaCertificateOfOriginDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'BlanketPeriod' => 'DateRange',
+'ImporterSpecification' => 'NaftaImporterSpecificationType',
+'SignatureContact' => 'Contact',
+'ProducerSpecification' => 'NaftaProducerSpecificationType',
+'Producers' => 'NaftaProducer',
+'CustomerImageUsages' => 'CustomerImageUsage',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'NaftaCertificateOfOriginDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var DateRange
+     */
+    public $BlanketPeriod;
+
+        
+    /**
+     * @var \FedEx\SimpleType\NaftaImporterSpecificationType|string
+     */
+    public $ImporterSpecification;
+
+        
+    /**
+     * @var Contact
+     */
+    public $SignatureContact;
+
+        
+    /**
+     * @var \FedEx\SimpleType\NaftaProducerSpecificationType|string
+     */
+    public $ProducerSpecification;
+
+        
+    /**
+     * @var NaftaProducer[]
+     */
+    public $Producers = array();
+
+        
+    /**
+     * @var CustomerImageUsage[]
+     */
+    public $CustomerImageUsages = array();
+
+
 
     /**
      * Set Format
@@ -29,6 +84,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +107,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setBlanketPeriod(DateRange $blanketPeriod)
     {
+        $this->__set('BlanketPeriod', $blanketPeriod);
         $this->BlanketPeriod = $blanketPeriod;
         return $this;
     }
@@ -73,6 +130,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setImporterSpecification($importerSpecification)
     {
+        $this->__set('ImporterSpecification', $importerSpecification);
         $this->ImporterSpecification = $importerSpecification;
         return $this;
     }
@@ -95,6 +153,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setSignatureContact(Contact $signatureContact)
     {
+        $this->__set('SignatureContact', $signatureContact);
         $this->SignatureContact = $signatureContact;
         return $this;
     }
@@ -117,6 +176,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setProducerSpecification($producerSpecification)
     {
+        $this->__set('ProducerSpecification', $producerSpecification);
         $this->ProducerSpecification = $producerSpecification;
         return $this;
     }
@@ -139,6 +199,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setProducers(array $producers)
     {
+        $this->__set('Producers', $producers);
         $this->Producers = $producers;
         return $this;
     }
@@ -161,6 +222,7 @@ class NaftaCertificateOfOriginDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages)
     {
+        $this->__set('CustomerImageUsages', $customerImageUsages);
         $this->CustomerImageUsages = $customerImageUsages;
         return $this;
     }

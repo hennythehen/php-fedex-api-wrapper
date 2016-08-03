@@ -14,12 +14,32 @@ class EMailLabelDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Message' => 'string',
+'Recipients' => 'EMailRecipient',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EMailLabelDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $Message;
+
+        
+    /**
+     * @var EMailRecipient[]
+     */
+    public $Recipients = array();
+
+
 
     /**
      * Content of the email message.
@@ -29,6 +49,7 @@ class EMailLabelDetail
      */
     public function setMessage($message)
     {
+        $this->__set('Message', $message);
         $this->Message = $message;
         return $this;
     }
@@ -51,6 +72,7 @@ class EMailLabelDetail
      */
     public function setRecipients(array $recipients)
     {
+        $this->__set('Recipients', $recipients);
         $this->Recipients = $recipients;
         return $this;
     }

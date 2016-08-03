@@ -14,12 +14,32 @@ class LiabilityCoverageDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CoverageType' => 'LiabilityCoverageType',
+'CoverageAmount' => 'Money',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'LiabilityCoverageDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\LiabilityCoverageType|string
+     */
+    public $CoverageType;
+
+        
+    /**
+     * @var Money
+     */
+    public $CoverageAmount;
+
+
 
     /**
      * Set CoverageType
@@ -29,6 +49,7 @@ class LiabilityCoverageDetail
      */
     public function setCoverageType($coverageType)
     {
+        $this->__set('CoverageType', $coverageType);
         $this->CoverageType = $coverageType;
         return $this;
     }
@@ -51,6 +72,7 @@ class LiabilityCoverageDetail
      */
     public function setCoverageAmount(Money $coverageAmount)
     {
+        $this->__set('CoverageAmount', $coverageAmount);
         $this->CoverageAmount = $coverageAmount;
         return $this;
     }

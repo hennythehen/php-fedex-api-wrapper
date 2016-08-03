@@ -14,12 +14,32 @@ class Weight
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Units' => 'WeightUnits',
+'Value' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Weight';
+
+        
+    /**
+     * @var \FedEx\SimpleType\WeightUnits|string
+     */
+    public $Units;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Value;
+
+
 
     /**
      * Identifies the unit of measure associated with a weight value.
@@ -29,6 +49,7 @@ class Weight
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }
@@ -51,6 +72,7 @@ class Weight
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

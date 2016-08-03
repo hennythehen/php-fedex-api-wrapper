@@ -14,12 +14,116 @@ class DangerousGoodsDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Regulation' => 'HazardousCommodityRegulationType',
+'Accessibility' => 'DangerousGoodsAccessibilityType',
+'CargoAircraftOnly' => 'boolean',
+'Options' => 'HazardousCommodityOptionType',
+'PackingOption' => 'DangerousGoodsPackingOptionType',
+'ReferenceId' => 'string',
+'Containers' => 'DangerousGoodsContainer',
+'Packaging' => 'HazardousCommodityPackagingDetail',
+'Signatory' => 'DangerousGoodsSignatory',
+'EmergencyContactNumber' => 'string',
+'Offeror' => 'string',
+'InfectiousSubstanceResponsibleContact' => 'Contact',
+'AdditionalHandling' => 'string',
+'RadioactivityDetail' => 'RadioactivityDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DangerousGoodsDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\HazardousCommodityRegulationType|string
+     */
+    public $Regulation;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DangerousGoodsAccessibilityType|string
+     */
+    public $Accessibility;
+
+        
+    /**
+     * @var boolean
+     */
+    public $CargoAircraftOnly;
+
+        
+    /**
+     * @var HazardousCommodityOptionType[]
+     */
+    public $Options = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\DangerousGoodsPackingOptionType|string
+     */
+    public $PackingOption;
+
+        
+    /**
+     * @var string
+     */
+    public $ReferenceId;
+
+        
+    /**
+     * @var DangerousGoodsContainer[]
+     */
+    public $Containers = array();
+
+        
+    /**
+     * @var HazardousCommodityPackagingDetail
+     */
+    public $Packaging;
+
+        
+    /**
+     * @var DangerousGoodsSignatory
+     */
+    public $Signatory;
+
+        
+    /**
+     * @var string
+     */
+    public $EmergencyContactNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $Offeror;
+
+        
+    /**
+     * @var Contact
+     */
+    public $InfectiousSubstanceResponsibleContact;
+
+        
+    /**
+     * @var string
+     */
+    public $AdditionalHandling;
+
+        
+    /**
+     * @var RadioactivityDetail
+     */
+    public $RadioactivityDetail;
+
+
 
     /**
      * Set Regulation
@@ -29,6 +133,7 @@ class DangerousGoodsDetail
      */
     public function setRegulation($regulation)
     {
+        $this->__set('Regulation', $regulation);
         $this->Regulation = $regulation;
         return $this;
     }
@@ -51,6 +156,7 @@ class DangerousGoodsDetail
      */
     public function setAccessibility($accessibility)
     {
+        $this->__set('Accessibility', $accessibility);
         $this->Accessibility = $accessibility;
         return $this;
     }
@@ -73,6 +179,7 @@ class DangerousGoodsDetail
      */
     public function setCargoAircraftOnly($cargoAircraftOnly)
     {
+        $this->__set('CargoAircraftOnly', $cargoAircraftOnly);
         $this->CargoAircraftOnly = $cargoAircraftOnly;
         return $this;
     }
@@ -95,6 +202,7 @@ class DangerousGoodsDetail
      */
     public function setOptions(array $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }
@@ -117,6 +225,7 @@ class DangerousGoodsDetail
      */
     public function setPackingOption($packingOption)
     {
+        $this->__set('PackingOption', $packingOption);
         $this->PackingOption = $packingOption;
         return $this;
     }
@@ -139,6 +248,7 @@ class DangerousGoodsDetail
      */
     public function setReferenceId($referenceId)
     {
+        $this->__set('ReferenceId', $referenceId);
         $this->ReferenceId = $referenceId;
         return $this;
     }
@@ -161,6 +271,7 @@ class DangerousGoodsDetail
      */
     public function setContainers(array $containers)
     {
+        $this->__set('Containers', $containers);
         $this->Containers = $containers;
         return $this;
     }
@@ -183,6 +294,7 @@ class DangerousGoodsDetail
      */
     public function setPackaging(HazardousCommodityPackagingDetail $packaging)
     {
+        $this->__set('Packaging', $packaging);
         $this->Packaging = $packaging;
         return $this;
     }
@@ -205,6 +317,7 @@ class DangerousGoodsDetail
      */
     public function setSignatory(DangerousGoodsSignatory $signatory)
     {
+        $this->__set('Signatory', $signatory);
         $this->Signatory = $signatory;
         return $this;
     }
@@ -227,6 +340,7 @@ class DangerousGoodsDetail
      */
     public function setEmergencyContactNumber($emergencyContactNumber)
     {
+        $this->__set('EmergencyContactNumber', $emergencyContactNumber);
         $this->EmergencyContactNumber = $emergencyContactNumber;
         return $this;
     }
@@ -249,6 +363,7 @@ class DangerousGoodsDetail
      */
     public function setOfferor($offeror)
     {
+        $this->__set('Offeror', $offeror);
         $this->Offeror = $offeror;
         return $this;
     }
@@ -271,6 +386,7 @@ class DangerousGoodsDetail
      */
     public function setInfectiousSubstanceResponsibleContact(Contact $infectiousSubstanceResponsibleContact)
     {
+        $this->__set('InfectiousSubstanceResponsibleContact', $infectiousSubstanceResponsibleContact);
         $this->InfectiousSubstanceResponsibleContact = $infectiousSubstanceResponsibleContact;
         return $this;
     }
@@ -293,6 +409,7 @@ class DangerousGoodsDetail
      */
     public function setAdditionalHandling($additionalHandling)
     {
+        $this->__set('AdditionalHandling', $additionalHandling);
         $this->AdditionalHandling = $additionalHandling;
         return $this;
     }
@@ -315,6 +432,7 @@ class DangerousGoodsDetail
      */
     public function setRadioactivityDetail(RadioactivityDetail $radioactivityDetail)
     {
+        $this->__set('RadioactivityDetail', $radioactivityDetail);
         $this->RadioactivityDetail = $radioactivityDetail;
         return $this;
     }

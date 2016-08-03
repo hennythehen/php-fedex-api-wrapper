@@ -14,12 +14,32 @@ class HazardousCommodityOptionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'LabelTextOption' => 'HazardousCommodityLabelTextOptionType',
+'CustomerSuppliedLabelText' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityOptionDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\HazardousCommodityLabelTextOptionType|string
+     */
+    public $LabelTextOption;
+
+        
+    /**
+     * @var string
+     */
+    public $CustomerSuppliedLabelText;
+
+
 
     /**
      * Specifies how the customer wishes the label text to be handled for this commodity in this package.
@@ -29,6 +49,7 @@ class HazardousCommodityOptionDetail
      */
     public function setLabelTextOption($labelTextOption)
     {
+        $this->__set('LabelTextOption', $labelTextOption);
         $this->LabelTextOption = $labelTextOption;
         return $this;
     }
@@ -51,6 +72,7 @@ class HazardousCommodityOptionDetail
      */
     public function setCustomerSuppliedLabelText($customerSuppliedLabelText)
     {
+        $this->__set('CustomerSuppliedLabelText', $customerSuppliedLabelText);
         $this->CustomerSuppliedLabelText = $customerSuppliedLabelText;
         return $this;
     }

@@ -14,12 +14,53 @@ class HoldAtLocationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PhoneNumber' => 'string',
+'LocationContactAndAddress' => 'ContactAndAddress',
+'LocationType' => 'FedExLocationType',
+'LocationId' => 'string',
+'LocationNumber' => 'int',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HoldAtLocationDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $PhoneNumber;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $LocationContactAndAddress;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FedExLocationType|string
+     */
+    public $LocationType;
+
+        
+    /**
+     * @var string
+     */
+    public $LocationId;
+
+        
+    /**
+     * @var int
+     */
+    public $LocationNumber;
+
+
 
     /**
      * Contact phone number for recipient of shipment.
@@ -29,6 +70,7 @@ class HoldAtLocationDetail
      */
     public function setPhoneNumber($phoneNumber)
     {
+        $this->__set('PhoneNumber', $phoneNumber);
         $this->PhoneNumber = $phoneNumber;
         return $this;
     }
@@ -51,6 +93,7 @@ class HoldAtLocationDetail
      */
     public function setLocationContactAndAddress(ContactAndAddress $locationContactAndAddress)
     {
+        $this->__set('LocationContactAndAddress', $locationContactAndAddress);
         $this->LocationContactAndAddress = $locationContactAndAddress;
         return $this;
     }
@@ -73,6 +116,7 @@ class HoldAtLocationDetail
      */
     public function setLocationType($locationType)
     {
+        $this->__set('LocationType', $locationType);
         $this->LocationType = $locationType;
         return $this;
     }
@@ -95,6 +139,7 @@ class HoldAtLocationDetail
      */
     public function setLocationId($locationId)
     {
+        $this->__set('LocationId', $locationId);
         $this->LocationId = $locationId;
         return $this;
     }
@@ -117,6 +162,7 @@ class HoldAtLocationDetail
      */
     public function setLocationNumber($locationNumber)
     {
+        $this->__set('LocationNumber', $locationNumber);
         $this->LocationNumber = $locationNumber;
         return $this;
     }

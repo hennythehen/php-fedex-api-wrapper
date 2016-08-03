@@ -14,12 +14,39 @@ class FreightCommitDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'OriginDetail' => 'FreightServiceCenterDetail',
+'DestinationDetail' => 'FreightServiceCenterDetail',
+'TotalDistance' => 'Distance',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightCommitDetail';
+
+        
+    /**
+     * @var FreightServiceCenterDetail
+     */
+    public $OriginDetail;
+
+        
+    /**
+     * @var FreightServiceCenterDetail
+     */
+    public $DestinationDetail;
+
+        
+    /**
+     * @var Distance
+     */
+    public $TotalDistance;
+
+
 
     /**
      * Information about the origin Freight Service Center.
@@ -29,6 +56,7 @@ class FreightCommitDetail
      */
     public function setOriginDetail(FreightServiceCenterDetail $originDetail)
     {
+        $this->__set('OriginDetail', $originDetail);
         $this->OriginDetail = $originDetail;
         return $this;
     }
@@ -51,6 +79,7 @@ class FreightCommitDetail
      */
     public function setDestinationDetail(FreightServiceCenterDetail $destinationDetail)
     {
+        $this->__set('DestinationDetail', $destinationDetail);
         $this->DestinationDetail = $destinationDetail;
         return $this;
     }
@@ -73,6 +102,7 @@ class FreightCommitDetail
      */
     public function setTotalDistance(Distance $totalDistance)
     {
+        $this->__set('TotalDistance', $totalDistance);
         $this->TotalDistance = $totalDistance;
         return $this;
     }

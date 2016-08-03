@@ -14,12 +14,46 @@ class RateDiscount
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'RateDiscountType' => 'RateDiscountType',
+'Description' => 'string',
+'Amount' => 'Money',
+'Percent' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RateDiscount';
+
+        
+    /**
+     * @var \FedEx\SimpleType\RateDiscountType|string
+     */
+    public $RateDiscountType;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var Money
+     */
+    public $Amount;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Percent;
+
+
 
     /**
      * Set RateDiscountType
@@ -29,6 +63,7 @@ class RateDiscount
      */
     public function setRateDiscountType($rateDiscountType)
     {
+        $this->__set('RateDiscountType', $rateDiscountType);
         $this->RateDiscountType = $rateDiscountType;
         return $this;
     }
@@ -51,6 +86,7 @@ class RateDiscount
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -73,6 +109,7 @@ class RateDiscount
      */
     public function setAmount(Money $amount)
     {
+        $this->__set('Amount', $amount);
         $this->Amount = $amount;
         return $this;
     }
@@ -95,6 +132,7 @@ class RateDiscount
      */
     public function setPercent($percent)
     {
+        $this->__set('Percent', $percent);
         $this->Percent = $percent;
         return $this;
     }

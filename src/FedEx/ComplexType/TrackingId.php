@@ -14,12 +14,39 @@ class TrackingId
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'TrackingIdType' => 'TrackingIdType',
+'FormId' => 'string',
+'TrackingNumber' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'TrackingId';
+
+        
+    /**
+     * @var \FedEx\SimpleType\TrackingIdType|string
+     */
+    public $TrackingIdType;
+
+        
+    /**
+     * @var string
+     */
+    public $FormId;
+
+        
+    /**
+     * @var string
+     */
+    public $TrackingNumber;
+
+
 
     /**
      * Set TrackingIdType
@@ -29,6 +56,7 @@ class TrackingId
      */
     public function setTrackingIdType($trackingIdType)
     {
+        $this->__set('TrackingIdType', $trackingIdType);
         $this->TrackingIdType = $trackingIdType;
         return $this;
     }
@@ -51,6 +79,7 @@ class TrackingId
      */
     public function setFormId($formId)
     {
+        $this->__set('FormId', $formId);
         $this->FormId = $formId;
         return $this;
     }
@@ -73,6 +102,7 @@ class TrackingId
      */
     public function setTrackingNumber($trackingNumber)
     {
+        $this->__set('TrackingNumber', $trackingNumber);
         $this->TrackingNumber = $trackingNumber;
         return $this;
     }

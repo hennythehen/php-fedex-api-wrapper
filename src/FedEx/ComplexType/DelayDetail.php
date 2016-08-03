@@ -14,12 +14,60 @@ class DelayDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Date' => 'date',
+'DayOfWeek' => 'DayOfWeekType',
+'Level' => 'DelayLevelType',
+'Point' => 'DelayPointType',
+'Type' => 'CommitmentDelayType',
+'Description' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DelayDetail';
+
+        
+    /**
+     * @var date
+     */
+    public $Date;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DayOfWeekType|string
+     */
+    public $DayOfWeek;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DelayLevelType|string
+     */
+    public $Level;
+
+        
+    /**
+     * @var \FedEx\SimpleType\DelayPointType|string
+     */
+    public $Point;
+
+        
+    /**
+     * @var \FedEx\SimpleType\CommitmentDelayType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+
 
     /**
      * The date of the delay
@@ -29,6 +77,7 @@ class DelayDetail
      */
     public function setDate($date)
     {
+        $this->__set('Date', $date);
         $this->Date = $date;
         return $this;
     }
@@ -51,6 +100,7 @@ class DelayDetail
      */
     public function setDayOfWeek($dayOfWeek)
     {
+        $this->__set('DayOfWeek', $dayOfWeek);
         $this->DayOfWeek = $dayOfWeek;
         return $this;
     }
@@ -73,6 +123,7 @@ class DelayDetail
      */
     public function setLevel($level)
     {
+        $this->__set('Level', $level);
         $this->Level = $level;
         return $this;
     }
@@ -95,6 +146,7 @@ class DelayDetail
      */
     public function setPoint($point)
     {
+        $this->__set('Point', $point);
         $this->Point = $point;
         return $this;
     }
@@ -117,6 +169,7 @@ class DelayDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -139,6 +192,7 @@ class DelayDetail
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }

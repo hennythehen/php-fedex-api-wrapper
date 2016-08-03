@@ -14,12 +14,53 @@ class EMailNotificationRecipient
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'EMailNotificationRecipientType' => 'EMailNotificationRecipientType',
+'EMailAddress' => 'string',
+'NotificationEventsRequested' => 'EMailNotificationEventType',
+'Format' => 'EMailNotificationFormatType',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EMailNotificationRecipient';
+
+        
+    /**
+     * @var \FedEx\SimpleType\EMailNotificationRecipientType|string
+     */
+    public $EMailNotificationRecipientType;
+
+        
+    /**
+     * @var string
+     */
+    public $EMailAddress;
+
+        
+    /**
+     * @var EMailNotificationEventType[]
+     */
+    public $NotificationEventsRequested = array();
+
+        
+    /**
+     * @var \FedEx\SimpleType\EMailNotificationFormatType|string
+     */
+    public $Format;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * Identifies the relationship this email recipient has to the shipment.
@@ -29,6 +70,7 @@ class EMailNotificationRecipient
      */
     public function setEMailNotificationRecipientType($eMailNotificationRecipientType)
     {
+        $this->__set('EMailNotificationRecipientType', $eMailNotificationRecipientType);
         $this->EMailNotificationRecipientType = $eMailNotificationRecipientType;
         return $this;
     }
@@ -51,6 +93,7 @@ class EMailNotificationRecipient
      */
     public function setEMailAddress($eMailAddress)
     {
+        $this->__set('EMailAddress', $eMailAddress);
         $this->EMailAddress = $eMailAddress;
         return $this;
     }
@@ -73,6 +116,7 @@ class EMailNotificationRecipient
      */
     public function setNotificationEventsRequested(array $notificationEventsRequested)
     {
+        $this->__set('NotificationEventsRequested', $notificationEventsRequested);
         $this->NotificationEventsRequested = $notificationEventsRequested;
         return $this;
     }
@@ -95,6 +139,7 @@ class EMailNotificationRecipient
      */
     public function setFormat($format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -117,6 +162,7 @@ class EMailNotificationRecipient
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

@@ -14,12 +14,32 @@ class AdditionalLabelsDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Type' => 'AdditionalLabelsType',
+'Count' => 'nonNegativeInteger',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'AdditionalLabelsDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\AdditionalLabelsType|string
+     */
+    public $Type;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Count;
+
+
 
     /**
      * The type of additional labels to return.
@@ -29,6 +49,7 @@ class AdditionalLabelsDetail
      */
     public function setType($type)
     {
+        $this->__set('Type', $type);
         $this->Type = $type;
         return $this;
     }
@@ -51,6 +72,7 @@ class AdditionalLabelsDetail
      */
     public function setCount($count)
     {
+        $this->__set('Count', $count);
         $this->Count = $count;
         return $this;
     }

@@ -14,12 +14,39 @@ class CustomLabelGraphicEntry
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Position' => 'CustomLabelPosition',
+'PrinterGraphicId' => 'string',
+'FileGraphicFullName' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomLabelGraphicEntry';
+
+        
+    /**
+     * @var CustomLabelPosition
+     */
+    public $Position;
+
+        
+    /**
+     * @var string
+     */
+    public $PrinterGraphicId;
+
+        
+    /**
+     * @var string
+     */
+    public $FileGraphicFullName;
+
+
 
     /**
      * Set Position
@@ -29,6 +56,7 @@ class CustomLabelGraphicEntry
      */
     public function setPosition(CustomLabelPosition $position)
     {
+        $this->__set('Position', $position);
         $this->Position = $position;
         return $this;
     }
@@ -51,6 +79,7 @@ class CustomLabelGraphicEntry
      */
     public function setPrinterGraphicId($printerGraphicId)
     {
+        $this->__set('PrinterGraphicId', $printerGraphicId);
         $this->PrinterGraphicId = $printerGraphicId;
         return $this;
     }
@@ -73,6 +102,7 @@ class CustomLabelGraphicEntry
      */
     public function setFileGraphicFullName($fileGraphicFullName)
     {
+        $this->__set('FileGraphicFullName', $fileGraphicFullName);
         $this->FileGraphicFullName = $fileGraphicFullName;
         return $this;
     }

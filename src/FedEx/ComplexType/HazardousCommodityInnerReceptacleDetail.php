@@ -14,12 +14,25 @@ class HazardousCommodityInnerReceptacleDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Quantity' => 'HazardousCommodityQuantityDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityInnerReceptacleDetail';
+
+        
+    /**
+     * @var HazardousCommodityQuantityDetail
+     */
+    public $Quantity;
+
+
 
     /**
      * This specifies the quantity contained in the inner receptacle.
@@ -29,6 +42,7 @@ class HazardousCommodityInnerReceptacleDetail
      */
     public function setQuantity(HazardousCommodityQuantityDetail $quantity)
     {
+        $this->__set('Quantity', $quantity);
         $this->Quantity = $quantity;
         return $this;
     }

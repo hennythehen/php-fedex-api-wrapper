@@ -14,12 +14,25 @@ class SmartPostShipmentProcessingOptionsRequested
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Options' => 'SmartPostShipmentProcessingOptionType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'SmartPostShipmentProcessingOptionsRequested';
+
+        
+    /**
+     * @var SmartPostShipmentProcessingOptionType[]
+     */
+    public $Options = array();
+
+
 
     /**
      * Set Options
@@ -29,6 +42,7 @@ class SmartPostShipmentProcessingOptionsRequested
      */
     public function setOptions(array $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }

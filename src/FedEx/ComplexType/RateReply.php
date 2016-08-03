@@ -14,12 +14,53 @@ class RateReply
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'HighestSeverity' => 'NotificationSeverityType',
+'Notifications' => 'Notification',
+'TransactionDetail' => 'TransactionDetail',
+'Version' => 'VersionId',
+'RateReplyDetails' => 'RateReplyDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RateReply';
+
+        
+    /**
+     * @var \FedEx\SimpleType\NotificationSeverityType|string
+     */
+    public $HighestSeverity;
+
+        
+    /**
+     * @var Notification[]
+     */
+    public $Notifications = array();
+
+        
+    /**
+     * @var TransactionDetail
+     */
+    public $TransactionDetail;
+
+        
+    /**
+     * @var VersionId
+     */
+    public $Version;
+
+        
+    /**
+     * @var RateReplyDetail[]
+     */
+    public $RateReplyDetails = array();
+
+
 
     /**
      * This indicates the highest level of severity of all the notifications returned in this reply.
@@ -29,6 +70,7 @@ class RateReply
      */
     public function setHighestSeverity($highestSeverity)
     {
+        $this->__set('HighestSeverity', $highestSeverity);
         $this->HighestSeverity = $highestSeverity;
         return $this;
     }
@@ -51,6 +93,7 @@ class RateReply
      */
     public function setNotifications(array $notifications)
     {
+        $this->__set('Notifications', $notifications);
         $this->Notifications = $notifications;
         return $this;
     }
@@ -73,6 +116,7 @@ class RateReply
      */
     public function setTransactionDetail(TransactionDetail $transactionDetail)
     {
+        $this->__set('TransactionDetail', $transactionDetail);
         $this->TransactionDetail = $transactionDetail;
         return $this;
     }
@@ -95,6 +139,7 @@ class RateReply
      */
     public function setVersion(VersionId $version)
     {
+        $this->__set('Version', $version);
         $this->Version = $version;
         return $this;
     }
@@ -117,6 +162,7 @@ class RateReply
      */
     public function setRateReplyDetails(array $rateReplyDetails)
     {
+        $this->__set('RateReplyDetails', $rateReplyDetails);
         $this->RateReplyDetails = $rateReplyDetails;
         return $this;
     }

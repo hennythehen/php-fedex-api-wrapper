@@ -14,12 +14,46 @@ class EMailRecipient
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'EmailAddress' => 'string',
+'Role' => 'AccessorRoleType',
+'OptionsRequested' => 'EmailOptionsRequested',
+'Localization' => 'Localization',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'EMailRecipient';
+
+        
+    /**
+     * @var string
+     */
+    public $EmailAddress;
+
+        
+    /**
+     * @var \FedEx\SimpleType\AccessorRoleType|string
+     */
+    public $Role;
+
+        
+    /**
+     * @var EmailOptionsRequested
+     */
+    public $OptionsRequested;
+
+        
+    /**
+     * @var Localization
+     */
+    public $Localization;
+
+
 
     /**
      * EMail address of the recipient.
@@ -29,6 +63,7 @@ class EMailRecipient
      */
     public function setEmailAddress($emailAddress)
     {
+        $this->__set('EmailAddress', $emailAddress);
         $this->EmailAddress = $emailAddress;
         return $this;
     }
@@ -51,6 +86,7 @@ class EMailRecipient
      */
     public function setRole($role)
     {
+        $this->__set('Role', $role);
         $this->Role = $role;
         return $this;
     }
@@ -73,6 +109,7 @@ class EMailRecipient
      */
     public function setOptionsRequested(EmailOptionsRequested $optionsRequested)
     {
+        $this->__set('OptionsRequested', $optionsRequested);
         $this->OptionsRequested = $optionsRequested;
         return $this;
     }
@@ -95,6 +132,7 @@ class EMailRecipient
      */
     public function setLocalization(Localization $localization)
     {
+        $this->__set('Localization', $localization);
         $this->Localization = $localization;
         return $this;
     }

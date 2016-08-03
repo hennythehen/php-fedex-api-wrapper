@@ -14,12 +14,32 @@ class ExportDeclarationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'DocumentFormat' => 'ShippingDocumentFormat',
+'CustomerImageUsages' => 'CustomerImageUsage',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ExportDeclarationDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $DocumentFormat;
+
+        
+    /**
+     * @var CustomerImageUsage[]
+     */
+    public $CustomerImageUsages = array();
+
+
 
     /**
      * Specifies characteristics of a shipping document to be produced.
@@ -29,6 +49,7 @@ class ExportDeclarationDetail
      */
     public function setDocumentFormat(ShippingDocumentFormat $documentFormat)
     {
+        $this->__set('DocumentFormat', $documentFormat);
         $this->DocumentFormat = $documentFormat;
         return $this;
     }
@@ -51,6 +72,7 @@ class ExportDeclarationDetail
      */
     public function setCustomerImageUsages(array $customerImageUsages)
     {
+        $this->__set('CustomerImageUsages', $customerImageUsages);
         $this->CustomerImageUsages = $customerImageUsages;
         return $this;
     }

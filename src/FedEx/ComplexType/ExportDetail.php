@@ -14,12 +14,46 @@ class ExportDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'B13AFilingOption' => 'B13AFilingOptionType',
+'ExportComplianceStatement' => 'string',
+'PermitNumber' => 'string',
+'DestinationControlDetail' => 'DestinationControlDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ExportDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\B13AFilingOptionType|string
+     */
+    public $B13AFilingOption;
+
+        
+    /**
+     * @var string
+     */
+    public $ExportComplianceStatement;
+
+        
+    /**
+     * @var string
+     */
+    public $PermitNumber;
+
+        
+    /**
+     * @var DestinationControlDetail
+     */
+    public $DestinationControlDetail;
+
+
 
     /**
      * Set B13AFilingOption
@@ -29,6 +63,7 @@ class ExportDetail
      */
     public function setB13AFilingOption($b13AFilingOption)
     {
+        $this->__set('B13AFilingOption', $b13AFilingOption);
         $this->B13AFilingOption = $b13AFilingOption;
         return $this;
     }
@@ -51,6 +86,7 @@ class ExportDetail
      */
     public function setExportComplianceStatement($exportComplianceStatement)
     {
+        $this->__set('ExportComplianceStatement', $exportComplianceStatement);
         $this->ExportComplianceStatement = $exportComplianceStatement;
         return $this;
     }
@@ -73,6 +109,7 @@ class ExportDetail
      */
     public function setPermitNumber($permitNumber)
     {
+        $this->__set('PermitNumber', $permitNumber);
         $this->PermitNumber = $permitNumber;
         return $this;
     }
@@ -95,6 +132,7 @@ class ExportDetail
      */
     public function setDestinationControlDetail(DestinationControlDetail $destinationControlDetail)
     {
+        $this->__set('DestinationControlDetail', $destinationControlDetail);
         $this->DestinationControlDetail = $destinationControlDetail;
         return $this;
     }

@@ -14,12 +14,74 @@ class Address
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'StreetLines' => 'string',
+'City' => 'string',
+'StateOrProvinceCode' => 'string',
+'PostalCode' => 'string',
+'UrbanizationCode' => 'string',
+'CountryCode' => 'string',
+'CountryName' => 'string',
+'Residential' => 'boolean',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Address';
+
+        
+    /**
+     * @var string[]
+     */
+    public $StreetLines = array();
+
+        
+    /**
+     * @var string
+     */
+    public $City;
+
+        
+    /**
+     * @var string
+     */
+    public $StateOrProvinceCode;
+
+        
+    /**
+     * @var string
+     */
+    public $PostalCode;
+
+        
+    /**
+     * @var string
+     */
+    public $UrbanizationCode;
+
+        
+    /**
+     * @var string
+     */
+    public $CountryCode;
+
+        
+    /**
+     * @var string
+     */
+    public $CountryName;
+
+        
+    /**
+     * @var boolean
+     */
+    public $Residential;
+
+
 
     /**
      * Combination of number, street name, etc. At least one line is required for a valid physical address; empty lines should not be included.
@@ -29,6 +91,7 @@ class Address
      */
     public function setStreetLines(array $streetLines)
     {
+        $this->__set('StreetLines', $streetLines);
         $this->StreetLines = $streetLines;
         return $this;
     }
@@ -51,6 +114,7 @@ class Address
      */
     public function setCity($city)
     {
+        $this->__set('City', $city);
         $this->City = $city;
         return $this;
     }
@@ -73,6 +137,7 @@ class Address
      */
     public function setStateOrProvinceCode($stateOrProvinceCode)
     {
+        $this->__set('StateOrProvinceCode', $stateOrProvinceCode);
         $this->StateOrProvinceCode = $stateOrProvinceCode;
         return $this;
     }
@@ -95,6 +160,7 @@ class Address
      */
     public function setPostalCode($postalCode)
     {
+        $this->__set('PostalCode', $postalCode);
         $this->PostalCode = $postalCode;
         return $this;
     }
@@ -117,6 +183,7 @@ class Address
      */
     public function setUrbanizationCode($urbanizationCode)
     {
+        $this->__set('UrbanizationCode', $urbanizationCode);
         $this->UrbanizationCode = $urbanizationCode;
         return $this;
     }
@@ -139,6 +206,7 @@ class Address
      */
     public function setCountryCode($countryCode)
     {
+        $this->__set('CountryCode', $countryCode);
         $this->CountryCode = $countryCode;
         return $this;
     }
@@ -161,6 +229,7 @@ class Address
      */
     public function setCountryName($countryName)
     {
+        $this->__set('CountryName', $countryName);
         $this->CountryName = $countryName;
         return $this;
     }
@@ -183,6 +252,7 @@ class Address
      */
     public function setResidential($residential)
     {
+        $this->__set('Residential', $residential);
         $this->Residential = $residential;
         return $this;
     }

@@ -14,12 +14,53 @@ class DangerousGoodsContainer
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'PackingType' => 'HazardousContainerPackingType',
+'ContainerType' => 'string',
+'RadioactiveContainerClass' => 'RadioactiveContainerClassType',
+'NumberOfContainers' => 'nonNegativeInteger',
+'HazardousCommodities' => 'HazardousCommodityContent',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DangerousGoodsContainer';
+
+        
+    /**
+     * @var \FedEx\SimpleType\HazardousContainerPackingType|string
+     */
+    public $PackingType;
+
+        
+    /**
+     * @var string
+     */
+    public $ContainerType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\RadioactiveContainerClassType|string
+     */
+    public $RadioactiveContainerClass;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $NumberOfContainers;
+
+        
+    /**
+     * @var HazardousCommodityContent[]
+     */
+    public $HazardousCommodities = array();
+
+
 
     /**
      * Indicates whether there are additional inner receptacles within this container.
@@ -29,6 +70,7 @@ class DangerousGoodsContainer
      */
     public function setPackingType($packingType)
     {
+        $this->__set('PackingType', $packingType);
         $this->PackingType = $packingType;
         return $this;
     }
@@ -51,6 +93,7 @@ class DangerousGoodsContainer
      */
     public function setContainerType($containerType)
     {
+        $this->__set('ContainerType', $containerType);
         $this->ContainerType = $containerType;
         return $this;
     }
@@ -73,6 +116,7 @@ class DangerousGoodsContainer
      */
     public function setRadioactiveContainerClass($radioactiveContainerClass)
     {
+        $this->__set('RadioactiveContainerClass', $radioactiveContainerClass);
         $this->RadioactiveContainerClass = $radioactiveContainerClass;
         return $this;
     }
@@ -95,6 +139,7 @@ class DangerousGoodsContainer
      */
     public function setNumberOfContainers($numberOfContainers)
     {
+        $this->__set('NumberOfContainers', $numberOfContainers);
         $this->NumberOfContainers = $numberOfContainers;
         return $this;
     }
@@ -117,6 +162,7 @@ class DangerousGoodsContainer
      */
     public function setHazardousCommodities(array $hazardousCommodities)
     {
+        $this->__set('HazardousCommodities', $hazardousCommodities);
         $this->HazardousCommodities = $hazardousCommodities;
         return $this;
     }

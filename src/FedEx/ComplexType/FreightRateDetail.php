@@ -14,12 +14,53 @@ class FreightRateDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'QuoteNumber' => 'string',
+'QuoteType' => 'FreightRateQuoteType',
+'BaseChargeCalculation' => 'FreightBaseChargeCalculationType',
+'BaseCharges' => 'FreightBaseCharge',
+'Notations' => 'FreightRateNotation',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FreightRateDetail';
+
+        
+    /**
+     * @var string
+     */
+    public $QuoteNumber;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightRateQuoteType|string
+     */
+    public $QuoteType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightBaseChargeCalculationType|string
+     */
+    public $BaseChargeCalculation;
+
+        
+    /**
+     * @var FreightBaseCharge[]
+     */
+    public $BaseCharges = array();
+
+        
+    /**
+     * @var FreightRateNotation[]
+     */
+    public $Notations = array();
+
+
 
     /**
      * A unique identifier for a specific rate quotation.
@@ -29,6 +70,7 @@ class FreightRateDetail
      */
     public function setQuoteNumber($quoteNumber)
     {
+        $this->__set('QuoteNumber', $quoteNumber);
         $this->QuoteNumber = $quoteNumber;
         return $this;
     }
@@ -51,6 +93,7 @@ class FreightRateDetail
      */
     public function setQuoteType($quoteType)
     {
+        $this->__set('QuoteType', $quoteType);
         $this->QuoteType = $quoteType;
         return $this;
     }
@@ -73,6 +116,7 @@ class FreightRateDetail
      */
     public function setBaseChargeCalculation($baseChargeCalculation)
     {
+        $this->__set('BaseChargeCalculation', $baseChargeCalculation);
         $this->BaseChargeCalculation = $baseChargeCalculation;
         return $this;
     }
@@ -95,6 +139,7 @@ class FreightRateDetail
      */
     public function setBaseCharges(array $baseCharges)
     {
+        $this->__set('BaseCharges', $baseCharges);
         $this->BaseCharges = $baseCharges;
         return $this;
     }
@@ -117,6 +162,7 @@ class FreightRateDetail
      */
     public function setNotations(array $notations)
     {
+        $this->__set('Notations', $notations);
         $this->Notations = $notations;
         return $this;
     }

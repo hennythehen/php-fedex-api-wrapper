@@ -14,12 +14,32 @@ class DateRange
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Begins' => 'date',
+'Ends' => 'date',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'DateRange';
+
+        
+    /**
+     * @var date
+     */
+    public $Begins;
+
+        
+    /**
+     * @var date
+     */
+    public $Ends;
+
+
 
     /**
      * Set Begins
@@ -29,6 +49,7 @@ class DateRange
      */
     public function setBegins($begins)
     {
+        $this->__set('Begins', $begins);
         $this->Begins = $begins;
         return $this;
     }
@@ -51,6 +72,7 @@ class DateRange
      */
     public function setEnds($ends)
     {
+        $this->__set('Ends', $ends);
         $this->Ends = $ends;
         return $this;
     }

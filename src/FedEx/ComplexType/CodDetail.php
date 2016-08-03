@@ -14,12 +14,74 @@ class CodDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'CodCollectionAmount' => 'Money',
+'AddTransportationChargesDetail' => 'CodAddTransportationChargesDetail',
+'CollectionType' => 'CodCollectionType',
+'CodRecipient' => 'Party',
+'FinancialInstitutionContactAndAddress' => 'ContactAndAddress',
+'RemitToName' => 'string',
+'ReferenceIndicator' => 'CodReturnReferenceIndicatorType',
+'ReturnTrackingId' => 'TrackingId',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CodDetail';
+
+        
+    /**
+     * @var Money
+     */
+    public $CodCollectionAmount;
+
+        
+    /**
+     * @var CodAddTransportationChargesDetail
+     */
+    public $AddTransportationChargesDetail;
+
+        
+    /**
+     * @var \FedEx\SimpleType\CodCollectionType|string
+     */
+    public $CollectionType;
+
+        
+    /**
+     * @var Party
+     */
+    public $CodRecipient;
+
+        
+    /**
+     * @var ContactAndAddress
+     */
+    public $FinancialInstitutionContactAndAddress;
+
+        
+    /**
+     * @var string
+     */
+    public $RemitToName;
+
+        
+    /**
+     * @var \FedEx\SimpleType\CodReturnReferenceIndicatorType|string
+     */
+    public $ReferenceIndicator;
+
+        
+    /**
+     * @var TrackingId
+     */
+    public $ReturnTrackingId;
+
+
 
     /**
      * Set CodCollectionAmount
@@ -29,6 +91,7 @@ class CodDetail
      */
     public function setCodCollectionAmount(Money $codCollectionAmount)
     {
+        $this->__set('CodCollectionAmount', $codCollectionAmount);
         $this->CodCollectionAmount = $codCollectionAmount;
         return $this;
     }
@@ -51,6 +114,7 @@ class CodDetail
      */
     public function setAddTransportationChargesDetail(CodAddTransportationChargesDetail $addTransportationChargesDetail)
     {
+        $this->__set('AddTransportationChargesDetail', $addTransportationChargesDetail);
         $this->AddTransportationChargesDetail = $addTransportationChargesDetail;
         return $this;
     }
@@ -73,6 +137,7 @@ class CodDetail
      */
     public function setCollectionType($collectionType)
     {
+        $this->__set('CollectionType', $collectionType);
         $this->CollectionType = $collectionType;
         return $this;
     }
@@ -95,6 +160,7 @@ class CodDetail
      */
     public function setCodRecipient(Party $codRecipient)
     {
+        $this->__set('CodRecipient', $codRecipient);
         $this->CodRecipient = $codRecipient;
         return $this;
     }
@@ -117,6 +183,7 @@ class CodDetail
      */
     public function setFinancialInstitutionContactAndAddress(ContactAndAddress $financialInstitutionContactAndAddress)
     {
+        $this->__set('FinancialInstitutionContactAndAddress', $financialInstitutionContactAndAddress);
         $this->FinancialInstitutionContactAndAddress = $financialInstitutionContactAndAddress;
         return $this;
     }
@@ -139,6 +206,7 @@ class CodDetail
      */
     public function setRemitToName($remitToName)
     {
+        $this->__set('RemitToName', $remitToName);
         $this->RemitToName = $remitToName;
         return $this;
     }
@@ -161,6 +229,7 @@ class CodDetail
      */
     public function setReferenceIndicator($referenceIndicator)
     {
+        $this->__set('ReferenceIndicator', $referenceIndicator);
         $this->ReferenceIndicator = $referenceIndicator;
         return $this;
     }
@@ -183,6 +252,7 @@ class CodDetail
      */
     public function setReturnTrackingId(TrackingId $returnTrackingId)
     {
+        $this->__set('ReturnTrackingId', $returnTrackingId);
         $this->ReturnTrackingId = $returnTrackingId;
         return $this;
     }

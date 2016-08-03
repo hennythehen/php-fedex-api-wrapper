@@ -14,12 +14,46 @@ class ShippingDocumentDispositionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'DispositionType' => 'ShippingDocumentDispositionType',
+'Grouping' => 'ShippingDocumentGroupingType',
+'EMailDetail' => 'ShippingDocumentEMailDetail',
+'PrintDetail' => 'ShippingDocumentPrintDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ShippingDocumentDispositionDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentDispositionType|string
+     */
+    public $DispositionType;
+
+        
+    /**
+     * @var \FedEx\SimpleType\ShippingDocumentGroupingType|string
+     */
+    public $Grouping;
+
+        
+    /**
+     * @var ShippingDocumentEMailDetail
+     */
+    public $EMailDetail;
+
+        
+    /**
+     * @var ShippingDocumentPrintDetail
+     */
+    public $PrintDetail;
+
+
 
     /**
      * Values in this field specify how to create and return the document.
@@ -29,6 +63,7 @@ class ShippingDocumentDispositionDetail
      */
     public function setDispositionType($dispositionType)
     {
+        $this->__set('DispositionType', $dispositionType);
         $this->DispositionType = $dispositionType;
         return $this;
     }
@@ -51,6 +86,7 @@ class ShippingDocumentDispositionDetail
      */
     public function setGrouping($grouping)
     {
+        $this->__set('Grouping', $grouping);
         $this->Grouping = $grouping;
         return $this;
     }
@@ -73,6 +109,7 @@ class ShippingDocumentDispositionDetail
      */
     public function setEMailDetail(ShippingDocumentEMailDetail $eMailDetail)
     {
+        $this->__set('EMailDetail', $eMailDetail);
         $this->EMailDetail = $eMailDetail;
         return $this;
     }
@@ -95,6 +132,7 @@ class ShippingDocumentDispositionDetail
      */
     public function setPrintDetail(ShippingDocumentPrintDetail $printDetail)
     {
+        $this->__set('PrintDetail', $printDetail);
         $this->PrintDetail = $printDetail;
         return $this;
     }

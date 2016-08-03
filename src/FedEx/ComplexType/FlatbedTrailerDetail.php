@@ -14,12 +14,25 @@ class FlatbedTrailerDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Options' => 'FlatbedTrailerOption',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'FlatbedTrailerDetail';
+
+        
+    /**
+     * @var FlatbedTrailerOption[]
+     */
+    public $Options = array();
+
+
 
     /**
      * Set Options
@@ -29,6 +42,7 @@ class FlatbedTrailerDetail
      */
     public function setOptions(array $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }

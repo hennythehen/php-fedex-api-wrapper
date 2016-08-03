@@ -14,12 +14,25 @@ class Rma
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Reason' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Rma';
+
+        
+    /**
+     * @var string
+     */
+    public $Reason;
+
+
 
     /**
      * Set Reason
@@ -29,6 +42,7 @@ class Rma
      */
     public function setReason($reason)
     {
+        $this->__set('Reason', $reason);
         $this->Reason = $reason;
         return $this;
     }

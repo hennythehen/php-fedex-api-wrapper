@@ -14,12 +14,137 @@ class Commodity
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Name' => 'string',
+'NumberOfPieces' => 'nonNegativeInteger',
+'Description' => 'string',
+'CountryOfManufacture' => 'string',
+'HarmonizedCode' => 'string',
+'Weight' => 'Weight',
+'Quantity' => 'decimal',
+'QuantityUnits' => 'string',
+'AdditionalMeasures' => 'Measure',
+'UnitPrice' => 'Money',
+'CustomsValue' => 'Money',
+'ExciseConditions' => 'EdtExciseCondition',
+'ExportLicenseNumber' => 'string',
+'ExportLicenseExpirationDate' => 'date',
+'CIMarksAndNumbers' => 'string',
+'PartNumber' => 'string',
+'NaftaDetail' => 'NaftaCommodityDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Commodity';
+
+        
+    /**
+     * @var string
+     */
+    public $Name;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $NumberOfPieces;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+        
+    /**
+     * @var string
+     */
+    public $CountryOfManufacture;
+
+        
+    /**
+     * @var string
+     */
+    public $HarmonizedCode;
+
+        
+    /**
+     * @var Weight
+     */
+    public $Weight;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Quantity;
+
+        
+    /**
+     * @var string
+     */
+    public $QuantityUnits;
+
+        
+    /**
+     * @var Measure[]
+     */
+    public $AdditionalMeasures = array();
+
+        
+    /**
+     * @var Money
+     */
+    public $UnitPrice;
+
+        
+    /**
+     * @var Money
+     */
+    public $CustomsValue;
+
+        
+    /**
+     * @var EdtExciseCondition[]
+     */
+    public $ExciseConditions = array();
+
+        
+    /**
+     * @var string
+     */
+    public $ExportLicenseNumber;
+
+        
+    /**
+     * @var date
+     */
+    public $ExportLicenseExpirationDate;
+
+        
+    /**
+     * @var string
+     */
+    public $CIMarksAndNumbers;
+
+        
+    /**
+     * @var string
+     */
+    public $PartNumber;
+
+        
+    /**
+     * @var NaftaCommodityDetail
+     */
+    public $NaftaDetail;
+
+
 
     /**
      * Set Name
@@ -29,6 +154,7 @@ class Commodity
      */
     public function setName($name)
     {
+        $this->__set('Name', $name);
         $this->Name = $name;
         return $this;
     }
@@ -51,6 +177,7 @@ class Commodity
      */
     public function setNumberOfPieces($numberOfPieces)
     {
+        $this->__set('NumberOfPieces', $numberOfPieces);
         $this->NumberOfPieces = $numberOfPieces;
         return $this;
     }
@@ -73,6 +200,7 @@ class Commodity
      */
     public function setDescription($description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -95,6 +223,7 @@ class Commodity
      */
     public function setCountryOfManufacture($countryOfManufacture)
     {
+        $this->__set('CountryOfManufacture', $countryOfManufacture);
         $this->CountryOfManufacture = $countryOfManufacture;
         return $this;
     }
@@ -117,6 +246,7 @@ class Commodity
      */
     public function setHarmonizedCode($harmonizedCode)
     {
+        $this->__set('HarmonizedCode', $harmonizedCode);
         $this->HarmonizedCode = $harmonizedCode;
         return $this;
     }
@@ -139,6 +269,7 @@ class Commodity
      */
     public function setWeight(Weight $weight)
     {
+        $this->__set('Weight', $weight);
         $this->Weight = $weight;
         return $this;
     }
@@ -161,6 +292,7 @@ class Commodity
      */
     public function setQuantity($quantity)
     {
+        $this->__set('Quantity', $quantity);
         $this->Quantity = $quantity;
         return $this;
     }
@@ -183,6 +315,7 @@ class Commodity
      */
     public function setQuantityUnits($quantityUnits)
     {
+        $this->__set('QuantityUnits', $quantityUnits);
         $this->QuantityUnits = $quantityUnits;
         return $this;
     }
@@ -205,6 +338,7 @@ class Commodity
      */
     public function setAdditionalMeasures(array $additionalMeasures)
     {
+        $this->__set('AdditionalMeasures', $additionalMeasures);
         $this->AdditionalMeasures = $additionalMeasures;
         return $this;
     }
@@ -227,6 +361,7 @@ class Commodity
      */
     public function setUnitPrice(Money $unitPrice)
     {
+        $this->__set('UnitPrice', $unitPrice);
         $this->UnitPrice = $unitPrice;
         return $this;
     }
@@ -249,6 +384,7 @@ class Commodity
      */
     public function setCustomsValue(Money $customsValue)
     {
+        $this->__set('CustomsValue', $customsValue);
         $this->CustomsValue = $customsValue;
         return $this;
     }
@@ -271,6 +407,7 @@ class Commodity
      */
     public function setExciseConditions(array $exciseConditions)
     {
+        $this->__set('ExciseConditions', $exciseConditions);
         $this->ExciseConditions = $exciseConditions;
         return $this;
     }
@@ -293,6 +430,7 @@ class Commodity
      */
     public function setExportLicenseNumber($exportLicenseNumber)
     {
+        $this->__set('ExportLicenseNumber', $exportLicenseNumber);
         $this->ExportLicenseNumber = $exportLicenseNumber;
         return $this;
     }
@@ -315,6 +453,7 @@ class Commodity
      */
     public function setExportLicenseExpirationDate($exportLicenseExpirationDate)
     {
+        $this->__set('ExportLicenseExpirationDate', $exportLicenseExpirationDate);
         $this->ExportLicenseExpirationDate = $exportLicenseExpirationDate;
         return $this;
     }
@@ -337,6 +476,7 @@ class Commodity
      */
     public function setCIMarksAndNumbers($cIMarksAndNumbers)
     {
+        $this->__set('CIMarksAndNumbers', $cIMarksAndNumbers);
         $this->CIMarksAndNumbers = $cIMarksAndNumbers;
         return $this;
     }
@@ -359,6 +499,7 @@ class Commodity
      */
     public function setPartNumber($partNumber)
     {
+        $this->__set('PartNumber', $partNumber);
         $this->PartNumber = $partNumber;
         return $this;
     }
@@ -381,6 +522,7 @@ class Commodity
      */
     public function setNaftaDetail(NaftaCommodityDetail $naftaDetail)
     {
+        $this->__set('NaftaDetail', $naftaDetail);
         $this->NaftaDetail = $naftaDetail;
         return $this;
     }

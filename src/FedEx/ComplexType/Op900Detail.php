@@ -14,12 +14,46 @@ class Op900Detail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'Reference' => 'CustomerReferenceType',
+'CustomerImageUsages' => 'CustomerImageUsage',
+'SignatureName' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Op900Detail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var \FedEx\SimpleType\CustomerReferenceType|string
+     */
+    public $Reference;
+
+        
+    /**
+     * @var CustomerImageUsage[]
+     */
+    public $CustomerImageUsages = array();
+
+        
+    /**
+     * @var string
+     */
+    public $SignatureName;
+
+
 
     /**
      * Specifies characteristics of a shipping document to be produced.
@@ -29,6 +63,7 @@ class Op900Detail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +86,7 @@ class Op900Detail
      */
     public function setReference($reference)
     {
+        $this->__set('Reference', $reference);
         $this->Reference = $reference;
         return $this;
     }
@@ -73,6 +109,7 @@ class Op900Detail
      */
     public function setCustomerImageUsages(array $customerImageUsages)
     {
+        $this->__set('CustomerImageUsages', $customerImageUsages);
         $this->CustomerImageUsages = $customerImageUsages;
         return $this;
     }
@@ -95,6 +132,7 @@ class Op900Detail
      */
     public function setSignatureName($signatureName)
     {
+        $this->__set('SignatureName', $signatureName);
         $this->SignatureName = $signatureName;
         return $this;
     }

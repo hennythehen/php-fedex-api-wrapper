@@ -14,12 +14,32 @@ class ReturnInstructionsDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'CustomText' => 'string',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ReturnInstructionsDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var string
+     */
+    public $CustomText;
+
+
 
     /**
      * Set Format
@@ -29,6 +49,7 @@ class ReturnInstructionsDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +72,7 @@ class ReturnInstructionsDetail
      */
     public function setCustomText($customText)
     {
+        $this->__set('CustomText', $customText);
         $this->CustomText = $customText;
         return $this;
     }

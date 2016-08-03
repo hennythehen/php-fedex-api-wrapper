@@ -14,12 +14,46 @@ class Dimensions
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Length' => 'nonNegativeInteger',
+'Width' => 'nonNegativeInteger',
+'Height' => 'nonNegativeInteger',
+'Units' => 'LinearUnits',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Dimensions';
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Length;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Width;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $Height;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LinearUnits|string
+     */
+    public $Units;
+
+
 
     /**
      * Set Length
@@ -29,6 +63,7 @@ class Dimensions
      */
     public function setLength($length)
     {
+        $this->__set('Length', $length);
         $this->Length = $length;
         return $this;
     }
@@ -51,6 +86,7 @@ class Dimensions
      */
     public function setWidth($width)
     {
+        $this->__set('Width', $width);
         $this->Width = $width;
         return $this;
     }
@@ -73,6 +109,7 @@ class Dimensions
      */
     public function setHeight($height)
     {
+        $this->__set('Height', $height);
         $this->Height = $height;
         return $this;
     }
@@ -95,6 +132,7 @@ class Dimensions
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }

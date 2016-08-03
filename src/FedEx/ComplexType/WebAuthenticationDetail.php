@@ -14,12 +14,32 @@ class WebAuthenticationDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'ParentCredential' => 'WebAuthenticationCredential',
+'UserCredential' => 'WebAuthenticationCredential',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'WebAuthenticationDetail';
+
+        
+    /**
+     * @var WebAuthenticationCredential
+     */
+    public $ParentCredential;
+
+        
+    /**
+     * @var WebAuthenticationCredential
+     */
+    public $UserCredential;
+
+
 
     /**
      * This was renamed from cspCredential.
@@ -29,6 +49,7 @@ class WebAuthenticationDetail
      */
     public function setParentCredential(WebAuthenticationCredential $parentCredential)
     {
+        $this->__set('ParentCredential', $parentCredential);
         $this->ParentCredential = $parentCredential;
         return $this;
     }
@@ -51,6 +72,7 @@ class WebAuthenticationDetail
      */
     public function setUserCredential(WebAuthenticationCredential $userCredential)
     {
+        $this->__set('UserCredential', $userCredential);
         $this->UserCredential = $userCredential;
         return $this;
     }

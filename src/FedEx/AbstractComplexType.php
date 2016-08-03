@@ -7,7 +7,7 @@ namespace FedEx;
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
  */
-abstract class AbstractComplexType
+abstract class AbstractComplexType extends AbstractType
 {
 
     /**

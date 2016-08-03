@@ -14,12 +14,32 @@ class Volume
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Units' => 'VolumeUnits',
+'Value' => 'decimal',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Volume';
+
+        
+    /**
+     * @var \FedEx\SimpleType\VolumeUnits|string
+     */
+    public $Units;
+
+        
+    /**
+     * @var decimal
+     */
+    public $Value;
+
+
 
     /**
      * Set Units
@@ -29,6 +49,7 @@ class Volume
      */
     public function setUnits($units)
     {
+        $this->__set('Units', $units);
         $this->Units = $units;
         return $this;
     }
@@ -51,6 +72,7 @@ class Volume
      */
     public function setValue($value)
     {
+        $this->__set('Value', $value);
         $this->Value = $value;
         return $this;
     }

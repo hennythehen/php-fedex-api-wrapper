@@ -14,12 +14,60 @@ class Notification
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Severity' => 'NotificationSeverityType',
+'Source' => 'string',
+'Code' => 'string',
+'Message' => 'string',
+'LocalizedMessage' => 'string',
+'MessageParameters' => 'NotificationParameter',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'Notification';
+
+        
+    /**
+     * @var \FedEx\SimpleType\NotificationSeverityType|string
+     */
+    public $Severity;
+
+        
+    /**
+     * @var string
+     */
+    public $Source;
+
+        
+    /**
+     * @var string
+     */
+    public $Code;
+
+        
+    /**
+     * @var string
+     */
+    public $Message;
+
+        
+    /**
+     * @var string
+     */
+    public $LocalizedMessage;
+
+        
+    /**
+     * @var NotificationParameter[]
+     */
+    public $MessageParameters = array();
+
+
 
     /**
      * The severity of this notification. This can indicate success or failure or some other information about the request. The values that can be returned are SUCCESS - Your transaction succeeded with no other applicable information. NOTE - Additional information that may be of interest to you about your transaction. WARNING - Additional information that you need to know about your transaction that you may need to take action on. ERROR - Information about an error that occurred while processing your transaction. FAILURE - FedEx was unable to process your transaction at this time due to a system failure. Please try again later
@@ -29,6 +77,7 @@ class Notification
      */
     public function setSeverity($severity)
     {
+        $this->__set('Severity', $severity);
         $this->Severity = $severity;
         return $this;
     }
@@ -51,6 +100,7 @@ class Notification
      */
     public function setSource($source)
     {
+        $this->__set('Source', $source);
         $this->Source = $source;
         return $this;
     }
@@ -73,6 +123,7 @@ class Notification
      */
     public function setCode($code)
     {
+        $this->__set('Code', $code);
         $this->Code = $code;
         return $this;
     }
@@ -95,6 +146,7 @@ class Notification
      */
     public function setMessage($message)
     {
+        $this->__set('Message', $message);
         $this->Message = $message;
         return $this;
     }
@@ -117,6 +169,7 @@ class Notification
      */
     public function setLocalizedMessage($localizedMessage)
     {
+        $this->__set('LocalizedMessage', $localizedMessage);
         $this->LocalizedMessage = $localizedMessage;
         return $this;
     }
@@ -139,6 +192,7 @@ class Notification
      */
     public function setMessageParameters(array $messageParameters)
     {
+        $this->__set('MessageParameters', $messageParameters);
         $this->MessageParameters = $messageParameters;
         return $this;
     }

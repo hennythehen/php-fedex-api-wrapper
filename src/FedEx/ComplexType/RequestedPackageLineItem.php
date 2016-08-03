@@ -14,12 +14,109 @@ class RequestedPackageLineItem
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'SequenceNumber' => 'positiveInteger',
+'GroupNumber' => 'nonNegativeInteger',
+'GroupPackageCount' => 'nonNegativeInteger',
+'VariableHandlingChargeDetail' => 'VariableHandlingChargeDetail',
+'InsuredValue' => 'Money',
+'Weight' => 'Weight',
+'Dimensions' => 'Dimensions',
+'PhysicalPackaging' => 'PhysicalPackagingType',
+'ItemDescription' => 'string',
+'ItemDescriptionForClearance' => 'string',
+'CustomerReferences' => 'CustomerReference',
+'SpecialServicesRequested' => 'PackageSpecialServicesRequested',
+'ContentRecords' => 'ContentRecord',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'RequestedPackageLineItem';
+
+        
+    /**
+     * @var positiveInteger
+     */
+    public $SequenceNumber;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $GroupNumber;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $GroupPackageCount;
+
+        
+    /**
+     * @var VariableHandlingChargeDetail
+     */
+    public $VariableHandlingChargeDetail;
+
+        
+    /**
+     * @var Money
+     */
+    public $InsuredValue;
+
+        
+    /**
+     * @var Weight
+     */
+    public $Weight;
+
+        
+    /**
+     * @var Dimensions
+     */
+    public $Dimensions;
+
+        
+    /**
+     * @var \FedEx\SimpleType\PhysicalPackagingType|string
+     */
+    public $PhysicalPackaging;
+
+        
+    /**
+     * @var string
+     */
+    public $ItemDescription;
+
+        
+    /**
+     * @var string
+     */
+    public $ItemDescriptionForClearance;
+
+        
+    /**
+     * @var CustomerReference[]
+     */
+    public $CustomerReferences = array();
+
+        
+    /**
+     * @var PackageSpecialServicesRequested
+     */
+    public $SpecialServicesRequested;
+
+        
+    /**
+     * @var ContentRecord[]
+     */
+    public $ContentRecords = array();
+
+
 
     /**
      * Used only with INDIVIDUAL_PACKAGE, as a unique identifier of each requested package.
@@ -29,6 +126,7 @@ class RequestedPackageLineItem
      */
     public function setSequenceNumber($sequenceNumber)
     {
+        $this->__set('SequenceNumber', $sequenceNumber);
         $this->SequenceNumber = $sequenceNumber;
         return $this;
     }
@@ -51,6 +149,7 @@ class RequestedPackageLineItem
      */
     public function setGroupNumber($groupNumber)
     {
+        $this->__set('GroupNumber', $groupNumber);
         $this->GroupNumber = $groupNumber;
         return $this;
     }
@@ -73,6 +172,7 @@ class RequestedPackageLineItem
      */
     public function setGroupPackageCount($groupPackageCount)
     {
+        $this->__set('GroupPackageCount', $groupPackageCount);
         $this->GroupPackageCount = $groupPackageCount;
         return $this;
     }
@@ -95,6 +195,7 @@ class RequestedPackageLineItem
      */
     public function setVariableHandlingChargeDetail(VariableHandlingChargeDetail $variableHandlingChargeDetail)
     {
+        $this->__set('VariableHandlingChargeDetail', $variableHandlingChargeDetail);
         $this->VariableHandlingChargeDetail = $variableHandlingChargeDetail;
         return $this;
     }
@@ -117,6 +218,7 @@ class RequestedPackageLineItem
      */
     public function setInsuredValue(Money $insuredValue)
     {
+        $this->__set('InsuredValue', $insuredValue);
         $this->InsuredValue = $insuredValue;
         return $this;
     }
@@ -139,6 +241,7 @@ class RequestedPackageLineItem
      */
     public function setWeight(Weight $weight)
     {
+        $this->__set('Weight', $weight);
         $this->Weight = $weight;
         return $this;
     }
@@ -161,6 +264,7 @@ class RequestedPackageLineItem
      */
     public function setDimensions(Dimensions $dimensions)
     {
+        $this->__set('Dimensions', $dimensions);
         $this->Dimensions = $dimensions;
         return $this;
     }
@@ -183,6 +287,7 @@ class RequestedPackageLineItem
      */
     public function setPhysicalPackaging($physicalPackaging)
     {
+        $this->__set('PhysicalPackaging', $physicalPackaging);
         $this->PhysicalPackaging = $physicalPackaging;
         return $this;
     }
@@ -205,6 +310,7 @@ class RequestedPackageLineItem
      */
     public function setItemDescription($itemDescription)
     {
+        $this->__set('ItemDescription', $itemDescription);
         $this->ItemDescription = $itemDescription;
         return $this;
     }
@@ -227,6 +333,7 @@ class RequestedPackageLineItem
      */
     public function setItemDescriptionForClearance($itemDescriptionForClearance)
     {
+        $this->__set('ItemDescriptionForClearance', $itemDescriptionForClearance);
         $this->ItemDescriptionForClearance = $itemDescriptionForClearance;
         return $this;
     }
@@ -249,6 +356,7 @@ class RequestedPackageLineItem
      */
     public function setCustomerReferences(array $customerReferences)
     {
+        $this->__set('CustomerReferences', $customerReferences);
         $this->CustomerReferences = $customerReferences;
         return $this;
     }
@@ -271,6 +379,7 @@ class RequestedPackageLineItem
      */
     public function setSpecialServicesRequested(PackageSpecialServicesRequested $specialServicesRequested)
     {
+        $this->__set('SpecialServicesRequested', $specialServicesRequested);
         $this->SpecialServicesRequested = $specialServicesRequested;
         return $this;
     }
@@ -293,6 +402,7 @@ class RequestedPackageLineItem
      */
     public function setContentRecords(array $contentRecords)
     {
+        $this->__set('ContentRecords', $contentRecords);
         $this->ContentRecords = $contentRecords;
         return $this;
     }

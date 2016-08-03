@@ -14,12 +14,60 @@ class HazardousCommodityContent
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Description' => 'HazardousCommodityDescription',
+'Quantity' => 'HazardousCommodityQuantityDetail',
+'InnerReceptacles' => 'HazardousCommodityInnerReceptacleDetail',
+'Options' => 'HazardousCommodityOptionDetail',
+'RadionuclideDetail' => 'RadionuclideDetail',
+'NetExplosiveDetail' => 'NetExplosiveDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'HazardousCommodityContent';
+
+        
+    /**
+     * @var HazardousCommodityDescription
+     */
+    public $Description;
+
+        
+    /**
+     * @var HazardousCommodityQuantityDetail
+     */
+    public $Quantity;
+
+        
+    /**
+     * @var HazardousCommodityInnerReceptacleDetail[]
+     */
+    public $InnerReceptacles = array();
+
+        
+    /**
+     * @var HazardousCommodityOptionDetail
+     */
+    public $Options;
+
+        
+    /**
+     * @var RadionuclideDetail
+     */
+    public $RadionuclideDetail;
+
+        
+    /**
+     * @var NetExplosiveDetail
+     */
+    public $NetExplosiveDetail;
+
+
 
     /**
      * Identifies and describes an individual hazardous commodity.
@@ -29,6 +77,7 @@ class HazardousCommodityContent
      */
     public function setDescription(HazardousCommodityDescription $description)
     {
+        $this->__set('Description', $description);
         $this->Description = $description;
         return $this;
     }
@@ -51,6 +100,7 @@ class HazardousCommodityContent
      */
     public function setQuantity(HazardousCommodityQuantityDetail $quantity)
     {
+        $this->__set('Quantity', $quantity);
         $this->Quantity = $quantity;
         return $this;
     }
@@ -73,6 +123,7 @@ class HazardousCommodityContent
      */
     public function setInnerReceptacles(array $innerReceptacles)
     {
+        $this->__set('InnerReceptacles', $innerReceptacles);
         $this->InnerReceptacles = $innerReceptacles;
         return $this;
     }
@@ -95,6 +146,7 @@ class HazardousCommodityContent
      */
     public function setOptions(HazardousCommodityOptionDetail $options)
     {
+        $this->__set('Options', $options);
         $this->Options = $options;
         return $this;
     }
@@ -117,6 +169,7 @@ class HazardousCommodityContent
      */
     public function setRadionuclideDetail(RadionuclideDetail $radionuclideDetail)
     {
+        $this->__set('RadionuclideDetail', $radionuclideDetail);
         $this->RadionuclideDetail = $radionuclideDetail;
         return $this;
     }
@@ -139,6 +192,7 @@ class HazardousCommodityContent
      */
     public function setNetExplosiveDetail(NetExplosiveDetail $netExplosiveDetail)
     {
+        $this->__set('NetExplosiveDetail', $netExplosiveDetail);
         $this->NetExplosiveDetail = $netExplosiveDetail;
         return $this;
     }

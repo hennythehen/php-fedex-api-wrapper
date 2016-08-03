@@ -14,12 +14,53 @@ class CustomDocumentDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'Format' => 'ShippingDocumentFormat',
+'LabelPrintingOrientation' => 'LabelPrintingOrientationType',
+'LabelRotation' => 'LabelRotationType',
+'SpecificationId' => 'string',
+'CustomContent' => 'CustomLabelDetail',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'CustomDocumentDetail';
+
+        
+    /**
+     * @var ShippingDocumentFormat
+     */
+    public $Format;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelPrintingOrientationType|string
+     */
+    public $LabelPrintingOrientation;
+
+        
+    /**
+     * @var \FedEx\SimpleType\LabelRotationType|string
+     */
+    public $LabelRotation;
+
+        
+    /**
+     * @var string
+     */
+    public $SpecificationId;
+
+        
+    /**
+     * @var CustomLabelDetail
+     */
+    public $CustomContent;
+
+
 
     /**
      * Common information controlling document production.
@@ -29,6 +70,7 @@ class CustomDocumentDetail
      */
     public function setFormat(ShippingDocumentFormat $format)
     {
+        $this->__set('Format', $format);
         $this->Format = $format;
         return $this;
     }
@@ -51,6 +93,7 @@ class CustomDocumentDetail
      */
     public function setLabelPrintingOrientation($labelPrintingOrientation)
     {
+        $this->__set('LabelPrintingOrientation', $labelPrintingOrientation);
         $this->LabelPrintingOrientation = $labelPrintingOrientation;
         return $this;
     }
@@ -73,6 +116,7 @@ class CustomDocumentDetail
      */
     public function setLabelRotation($labelRotation)
     {
+        $this->__set('LabelRotation', $labelRotation);
         $this->LabelRotation = $labelRotation;
         return $this;
     }
@@ -95,6 +139,7 @@ class CustomDocumentDetail
      */
     public function setSpecificationId($specificationId)
     {
+        $this->__set('SpecificationId', $specificationId);
         $this->SpecificationId = $specificationId;
         return $this;
     }
@@ -117,6 +162,7 @@ class CustomDocumentDetail
      */
     public function setCustomContent(CustomLabelDetail $customContent)
     {
+        $this->__set('CustomContent', $customContent);
         $this->CustomContent = $customContent;
         return $this;
     }

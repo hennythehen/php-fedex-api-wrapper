@@ -14,12 +14,39 @@ class ServiceSubOptionDetail
     extends AbstractComplexType
 {
 
+    public $propertyTypes = array(
+         'FreightGuarantee' => 'FreightGuaranteeType',
+'SmartPostHubId' => 'string',
+'SmartPostIndicia' => 'SmartPostIndiciaType',
+
+    );
+
     /**
      * Name of this complex type
      * 
      * @var string
      */
     protected $_name = 'ServiceSubOptionDetail';
+
+        
+    /**
+     * @var \FedEx\SimpleType\FreightGuaranteeType|string
+     */
+    public $FreightGuarantee;
+
+        
+    /**
+     * @var string
+     */
+    public $SmartPostHubId;
+
+        
+    /**
+     * @var \FedEx\SimpleType\SmartPostIndiciaType|string
+     */
+    public $SmartPostIndicia;
+
+
 
     /**
      * Identifies the type of Freight Guarantee applied, if FREIGHT_GUARANTEE is applied to the rate quote.
@@ -29,6 +56,7 @@ class ServiceSubOptionDetail
      */
     public function setFreightGuarantee($freightGuarantee)
     {
+        $this->__set('FreightGuarantee', $freightGuarantee);
         $this->FreightGuarantee = $freightGuarantee;
         return $this;
     }
@@ -51,6 +79,7 @@ class ServiceSubOptionDetail
      */
     public function setSmartPostHubId($smartPostHubId)
     {
+        $this->__set('SmartPostHubId', $smartPostHubId);
         $this->SmartPostHubId = $smartPostHubId;
         return $this;
     }
@@ -73,6 +102,7 @@ class ServiceSubOptionDetail
      */
     public function setSmartPostIndicia($smartPostIndicia)
     {
+        $this->__set('SmartPostIndicia', $smartPostIndicia);
         $this->SmartPostIndicia = $smartPostIndicia;
         return $this;
     }
