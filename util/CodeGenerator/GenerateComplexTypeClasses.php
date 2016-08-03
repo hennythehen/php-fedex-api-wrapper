@@ -88,12 +88,14 @@ class GenerateComplexTypeClasses extends AbstractGenerate
                 
                 $properties = array();
 
+                $propertyTypes = array();
+
                 foreach ($schema->sequence->element as $element) {
                     $property = array();
                     $property['name'] = (string) $element['name'];
                     $property['type'] = (string) str_replace('ns:', '', $element['type']);
                     $property['doc'] = (string) $element->annotation->documentation;
-                    
+
                     if (isset($element['maxOccurs'])) {
                         $property['maxOccurs'] = (string) $element['maxOccurs'];
                     } else {
@@ -143,9 +145,13 @@ class GenerateComplexTypeClasses extends AbstractGenerate
         $propertiesString = '';
         $methodString = '';
 
+        $propertyTypesString = '';
+
         foreach ($properties as $property) {
-            //$propertiesString .= " * @property {$property['type']} \${$property['name']} {$property['doc']}\n";
+            $propertiesString .= $this->_getGeneratedProperty($className, $property) ."\n";
             $methodString .= $this->_getGeneratedSetMethod($className, $property) . "\n";
+
+            $propertyTypesString .= "'{$property['name']}' => '{$property['type']}',"."\n";
         }
         
         $fileBody = <<<TEXT
@@ -165,6 +171,10 @@ class $className
     extends AbstractComplexType
 {
 
+    public \$propertyTypes = array(
+         $propertyTypesString
+    );
+
     /**
      * Name of this complex type
      * 
@@ -172,12 +182,60 @@ class $className
      */
     protected \$_name = '$className';
 
+$propertiesString
+
 $methodString
     
 }
 TEXT;
 
         return $fileBody;
+    }
+
+    protected function _getGeneratedProperty($className, array $orig)
+    {
+        $property = $orig;
+
+        $invalidTypes = array('string', 'int', 'dateTime', 'boolean', 'nonNegativeInteger', 'positiveInteger', 'date', 'weight', 'decimal', 'double', 'base64Binary');
+
+        $simpleTypeNamespace = "\\{$this->_baseNamespace}\\SimpleType\\";
+
+        $property['typePHPDoc'] = $property['type'];
+
+        $initializeAs = "";
+
+        if ($property['maxOccurs'] > 1 || $property['maxOccurs'] == 'unbounded') {
+            $property['typePHPDoc'] = "{$property['type']}[]";
+            $property['type'] = 'array';
+            $initializeAs = " = array()";
+        }
+
+        //set property type if is simple type
+        if ($this->_isSimpleType($property['type'])) {
+            $property['typePHPDoc'] = $simpleTypeNamespace . $property['type'] . '|string';
+            $property['type'] = null;
+        } else {
+            //check for invalid types for parameter type hints
+            if (in_array($property['type'], $invalidTypes)) {
+                $property['type'] = '';
+            } else {
+                $property['type'] = $property['type'] . ' ';
+            }
+        }
+
+        if (empty($property['doc'])) {
+            $property['doc'] = "Set {$property['name']}";
+        }
+
+        $returnString = <<<TEXT
+        
+    /**
+     * @var {$property['typePHPDoc']}
+     */
+    public \${$property['name']}{$initializeAs};
+
+TEXT;
+        return $returnString;
     }
 
     /**
@@ -229,6 +287,7 @@ TEXT;
      */
     public function set{$property['name']}({$property['type']}\${$varName})
     {
+        \$this->__set('{$property['name']}', \${$varName});
         \$this->{$property['name']} = \${$varName};
         return \$this;
     }
