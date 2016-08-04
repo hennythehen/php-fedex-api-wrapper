@@ -73,7 +73,7 @@ class GenerateSimpleTypeClasses extends AbstractGenerate
             $this->_exportPath = $exportPath;
         }
         elseif (!file_exists($exportPath)) {
-            mkdir($exportPath);
+            mkdir($exportPath.'/');
             $this->_exportPath = $exportPath;
         }
         else {

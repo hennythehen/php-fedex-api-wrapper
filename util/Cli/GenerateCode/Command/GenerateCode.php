@@ -43,22 +43,31 @@ class GenerateCode extends Console\Command\Command
      */
     protected function buildToPath($subpackageName, $wsdlPath)
     {
-        //RateRequest
         $wsdlPath = $this->srcDir . $wsdlPath;
 
+        $subpackagePath = '/' . str_replace(" ", "", $subpackageName);
+
+        $subpackageNamespace = '\\' . str_replace(" ", "", $subpackageName);
+
+
+        if (!file_exists($this->srcDir . $subpackagePath)) {
+            mkdir($this->srcDir . $subpackagePath);
+        }
+
         //generate Request class
-        $pathToRequestClassFile = $this->srcDir . '/'. str_replace(" ", "", $subpackageName) . 'Request.php';
-        $generateRequestClassFile = new CodeGenerator\GenerateRequestClass($pathToRequestClassFile, $wsdlPath, self::BASE_NAMESPACE, $subpackageName);
+        $pathToRequestClassFile = $this->srcDir . $subpackagePath . '/'. str_replace(" ", "", $subpackageName) . 'Request.php';
+        $generateRequestClassFile = new CodeGenerator\GenerateRequestClass($pathToRequestClassFile, $wsdlPath, self::BASE_NAMESPACE . $subpackageNamespace, $subpackageName);
         $generateRequestClassFile->run();
 
+
         //generate SimpleType classes
-        $exportPath = $this->srcDir . self::SIMPLE_TYPE_PATH;
-        $generateSimpleTypes = new CodeGenerator\GenerateSimpleTypeClasses($exportPath, $wsdlPath, self::BASE_NAMESPACE, $subpackageName);
+        $exportPath = $this->srcDir . $subpackagePath . self::SIMPLE_TYPE_PATH;
+        $generateSimpleTypes = new CodeGenerator\GenerateSimpleTypeClasses($exportPath, $wsdlPath, self::BASE_NAMESPACE . $subpackageNamespace, $subpackageName);
         $generateSimpleTypes->run();
 
         //generate ComplexType classes
-        $exportPath = $this->srcDir . self::COMPLEX_TYPE_PATH;
-        $generateComplexTypes = new CodeGenerator\GenerateComplexTypeClasses($exportPath, $wsdlPath, self::BASE_NAMESPACE, $subpackageName);
+        $exportPath = $this->srcDir . $subpackagePath . self::COMPLEX_TYPE_PATH;
+        $generateComplexTypes = new CodeGenerator\GenerateComplexTypeClasses($exportPath, $wsdlPath, self::BASE_NAMESPACE . $subpackageNamespace, $subpackageName);
         $generateComplexTypes->run();
     }
 
@@ -82,5 +91,12 @@ class GenerateCode extends Console\Command\Command
         }
         
         $this->buildToPath('Rate Service', '/_wsdl/RateService_v18.wsdl');
+        $this->buildToPath('Country Service', '/_wsdl/CountryService_v4.wsdl');
+        $this->buildToPath('Locations Service', '/_wsdl/LocationsService_v3.wsdl');
+        $this->buildToPath('Pickup Service', '/_wsdl/PickupService_v11.wsdl');
+        $this->buildToPath('Ship Service', '/_wsdl/ShipService_v17.wsdl');
+        $this->buildToPath('Track Service', '/_wsdl/TrackService_v10.wsdl');
+        $this->buildToPath('Upload Document Service', '/_wsdl/UploadDocumentService_v8.wsdl');
+        $this->buildToPath('Validation Availability And Commitment Service', '/_wsdl/ValidationAvailabilityAndCommitmentService_v4.wsdl');
     }
 }

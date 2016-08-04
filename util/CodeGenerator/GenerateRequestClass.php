@@ -189,6 +189,8 @@ class {$className}Request extends AbstractRequest
         }
 
         \$this->_soapClient = new \SoapClient(\$this->_wsdlPath, array('trace' => true));
+        
+        \$this->subpackageNamespace = __NAMESPACE__;
     }
 
     /**
