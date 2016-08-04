@@ -8,11 +8,12 @@
 
 namespace FedEx;
 
-use FedEx\ComplexType as ComplexType;
-use FedEx\SimpleType as SimpleType;
 
 class ReplyDenormalizer
 {
+
+    protected $subpackageNamespace;
+
     /**
      * Receives a ComplexType, SimpleType or array and hydrates it with data
      *
@@ -33,13 +34,13 @@ class ReplyDenormalizer
             if (is_array($class->$prop)) {
                 $arr = array();
                 if (!is_array($val)) {
-                    $newObj = $this->depluralizeClassName($prop);
+                    $newObj = $this->getClass($class->propertyTypes[$prop]);
                     $this->stdClassToObject($newObj, $val);
                     $arr[] = $newObj;
                 }
                 else {
                     for ($i = 0; $i < count($val); $i++) {
-                        $newObj = $this->depluralizeClassName($prop);
+                        $newObj = $this->getClass($class->propertyTypes[$prop]);
                         $this->stdClassToObject($newObj, $val[$i]);
                         $arr[] = $newObj;
                     }
@@ -83,27 +84,13 @@ class ReplyDenormalizer
     }
 
     /**
-     * @param string $possiblePluralName
-     * @return AbstractType|string
-     */
-    private function depluralizeClassName(string $possiblePluralName)
-    {
-        $className = substr($possiblePluralName, 0, -1);
-        $class = $this->getSimpleType($className);
-        if (!$class) {
-            $class = $this->getComplexType($className);
-        }
-        return $class;
-    }
-
-    /**
      * @param string $rawClassName
      * @return AbstractSimpleType|null
      */
     private function getSimpleType(string $rawClassName)
     {
-        if (class_exists(__NAMESPACE__.'\\SimpleType\\'.$rawClassName)) {
-            $rawClassName = __NAMESPACE__.'\\SimpleType\\'.$rawClassName;
+        if (class_exists($this->subpackageNamespace.'\\SimpleType\\'.$rawClassName)) {
+            $rawClassName = $this->subpackageNamespace.'\\SimpleType\\'.$rawClassName;
             $class = new $rawClassName;
             return $class;
         }
@@ -118,8 +105,8 @@ class ReplyDenormalizer
      */
     private function getComplexType(string $rawClassName)
     {
-        if (class_exists(__NAMESPACE__.'\\ComplexType\\'.$rawClassName)) {
-            $rawClassName = __NAMESPACE__.'\\ComplexType\\'.$rawClassName;
+        if (class_exists($this->subpackageNamespace.'\\ComplexType\\'.$rawClassName)) {
+            $rawClassName = $this->subpackageNamespace.'\\ComplexType\\'.$rawClassName;
             $class = new $rawClassName;
             return $class;
         }

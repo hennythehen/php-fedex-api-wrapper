@@ -1,0 +1,152 @@
+<?php
+namespace FedEx\TrackService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * ContentRecord
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Track Service
+ */
+class ContentRecord
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'PartNumber' => 'string',
+'ItemNumber' => 'string',
+'ReceivedQuantity' => 'nonNegativeInteger',
+'Description' => 'string',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'ContentRecord';
+
+        
+    /**
+     * @var string
+     */
+    public $PartNumber;
+
+        
+    /**
+     * @var string
+     */
+    public $ItemNumber;
+
+        
+    /**
+     * @var nonNegativeInteger
+     */
+    public $ReceivedQuantity;
+
+        
+    /**
+     * @var string
+     */
+    public $Description;
+
+
+
+    /**
+     * Set PartNumber
+     *
+     * @param string $partNumber
+     * @return ContentRecord
+     */
+    public function setPartNumber($partNumber)
+    {
+        $this->__set('PartNumber', $partNumber);
+        $this->PartNumber = $partNumber;
+        return $this;
+    }
+    
+    /**
+     * Returns Set PartNumber
+     *
+     * @return string
+     */
+    public function getPartNumber()
+    {
+        return $this->PartNumber;
+    }
+    
+    /**
+     * Set ItemNumber
+     *
+     * @param string $itemNumber
+     * @return ContentRecord
+     */
+    public function setItemNumber($itemNumber)
+    {
+        $this->__set('ItemNumber', $itemNumber);
+        $this->ItemNumber = $itemNumber;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ItemNumber
+     *
+     * @return string
+     */
+    public function getItemNumber()
+    {
+        return $this->ItemNumber;
+    }
+    
+    /**
+     * Set ReceivedQuantity
+     *
+     * @param nonNegativeInteger $receivedQuantity
+     * @return ContentRecord
+     */
+    public function setReceivedQuantity($receivedQuantity)
+    {
+        $this->__set('ReceivedQuantity', $receivedQuantity);
+        $this->ReceivedQuantity = $receivedQuantity;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ReceivedQuantity
+     *
+     * @return nonNegativeInteger
+     */
+    public function getReceivedQuantity()
+    {
+        return $this->ReceivedQuantity;
+    }
+    
+    /**
+     * Set Description
+     *
+     * @param string $description
+     * @return ContentRecord
+     */
+    public function setDescription($description)
+    {
+        $this->__set('Description', $description);
+        $this->Description = $description;
+        return $this;
+    }
+    
+    /**
+     * Returns Set Description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->Description;
+    }
+    
+
+    
+}

@@ -1,0 +1,152 @@
+<?php
+namespace FedEx\ShipService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * The descriptive data for a person or company entitiy doing business with FedEx.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Ship Service
+ */
+class Party
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'AccountNumber' => 'string',
+'Tins' => 'TaxpayerIdentification',
+'Contact' => 'Contact',
+'Address' => 'Address',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'Party';
+
+        
+    /**
+     * @var string
+     */
+    public $AccountNumber;
+
+        
+    /**
+     * @var TaxpayerIdentification[]
+     */
+    public $Tins = array();
+
+        
+    /**
+     * @var Contact
+     */
+    public $Contact;
+
+        
+    /**
+     * @var Address
+     */
+    public $Address;
+
+
+
+    /**
+     * Identifies the FedEx account number assigned to the customer.
+     *
+     * @param string $accountNumber
+     * @return Party
+     */
+    public function setAccountNumber($accountNumber)
+    {
+        $this->__set('AccountNumber', $accountNumber);
+        $this->AccountNumber = $accountNumber;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the FedEx account number assigned to the customer.
+     *
+     * @return string
+     */
+    public function getAccountNumber()
+    {
+        return $this->AccountNumber;
+    }
+    
+    /**
+     * Set Tins
+     *
+     * @param TaxpayerIdentification[] $tins
+     * @return Party
+     */
+    public function setTins(array $tins)
+    {
+        $this->__set('Tins', $tins);
+        $this->Tins = $tins;
+        return $this;
+    }
+    
+    /**
+     * Returns Set Tins
+     *
+     * @return TaxpayerIdentification[]
+     */
+    public function getTins()
+    {
+        return $this->Tins;
+    }
+    
+    /**
+     * Descriptive data identifying the point-of-contact person.
+     *
+     * @param Contact $contact
+     * @return Party
+     */
+    public function setContact(Contact $contact)
+    {
+        $this->__set('Contact', $contact);
+        $this->Contact = $contact;
+        return $this;
+    }
+    
+    /**
+     * Returns Descriptive data identifying the point-of-contact person.
+     *
+     * @return Contact
+     */
+    public function getContact()
+    {
+        return $this->Contact;
+    }
+    
+    /**
+     * The descriptive data for a physical location.
+     *
+     * @param Address $address
+     * @return Party
+     */
+    public function setAddress(Address $address)
+    {
+        $this->__set('Address', $address);
+        $this->Address = $address;
+        return $this;
+    }
+    
+    /**
+     * Returns The descriptive data for a physical location.
+     *
+     * @return Address
+     */
+    public function getAddress()
+    {
+        return $this->Address;
+    }
+    
+
+    
+}

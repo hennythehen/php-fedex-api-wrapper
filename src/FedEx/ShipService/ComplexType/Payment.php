@@ -1,0 +1,92 @@
+<?php
+namespace FedEx\ShipService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * The descriptive data for the monetary compensation given to FedEx for services rendered to the customer.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Ship Service
+ */
+class Payment
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'PaymentType' => 'PaymentType',
+'Payor' => 'Payor',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'Payment';
+
+        
+    /**
+     * @var \FedEx\ShipService\SimpleType\PaymentType|string
+     */
+    public $PaymentType;
+
+        
+    /**
+     * @var Payor
+     */
+    public $Payor;
+
+
+
+    /**
+     * Identifies the method of payment for a service. See PaymentType for list of valid enumerated values.
+     *
+     * @param \FedEx\ShipService\SimpleType\PaymentType|string $paymentType
+     * @return Payment
+     */
+    public function setPaymentType($paymentType)
+    {
+        $this->__set('PaymentType', $paymentType);
+        $this->PaymentType = $paymentType;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the method of payment for a service. See PaymentType for list of valid enumerated values.
+     *
+     * @return \FedEx\ShipService\SimpleType\PaymentType|string
+     */
+    public function getPaymentType()
+    {
+        return $this->PaymentType;
+    }
+    
+    /**
+     * Descriptive data identifying the party responsible for payment for a service.
+     *
+     * @param Payor $payor
+     * @return Payment
+     */
+    public function setPayor(Payor $payor)
+    {
+        $this->__set('Payor', $payor);
+        $this->Payor = $payor;
+        return $this;
+    }
+    
+    /**
+     * Returns Descriptive data identifying the party responsible for payment for a service.
+     *
+     * @return Payor
+     */
+    public function getPayor()
+    {
+        return $this->Payor;
+    }
+    
+
+    
+}

@@ -1,0 +1,92 @@
+<?php
+namespace FedEx\ShipService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * The descriptive data required for FedEx delivery signature services.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Ship Service
+ */
+class SignatureOptionDetail
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'OptionType' => 'SignatureOptionType',
+'SignatureReleaseNumber' => 'string',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'SignatureOptionDetail';
+
+        
+    /**
+     * @var \FedEx\ShipService\SimpleType\SignatureOptionType|string
+     */
+    public $OptionType;
+
+        
+    /**
+     * @var string
+     */
+    public $SignatureReleaseNumber;
+
+
+
+    /**
+     * Identifies the delivery signature services option selected by the customer for this shipment. See OptionType for the list of valid values.
+     *
+     * @param \FedEx\ShipService\SimpleType\SignatureOptionType|string $optionType
+     * @return SignatureOptionDetail
+     */
+    public function setOptionType($optionType)
+    {
+        $this->__set('OptionType', $optionType);
+        $this->OptionType = $optionType;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the delivery signature services option selected by the customer for this shipment. See OptionType for the list of valid values.
+     *
+     * @return \FedEx\ShipService\SimpleType\SignatureOptionType|string
+     */
+    public function getOptionType()
+    {
+        return $this->OptionType;
+    }
+    
+    /**
+     * Identifies the delivery signature release authorization number.
+     *
+     * @param string $signatureReleaseNumber
+     * @return SignatureOptionDetail
+     */
+    public function setSignatureReleaseNumber($signatureReleaseNumber)
+    {
+        $this->__set('SignatureReleaseNumber', $signatureReleaseNumber);
+        $this->SignatureReleaseNumber = $signatureReleaseNumber;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the delivery signature release authorization number.
+     *
+     * @return string
+     */
+    public function getSignatureReleaseNumber()
+    {
+        return $this->SignatureReleaseNumber;
+    }
+    
+
+    
+}

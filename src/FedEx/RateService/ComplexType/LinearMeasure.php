@@ -1,0 +1,92 @@
+<?php
+namespace FedEx\RateService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * Represents a one-dimensional measurement in small units (e.g. suitable for measuring a package or document), contrasted with Distance, which represents a large one-dimensional measurement (e.g. distance between cities).
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Rate Service
+ */
+class LinearMeasure
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'Value' => 'decimal',
+'Units' => 'LinearUnits',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'LinearMeasure';
+
+        
+    /**
+     * @var decimal
+     */
+    public $Value;
+
+        
+    /**
+     * @var \FedEx\RateService\SimpleType\LinearUnits|string
+     */
+    public $Units;
+
+
+
+    /**
+     * The numerical quantity of this measurement.
+     *
+     * @param decimal $value
+     * @return LinearMeasure
+     */
+    public function setValue($value)
+    {
+        $this->__set('Value', $value);
+        $this->Value = $value;
+        return $this;
+    }
+    
+    /**
+     * Returns The numerical quantity of this measurement.
+     *
+     * @return decimal
+     */
+    public function getValue()
+    {
+        return $this->Value;
+    }
+    
+    /**
+     * The units for this measurement.
+     *
+     * @param \FedEx\RateService\SimpleType\LinearUnits|string $units
+     * @return LinearMeasure
+     */
+    public function setUnits($units)
+    {
+        $this->__set('Units', $units);
+        $this->Units = $units;
+        return $this;
+    }
+    
+    /**
+     * Returns The units for this measurement.
+     *
+     * @return \FedEx\RateService\SimpleType\LinearUnits|string
+     */
+    public function getUnits()
+    {
+        return $this->Units;
+    }
+    
+
+    
+}

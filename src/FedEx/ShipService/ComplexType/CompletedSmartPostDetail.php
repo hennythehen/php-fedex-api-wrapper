@@ -1,0 +1,92 @@
+<?php
+namespace FedEx\ShipService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * Provides reply information specific to SmartPost shipments.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Ship Service
+ */
+class CompletedSmartPostDetail
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'PickUpCarrier' => 'CarrierCodeType',
+'Machinable' => 'boolean',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'CompletedSmartPostDetail';
+
+        
+    /**
+     * @var \FedEx\ShipService\SimpleType\CarrierCodeType|string
+     */
+    public $PickUpCarrier;
+
+        
+    /**
+     * @var boolean
+     */
+    public $Machinable;
+
+
+
+    /**
+     * Identifies the carrier that will pick up the SmartPost shipment.
+     *
+     * @param \FedEx\ShipService\SimpleType\CarrierCodeType|string $pickUpCarrier
+     * @return CompletedSmartPostDetail
+     */
+    public function setPickUpCarrier($pickUpCarrier)
+    {
+        $this->__set('PickUpCarrier', $pickUpCarrier);
+        $this->PickUpCarrier = $pickUpCarrier;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the carrier that will pick up the SmartPost shipment.
+     *
+     * @return \FedEx\ShipService\SimpleType\CarrierCodeType|string
+     */
+    public function getPickUpCarrier()
+    {
+        return $this->PickUpCarrier;
+    }
+    
+    /**
+     * Indicates whether the shipment is deemed to be machineable, based on dimensions, weight, and packaging.
+     *
+     * @param boolean $machinable
+     * @return CompletedSmartPostDetail
+     */
+    public function setMachinable($machinable)
+    {
+        $this->__set('Machinable', $machinable);
+        $this->Machinable = $machinable;
+        return $this;
+    }
+    
+    /**
+     * Returns Indicates whether the shipment is deemed to be machineable, based on dimensions, weight, and packaging.
+     *
+     * @return boolean
+     */
+    public function getMachinable()
+    {
+        return $this->Machinable;
+    }
+    
+
+    
+}

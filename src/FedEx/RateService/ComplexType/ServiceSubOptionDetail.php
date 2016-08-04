@@ -1,0 +1,122 @@
+<?php
+namespace FedEx\RateService\ComplexType;
+
+use FedEx\AbstractComplexType;
+
+/**
+ * Supporting detail for applied options identified in a rate quote.
+ *
+ * @author      Jeremy Dunn <jeremy@jsdunn.info>
+ * @package     PHP FedEx API wrapper
+ * @subpackage  Rate Service
+ */
+class ServiceSubOptionDetail
+    extends AbstractComplexType
+{
+
+    public $propertyTypes = array(
+         'FreightGuarantee' => 'FreightGuaranteeType',
+'SmartPostHubId' => 'string',
+'SmartPostIndicia' => 'SmartPostIndiciaType',
+
+    );
+
+    /**
+     * Name of this complex type
+     * 
+     * @var string
+     */
+    protected $_name = 'ServiceSubOptionDetail';
+
+        
+    /**
+     * @var \FedEx\RateService\SimpleType\FreightGuaranteeType|string
+     */
+    public $FreightGuarantee;
+
+        
+    /**
+     * @var string
+     */
+    public $SmartPostHubId;
+
+        
+    /**
+     * @var \FedEx\RateService\SimpleType\SmartPostIndiciaType|string
+     */
+    public $SmartPostIndicia;
+
+
+
+    /**
+     * Identifies the type of Freight Guarantee applied, if FREIGHT_GUARANTEE is applied to the rate quote.
+     *
+     * @param \FedEx\RateService\SimpleType\FreightGuaranteeType|string $freightGuarantee
+     * @return ServiceSubOptionDetail
+     */
+    public function setFreightGuarantee($freightGuarantee)
+    {
+        $this->__set('FreightGuarantee', $freightGuarantee);
+        $this->FreightGuarantee = $freightGuarantee;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the type of Freight Guarantee applied, if FREIGHT_GUARANTEE is applied to the rate quote.
+     *
+     * @return \FedEx\RateService\SimpleType\FreightGuaranteeType|string
+     */
+    public function getFreightGuarantee()
+    {
+        return $this->FreightGuarantee;
+    }
+    
+    /**
+     * Identifies the smartPostHubId used during rate quote, if SMART_POST_HUB_ID is a variable option on the rate request.
+     *
+     * @param string $smartPostHubId
+     * @return ServiceSubOptionDetail
+     */
+    public function setSmartPostHubId($smartPostHubId)
+    {
+        $this->__set('SmartPostHubId', $smartPostHubId);
+        $this->SmartPostHubId = $smartPostHubId;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the smartPostHubId used during rate quote, if SMART_POST_HUB_ID is a variable option on the rate request.
+     *
+     * @return string
+     */
+    public function getSmartPostHubId()
+    {
+        return $this->SmartPostHubId;
+    }
+    
+    /**
+     * Identifies the indicia used during rate quote, if SMART_POST_ALLOWED_INDICIA is a variable option on the rate request.
+     *
+     * @param \FedEx\RateService\SimpleType\SmartPostIndiciaType|string $smartPostIndicia
+     * @return ServiceSubOptionDetail
+     */
+    public function setSmartPostIndicia($smartPostIndicia)
+    {
+        $this->__set('SmartPostIndicia', $smartPostIndicia);
+        $this->SmartPostIndicia = $smartPostIndicia;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the indicia used during rate quote, if SMART_POST_ALLOWED_INDICIA is a variable option on the rate request.
+     *
+     * @return \FedEx\RateService\SimpleType\SmartPostIndiciaType|string
+     */
+    public function getSmartPostIndicia()
+    {
+        return $this->SmartPostIndicia;
+    }
+    
+
+    
+}
