@@ -97,6 +97,6 @@ class GenerateCode extends Console\Command\Command
         $this->buildToPath('Ship Service', '/_wsdl/ShipService_v17.wsdl');
         $this->buildToPath('Track Service', '/_wsdl/TrackService_v10.wsdl');
         $this->buildToPath('Upload Document Service', '/_wsdl/UploadDocumentService_v8.wsdl');
-        $this->buildToPath('Validation Availability And Commitment Service', '/_wsdl/ValidationAvailabilityAndCommitmentService_v4.wsdl');
+        $this->buildToPath('Validation Availability And Commitment Service', '/_wsdl/ValidationAvailabilityAndCommitmentService_v6.wsdl');
     }
 }

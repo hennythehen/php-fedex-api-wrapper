@@ -15,4 +15,5 @@ class CarrierCodeType
 {
     const _FDXE = 'FDXE';
     const _FDXG = 'FDXG';
+    const _FXSP = 'FXSP';
 }

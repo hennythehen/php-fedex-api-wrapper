@@ -36,7 +36,7 @@ class ValidationAvailabilityAndCommitmentServiceRequest extends AbstractRequest
         if (null != $wsdlPath) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/ValidationAvailabilityAndCommitmentService_v4.wsdl');
+            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/ValidationAvailabilityAndCommitmentService_v6.wsdl');
         }
 
         $this->_soapClient = new \SoapClient($this->_wsdlPath, array('trace' => true));
