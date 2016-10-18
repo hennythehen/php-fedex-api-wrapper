@@ -4,17 +4,14 @@ namespace FedEx\RateService\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Specifies the image format used for a shipping document.
+ * ShipmentDryIceProcessingOptionType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
  * @subpackage  Rate Service
  */
-class ShippingDocumentImageType
+class ShipmentDryIceProcessingOptionType
     extends AbstractSimpleType
 {
-    const _EPL2 = 'EPL2';
-    const _PDF = 'PDF';
-    const _PNG = 'PNG';
-    const _ZPLII = 'ZPLII';
+    const _SHIPMENT_LEVEL_DRY_ICE_ONLY = 'SHIPMENT_LEVEL_DRY_ICE_ONLY';
 }

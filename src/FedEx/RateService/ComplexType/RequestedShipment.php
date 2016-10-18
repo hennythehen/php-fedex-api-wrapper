@@ -23,6 +23,7 @@ class RequestedShipment
 'TotalWeight' => 'Weight',
 'TotalInsuredValue' => 'Money',
 'PreferredCurrency' => 'string',
+'ShipmentAuthorizationDetail' => 'ShipmentAuthorizationDetail',
 'Shipper' => 'Party',
 'Recipient' => 'Party',
 'RecipientLocationNumber' => 'string',
@@ -103,6 +104,12 @@ class RequestedShipment
      * @var string
      */
     public $PreferredCurrency;
+
+        
+    /**
+     * @var ShipmentAuthorizationDetail
+     */
+    public $ShipmentAuthorizationDetail;
 
         
     /**
@@ -426,6 +433,29 @@ class RequestedShipment
     public function getPreferredCurrency()
     {
         return $this->PreferredCurrency;
+    }
+    
+    /**
+     * Specifies details about the entity responsible for the shipment.
+     *
+     * @param ShipmentAuthorizationDetail $shipmentAuthorizationDetail
+     * @return RequestedShipment
+     */
+    public function setShipmentAuthorizationDetail(ShipmentAuthorizationDetail $shipmentAuthorizationDetail)
+    {
+        $this->__set('ShipmentAuthorizationDetail', $shipmentAuthorizationDetail);
+        $this->ShipmentAuthorizationDetail = $shipmentAuthorizationDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Specifies details about the entity responsible for the shipment.
+     *
+     * @return ShipmentAuthorizationDetail
+     */
+    public function getShipmentAuthorizationDetail()
+    {
+        return $this->ShipmentAuthorizationDetail;
     }
     
     /**

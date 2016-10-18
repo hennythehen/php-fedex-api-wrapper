@@ -21,6 +21,8 @@ class CommitDetail
 'AppliedSubOptions' => 'ServiceSubOptionDetail',
 'DerivedShipmentSignatureOption' => 'SignatureOptionDetail',
 'DerivedPackageSignatureOptions' => 'SignatureOptionDetail',
+'DerivedOriginDetail' => 'CleansedAddressAndLocationDetail',
+'DerivedDestinationDetail' => 'CleansedAddressAndLocationDetail',
 'CommitTimestamp' => 'dateTime',
 'DayOfWeek' => 'DayOfWeekType',
 'TransitTime' => 'TransitTimeType',
@@ -84,6 +86,18 @@ class CommitDetail
      * @var SignatureOptionDetail[]
      */
     public $DerivedPackageSignatureOptions = array();
+
+        
+    /**
+     * @var CleansedAddressAndLocationDetail
+     */
+    public $DerivedOriginDetail;
+
+        
+    /**
+     * @var CleansedAddressAndLocationDetail
+     */
+    public $DerivedDestinationDetail;
 
         
     /**
@@ -331,6 +345,52 @@ class CommitDetail
     public function getDerivedPackageSignatureOptions()
     {
         return $this->DerivedPackageSignatureOptions;
+    }
+    
+    /**
+     * Set DerivedOriginDetail
+     *
+     * @param CleansedAddressAndLocationDetail $derivedOriginDetail
+     * @return CommitDetail
+     */
+    public function setDerivedOriginDetail(CleansedAddressAndLocationDetail $derivedOriginDetail)
+    {
+        $this->__set('DerivedOriginDetail', $derivedOriginDetail);
+        $this->DerivedOriginDetail = $derivedOriginDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set DerivedOriginDetail
+     *
+     * @return CleansedAddressAndLocationDetail
+     */
+    public function getDerivedOriginDetail()
+    {
+        return $this->DerivedOriginDetail;
+    }
+    
+    /**
+     * Set DerivedDestinationDetail
+     *
+     * @param CleansedAddressAndLocationDetail $derivedDestinationDetail
+     * @return CommitDetail
+     */
+    public function setDerivedDestinationDetail(CleansedAddressAndLocationDetail $derivedDestinationDetail)
+    {
+        $this->__set('DerivedDestinationDetail', $derivedDestinationDetail);
+        $this->DerivedDestinationDetail = $derivedDestinationDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set DerivedDestinationDetail
+     *
+     * @return CleansedAddressAndLocationDetail
+     */
+    public function getDerivedDestinationDetail()
+    {
+        return $this->DerivedDestinationDetail;
     }
     
     /**

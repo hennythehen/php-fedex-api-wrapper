@@ -18,6 +18,7 @@ class Commodity
          'Name' => 'string',
 'NumberOfPieces' => 'nonNegativeInteger',
 'Description' => 'string',
+'Purpose' => 'CommodityPurposeType',
 'CountryOfManufacture' => 'string',
 'HarmonizedCode' => 'string',
 'Weight' => 'Weight',
@@ -59,6 +60,12 @@ class Commodity
      * @var string
      */
     public $Description;
+
+        
+    /**
+     * @var \FedEx\RateService\SimpleType\CommodityPurposeType|string
+     */
+    public $Purpose;
 
         
     /**
@@ -216,6 +223,29 @@ class Commodity
     }
     
     /**
+     * Set Purpose
+     *
+     * @param \FedEx\RateService\SimpleType\CommodityPurposeType|string $purpose
+     * @return Commodity
+     */
+    public function setPurpose($purpose)
+    {
+        $this->__set('Purpose', $purpose);
+        $this->Purpose = $purpose;
+        return $this;
+    }
+    
+    /**
+     * Returns Set Purpose
+     *
+     * @return \FedEx\RateService\SimpleType\CommodityPurposeType|string
+     */
+    public function getPurpose()
+    {
+        return $this->Purpose;
+    }
+    
+    /**
      * Set CountryOfManufacture
      *
      * @param string $countryOfManufacture
@@ -285,7 +315,7 @@ class Commodity
     }
     
     /**
-     * This field is used for enterprise transactions.
+     * Set Quantity
      *
      * @param decimal $quantity
      * @return Commodity
@@ -298,7 +328,7 @@ class Commodity
     }
     
     /**
-     * Returns This field is used for enterprise transactions.
+     * Returns Set Quantity
      *
      * @return decimal
      */

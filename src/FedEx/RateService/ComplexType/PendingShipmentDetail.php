@@ -17,7 +17,6 @@ class PendingShipmentDetail
     public $propertyTypes = array(
          'Type' => 'PendingShipmentType',
 'ExpirationDate' => 'date',
-'EmailLabelDetail' => 'EMailLabelDetail',
 'ProcessingOptions' => 'PendingShipmentProcessingOptionsRequested',
 'RecommendedDocumentSpecification' => 'RecommendedDocumentSpecification',
 
@@ -41,12 +40,6 @@ class PendingShipmentDetail
      * @var date
      */
     public $ExpirationDate;
-
-        
-    /**
-     * @var EMailLabelDetail
-     */
-    public $EmailLabelDetail;
 
         
     /**
@@ -106,29 +99,6 @@ class PendingShipmentDetail
     public function getExpirationDate()
     {
         return $this->ExpirationDate;
-    }
-    
-    /**
-     * Only used with type of EMAIL.
-     *
-     * @param EMailLabelDetail $emailLabelDetail
-     * @return PendingShipmentDetail
-     */
-    public function setEmailLabelDetail(EMailLabelDetail $emailLabelDetail)
-    {
-        $this->__set('EmailLabelDetail', $emailLabelDetail);
-        $this->EmailLabelDetail = $emailLabelDetail;
-        return $this;
-    }
-    
-    /**
-     * Returns Only used with type of EMAIL.
-     *
-     * @return EMailLabelDetail
-     */
-    public function getEmailLabelDetail()
-    {
-        return $this->EmailLabelDetail;
     }
     
     /**

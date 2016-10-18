@@ -4,17 +4,18 @@ namespace FedEx\RateService\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Specifies the image format used for a shipping document.
+ * ShipmentNotificationRoleType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
  * @subpackage  Rate Service
  */
-class ShippingDocumentImageType
+class ShipmentNotificationRoleType
     extends AbstractSimpleType
 {
-    const _EPL2 = 'EPL2';
-    const _PDF = 'PDF';
-    const _PNG = 'PNG';
-    const _ZPLII = 'ZPLII';
+    const _BROKER = 'BROKER';
+    const _OTHER = 'OTHER';
+    const _RECIPIENT = 'RECIPIENT';
+    const _SHIPPER = 'SHIPPER';
+    const _THIRD_PARTY = 'THIRD_PARTY';
 }

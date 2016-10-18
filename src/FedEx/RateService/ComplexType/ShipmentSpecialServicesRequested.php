@@ -19,7 +19,7 @@ class ShipmentSpecialServicesRequested
 'CodDetail' => 'CodDetail',
 'DeliveryOnInvoiceAcceptanceDetail' => 'DeliveryOnInvoiceAcceptanceDetail',
 'HoldAtLocationDetail' => 'HoldAtLocationDetail',
-'EMailNotificationDetail' => 'EMailNotificationDetail',
+'EventNotificationDetail' => 'ShipmentEventNotificationDetail',
 'ReturnShipmentDetail' => 'ReturnShipmentDetail',
 'PendingShipmentDetail' => 'PendingShipmentDetail',
 'InternationalControlledExportDetail' => 'InternationalControlledExportDetail',
@@ -66,9 +66,9 @@ class ShipmentSpecialServicesRequested
 
         
     /**
-     * @var EMailNotificationDetail
+     * @var ShipmentEventNotificationDetail
      */
-    public $EMailNotificationDetail;
+    public $EventNotificationDetail;
 
         
     /**
@@ -225,26 +225,26 @@ class ShipmentSpecialServicesRequested
     }
     
     /**
-     * Set EMailNotificationDetail
+     * This replaces eMailNotificationDetail
      *
-     * @param EMailNotificationDetail $eMailNotificationDetail
+     * @param ShipmentEventNotificationDetail $eventNotificationDetail
      * @return ShipmentSpecialServicesRequested
      */
-    public function setEMailNotificationDetail(EMailNotificationDetail $eMailNotificationDetail)
+    public function setEventNotificationDetail(ShipmentEventNotificationDetail $eventNotificationDetail)
     {
-        $this->__set('EMailNotificationDetail', $eMailNotificationDetail);
-        $this->EMailNotificationDetail = $eMailNotificationDetail;
+        $this->__set('EventNotificationDetail', $eventNotificationDetail);
+        $this->EventNotificationDetail = $eventNotificationDetail;
         return $this;
     }
     
     /**
-     * Returns Set EMailNotificationDetail
+     * Returns This replaces eMailNotificationDetail
      *
-     * @return EMailNotificationDetail
+     * @return ShipmentEventNotificationDetail
      */
-    public function getEMailNotificationDetail()
+    public function getEventNotificationDetail()
     {
-        return $this->EMailNotificationDetail;
+        return $this->EventNotificationDetail;
     }
     
     /**
