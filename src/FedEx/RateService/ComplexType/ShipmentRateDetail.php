@@ -37,6 +37,8 @@ class ShipmentRateDetail
 'TotalNetCharge' => 'Money',
 'TotalRebates' => 'Money',
 'TotalDutiesAndTaxes' => 'Money',
+'TotalAncillaryFeesAndTaxes' => 'Money',
+'TotalDutiesTaxesAndFees' => 'Money',
 'TotalNetChargeWithDutiesAndTaxes' => 'Money',
 'ShipmentLegRateDetails' => 'ShipmentLegRateDetail',
 'FreightRateDetail' => 'FreightRateDetail',
@@ -45,6 +47,7 @@ class ShipmentRateDetail
 'Surcharges' => 'Surcharge',
 'Taxes' => 'Tax',
 'DutiesAndTaxes' => 'EdtCommodityTax',
+'AncillaryFeesAndTaxes' => 'AncillaryFeeAndTax',
 'VariableHandlingCharges' => 'VariableHandlingCharges',
 'TotalVariableHandlingCharges' => 'VariableHandlingCharges',
 
@@ -193,6 +196,18 @@ class ShipmentRateDetail
     /**
      * @var Money
      */
+    public $TotalAncillaryFeesAndTaxes;
+
+        
+    /**
+     * @var Money
+     */
+    public $TotalDutiesTaxesAndFees;
+
+        
+    /**
+     * @var Money
+     */
     public $TotalNetChargeWithDutiesAndTaxes;
 
         
@@ -236,6 +251,12 @@ class ShipmentRateDetail
      * @var EdtCommodityTax[]
      */
     public $DutiesAndTaxes = array();
+
+        
+    /**
+     * @var AncillaryFeeAndTax[]
+     */
+    public $AncillaryFeesAndTaxes = array();
 
         
     /**
@@ -758,7 +779,53 @@ class ShipmentRateDetail
     }
     
     /**
-     * This shipment's totalNetCharge + totalDutiesAndTaxes; only provided if estimated duties and taxes were calculated for this shipment AND duties, taxes and transportation charges are all paid by the same sender's account.
+     * Identifies the total amount of the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
+     *
+     * @param Money $totalAncillaryFeesAndTaxes
+     * @return ShipmentRateDetail
+     */
+    public function setTotalAncillaryFeesAndTaxes(Money $totalAncillaryFeesAndTaxes)
+    {
+        $this->__set('TotalAncillaryFeesAndTaxes', $totalAncillaryFeesAndTaxes);
+        $this->TotalAncillaryFeesAndTaxes = $totalAncillaryFeesAndTaxes;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the total amount of the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
+     *
+     * @return Money
+     */
+    public function getTotalAncillaryFeesAndTaxes()
+    {
+        return $this->TotalAncillaryFeesAndTaxes;
+    }
+    
+    /**
+     * The total of the totalDutiesAndTaxes plus the totalAncillaryFeesAndTaxes.
+     *
+     * @param Money $totalDutiesTaxesAndFees
+     * @return ShipmentRateDetail
+     */
+    public function setTotalDutiesTaxesAndFees(Money $totalDutiesTaxesAndFees)
+    {
+        $this->__set('TotalDutiesTaxesAndFees', $totalDutiesTaxesAndFees);
+        $this->TotalDutiesTaxesAndFees = $totalDutiesTaxesAndFees;
+        return $this;
+    }
+    
+    /**
+     * Returns The total of the totalDutiesAndTaxes plus the totalAncillaryFeesAndTaxes.
+     *
+     * @return Money
+     */
+    public function getTotalDutiesTaxesAndFees()
+    {
+        return $this->TotalDutiesTaxesAndFees;
+    }
+    
+    /**
+     * This shipment's totalNetCharge + totalDutiesTaxesAndFees; some duties and taxes are only provided if estimated duties and taxes were calculated for this shipment AND duties, taxes and transportation charges are all paid by the same sender's account.
      *
      * @param Money $totalNetChargeWithDutiesAndTaxes
      * @return ShipmentRateDetail
@@ -771,7 +838,7 @@ class ShipmentRateDetail
     }
     
     /**
-     * Returns This shipment's totalNetCharge + totalDutiesAndTaxes; only provided if estimated duties and taxes were calculated for this shipment AND duties, taxes and transportation charges are all paid by the same sender's account.
+     * Returns This shipment's totalNetCharge + totalDutiesTaxesAndFees; some duties and taxes are only provided if estimated duties and taxes were calculated for this shipment AND duties, taxes and transportation charges are all paid by the same sender's account.
      *
      * @return Money
      */
@@ -939,6 +1006,29 @@ class ShipmentRateDetail
     public function getDutiesAndTaxes()
     {
         return $this->DutiesAndTaxes;
+    }
+    
+    /**
+     * Identifies the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
+     *
+     * @param AncillaryFeeAndTax[] $ancillaryFeesAndTaxes
+     * @return ShipmentRateDetail
+     */
+    public function setAncillaryFeesAndTaxes(array $ancillaryFeesAndTaxes)
+    {
+        $this->__set('AncillaryFeesAndTaxes', $ancillaryFeesAndTaxes);
+        $this->AncillaryFeesAndTaxes = $ancillaryFeesAndTaxes;
+        return $this;
+    }
+    
+    /**
+     * Returns Identifies the shipment-level fees and taxes that are not based on transportation charges or commodity-level estimated duties and taxes.
+     *
+     * @return AncillaryFeeAndTax[]
+     */
+    public function getAncillaryFeesAndTaxes()
+    {
+        return $this->AncillaryFeesAndTaxes;
     }
     
     /**

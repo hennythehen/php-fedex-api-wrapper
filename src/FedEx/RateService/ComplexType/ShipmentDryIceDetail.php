@@ -17,6 +17,7 @@ class ShipmentDryIceDetail
     public $propertyTypes = array(
          'PackageCount' => 'nonNegativeInteger',
 'TotalWeight' => 'Weight',
+'ProcessingOptions' => 'ShipmentDryIceProcessingOptionsRequested',
 
     );
 
@@ -38,6 +39,12 @@ class ShipmentDryIceDetail
      * @var Weight
      */
     public $TotalWeight;
+
+        
+    /**
+     * @var ShipmentDryIceProcessingOptionsRequested
+     */
+    public $ProcessingOptions;
 
 
 
@@ -85,6 +92,29 @@ class ShipmentDryIceDetail
     public function getTotalWeight()
     {
         return $this->TotalWeight;
+    }
+    
+    /**
+     * Set ProcessingOptions
+     *
+     * @param ShipmentDryIceProcessingOptionsRequested $processingOptions
+     * @return ShipmentDryIceDetail
+     */
+    public function setProcessingOptions(ShipmentDryIceProcessingOptionsRequested $processingOptions)
+    {
+        $this->__set('ProcessingOptions', $processingOptions);
+        $this->ProcessingOptions = $processingOptions;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ProcessingOptions
+     *
+     * @return ShipmentDryIceProcessingOptionsRequested
+     */
+    public function getProcessingOptions()
+    {
+        return $this->ProcessingOptions;
     }
     
 

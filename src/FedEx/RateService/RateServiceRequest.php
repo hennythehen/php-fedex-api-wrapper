@@ -36,7 +36,7 @@ class RateServiceRequest extends AbstractRequest
         if (null != $wsdlPath) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/RateService_v18.wsdl');
+            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/RateService_v20.wsdl');
         }
 
         $this->_soapClient = new \SoapClient($this->_wsdlPath, array('trace' => true));

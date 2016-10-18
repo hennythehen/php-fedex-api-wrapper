@@ -90,7 +90,7 @@ class GenerateCode extends Console\Command\Command
             throw new \Exception('Cannot write to directory: ' . $this->srcDir);
         }
         
-        $this->buildToPath('Rate Service', '/_wsdl/RateService_v18.wsdl');
+        $this->buildToPath('Rate Service', '/_wsdl/RateService_v20.wsdl');
         $this->buildToPath('Country Service', '/_wsdl/CountryService_v4.wsdl');
         $this->buildToPath('Locations Service', '/_wsdl/LocationsService_v3.wsdl');
         $this->buildToPath('Pickup Service', '/_wsdl/PickupService_v11.wsdl');
