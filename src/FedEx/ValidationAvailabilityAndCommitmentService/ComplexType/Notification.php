@@ -185,7 +185,7 @@ class Notification
     }
     
     /**
-     * A collection of name/value pairs that provide specific data to help the client determine the nature of an error (or warning, etc.) witout having to parse the message string.
+     * A collection of name/value pairs that provide specific data to help the client determine the nature of an error (or warning, etc.) without having to parse the message string.
      *
      * @param NotificationParameter[] $messageParameters
      * @return Notification
@@ -198,7 +198,7 @@ class Notification
     }
     
     /**
-     * Returns A collection of name/value pairs that provide specific data to help the client determine the nature of an error (or warning, etc.) witout having to parse the message string.
+     * Returns A collection of name/value pairs that provide specific data to help the client determine the nature of an error (or warning, etc.) without having to parse the message string.
      *
      * @return NotificationParameter[]
      */
